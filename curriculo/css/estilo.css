@@ -1,29 +1,23 @@
 .box_principal{
     width: 800px;
-    height: 1200px;
-    border: 3px solid red;
+    height: 1010px;
+    border: 3px solid rgb(0, 255, 42);
     margin: auto;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 
 .box_titulo{
-    width: 800px;
-    height: 150px;
+    width: 774px;
+    height: 120px;
     border: 3px solid red;
     margin: auto;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color: rgb(60, 47, 231);
+    background-color: #003d74;
     color: #ffff;
+    padding: 0px 0px 0px 25px;
 }
 
-/* .box_titulo.h1{
-    color: green;
-} */
-
-/* .h1_titulo{
-
-} */
 
 h2{
     /* margin-top: -20px; */
@@ -31,16 +25,9 @@ h2{
 }
 
 
-/* .h3_sub_titulo{
-
-} */
-
-a{
-    text-decoration: none;
-    font-size: 14px;
-}
 h4{
     margin-top: -10px;
+    font-size: 14px;
 }
 
         .h2_title_xp{
@@ -52,88 +39,143 @@ h4{
         }
 
         .h2_title_cursos{
-            margin-top: -20px;
+            margin-top: -30px;
         }
 
         .h2_title_certificados{
             margin-top: -20px;
         }
 
-hr{
+
+        .h4_formacao1{
+            margin-top: 15px;
+        }
+            .p_formacao1{
+                margin-top: -15px;
+            }
+        .h4_formacao2{
+            margin-top: 15px;
+        }
+            .p_formacao2{
+                margin-top: -15px;
+            }
+        .h4_formacao3{
+            margin-top: 15px;
+        }
+            .p_formacao3{
+                margin-top: -15px;
+            }
+
+p{
+    font-size: 10.5pt;
     margin-top: -10px;
+}
+
+ul{
+    font-size: 10pt;
+}
+
+a{
+    text-decoration: none;
+    font-size: 14px;
+    margin-top: -20px;
+    color: black;
+}
+
+hr{
+    margin-top: -12px;
     color: lightgray;
 }
 
 .table1{
     border: 3px solid rgb(17, 0, 255);
     width: 530px;
-    height: 1050px;
+    height: 900px;
 
 }
 
-/* 
-td{
-    padding: 10px;
-} */
 
 .resumo{
     border: 3px solid red;
     height: 70px;
+    padding: 5px 0px 0px 20px;
+    font-size: 10pt;
 }
 
 .experiencia{
     border: 3px solid red;
-    height: 20px;
+    height: 100px;
+    padding: 0px 0px 0px 20px;
 }
 
 
 .formacao{
     border: 3px solid red;
-    height: 200px;
+    height: 110px;
+    padding: 0px 0px 0px 20px;
+
 }
 
 .cursos{
     border: 3px solid red;
-    height: 150px;
+    height: 100px;
+    padding: 0px 0px 0px 20px;
+    margin-top: -40px;
 }
 
 .certificados{
     border: 3px solid red;
     height: 150px;
+    padding: 0px 0px 0px 20px;
+
 }
 
 
 .box_table2{
     width: 270px;
-    height: 1040px;
+    height: 890px;
     border: 3px solid red;
     margin: auto;
     margin-left: 530px;
-    margin-top: -1050px;
-    background-color: lightgrey;
+    margin-top: -900px;
+    background-color: #e4e2e2;
 }
 
 .table2{
     border: 3px solid rgb(17, 0, 255);
     width: 270px;
-    height: 1040px;
+    height: 400px;
 
 }
 
 .informacoes{
     border: 3px solid red;
-    height: 380px;
-    margin-top: -40px;
+    height: 70px;
+    padding: 0px 0px 0px 10px;
 }
 
 .skills{
     border: 3px solid red;
-    height: 240px;
-    margin-top: -40px;
+    height: 50px;
+    padding: 0px 0px 0px 10px;
+
 }
 
 .idiomas{
     border: 3px solid red;
-    height: 140px;
-    margin-top: -40px;
+    height: 30px;
+    padding: 0px 0px 0px 10px;
+
+}
+
+.ul_hab{
+    margin-left: -30px;
+}
+
+.ul_skills{
+    margin-left: -30px; 
+}
+
+.ul_idiomas{
+    margin-left: -30px; 
 }
