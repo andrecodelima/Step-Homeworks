@@ -1,0 +1,16 @@
+DEVER DE CASA
+=============
+
+Faça uma página com uma lista de produtos, como se fosse uma loja online.
+Utilize tags html5
+
+referência
+https://www.w3schools.com/html/html_layout.asp 
+
+exemplo 1 com um produto por linha
+https://www.americanas.com.br/categoria/informatica/notebooks?chave=pfm_hm_tt_1_0_notebook&viewMode=list
+
+exemplo 2 com blocos
+https://lista.mercadolivre.com.br/notebooks#D[A:notebooks]
+
+Faça pelo menos 6 produtos
