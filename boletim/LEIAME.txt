@@ -1,0 +1,8 @@
+USANDO LAYOUT COM GRID DO BS, FAÇA:
+
+Usando com modelo o boletim do link abaixo:
+https://cuiadigital.com.br/wp-content/uploads/2017/03/Boletim-7.png
+
+faça um boletim de um aluno, use dados fictícios.
+
+ACHANDO NECESSÁRIO MUDAR O LAYOUT, FIQUE À VONTADE.
