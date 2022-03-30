@@ -1,0 +1,15 @@
+
+h1 -> cabeçalho de primeiro nível
+p -> parágrafo
+br -> break row, quebra a linha (encerra a linha atual)
+img -> imagem
+src -> source -> origem da informação/arquivo
+hr -> horizontal row -> linha horizontal
+
+
+=================DEVER DE CASA ===========================
+
+
+Crie uma página html sobre BITCOIN.
+Deverá ter um título, uma imagem e (pelo menos) 2 parágrafos
+
