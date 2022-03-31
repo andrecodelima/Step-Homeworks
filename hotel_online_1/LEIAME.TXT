@@ -1,0 +1,17 @@
+Dever de casa
+=============
+
+Crie um site para um hotel com o seguinte mapa do site:
+
+-Home(index.html)
+    -Hospedagens
+        -Suite
+        -Apartamentos
+        -Chalés
+    -Reservas
+    -Contato
+        -Turismo
+
+Observe que, EXCETO O HOME, cada página terá uma pasta. O caminho dos arquivos deverão respeitar a hirearquia a cima.
+
+NÃO PRECISA DE CONTEÚDO, basta um h1 com o nome da página e um navbar para navegação
