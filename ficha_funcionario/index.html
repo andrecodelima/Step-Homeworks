@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ficha Cadastral</title>
+
+    <link rel="stylesheet" href="./main.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+    <div id="main">
+        <header id="main-header">
+            <h1>Cadastro de Funcionários</h1>
+        </header>
+    
+        <section id="main-section"> 
+            <form action="">
+                <legend><h2>Dados dos Funcionários</h2>
+                    <div class="row-dadospessoais">
+                        <div class="colum-md">
+                            <label class="numero" for="ID"><h3>ID</h3></label><br>
+                            <input type="number" id="numero" name="id" placeholder="ID" required >
+                        </div>
+
+                        <div class="colum-md">
+                            <label class="nome" for="nome"><h3>NOME</h3></label><br>
+                            <input type="name" id="nome" name="name" placeholder="NOME" required >
+                        </div>
+                        
+
+                        <div class="colum-md">
+                            <label class="data" for="ID"><h3>NASCIMENTO</h3></label><br>
+                            <input type="date" id="data" name="data" placeholder="NASCIMENTO" required>
+                        </div>
+
+                        <div class="colum-md">
+                            <label class="numero" for="ID"><h3>IDADE</h3></label><br>
+                            <input type="number" id="numero" name="idade"  placeholder="IDADE" min="0" max="150" required>
+                        </div>
+
+                        <div class="colum-md">
+                            <label class="selecao"><h3>GÊNERO</h3></label><br>
+                            <select id="selecao" name="genero" >
+                                <option class="selecao" value=""></option>
+                                <option class="selecao" value="MASCULINO">MASCULINO</option>
+                                <option class="selecao" value="FEMENINO">FEMININO</option>
+                            </select>
+                        </div>
+
+                        <div class="colum-md">
+                            <label class="selecao"><h3>ESTADO CIVIL</h3></label><br>
+                            <select id="selecao" name="genero" >
+                                <option class="selecao" value=""></option>
+                                <option class="selecao" value="MASCULINO">CASADO(A)</option>
+                                <option class="selecao" value="FEMENINO">SOLTEIRO</option>
+                            </select>
+                        </div>
+
+                        <div class="colum-md">
+                            <label class="selecao"><h3>NATURALIDADE</h3></label><br>
+                            <select id="selecao" name="naturalidade" >
+                                <option class="selecao" value=""></option>
+                                <option class="selecao" value="Acre">Acre</option>
+                                <option class="selecao" value="Alagoas">Alagoas</option>
+                                <option class="selecao" value="Amapa">Amapá</option>
+                                <option class="selecao" value="Amazonas">Amazonas</option>
+                                <option class="selecao" value="Bahia">Bahia</option>
+                                <option class="selecao" value="Ceara">Ceará</option>
+                                <option class="selecao" value="Distrito Federal">Distrito Federal*</option>
+                                <option class="selecao" value="Espirito Santo"> Espírito Santo</option>
+                                <option class="selecao" value="Goias">Goiás</option>
+                                <option class="selecao" value="Maranhao">Maranhão</option>
+                                <option class="selecao" value="Mato Grosso">Mato Grosso</option>
+                                <option class="selecao" value="Mato Grosso do Sul">Mato Grosso do Sul</option>
+                                <option class="selecao" value="Minas Gerais"> Minas Gerais</option>
+                                <option class="selecao" value="Para">Pará</option>
+                                <option class="selecao" value="Paraiba">Paraíba</option>
+                                <option class="selecao" value="Parana">Paraná</option>
+                                <option class="selecao" value="Pernambuco">Pernambuco</option>
+                                <option class="selecao" value="Piaui">Piauí</option>
+                                <option class="selecao" value="Rio de Janeiro">Rio de Janeiro</option>
+                                <option class="selecao" value="Rio Grande do Norte">Rio Grande do Norte</option>
+                                <option class="selecao" value="Rondonia">Rondônia</option>
+                                <option class="selecao" value="Roraima">Roraima</option>
+                                <option class="selecao" value="Santa Catarina">Santa Catarina</option>
+                                <option class="selecao" value="Sao Paulo">São Paulo</option>
+                                <option class="selecao" value="Sergipe">Sergipe</option>
+                                <option class="selecao" value="Tocantins">Tocantins</option>
+                            </select>
+                        </div>
+
+                        <div class="colum-md">
+                            <label class="selecao"><h3>UF</h3></label><br>
+                            <select id="selecao" name="uf" >
+                                <option class="selecao" value=""></option>
+                                <option class="selecao" value="AC">AC</option>
+                                <option class="selecao" value="AL">AL</option>
+                                <option class="selecao" value="AP">AP</option>
+                                <option class="selecao" value="AM">AM</option>
+                                <option class="selecao" value="BA">BA</option>
+                                <option class="selecao" value="CE">CE</option>
+                                <option class="selecao" value="DF">DF</option>
+                                <option class="selecao" value="ES">ES</option>
+                                <option class="selecao" value="GO">GO</option>
+                                <option class="selecao" value="MA">MA</option>
+                                <option class="selecao" value="MG">MG</option>
+                                <option class="selecao" value="MS">MS</option>
+                                <option class="selecao" value="MT">MT</option>
+                                <option class="selecao" value="PA">PA</option>
+                                <option class="selecao" value="PB">PB</option>
+                                <option class="selecao" value="PE">PE</option>
+                                <option class="selecao" value="PI">PI</option>
+                                <option class="selecao" value="PR">PR</option>
+                                <option class="selecao" value="RJ">RJ</option>
+                                <option class="selecao" value="RN">RN</option>
+                                <option class="selecao" value="RO">RO</option>
+                                <option class="selecao" value="RR">RR</option>
+                                <option class="selecao" value="RS">RS</option>
+                                <option class="selecao" value="SC">SC</option>
+                                <option class="selecao" value="SP">SP</option>
+                                <option class="selecao" value="SE">SE</option>
+                                <option class="selecao" value="TO">TO</option>
+                            </select>
+                        </div>
+                        
+                    </div>     
+            </legend>
+            </form>
+        </section>
+    </div>
+    
+
+   
+</body>
+</html>

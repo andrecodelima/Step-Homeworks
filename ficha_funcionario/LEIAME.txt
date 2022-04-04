@@ -1,0 +1,13 @@
+DEVER DE CASA
+=============
+
+Crie uma página com um formulário de cadastro de funcionários que tenha:
+-Nome
+-CPF
+-Telefone
+-Data de Nascimento
+-Endereço
+-Gênero
+e um botão para cadastrar.
+
+material de apoio: https://www.w3schools.com/html/html_forms.asp
