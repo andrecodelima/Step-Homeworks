@@ -51,12 +51,6 @@ legend{
     margin-left: 3px;
 }
 
-.colum-md-set{
-    margin-left: 65%;
-    width: 50%;
-    margin-top: 30px;
-}
-
 .row-dadospessoais-row-1{
     display: -ms-flexbox;
     display: flex;
@@ -127,14 +121,13 @@ legend h2{
     display: flex;
     /* -ms-flex-wrap: wrap; */
     /* flex-wrap: wrap; */
-    padding: 25px;
-    padding-left: 25%;
-    margin-left: 200px;
-    display:table-row;
+    padding: 10px;
     vertical-align: middle;
-    /* background-color: #c2c5c2; */
+    background-color: #93bdf3;
+    margin-top: 40px;
 
 }
+
 
     .row-set p{
         font-size: 8pt;
@@ -303,10 +296,9 @@ label h3{
     float: left;
     width: 150px;
     padding-left: 5px;
-    padding-right: 30px;
+    padding-right: -70px;
     float: right;
     margin-left: 2px;
-    margin-top: -45px;
 }
 
 .button-clear{
