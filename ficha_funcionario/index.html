@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,279 +10,405 @@
     <link rel="stylesheet" href="./css/main.css">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
 
 </head>
+
 <body>
 
     <div id="main">
+
+        <!-- HEADER - TÍTULO E FOTO -->
         <header id="main-header">
             <h1>Cadastro de Funcionários</h1>
             <div class="foto">
                 <img src="./imgs/foto1.jpg" width="80" height="80" alt="">
             </div>
         </header>
-    
-        <section id="main-section"> 
-            <form action="">
-                    <legend><h2>DADOS DOS FUNCIONÁRIOS</h2>
-                        <div class="row-dadospessoais-row-1">
-                            <div class="colum-md">
-                                <label class="numero" for="ID"><h3>ID</h3></label><br>
-                                <input type="number" id="numero" name="id" placeholder="ID" required >
-                            </div>
 
-                            <div class="colum-md">
-                                <label class="nome" for="nome"><h3>NOME</h3></label><br>
-                                <input type="name" id="nome" name="name" placeholder="NOME" required >
-                            </div>
-                            
+        <!-- SECTION - ENTRADA DE DADOS -->
+        <section id="main-section">
+            <form action="" method="post">
 
-                            <div class="colum-md">
-                                <label class="data" for="ID"><h3>NASCIMENTO</h3></label><br>
-                                <input type="date" id="data" name="data" placeholder="NASCIMENTO" required>
-                            </div>
+                <!-- DADOS - IDENTIFICAÇÃO -->
 
-                            <div class="colum-md">
-                                <label class="numero" for="ID"><h3>IDADE</h3></label><br>
-                                <input type="number" id="numero" name="idade"  placeholder="IDADE" min="0" max="150" required>
-                            </div>
-
-                            <div class="colum-md">
-                                <label class="selecao"><h3>GÊNERO</h3></label><br>
-                                <select id="selecao" name="genero" >
-                                    <option class="selecao" value=""></option>
-                                    <option class="selecao" value="MASCULINO">MASCULINO</option>
-                                    <option class="selecao" value="FEMENINO">FEMININO</option>
-                                </select>
-                            </div>
-
-                            <div class="colum-md">
-                                <label class="selecao"><h3>ESTADO CIVIL</h3></label><br>
-                                <select id="selecao" name="genero" >
-                                    <option class="selecao" value=""></option>
-                                    <option class="selecao" value="MASCULINO">CASADO(A)</option>
-                                    <option class="selecao" value="FEMENINO">SOLTEIRO</option>
-                                </select>
-                            </div>
-
-                            <div class="colum-md">
-                                <label class="selecao"><h3>NATURALIDADE</h3></label><br>
-                                <select id="selecao" name="naturalidade" >
-                                    <option class="selecao" value=""></option>
-                                    <option class="selecao" value="Acre">Acre</option>
-                                    <option class="selecao" value="Alagoas">Alagoas</option>
-                                    <option class="selecao" value="Amapa">Amapá</option>
-                                    <option class="selecao" value="Amazonas">Amazonas</option>
-                                    <option class="selecao" value="Bahia">Bahia</option>
-                                    <option class="selecao" value="Ceara">Ceará</option>
-                                    <option class="selecao" value="Distrito Federal">Distrito Federal*</option>
-                                    <option class="selecao" value="Espirito Santo"> Espírito Santo</option>
-                                    <option class="selecao" value="Goias">Goiás</option>
-                                    <option class="selecao" value="Maranhao">Maranhão</option>
-                                    <option class="selecao" value="Mato Grosso">Mato Grosso</option>
-                                    <option class="selecao" value="Mato Grosso do Sul">Mato Grosso do Sul</option>
-                                    <option class="selecao" value="Minas Gerais"> Minas Gerais</option>
-                                    <option class="selecao" value="Para">Pará</option>
-                                    <option class="selecao" value="Paraiba">Paraíba</option>
-                                    <option class="selecao" value="Parana">Paraná</option>
-                                    <option class="selecao" value="Pernambuco">Pernambuco</option>
-                                    <option class="selecao" value="Piaui">Piauí</option>
-                                    <option class="selecao" value="Rio de Janeiro">Rio de Janeiro</option>
-                                    <option class="selecao" value="Rio Grande do Norte">Rio Grande do Norte</option>
-                                    <option class="selecao" value="Rondonia">Rondônia</option>
-                                    <option class="selecao" value="Roraima">Roraima</option>
-                                    <option class="selecao" value="Santa Catarina">Santa Catarina</option>
-                                    <option class="selecao" value="Sao Paulo">São Paulo</option>
-                                    <option class="selecao" value="Sergipe">Sergipe</option>
-                                    <option class="selecao" value="Tocantins">Tocantins</option>
-                                </select>
-                            </div>
-
-                            <div class="colum-md">
-                                <label class="selecao-cod-uf"><h3>UF</h3></label><br>
-                                <select id="selecao-cod-uf" name="uf" >
-                                    <option class="selecao" value=""></option>
-                                    <option class="selecao" value="AC">AC</option>
-                                    <option class="selecao" value="AL">AL</option>
-                                    <option class="selecao" value="AP">AP</option>
-                                    <option class="selecao" value="AM">AM</option>
-                                    <option class="selecao" value="BA">BA</option>
-                                    <option class="selecao" value="CE">CE</option>
-                                    <option class="selecao" value="DF">DF</option>
-                                    <option class="selecao" value="ES">ES</option>
-                                    <option class="selecao" value="GO">GO</option>
-                                    <option class="selecao" value="MA">MA</option>
-                                    <option class="selecao" value="MG">MG</option>
-                                    <option class="selecao" value="MS">MS</option>
-                                    <option class="selecao" value="MT">MT</option>
-                                    <option class="selecao" value="PA">PA</option>
-                                    <option class="selecao" value="PB">PB</option>
-                                    <option class="selecao" value="PE">PE</option>
-                                    <option class="selecao" value="PI">PI</option>
-                                    <option class="selecao" value="PR">PR</option>
-                                    <option class="selecao" value="RJ">RJ</option>
-                                    <option class="selecao" value="RN">RN</option>
-                                    <option class="selecao" value="RO">RO</option>
-                                    <option class="selecao" value="RR">RR</option>
-                                    <option class="selecao" value="RS">RS</option>
-                                    <option class="selecao" value="SC">SC</option>
-                                    <option class="selecao" value="SP">SP</option>
-                                    <option class="selecao" value="SE">SE</option>
-                                    <option class="selecao" value="TO">TO</option>
-                                </select>
-                            </div>
-                        </div>   
-                        <div class="row-dadospessoais-row-2">
-                            <div class="colum-md">
-                                <label class="selecao"><h3>ESCOLARIDADE</h3></label><br>
-                                <select id="selecao" name="escolaridade" >
-                                    <option class="selecao" value=""></option>
-                                    <option class="selecao" value="Fundamental">Fundamental</option>
-                                    <option class="selecao" value="Medio">Médio</option>
-                                    <option class="selecao" value="Superior ">Superior</option>
-                                    <option class="selecao" value="Pos-graduacao.">Pós-graduação.</option>
-                                    <option class="selecao" value="Mestrado">Mestrado</option>
-                                    <option class="selecao" value="Doutorado">Doutorado</option>
-                                </select>
-                            </div>
-
-                            <div class="colum-md">
-                                <label class="nome" for="nome"><h3>NOME DO PAI</h3></label><br>
-                                <input type="name" id="nome" name="name" placeholder="NOME DO PAI" required >
-                            </div>
-
-                            <div class="colum-md">
-                                <label class="nome" for="nome"><h3>NOME Da MÃE</h3></label><br>
-                                <input type="name" id="nome" name="name" placeholder="NOME DA MÃE" required >
-                            </div> 
-
-                            
-                        </div>
-
-                        <div class="row-dadospessoais-row-3">     
-                            <div class="colum-md">
-                                <label class="nome-cod" for="nome"><h3>CEP</h3></label><br>
-                                <input type="name" id="nome-cod" name="name" placeholder="CEP" required >
-                            </div>
-
-                            <div class="colum-md">
-                                <label class="nome" for="nome"><h3>ENDEREÇO</h3></label><br>
-                                <input type="name" id="nome" name="name" placeholder="ENDEREÇO" required >
-                            </div>
-
-                            <div class="colum-md">
-                                <label class="nome" for="nome"><h3>COMPLEMENTO</h3></label><br>
-                                <input type="name" id="nome" name="name" placeholder="COMPLEMENTO" >
-                            </div>
-
-                            <div class="colum-md">
-                                <label class="selecao-cod-uf"><h3>UF</h3></label><br>
-                                <select id="selecao-cod-uf" name="uf" >
-                                    <option class="selecao" value=""></option>
-                                    <option class="selecao" value="AC">AC</option>
-                                    <option class="selecao" value="AL">AL</option>
-                                    <option class="selecao" value="AP">AP</option>
-                                    <option class="selecao" value="AM">AM</option>
-                                    <option class="selecao" value="BA">BA</option>
-                                    <option class="selecao" value="CE">CE</option>
-                                    <option class="selecao" value="DF">DF</option>
-                                    <option class="selecao" value="ES">ES</option>
-                                    <option class="selecao" value="GO">GO</option>
-                                    <option class="selecao" value="MA">MA</option>
-                                    <option class="selecao" value="MG">MG</option>
-                                    <option class="selecao" value="MS">MS</option>
-                                    <option class="selecao" value="MT">MT</option>
-                                    <option class="selecao" value="PA">PA</option>
-                                    <option class="selecao" value="PB">PB</option>
-                                    <option class="selecao" value="PE">PE</option>
-                                    <option class="selecao" value="PI">PI</option>
-                                    <option class="selecao" value="PR">PR</option>
-                                    <option class="selecao" value="RJ">RJ</option>
-                                    <option class="selecao" value="RN">RN</option>
-                                    <option class="selecao" value="RO">RO</option>
-                                    <option class="selecao" value="RR">RR</option>
-                                    <option class="selecao" value="RS">RS</option>
-                                    <option class="selecao" value="SC">SC</option>
-                                    <option class="selecao" value="SP">SP</option>
-                                    <option class="selecao" value="SE">SE</option>
-                                    <option class="selecao" value="TO">TO</option>
-                                </select>
-                            </div>
-
-                            <div class="colum-md">
-                                <label class="nome" for="nome"><h3>CIDADE</h3></label><br>
-                                <input type="name" id="nome" name="cidade" placeholder="CIDADE" >
-                            </div>
-
-
-                            <div class="colum-md">
-                                <label class="nome" for="nome"><h3>BAIRRO</h3></label><br>
-                                <input type="name" id="nome" name="bairro" placeholder="BAIRRO" >
-                            </div>
-
-                            <div class="colum-md">
-                                <label class="nome-cod-cel" for="nome"><h3>CELULAR</h3></label><br>
-                                <input type="tel" id="nome-cod-cel" name="celular" placeholder="CELULAR" required >
-                            </div>
-
-                            <div class="colum-md">
-                                <label class="nome-cod-cel" for="nome"><h3>E-MAIL</h3></label><br>
-                                <input type="email" id="nome-cod" name="email" placeholder="EMAIL" required>
-                            </div>
-
-                        </div>
-                </legend>
-
-                <legend><h2>DOCUMENTAÇÃO</h2>
+                <legend>
+                    <h2>DADOS DOS FUNCIONÁRIOS</h2>
                     <div class="row-dadospessoais-row-1">
                         <div class="colum-md">
-                            <label class="nome-cod-doc" for="nome"><h3>CTPS</h3></label><br>
+                            <label class="numero" for="ID">
+                                <h3>ID</h3>
+                            </label><br>
+                            <input type="number" id="numero" name="id" placeholder="ID" required>
+                        </div>
+
+                        <div class="colum-md">
+                            <label class="nome" for="nome">
+                                <h3>
+                                    <p class="simb-obrigacao">*</p>NOME
+                                </h3>
+                            </label><br>
+                            <input type="name" id="nome" name="name" placeholder="NOME" required minlength="2"
+                                maxlength="30">
+                        </div>
+
+
+                        <div class="colum-md">
+                            <label class="data" for="ID">
+                                <h3>
+                                    <p class="simb-obrigacao">*</p>NASCIMENTO
+                                </h3>
+                            </label><br>
+                            <input type="date" id="data" name="data" required>
+                        </div>
+
+                        <div class="colum-md">
+                            <label class="numero" for="ID">
+                                <h3>
+                                    <p class="simb-obrigacao">*</p>IDADE
+                                </h3>
+                            </label><br>
+                            <input type="number" id="numero" name="idade" placeholder="IDADE" min="0" max="150"
+                                required>
+                        </div>
+
+                        <div class="colum-md">
+                            <label class="selecao">
+                                <h3>
+                                    <p class="simb-obrigacao">*</p>GÊNERO
+                                </h3>
+                            </label><br>
+                            <select id="selecao" name="genero" required>
+                                <option class="selecao" value=""></option>
+                                <option class="selecao" value="MASCULINO">MASCULINO</option>
+                                <option class="selecao" value="FEMENINO">FEMININO</option>
+                            </select>
+                        </div>
+
+                        <div class="colum-md">
+                            <label class="selecao">
+                                <h3>
+                                    <p class="simb-obrigacao">*</p>ESTADO CIVIL
+                                </h3>
+                            </label><br>
+                            <select id="selecao" name="genero" required>
+                                <option class="selecao" value=""></option>
+                                <option class="selecao" value="MASCULINO">CASADO(A)</option>
+                                <option class="selecao" value="FEMENINO">SOLTEIRO(A)</option>
+                            </select>
+                        </div>
+
+                        <div class="colum-md">
+                            <label class="selecao">
+                                <h3>NATURALIDADE</h3>
+                            </label><br>
+                            <select id="selecao" name="naturalidade" required>
+                                <option class="selecao" value=""></option>
+                                <option class="selecao" value="Acre">Acre</option>
+                                <option class="selecao" value="Alagoas">Alagoas</option>
+                                <option class="selecao" value="Amapa">Amapá</option>
+                                <option class="selecao" value="Amazonas">Amazonas</option>
+                                <option class="selecao" value="Bahia">Bahia</option>
+                                <option class="selecao" value="Ceara">Ceará</option>
+                                <option class="selecao" value="Distrito Federal">Distrito Federal*</option>
+                                <option class="selecao" value="Espirito Santo"> Espírito Santo</option>
+                                <option class="selecao" value="Goias">Goiás</option>
+                                <option class="selecao" value="Maranhao">Maranhão</option>
+                                <option class="selecao" value="Mato Grosso">Mato Grosso</option>
+                                <option class="selecao" value="Mato Grosso do Sul">Mato Grosso do Sul</option>
+                                <option class="selecao" value="Minas Gerais"> Minas Gerais</option>
+                                <option class="selecao" value="Para">Pará</option>
+                                <option class="selecao" value="Paraiba">Paraíba</option>
+                                <option class="selecao" value="Parana">Paraná</option>
+                                <option class="selecao" value="Pernambuco">Pernambuco</option>
+                                <option class="selecao" value="Piaui">Piauí</option>
+                                <option class="selecao" value="Rio de Janeiro">Rio de Janeiro</option>
+                                <option class="selecao" value="Rio Grande do Norte">Rio Grande do Norte</option>
+                                <option class="selecao" value="Rondonia">Rondônia</option>
+                                <option class="selecao" value="Roraima">Roraima</option>
+                                <option class="selecao" value="Santa Catarina">Santa Catarina</option>
+                                <option class="selecao" value="Sao Paulo">São Paulo</option>
+                                <option class="selecao" value="Sergipe">Sergipe</option>
+                                <option class="selecao" value="Tocantins">Tocantins</option>
+                            </select>
+                        </div>
+
+                        <div class="colum-md">
+                            <label class="selecao-cod-uf">
+                                <h3>
+                                    <p class="simb-obrigacao">*</p>UF
+                                </h3>
+                            </label><br>
+                            <select id="selecao-cod-uf" name="uf">
+                                <option class="selecao" value=""></option>
+                                <option class="selecao" value="AC">AC</option>
+                                <option class="selecao" value="AL">AL</option>
+                                <option class="selecao" value="AP">AP</option>
+                                <option class="selecao" value="AM">AM</option>
+                                <option class="selecao" value="BA">BA</option>
+                                <option class="selecao" value="CE">CE</option>
+                                <option class="selecao" value="DF">DF</option>
+                                <option class="selecao" value="ES">ES</option>
+                                <option class="selecao" value="GO">GO</option>
+                                <option class="selecao" value="MA">MA</option>
+                                <option class="selecao" value="MG">MG</option>
+                                <option class="selecao" value="MS">MS</option>
+                                <option class="selecao" value="MT">MT</option>
+                                <option class="selecao" value="PA">PA</option>
+                                <option class="selecao" value="PB">PB</option>
+                                <option class="selecao" value="PE">PE</option>
+                                <option class="selecao" value="PI">PI</option>
+                                <option class="selecao" value="PR">PR</option>
+                                <option class="selecao" value="RJ">RJ</option>
+                                <option class="selecao" value="RN">RN</option>
+                                <option class="selecao" value="RO">RO</option>
+                                <option class="selecao" value="RR">RR</option>
+                                <option class="selecao" value="RS">RS</option>
+                                <option class="selecao" value="SC">SC</option>
+                                <option class="selecao" value="SP">SP</option>
+                                <option class="selecao" value="SE">SE</option>
+                                <option class="selecao" value="TO">TO</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row-dadospessoais-row-2">
+                        <div class="colum-md">
+                            <label class="selecao">
+                                <h3>
+                                    <p class="simb-obrigacao">*</p>ESCOLARIDADE
+                                </h3>
+                            </label><br>
+                            <select id="selecao" name="escolaridade" required>
+                                <option class="selecao" value=""></option>
+                                <option class="selecao" value="Fundamental">Fundamental</option>
+                                <option class="selecao" value="Medio">Médio</option>
+                                <option class="selecao" value="Superior ">Superior</option>
+                                <option class="selecao" value="Pos-graduacao.">Pós-graduação.</option>
+                                <option class="selecao" value="Mestrado">Mestrado</option>
+                                <option class="selecao" value="Doutorado">Doutorado</option>
+                            </select>
+                        </div>
+
+                        <div class="colum-md">
+                            <label class="nome" for="nome">
+                                <h3>NOME DO PAI</h3>
+                            </label><br>
+                            <input type="name" id="nome" name="name" placeholder="NOME DO PAI">
+                        </div>
+
+                        <div class="colum-md">
+                            <label class="nome" for="nome">
+                                <h3>
+                                    <p class="simb-obrigacao">*</p>NOME Da MÃE
+                                </h3>
+                            </label><br>
+                            <input type="name" id="nome" name="name" placeholder="NOME DA MÃE" required maxlength="30">
+                        </div>
+
+
+                    </div>
+
+                    <div class="row-dadospessoais-row-3">
+                        <div class="colum-md">
+                            <label class="nome-cod" for="nome">
+                                <h3>
+                                    <p class="simb-obrigacao">*</p>CEP
+                                </h3>
+                            </label><br>
+                            <input type="name" id="nome-cod" name="name" placeholder="CEP" required maxlength="9">
+                        </div>
+
+                        <div class="colum-md">
+                            <label class="nome" for="nome">
+                                <h3>
+                                    <p class="simb-obrigacao">*</p>ENDEREÇO
+                                </h3>
+                            </label><br>
+                            <input type="name" id="nome" name="name" placeholder="ENDEREÇO" required minlength="1"
+                                maxlength="30">
+                        </div>
+
+                        <div class="colum-md">
+                            <label class="nome" for="nome">
+                                <h3>COMPLEMENTO</h3>
+                            </label><br>
+                            <input type="name" id="nome" name="name" placeholder="COMPLEMENTO" maxlength="20">
+                        </div>
+
+                        <div class="colum-md">
+                            <label class="selecao-cod-uf">
+                                <h3>
+                                    <p class="simb-obrigacao">*</p>UF
+                                </h3>
+                            </label><br>
+                            <select id="selecao-cod-uf" name="uf" required>
+                                <option class="selecao" value=""></option>
+                                <option class="selecao" value="AC">AC</option>
+                                <option class="selecao" value="AL">AL</option>
+                                <option class="selecao" value="AP">AP</option>
+                                <option class="selecao" value="AM">AM</option>
+                                <option class="selecao" value="BA">BA</option>
+                                <option class="selecao" value="CE">CE</option>
+                                <option class="selecao" value="DF">DF</option>
+                                <option class="selecao" value="ES">ES</option>
+                                <option class="selecao" value="GO">GO</option>
+                                <option class="selecao" value="MA">MA</option>
+                                <option class="selecao" value="MG">MG</option>
+                                <option class="selecao" value="MS">MS</option>
+                                <option class="selecao" value="MT">MT</option>
+                                <option class="selecao" value="PA">PA</option>
+                                <option class="selecao" value="PB">PB</option>
+                                <option class="selecao" value="PE">PE</option>
+                                <option class="selecao" value="PI">PI</option>
+                                <option class="selecao" value="PR">PR</option>
+                                <option class="selecao" value="RJ">RJ</option>
+                                <option class="selecao" value="RN">RN</option>
+                                <option class="selecao" value="RO">RO</option>
+                                <option class="selecao" value="RR">RR</option>
+                                <option class="selecao" value="RS">RS</option>
+                                <option class="selecao" value="SC">SC</option>
+                                <option class="selecao" value="SP">SP</option>
+                                <option class="selecao" value="SE">SE</option>
+                                <option class="selecao" value="TO">TO</option>
+                            </select>
+                        </div>
+
+                        <div class="colum-md">
+                            <label class="nome" for="nome">
+                                <h3>
+                                    <p class="simb-obrigacao">*</p>CIDADE
+                                </h3>
+                            </label><br>
+                            <input type="name" id="nome" name="cidade" placeholder="CIDADE" required minlength="3"
+                                maxlength="15">
+                        </div>
+
+
+                        <div class="colum-md">
+                            <label class="nome" for="nome">
+                                <h3>
+                                    <p class="simb-obrigacao">*</p>BAIRRO
+                                </h3>
+                            </label><br>
+                            <input type="name" id="nome" name="bairro" placeholder="BAIRRO" required minlength="3"
+                                maxlength="20">
+                        </div>
+
+                        <div class="colum-md">
+                            <label class="nome-cod-cel" for="nome">
+                                <h3>
+                                    <p class="simb-obrigacao">*</p>CELULAR
+                                </h3>
+                            </label><br>
+                            <input type="tel" id="nome-cod-cel" name="celular" placeholder="CELULAR" required
+                                maxlength="15">
+                        </div>
+
+                        <div class="colum-md">
+                            <label class="nome-cod" for="nome">
+                                <h3>
+                                    <p class="simb-obrigacao">*</p>E-MAIL
+                                </h3>
+                            </label><br>
+                            <input type="email" id="nome-cod" name="email" placeholder="EMAIL" required maxlength="25">
+                        </div>
+
+                    </div>
+                </legend>
+
+
+                <!-- DADOS - DOCUMENTAÇÃO -->
+
+                <legend>
+                    <h2>DOCUMENTAÇÃO</h2>
+                    <div class="row-dadospessoais-row-1">
+                        <div class="colum-md">
+                            <label class="nome-cod-doc" for="nome">
+                                <h3>
+                                    <p class="simb-obrigacao">*</p>CTPS
+                                </h3>
+                            </label><br>
                             <input type="name" id="nome-cod-doc" name="ctps" placeholder="CTPS" required>
                         </div>
 
                         <div class="colum-md">
-                            <label class="nome-cod-doc" for="nome"><h3>SÉRIE</h3></label><br>
-                            <input type="name" id="nome-cod-doc" name="serie" placeholder="SÉRIE" required>
+                            <label class="nome-cod-doc" for="nome">
+                                <h3>SÉRIE</h3>
+                            </label><br>
+                            <input type="name" id="nome-cod-doc" name="serie" placeholder="SÉRIE"
+                                maxlength="14">
                         </div>
 
                         <div class="colum-md">
-                            <label class="nome-cod-doc" for="nome"><h3>EMISSÃO</h3></label><br>
-                            <input type="name" id="nome-cod-doc" name="emissao" placeholder="EMISSÃO" required>
+                            <label class="nome-cod-doc" for="nome">
+                                <h3>
+                                    <p class="simb-obrigacao">*</p>EMISSÃO
+                                </h3>
+                            </label><br>
+                            <input type="date" id="nome-cod-doc" name="emissao" required>
                         </div>
 
                         <div class="colum-md">
-                            <label class="nome-cod-doc" for="nome"><h3>CPF</h3></label><br>
-                            <input type="name" id="nome-cod-doc" name="cpf" placeholder="CPF" required>
+                            <label class="nome-cod-doc" for="nome">
+                                <h3>
+                                    <p class="simb-obrigacao">*</p>CPF
+                                </h3>
+                            </label><br>
+                            <input type="name" id="nome-cod-doc" name="cpf" placeholder="CPF" required maxlength="15">
                         </div>
 
                         <div class="colum-md">
-                            <label class="nome-cod-doc" for="nome"><h3>IDENTIDADE</h3></label><br>
-                            <input type="name" id="nome-cod-doc" name="identidade" placeholder="IDENTIDADE" required>
+                            <label class="nome-cod-doc" for="nome">
+                                <h3>
+                                    <p class="simb-obrigacao">*</p>IDENTIDADE
+                                </h3>
+                            </label><br>
+                            <input type="name" id="nome-cod-doc" name="identidade" placeholder="IDENTIDADE" required
+                                maxlength="15">
                         </div>
 
                         <div class="colum-md">
-                            <label class="nome-cod-doc" for="nome"><h3>TÍTULO ELEITORAL</h3></label><br>
-                            <input type="name" id="nome-cod-doc" name="titulo" placeholder="TÍTULO ELEITORAL" required>
+                            <label class="nome-cod-doc" for="nome">
+                                <h3>
+                                    <p class="simb-obrigacao">*</p>TÍTULO ELEITORAL
+                                </h3>
+                            </label><br>
+                            <input type="name" id="nome-cod-doc" name="titulo" placeholder="TÍTULO ELEITORAL" required
+                                max="15">
                         </div>
 
                         <div class="colum-md">
-                            <label class="nome-cod-doc" for="nome"><h3>EMISSAO</h3></label><br>
-                            <input type="name" id="nome-cod-doc" name="titulo" placeholder="EMISSÃO" required>
+                            <label class="nome-cod-doc" for="nome">
+                                <h3>
+                                    <p class="simb-obrigacao">*</p>EMISSAO
+                                </h3>
+                            </label><br>
+                            <input type="date" id="nome-cod-doc" name="titulo" required>
                         </div>
 
                     </div>
 
                     <div class="row-dadospessoais-row-2">
                         <div class="colum-md">
-                            <label class="nome-cod-doc" for="nome"><h3>CNH</h3></label><br>
-                            <input type="name" id="nome-cod-doc" name="titulo" placeholder="CNH" required>
+                            <label class="nome-cod-doc" for="nome">
+                                <h3>
+                                    <p class="simb-obrigacao">*</p>CNH
+                                </h3>
+                            </label><br>
+                            <input type="name" id="nome-cod-doc" name="titulo" placeholder="CNH" required
+                                maxlength="15">
                         </div>
                         <div class="colum-md">
-                            <label class="selecao-cod-uf"><h3>CAT</h3></label><br>
-                            <select id="selecao-cod-uf" name="CAT" >
+                            <label class="selecao-cod-uf">
+                                <h3>
+                                    <p class="simb-obrigacao">*</p>CAT
+                                </h3>
+                            </label><br>
+                            <select id="selecao-cod-uf" name="CAT" required>
                                 <option class="selecao" value=""></option>
                                 <option class="selecao" value="A">A</option>
                                 <option class="selecao" value="B">B</option>
@@ -291,18 +418,31 @@
                         </div>
 
                         <div class="colum-md">
-                            <label class="nome-cod-doc" for="nome"><h3>VENCIMENTO</h3></label><br>
-                            <input type="date" id="nome-cod-doc" name="vencimento" placeholder="VENCIMENTO" required>
+                            <label class="nome-cod-doc" for="nome">
+                                <h3>
+                                    <p class="simb-obrigacao">*</p>VENCIMENTO
+                                </h3>
+                            </label><br>
+                            <input type="date" id="nome-cod-doc" name="vencimento" required>
                         </div>
 
                         <div class="colum-md">
-                            <label class="nome-cod-doc" for="nome"><h3>RESERVISTA</h3></label><br>
-                            <input type="name" id="nome-cod-doc" name="reservista" placeholder="RESERVISTA" required>
+                            <label class="nome-cod-doc" for="nome">
+                                <h3>
+                                    <p class="simb-obrigacao">*</p>RESERVISTA
+                                </h3>
+                            </label><br>
+                            <input type="name" id="nome-cod-doc" name="reservista" placeholder="RESERVISTA" required
+                                maxlength="15">
                         </div>
 
                         <div class="colum-md">
-                            <label class="selecao-cod-banco"><h3>BANCO</h3></label><br>
-                            <select id="selecao-cod-banco" name="BANCO" >
+                            <label class="selecao-cod-banco">
+                                <h3>
+                                    <p class="simb-obrigacao">*</p>BANCO
+                                </h3>
+                            </label><br>
+                            <select id="selecao-cod-banco" name="BANCO" required>
                                 <option class="selecao" value=""></option>
                                 <option class="selecao" value="">001 – Banco do Brasil S.A</option>
                                 <option class="selecao" value="A">033 – Banco Santander (Brasil) S.A.</option>
@@ -316,18 +456,31 @@
                         </div>
 
                         <div class="colum-md">
-                            <label class="nome-cod-doc" for="nome"><h3>AGÊNCIA</h3></label><br>
-                            <input type="name" id="nome-cod-doc" name="agencia" placeholder="AGÊNCIA" required>
+                            <label class="nome-cod-doc" for="nome">
+                                <h3>
+                                    <p class="simb-obrigacao">*</p>AGÊNCIA
+                                </h3>
+                            </label><br>
+                            <input type="name" id="nome-cod-doc" name="agencia" placeholder="AGÊNCIA" required max="9">
                         </div>
 
                         <div class="colum-md">
-                            <label class="nome-cod-doc" for="nome"><h3>CONTA</h3></label><br>
-                            <input type="name" id="nome-cod-doc" name="conta" placeholder="CONTA" required>
+                            <label class="nome-cod-doc" for="nome">
+                                <h3>
+                                    <p class="simb-obrigacao">*</p>CONTA
+                                </h3>
+                            </label><br>
+                            <input type="name" id="nome-cod-doc" name="conta" placeholder="CONTA" required
+                                maxlength="9">
                         </div>
 
                         <div class="colum-md">
-                            <label class="selecao-cod-banco"><h3>TIPO DE CONTA</h3></label><br>
-                            <select id="selecao-cod-banco" name="tipoconta" >
+                            <label class="selecao-cod-banco">
+                                <h3>
+                                    <p class="simb-obrigacao">*</p>TIPO DE CONTA
+                                </h3>
+                            </label><br>
+                            <select id="selecao-cod-banco" name="tipoconta" required>
                                 <option class="selecao" value=""></option>
                                 <option class="selecao" value="">Conta corrente</option>
                                 <option class="selecao" value="">Conta poupança</option>
@@ -339,68 +492,93 @@
                     </div>
                 </legend>
 
-                <legend><h2>DADOS DE CONTRATO</h2>
+                <!-- DADOS - CONTRATO -->
+                <legend>
+                    <h2>DADOS DE CONTRATO</h2>
                     <div class="row-dadospessoais-row-1">
                         <div class="colum-md">
-                            <label class="nome-cod-doc" for="nome"><h3>ADMISSÃO</h3></label><br>
-                            <input type="date" id="nome-cod-doc" name="admissao" placeholder="ADMISSÃO" required>
+                            <label class="nome-cod-doc" for="nome">
+                                <h3>
+                                    <p class="simb-obrigacao">*</p>ADMISSÃO
+                                </h3>
+                            </label><br>
+                            <input type="date" id="nome-cod-doc" name="admissao" required>
                         </div>
 
                         <div class="colum-md">
-                            <label class="nome-cod-doc" for="nome"><h3>DEMISSÃO</h3></label><br>
-                            <input type="date" id="nome-cod-doc" name="demissao" placeholder="ADMISSÃO">
+                            <label class="nome-cod-doc" for="nome">
+                                <h3>DEMISSÃO</h3>
+                            </label><br>
+                            <input type="date" id="nome-cod-doc" name="demissao">
                         </div>
 
                         <div class="colum-md">
-                            <label class="numero" for="nome"><h3>MESES</h3></label><br>
+                            <label class="numero" for="nome">
+                                <h3>
+                                    <p class="simb-obrigacao">*</p>MESES
+                                </h3>
+                            </label><br>
                             <input type="number" id="numero" name="meses" placeholder="MESES">
                         </div>
 
                         <div class="colum-md">
-                            <label class="nome-cod-doc" for="nome"><h3>SALÁRIO</h3></label><br>
+                            <label class="nome-cod-doc" for="nome">
+                                <h3>
+                                    <p class="simb-obrigacao">*</p>SALÁRIO
+                                </h3>
+                            </label><br>
                             <input type="name" id="nome-cod-doc" name="salario" placeholder="SALÁRIO" required>
                         </div>
-                        
+
                         <div class="colum-md">
-                            <label class="nome-cod-doc" for="nome"><h3>FUNÇÃO</h3></label><br>
+                            <label class="nome-cod-doc" for="nome">
+                                <h3>
+                                    <p class="simb-obrigacao">*</p>FUNÇÃO
+                                </h3>
+                            </label><br>
                             <input type="name" id="nome-cod-doc" name="funcao" placeholder="FUNÇÃO" required>
                         </div>
 
                         <div class="colum-md">
-                            <label class="nome" for="nome"><h3>HORÁRIO</h3></label><br>
-                            <input type="name" id="nome" name="funcao" placeholder="HORÁRIO" required>
+                            <label class="nome" for="nome">
+                                <h3>HORÁRIO</h3>
+                            </label><br>
+                            <input type="name" id="nome" name="funcao" placeholder="HORÁRIO">
                         </div>
 
                     </div>
                 </legend>
 
+                <!-- EDIÇAÕ DOS DADOS -->
+
                 <div class="row-set">
-                        <div class="colum-md-1">
-                            <p>SALVAR</p>
-                            <input class="submit submit-save" type="submit" value="">   
-                        </div>
+                    <div class="colum-md-1">
+                        <p>SALVAR</p>
+                        <input class="submit submit-save" type="submit" value="">
+                    </div>
 
-                        <div class="colum-md-1">
-                            <p>EDITAR</p>
-                            <input class="button button-edit" type="button" value="">
-                        </div>
+                    <div class="colum-md-1">
+                        <p>EDITAR</p>
+                        <input class="button button-edit" type="button" value="">
+                    </div>
 
-                        <div class="colum-md-1">
-                            <p>LIMPAR</p>
-                            <input class="button button-clear" type="button" value="">
-                        </div>
+                    <div class="colum-md-1">
+                        <p>LIMPAR</p>
+                        <input class="button button-clear" type="button" value="">
+                    </div>
 
-                        <div class="colum-md-1">
-                            <p>EXCLUIR</p>
-                            <input class="button button-del" type="button" value="">
-                        </div>
+                    <div class="colum-md-1">
+                        <p>EXCLUIR</p>
+                        <input class="button button-del" type="button" value="">
+                    </div>
                 </div>
 
             </form>
         </section>
     </div>
-    
 
-   
+
+
 </body>
+
 </html>
