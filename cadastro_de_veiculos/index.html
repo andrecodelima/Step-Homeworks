@@ -19,63 +19,78 @@
 
 <body>
 
-  <div id="main">
+  <header id="main-header">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"><img class="img-logo" src="./imgs/logo.png" title="carmotor" alt="imagem da logomarca"></a>
 
-    <header id="main-header">
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#"><img class="img-logo" src="./imgs/logo.png" alt=""></a>
+        <div class="box">
+          <h1 class="h1-box">SISTEMA <em>CARMOTOR</em> </h1>
+        </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-link" aria-current="page" href="#">
+              <h2>| Home |</h2>
+            </a>
+            <a class="nav-link active" href="#">
+              <h2>| Cadastro de veículos |</h2>
+            </a>
+            <a class="nav-link " href="#">
+              <h2>| Administração |</h2>
+            </a>
+            <a class="nav-link" href="#">
+              <h2>| Comercial |</h2>
+            </a>
 
-          <div class="box">
-            <h1 class="h1-box">SISTEMA MOTOCAR</h1>
-          </div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-              <a class="nav-link" aria-current="page" href="#">
-                <h2>Home |</h2>
-              </a>
-              <a class="nav-link active" href="#">
-                <h2>Cadastro de veículos |</h2>
-              </a>
-              <a class="nav-link " href="#">
-                <h2>Administração |</h2>
-              </a>
-              <a class="nav-link" href="#">
-                <h2>Comercial</h2>
-              </a>
-
-            </div>
           </div>
         </div>
-      </nav>
+      </div>
+    </nav>
 
-    </header>
+  </header>
 
-    <section id="main-section">
+  <section id="main-section">
 
-      <!-- CATEGORIAS -->
+    <!-- CATEGORIAS -->
+    <form action="" method="get">
       <div class="row">
         <div class="col-md-12-section">
-          <label for="categoria">Categorias</label> <br>
-          <h3> Carro <input type="radio" name="cat" id="categoria"> </h3>
-          <h3> Moto <input type="radio" name="cat" id="categoria"> </h3>
+          <label class="label-categoria" for="categoria"><h3>Categorias</h3></label> <br>
+          <ul class="ul-categoria">
+            <li><input class="radio1" type="radio" name="cat" id="categoria">
+              <h5>Carros</h5>
+            </li>
+            <li><input class="radio2" type="radio" name="cat" id="categoria">
+              <h5>Motos</h5>
+            </li>
+          </ul>
         </div>
       </div>
 
-      <!-- CARRO -->
+            <!-- ======= Carro ======
+            ==============================
+                 ======= Carro ======
+            -->
+
       <div class="row-1">
         <div class="titulo-carro" for="">
-          <h3>Carro</h3>
+          <h2 class="h2-subtitulo">Carros</h2>
         </div>
+
+        <!-- Fabricantes -->
         <div class="row">
-          <div class="col-md">
-            <label for="categoria">Fabricantes</label> <br>
-            <select class="select-inf" name="" id="" required>
+          <div class="col-md-section">
+            <label for="fabricantes">Fabricantes</label> <br>
+            <select class="select-inf" name="fabricante" id="fabricante" required>
+
+              <!-- Espaço vazio -->
               <option name=" " id=" "> </option>
+              <!-- Início -->
+
               <option name="gm" id="gm"> General Motors Company</option>
               <option name="volks" id="volks"> Volkswagen Group AG</option>
               <option name="toyota" id="toyota"> Toyota Motor Corporation</option>
@@ -83,10 +98,16 @@
               <option name="ford" id="ford"> Ford Motor Company</option>
             </select>
           </div>
-          <div class="col-md">
-            <label for="categoria">Modelos</label> <br>
-            <select class="select-inf" name="" id="select-inf" required>
+        
+        <!-- Modelos -->
+          <div class="col-md-section">
+            <label for="modelos">Modelos</label> <br>
+            <select class="select-inf" name="modelos" id="select-inf" required>
+
+              <!-- Espaço vazio -->
               <option name=" " id=" "> </option>
+              <!-- Início -->
+
               <option name="gm" id="gm"> Chevrolet</option>
               <option name="volks" id="volks"> Audi</option>
               <option name="toyota" id="toyota"> Toyota</option>
@@ -95,10 +116,15 @@
             </select>
           </div>
 
-          <div class="col-md">
-            <label for="categoria">Ano</label> <br>
-            <select class="select-inf" name="" id="select-inf" required>
-              <option value=""></option>
+        <!-- Ano -->
+          <div class="col-md-section">
+            <label for="ano">Ano</label> <br>
+            <select class="select-inf" name="ano" id="select-inf" required>
+
+              <!-- Espaço vazio -->
+              <option name=" " id=" "> </option>
+              <!-- Início -->
+
               <option value="21">2021</option>
               <option value="20">2020</option>
               <option value="19">2019</option>
@@ -108,136 +134,211 @@
             </select>
           </div>
 
-          <div class="col-md">
+        <!-- Cor -->
+          <div class="col-md-section">
             <label class="cor-label" for="categoria">Cor</label> <br>
             <input class="cor" type="color" name="cor" id="cor">
           </div>
 
-          <div class="col-md">
-            <label class="label-inf" for="categoria" required>Placa</label> <br>
-            <input class="text-inf" type="text" name="placa" id="placa">
+          <div class="col-md-section">
+            <label class="label-inf-placa" for="placa" required>Placa</label> <br>
+            <input class="text-inf" type="text" name="placa" id="placa" placeholder="Ex: LVE 9999">
           </div>
         </div>
       </div>
+      <!-- Fim de sessão -->
 
+      <!-- Início de sessão -->
       <div class="row-1">
         <div class="row">
 
+        <!-- Opcinionais -->
           <div class="col-md">
-            <label for="categoria">Opcionais</label> <br>
-            <input type="checkbox" name="direcao" id="direcao"> Direção
+            <label class="label-inf" for="opcionais">Opcionais</label> <br>
+            <input class="checkbox" type="checkbox" name="direcao" id="direcao"> Direção
             <br>
-            <input type="checkbox" name="ar" id="ar"> Ar
+            <input class="checkbox" type="checkbox" name="ar" id="ar"> Ar
             <br>
-            <input type="checkbox" name="teto" id="teto"> Teto Solar
+            <input class="checkbox" type="checkbox" name="teto" id="teto"> Teto Solar
             <br>
-            <input type="checkbox" name="couro" id="couro"> Couro
+            <input class="checkbox" type="checkbox" name="couro" id="couro"> Couro
           </div>
 
+        <!-- Câmbio -->
           <div class="col-md">
-            <label for="categoria">Câmbio</label> <br>
-            <h3> Manual <input type="radio" name="cat" id="categoria"> </h3>
-            <h3> Automático <input type="radio" name="cat" id="categoria"> </h3>
+            <label class="label-cambio" for="cambio">Câmbio</label> <br>
+            <ul class="cambio">
+              <li><input class="radio1" type="radio" name="cambio" id="cambio">
+                <h5>Manual</h5>
+              </li>
+              <li><input class="radio2" type="radio" name="cambio" id="cambio">
+                <h5>Automático</h5>
+              </li>
+            </ul>
           </div>
 
+        <!-- Estado -->
           <div class="col-md">
-            <label for="categoria">Estado</label> <br>
-            <h3> Zero KM <input type="radio" name="cat" id="categoria"> </h3>
-            <h3> Usado <input type="radio" name="cat" id="categoria"> </h3>
+            <label class="label-estado" for="categoria">Estado</label> <br>
+            <ul class="estado">
+              <li><input class="radio1" type="radio" name="estado" id="estado">
+                <h5>Zero KM</h5><br>
+              </li>
+              <li><input class="radio2" type="radio" name="estado" id="estado">
+                <h5>Usado</h5>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+            <!-- ======= Moto ======
+            ==============================
+                 ======= Moto ======
+            -->
+
+      <div class="row-1">
+        <div class="titulo-carro" for="">
+          <h2 class="h2-subtitulo">Motos</h2>
+        </div>
+
+        <!-- Fabricantes -->
+        <div class="row">
+          <div class="col-md-section">
+            <label for="fabricantes">Fabricantes</label> <br>
+            <select class="select-inf" name="fabricante" id="fabricante" required>
+
+              <!-- Espaço vazio -->
+              <option name=" " id=" "> </option>
+              <!-- Início -->
+
+              <option name="gm" id="gm"> General Motors Company</option>
+              <option name="volks" id="volks"> Volkswagen Group AG</option>
+              <option name="toyota" id="toyota"> Toyota Motor Corporation</option>
+              <option name="hyundai" id="hyundai">Hyundai Motor Group</option>
+              <option name="ford" id="ford"> Ford Motor Company</option>
+            </select>
+          </div>
+        
+        <!-- Modelos -->
+          <div class="col-md-section">
+            <label for="modelos">Modelos</label> <br>
+            <select class="select-inf" name="modelos" id="select-inf" required>
+
+              <!-- Espaço vazio -->
+              <option name=" " id=" "> </option>
+              <!-- Início -->
+
+              <option name="gm" id="gm"> Chevrolet</option>
+              <option name="volks" id="volks"> Audi</option>
+              <option name="toyota" id="toyota"> Toyota</option>
+              <option name="hyundai" id="hyundai">Hyundai</option>
+              <option name="ford" id="ford"> Ford </option>
+            </select>
+          </div>
+
+        <!-- Ano -->
+          <div class="col-md-section">
+            <label for="ano">Ano</label> <br>
+            <select class="select-inf" name="ano" id="select-inf" required>
+
+              <!-- Espaço vazio -->
+              <option name=" " id=" "> </option>
+              <!-- Início -->
+
+              <option value="21">2021</option>
+              <option value="20">2020</option>
+              <option value="19">2019</option>
+              <option value="18">2018</option>
+              <option value="17">2017</option>
+              <option value="16">2016</option>
+            </select>
+          </div>
+
+        <!-- Cor -->
+          <div class="col-md-section">
+            <label class="cor-label" for="categoria">Cor</label> <br>
+            <input class="cor" type="color" name="cor" id="cor">
+          </div>
+
+          <div class="col-md-section">
+            <label class="label-inf-placa" for="placa" required>Placa</label> <br>
+            <input class="text-inf" type="text" name="placa" id="placa" placeholder="Ex: LVE 9999">
+          </div>
+        </div>
+      </div>
+      <!-- Fim de sessão -->
+
+      <!-- Início de sessão -->
+      <div class="row-1">
+        <div class="row">
+
+        <!-- Opcinionais -->
+          <div class="col-md">
+            <label class="label-inf" for="opcionais">Opcionais</label> <br>
+            <input class="checkbox" type="checkbox" name="direcao" id="direcao"> Direção
+            <br>
+            <input class="checkbox" type="checkbox" name="ar" id="ar"> Ar
+            <br>
+            <input class="checkbox" type="checkbox" name="teto" id="teto"> Teto Solar
+            <br>
+            <input class="checkbox" type="checkbox" name="couro" id="couro"> Couro
+          </div>
+
+        <!-- Câmbio -->
+          <div class="col-md">
+            <label class="label-cambio" for="cambio">Câmbio</label> <br>
+            <ul class="cambio">
+              <li><input class="radio1" type="radio" name="cambio" id="cambio">
+                <h5>Manual</h5>
+              </li>
+              <li><input class="radio2" type="radio" name="cambio" id="cambio">
+                <h5>Automático</h5>
+              </li>
+            </ul>
+          </div>
+
+        <!-- Estado -->
+          <div class="col-md">
+            <label class="label-estado" for="categoria">Estado</label> <br>
+            <ul class="estado">
+              <li><input class="radio1" type="radio" name="estado" id="estado">
+                <h5>Zero KM</h5><br>
+              </li>
+              <li><input class="radio2" type="radio" name="estado" id="estado">
+                <h5>Usado</h5>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Fim de sessão -->
+
+      <!-- Início de sessão -->
+
+      
+      <div class="row-1">
+        <div class="row-set">
+          <div class="col-md-3">
+            <input class="btn btn-success" type="submit" value="Cadastrar">
+          </div>
+
+          <div class="col-md-3">
+            <input class="btn btn-warning" type="reset" value="Limpar">
+          </div>
+
+          <div class="col-md-3">
+            <input class="btn btn-danger" type="button" value="Excluir">
           </div>
 
         </div>
 
       </div>
+    </form>
 
-            <!-- MOTOS -->
-
-      
-            <div class="row-1">
-              <div class="titulo-carro" for="">
-                <h3>Moto</h3>
-              </div>
-              <div class="row">
-                <div class="col-md">
-                  <label for="categoria">Fabricantes</label> <br>
-                  <select class="select-inf" name="" id="" required>
-                    <option name=" " id=" "> </option>
-                    <option name="gm" id="gm"> General Motors Company</option>
-                    <option name="volks" id="volks"> Volkswagen Group AG</option>
-                    <option name="toyota" id="toyota"> Toyota Motor Corporation</option>
-                    <option name="hyundai" id="hyundai">Hyundai Motor Group</option>
-                    <option name="ford" id="ford"> Ford Motor Company</option>
-                  </select>
-                </div>
-                <div class="col-md">
-                  <label for="categoria">Modelos</label> <br>
-                  <select class="select-inf" name="" id="select-inf" required>
-                    <option name=" " id=" "> </option>
-                    <option name="gm" id="gm"> Chevrolet</option>
-                    <option name="volks" id="volks"> Audi</option>
-                    <option name="toyota" id="toyota"> Toyota</option>
-                    <option name="hyundai" id="hyundai">Hyundai</option>
-                    <option name="ford" id="ford"> Ford </option>
-                  </select>
-                </div>
-      
-                <div class="col-md">
-                  <label for="categoria">Ano</label> <br>
-                  <select class="select-inf" name="" id="select-inf" required>
-                    <option value=""></option>
-                    <option value="21">2021</option>
-                    <option value="20">2020</option>
-                    <option value="19">2019</option>
-                    <option value="18">2018</option>
-                    <option value="17">2017</option>
-                    <option value="16">2016</option>
-                  </select>
-                </div>
-      
-                <div class="col-md">
-                  <label class="cor-label" for="categoria">Cor</label> <br>
-                  <input class="cor" type="color" name="cor" id="cor">
-                </div>
-      
-                <div class="col-md">
-                  <label class="label-inf" for="categoria" required>Placa</label> <br>
-                  <input class="text-inf" type="text" name="placa" id="placa">
-                </div>
-              </div>
-            </div>
-      
-            <div class="row-1">
-              <div class="row">
-      
-                <div class="col-md">
-                  <label for="categoria">Opcionais</label> <br>
-                  <input type="checkbox" name="direcao" id="direcao"> Direção
-                  <br>
-                  <input type="checkbox" name="ar" id="ar"> Ar
-                  <br>
-                  <input type="checkbox" name="teto" id="teto"> Teto Solar
-                  <br>
-                  <input type="checkbox" name="couro" id="couro"> Couro
-                </div>
-      
-                <div class="col-md">
-                  <label for="categoria">Câmbio</label> <br>
-                  <h3> Manual <input type="radio" name="cat" id="categoria"> </h3>
-                  <h3> Automático <input type="radio" name="cat" id="categoria"> </h3>
-                </div>
-      
-                <div class="col-md">
-                  <label for="categoria">Estado</label> <br>
-                  <h3> Zero KM <input type="radio" name="cat" id="categoria"> </h3>
-                  <h3> Usado <input type="radio" name="cat" id="categoria"> </h3>
-                </div>
-      
-              </div>
-      
-            </div>
-
-
-  </div>
   </section>
   </div>
 

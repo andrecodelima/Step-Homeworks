@@ -6,11 +6,18 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+body{
+    background-image: url("../imgs/fundo.png");
+    /* background-repeat: no-repeat; */
+    background-size: cover;
+
+}
+
 .navbar-brand .img-logo{
-    width: 140px;
-    height: 140px;
+    width: 180px;
+    height: 160px;
     box-shadow: 1px 5px 9px;
-    color: black;
+    color: rgb(0, 0, 0);
 }
 
 
@@ -18,20 +25,51 @@
     font-size: 30pt;
     font-weight: bold;
     color: white;
+    margin-left: -170px;
 }
 
+.h2-subtitulo{
+    font-weight: bolder;
+    font-size: 20pt;
+    color: rgb(255,255,255);
+
+}
 .navbar-nav h2{
     font-size: 15pt;
-    font-weight: 800;
+    font-weight: bold;
 }
 
 .navbar-nav h2:hover{
-    color: #949498;
+    color: white;
 }
 
 
 a.nav-link:hover{
-    color:#949498;
+    color:red;
+    background-color: rgb(0, 0, 0);
+}
+
+
+ul h5{
+    float: left;
+    margin-left: 15px;
+    font-size: 13pt;
+}
+
+ul{
+    list-style: none;
+    margin-left: 2px;
+
+}
+
+.ul-categoria{
+    margin-left: 41%;
+}
+
+li{
+    float: left;
+    margin-left: -14px;
+    padding-right: 55px;
 }
 
 
@@ -39,18 +77,18 @@ a.nav-link:hover{
 #main-header{
     width: 100%;
     height: 10%;
-    border: 2px solid red;
+
 }
 
 .container-fluid{
-    border: 1px solid rgb(4, 0, 255);
+    /* border: 1px solid rgb(4, 0, 255); */
 
 }
 
 .navbar-collapse{
-    border: 1px solid rgb(255, 0, 140);
+    /* border: 1px solid rgb(255, 0, 140); */
     margin-top: 60px;
-    margin-left: -90%;
+    margin-left: -100%;
 
 }
 .collapse{
@@ -60,7 +98,7 @@ a.nav-link:hover{
 }
 
 .navbar-nav{
-    border: 1px solid rgb(0, 255, 21);
+    /* border: 1px solid rgb(0, 255, 21); */
 }
 .nav-link a{
     color: red;
@@ -69,57 +107,126 @@ a.nav-link:hover{
     width: 90%;
     height: 40px;
     margin-top: -60px;
-    border: 1px solid rgb(0, 255, 21);
+    /* border: 1px solid rgb(0, 255, 21); */
     text-align: center;
 }
+
 /* SECTION */
 
 #main-section{
-    width:60%;
-    height: 900px;
-    border: 1px solid rgb(255, 0, 0);
+    width:65%;
+    /* height: 960px; */
+    background-color: #ffff;
     margin: auto;
+    padding: 15px;
+    position: static;
+    margin-top: 40px;
+    box-shadow: 2px 2px 7px;
+
 }
+
 
 .row{
     margin-top: 10px;
-    
-} 
+    border: 1px solid red;
+}
 
 .row-1{
-    border: 1px solid rgb(0, 255, 64);
-    margin-top: 30px;
+    border: 1px solid red;
+    margin-top: 40px;
+    background-color: #949498;
+    /* width: 90px; */
+    box-shadow: 3px 3px 3px;
+
 
 } 
 
+.row-set {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+    padding: 15px;
+}
+
+.col-md-section{
+    margin:0;
+    padding-left:10px;
+    border-radius: 2px;
+    padding: 15px;
+}
+
+
 .col-md-12-section{
-    border: 1px solid rgb(38, 0, 255);
-    width: 95%;
-    height: 90px;
+    width: 97%;
+    background-color: #949498;
+    border: 1px solid red;
+    box-shadow: 3px 3px 3px;
+    border-radius: 2px;
+    text-align: center;
+    
 }
 
 
 label{
-    font-size: 17pt;
+    font-size: 12pt;
     font-weight: bold;
     margin-left: 15px;
     margin-top: 15px;
-    width: 100%;
-    border: 1px solid rgb(38, 0, 255);
+    padding: 5px;
+    width: 160px;
+    border: 1px solid rgb(255,255,255);
+    color: rgb(0, 0, 0);
+    background-color: #818183;
+
 
 }
 
+.label-inf{
+    width: 160px;
+    margin-left: 15px;
+    padding: 5px;
+}
+
+.label-inf-placa{
+    width: 140px;
+    margin-left: 15px;
+    padding: 5px;
+}
+
+.label-categoria{
+    width: 190px;
+    height: 40px;
+
+}
+
+.label-categoria h3{
+    text-align: center;
+}
+
+.label-cambio{
+    width: 190px;
+    height: 40px;
+}
+
+.label-estado{
+    width: 190px;
+    height: 40px;
+}
 .titulo-carro{
     text-align: center;
     padding-top: 10px;
-    border: 1px solid rgb(38, 0, 255);
+    background-color: rgb(0, 0, 0);
 
 }
 .col-md-12-section h3 {
-    font-size: 14pt;
+    font-size: 17pt;
     font-weight: bold;
     float: left;
-    margin-left: 15px;
+    margin-left: 25px;
+    
 }   
 
 .col-md h3 {
@@ -131,24 +238,119 @@ label{
 } 
 
 .select-inf{
-    width: 120px;
+    width: 160px;
     margin-left: 15px;
 }
 
 .cor{
     margin-left: 15px;
 }
+
 .cor-label{
     width: 70px;
 
 }
 
-.label-inf{
-    width: 110px;
-    margin-left: -50px;
-}
 .text-inf{
-    width: 110px;
-    margin-left: -50px;
+    width: 140px;
+    margin-left: 15px;
 
+}
+
+.checkbox{
+    margin-left: 15px;
+}
+
+
+.radio1{
+    margin-left: -70px;
+}
+
+.radio2{
+    margin-left: -65px;
+}
+
+input::placeholder{
+    color: #818183;
+    padding: 10px;
+    font-size: 10pt;
+}
+
+input{
+    all: unset;
+    border: 1px solid white;
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+  border-radius: 4px;
+}
+input:checked{
+    background-color: red;
+
+}
+
+input.cor{
+    all: unset;
+    border: 1px solid white;
+  width: 68px;
+  height: 25px;
+  display: inline-block;
+  border-radius: 4px;
+  margin-left: 15px;
+}
+
+input#placa{
+    all: unset;
+    border: 1px solid white;
+  width: 140px;
+  height: 25px;
+  display: inline-block;
+  border-radius: 4px;
+  margin-left: 15px;
+  background-color: white;
+}
+
+
+/* .col-md-12-section ul{
+    margin-left: 1px;
+} */
+
+.col-md-12-section .radio1{
+    margin-left: -145px;
+}
+
+.col-md-12-section .radio2{
+    margin-left: -135px;
+}
+
+.cambio .radio1{
+    margin-left: -85px;
+}
+
+.cambio .radio2{
+    margin-left: -115px;
+}
+
+.estado .radio1{
+    margin-left: -95px;
+}
+
+.estado .radio2{
+    margin-left: -80px;
+}
+
+
+.btn-success{
+    width: 100px;
+    height: 30px;
+}
+
+.btn-warning{
+    width: 100px;
+    height: 30px;
+}
+
+.btn-danger{
+    width: 100px;
+    height: 30px;
 }
