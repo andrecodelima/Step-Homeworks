@@ -128,11 +128,11 @@ li{
 
 .row{
     margin-top: 10px;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 .row-1{
-    border: 1px solid red;
+    /* border: 1px solid red; */
     margin-top: 40px;
     background-color: #949498;
     /* width: 90px; */
@@ -162,7 +162,7 @@ li{
 .col-md-12-section{
     width: 97%;
     background-color: #949498;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     box-shadow: 3px 3px 3px;
     border-radius: 2px;
     text-align: center;
