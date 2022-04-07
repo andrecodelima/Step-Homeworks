@@ -13,11 +13,6 @@
     color: black;
 }
 
-h2{
-    color:rgb(255, 255, 255);
-    font-size: 16pt;
-    font-weight: 800;
-}
 
 .h1-box{
     font-size: 30pt;
@@ -26,7 +21,7 @@ h2{
 }
 
 .navbar-nav h2{
-    font-size: 20pt;
+    font-size: 15pt;
     font-weight: 800;
 }
 
@@ -79,9 +74,81 @@ a.nav-link:hover{
 }
 /* SECTION */
 
-#main-box{
+#main-section{
     width:60%;
     height: 900px;
     border: 1px solid rgb(255, 0, 0);
     margin: auto;
+}
+
+.row{
+    margin-top: 10px;
+    
+} 
+
+.row-1{
+    border: 1px solid rgb(0, 255, 64);
+    margin-top: 30px;
+
+} 
+
+.col-md-12-section{
+    border: 1px solid rgb(38, 0, 255);
+    width: 95%;
+    height: 90px;
+}
+
+
+label{
+    font-size: 17pt;
+    font-weight: bold;
+    margin-left: 15px;
+    margin-top: 15px;
+    width: 100%;
+    border: 1px solid rgb(38, 0, 255);
+
+}
+
+.titulo-carro{
+    text-align: center;
+    padding-top: 10px;
+    border: 1px solid rgb(38, 0, 255);
+
+}
+.col-md-12-section h3 {
+    font-size: 14pt;
+    font-weight: bold;
+    float: left;
+    margin-left: 15px;
+}   
+
+.col-md h3 {
+    font-size: 14pt;
+    font-weight: bold;
+    float: left;
+    margin-left: 15px;
+    margin-top: 10px;
+} 
+
+.select-inf{
+    width: 120px;
+    margin-left: 15px;
+}
+
+.cor{
+    margin-left: 15px;
+}
+.cor-label{
+    width: 70px;
+
+}
+
+.label-inf{
+    width: 110px;
+    margin-left: -50px;
+}
+.text-inf{
+    width: 110px;
+    margin-left: -50px;
+
 }
