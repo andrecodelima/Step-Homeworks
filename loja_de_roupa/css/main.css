@@ -1,0 +1,36 @@
+/* GLOBAL */
+
+*{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin:0 auto;
+}
+
+.img-logo{
+    width: 150px;
+    height: 150px;
+}
+
+/* HEADER */
+
+.navbar{
+    border: 2px red solid;
+    height: 150px;
+
+ }
+
+
+.row{
+    border: 2px red solid;
+}
+
+.col-md-2{
+    border: 2px blue solid;
+}
+
+#main{
+    border: 2px red solid;
+    width: 1100px;
+    height: 1000px;
+    margin: auto;
+ }
+

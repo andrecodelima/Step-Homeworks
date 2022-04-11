@@ -1,0 +1,13 @@
+DEVER DE CASA
+=============
+
+Crie um site para uma loja de roupas (pode ser feminina, masculina, infantil, esportiva e etc)
+Perecisa ter:
+Home
+Produtos
+Contato (formulário de contatos e um mapa de como chegar)
+
+Coloque os campos que achar conveniente no formulário
+Coloque fotos dos Produtos
+
+Pode copiar de algum lugar ou fazer do zero.
