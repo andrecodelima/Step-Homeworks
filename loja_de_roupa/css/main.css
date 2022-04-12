@@ -8,8 +8,36 @@
 .img-logo{
     width: 150px;
     height: 150px;
+    margin-left: 300px;
 }
 
+.img-section{
+    width: 1050px;
+    height: 500px;
+}
+
+.img-row-1{
+    width: 240px;
+    height: 340px;
+    margin-left: -15px;
+}
+
+
+.navbar-nav h2{
+    font-size: 16pt;
+    padding-left: 10px;
+}
+
+
+.box-title-produto h4{
+    font-size: 10pt;
+    font-weight: bold;
+}
+
+.box-title-produto p{
+    font-size: 8pt;
+
+}
 /* HEADER */
 
 .navbar{
@@ -18,19 +46,81 @@
 
  }
 
+ .container-fluid{
+    border: 2px rgb(20, 170, 45) solid;
 
+ }
+
+ .navbar-brand{
+    border: 2px rgb(20, 170, 45) solid;
+
+ }
+
+ .collapse{
+    border: 2px rgb(20, 170, 45) solid;
+
+ }
+
+.navbar-nav{
+    border: 2px rgb(20, 170, 45) solid;
+    margin: 0;
+    width: 600px;
+}
+
+/* SECTION */
 .row{
-    border: 2px red solid;
+    border: 2px rgb(9, 107, 38) solid;
+    margin-left: 2px;
+    width: 1100px;
+    margin-top: 20px;
 }
 
-.col-md-2{
-    border: 2px blue solid;
+.row-2{
+    border: 2px rgb(9, 107, 38) solid;
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    margin-top: 100px;
 }
 
+.col-md-3{
+    border: 2px rgb(17, 0, 255) solid;
+    width: 240px;
+    height: 430px;
+    margin-left: 15px;
+    margin-right: 17px;
+}
+
+.box-title-produto{
+    border: 2px rgb(17, 0, 255) solid;
+    width: 240px;
+    height: 60px;
+    margin-left: -15px;
+    margin-top: 30px;
+    padding: 5px;
+}
 #main{
     border: 2px red solid;
     width: 1100px;
-    height: 1000px;
+    height: 1200px;
     margin: auto;
+    margin-top: 5px;
  }
 
+
+ .box-button{
+     width: 200px;
+     height: 50px;
+     border: 2px red solid;
+     margin-top: -250px;
+     margin-right: 70px;
+ }
+
+ .button-banner{
+    width: 200px;
+    height: 50px;
+    margin-left: -14px;
+    margin-top: -2px;
+ }

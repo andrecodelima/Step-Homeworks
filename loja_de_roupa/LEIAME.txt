@@ -11,3 +11,10 @@ Coloque os campos que achar conveniente no formulário
 Coloque fotos dos Produtos
 
 Pode copiar de algum lugar ou fazer do zero.
+
+coral, terracota, bege, branco
+
+3e4430 - (verde - fundo)
+c86d37 - (laranja - nome modas)
+ff5757 - (coral)
+c5c8be - (cinza claro - flor)
