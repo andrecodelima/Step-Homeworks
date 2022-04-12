@@ -1,19 +1,29 @@
 /* GLOBAL */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 *{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Raleway;
     margin:0 auto;
+}
+
+body{
+    background-color: #fff;
 }
 
 .img-logo{
     width: 150px;
     height: 150px;
-    margin-left: 300px;
+    margin-left: 210px;
 }
 
 .img-section{
-    width: 1050px;
+    width: 1069px;
     height: 500px;
+}
+.img-banner{
+    width: 500px;
+    height: 430px;
+    margin-left: -12px;
 }
 
 .img-row-1{
@@ -35,80 +45,150 @@
 }
 
 .box-title-produto p{
-    font-size: 8pt;
+    font-size: 7pt;
+}
 
+.col-md-4 h4{
+    font-size: 10pt;
+    font-weight: bold;
+}
+
+.col-md-4 h5{
+    font-size: 10pt;
+}
+
+.box-contato h2{
+    font-size: 17pt;
+    font-weight: bolder;
 }
 /* HEADER */
 
 .navbar{
-    border: 2px red solid;
     height: 150px;
-
  }
 
  .container-fluid{
-    border: 2px rgb(20, 170, 45) solid;
+    background-color: #3e4430;
 
  }
 
  .navbar-brand{
-    border: 2px rgb(20, 170, 45) solid;
 
  }
 
  .collapse{
-    border: 2px rgb(20, 170, 45) solid;
 
  }
 
 .navbar-nav{
-    border: 2px rgb(20, 170, 45) solid;
     margin: 0;
     width: 600px;
+    margin-top: 55px;
 }
 
 /* SECTION */
 .row{
-    border: 2px rgb(9, 107, 38) solid;
+    /* border-radius: 8px; */
+    /* box-shadow: 1px 1px 2px; */
     margin-left: 2px;
     width: 1100px;
     margin-top: 20px;
 }
 
+.row-form{
+    /* border: 2px solid red; */
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    height: 450px;
+    margin-top: 4px;   
+}
+
 .row-2{
-    border: 2px rgb(9, 107, 38) solid;
     --bs-gutter-x: 1.5rem;
     --bs-gutter-y: 0;
     display: flex;
     flex-wrap: wrap;
     margin: 0;
     margin-top: 100px;
+    padding: 10px;
 }
-
 .col-md-3{
-    border: 2px rgb(17, 0, 255) solid;
+    border: 2px rgb(240, 240, 245) solid;
+    border-radius: 8px;
+    box-shadow: 3px 3px 5px;
     width: 240px;
     height: 430px;
     margin-left: 15px;
     margin-right: 17px;
 }
 
+.col-md-banner{
+    /* border: 2px rgb(17, 0, 255) solid; */
+    width: 500px;
+    height: 430px;
+    /* margin-left: 14px; */
+}
+
+.col-md-4-form{
+    border: 2px rgb(240, 240, 245) solid;
+    border-radius: 8px;
+    box-shadow: 3px 3px 5px;
+    width: 400px;
+    height: 450px;
+    margin: 0;
+    padding: 10px;
+}
+
+.col-md-4-mapa{
+    border: 2px rgb(240, 240, 245) solid;
+    border-radius: 8px;
+    box-shadow: 3px 3px 5px;
+    width:650px;
+    height: 450px;
+    margin: 0;
+    padding: 10px;
+    margin-left: 20px;
+}
+
 .box-title-produto{
-    border: 2px rgb(17, 0, 255) solid;
+    border: 2px rgb(240, 240, 245) solid;
+    border-radius: 8px;
     width: 240px;
     height: 60px;
-    margin-left: -15px;
-    margin-top: 30px;
+    margin-left: -14px;
+    margin-top: 28px;
     padding: 5px;
 }
+
+.box-contato{
+    border: 2px rgb(240, 240, 245) solid;
+    border-radius: 8px;
+    width: 400px;
+    height: 60px;
+    margin-left: -1px;
+    margin-top: 28px;
+    padding: 10px;
+}
+
 #main{
-    border: 2px red solid;
     width: 1100px;
     height: 1200px;
     margin: auto;
     margin-top: 5px;
  }
 
+a.nav-link-gmodas{
+    text-decoration: none;
+    color: #fff;
+}
+
+a.nav-link-gmodas:hover{
+    background-color:#c86d37;
+    margin: auto;
+}
 
  .box-button{
      width: 200px;
@@ -123,4 +203,42 @@
     height: 50px;
     margin-left: -14px;
     margin-top: -2px;
+ }
+
+ #main-footer{
+    background-color: #c5c8be;
+    width: 1069px;
+    margin-top: -30px;
+    padding-left: 10px;
+ }
+
+ .texto{
+     width: 350px;
+ }
+ label{
+     margin-top: 10px;
+     font-size: 11pt;
+     font-weight: bold;
+ }
+
+ #area-texto{
+     width: 350px;
+     height: 150px;
+ }
+
+ .submit{
+    width: 150px;
+    height: 50px;
+    background-color:#3e4430;
+    color: #fff;
+    font-size: 15pt;
+    font-weight: bold;
+ }
+
+ iframe{
+    margin-top:-10px;
+    margin-left: -11px;
+    width:650px;
+    height: 450px;
+    border-radius: 8px;
  }
