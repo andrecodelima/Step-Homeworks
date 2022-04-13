@@ -1,0 +1,11 @@
+DEVER DE CASA
+=============
+Usando como imagem o link abaixo:
+https://www.produzz.com.br/wp-content/uploads/2016/10/blank-price-tag-png-4.png
+
+coloque dentro dessa imagem de etiqueta de preço dados de um produto, sabendo que:
+-Precisa da foto do produto
+-Nome do produto em destaque
+-Preço do produto
+
+TODOS OS ITENS DEVERÃO APARECER SOBRE A ETIQUETA DE PREÇO.
