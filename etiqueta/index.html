@@ -12,13 +12,27 @@
 <style>
 *{
     margin: 0 auto;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+
+h1{
+
+}
+
+h2{
+
+}
+
 #main{
  border: 2px solid red;
  margin: 0 auto;
- width: 500px;
- height: 500px;   
+ width: 516px;
+ height: 424px;   
  position: relative;
+ border: 1px solid #cbc3b3;
+ border-radius: 12px;
+ box-shadow: 0px 20px 22px;
+ color: rebeccapurple;
 
 }
     #box-etiqueta{
@@ -35,17 +49,31 @@
         }
 
     #box-produto{
-
+        position: absolute;
+        top: 159px;
+        left: 179px;
     }
+        .img-bola{
+            width: 122px
+        }
 
     #box-nome-produto{
-
+        position: absolute;
+        top: 114px;
+        left: 179px;
+        font-size: 14px;
+        color: #eceae6;
     
     }
 
     #box-preco-produto{
-
-    
+        position: absolute;
+        top: 196px;
+        left: 314px;
+        font-size: 15px;
+        background-color: #eeebe5;
+        padding: 5px;
+        border: 1px solid wheat;
     }
 
 </style>
@@ -60,16 +88,15 @@
         </div>    
     
         <div id="box-produto">
-            <img src="https://static.netshoes.com.br/produtos/bola-de-futebol-campo-adidas-starlancer-plus/26/NQQ-7359-026/NQQ-7359-026_zoom1.jpg?ts=1638375872&ims=326x" alt="">
+            <img class="img-bola" src="./bola.png" alt="">
         </div>
     
         <div id="box-nome-produto">
-            <h1>Bola de Futebol Campo <br>
-                Adidas Starlancer Plus</h1>
+            <h1>Bola de Futebol</h1>
         </div>
     
         <div id="box-preco-produto">
-            <h2>129,99</h2>
+            <h2>R$ 99,99</h2>
         </div>
     
     </div>
