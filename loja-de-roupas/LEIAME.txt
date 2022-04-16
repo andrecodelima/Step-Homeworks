@@ -1,0 +1,20 @@
+DEVER DE CASA
+=============
+
+Crie um site para uma loja de roupas (pode ser feminina, masculina, infantil, esportiva e etc)
+Perecisa ter:
+Home
+Produtos
+Contato (formulário de contatos e um mapa de como chegar)
+
+Coloque os campos que achar conveniente no formulário
+Coloque fotos dos Produtos
+
+Pode copiar de algum lugar ou fazer do zero.
+
+coral, terracota, bege, branco
+
+3e4430 - (verde - fundo)
+c86d37 - (laranja - nome modas)
+ff5757 - (coral)
+c5c8be - (cinza claro - flor)
