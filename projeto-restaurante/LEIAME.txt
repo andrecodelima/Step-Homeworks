@@ -11,18 +11,6 @@ Entrega do vídeo demonstrando o funcionamento do projeto em: MYSTAT, PERFORMANC
 
 -------------------------REQUISITOS-------------------------------------
 
-TEMA 1: Clínica Médica
-    -Home
-    -Atendimento (formulário de pré agendamento);
-    -Internação (Mostrar fotos dos quartos)
-    -Fale Conosco (formulário de contato e MAPA de como chegar)
-
-TEMA 2: ACADEMIA DE GINÁSTICA
-    -Home
-    -Atividades (mostrar foto e descrição das atividades)
-    -Matrículas (formulário de pré matrícula do aluno)
-    -Sobre nós (mapa de como chegar e um formulário de contato)
-
 TEMA 3: Restaurante
     -Home
     -Cardápio (foto e descrição dos pratos)
@@ -42,3 +30,8 @@ TEMA 3: Restaurante
 ######################DEVER DE CASA#####################
 
 Subir a parcial do projeto, ou seja, aquilo que foi feito até a próxima aula.
+
+########################################################
+
+Comida brasileira
+nome: do oiapoque ao chuí
