@@ -35,3 +35,5 @@ Subir a parcial do projeto, ou seja, aquilo que foi feito até a próxima aula.
 
 Comida brasileira
 nome: do oiapoque ao chuí
+paleta: #295135 (verde escuro)
+        #B9A992 (Bege)
