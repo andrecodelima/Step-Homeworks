@@ -10,22 +10,116 @@
 .img-logo{
     width: 150px;
     height: 150px;
+    margin-left: 50px;
 }
 
 /* Header - NavBar */
 #main-header{
-    border: 2px solid red;
+    border: 2px solid rgb(0, 68, 255);
     width: 100%;
-    height: 150px;
+    height: 180px;
 }
 
 .navbar{
-    border: 2px solid red;
-    background-color: #295135  ;
+    /* border: 2px solid rgb(72, 255, 0); */
+    /* background-color: #dacb8d   ; */
     height: 150px;
 }
 
 .navbar-expand-lg{
-    border: 2px solid blanchedalmond;
+    border: 2px solid red;
 
 }
+
+.nav-item-left{
+    border: 2px solid red;
+    margin-left: 20px;
+}
+
+.nav-item-right{
+    border: 2px solid red;
+    margin-left: 20px;
+}
+
+.navbar-brand {
+    display: inline-block;
+    padding-top: 0.3125rem;
+    padding-bottom: 0.3125rem;
+    /* margin-right: rem; */
+    font-size: 1.25rem;
+    line-height: inherit;
+    /* white-space: nowrap; */
+    margin: 0;
+    padding: 0;
+    margin-left: -40px;
+}
+.navbar-prenav {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+    height: 50px;
+    flex-direction: column;
+    border: 2px blue solid;
+}
+
+.box-nav{
+    
+        width: 2000px;
+        /* padding-right: 15px; */
+        /* padding-left: 15px; */
+        margin-right: auto;
+        margin-left: auto;
+        border: 2px solid green;
+    
+}
+
+.navbar-nav-left{
+    border: 2px solid rgb(47, 0, 255);
+    margin-left: 400px;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        padding-left: 0;
+        margin-bottom: 0;
+        list-style: none;
+        flex-direction: row
+    }
+
+.navbar-nav-right{
+    border: 2px solid rgb(47, 0, 255);
+    margin-left: 50px;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        padding-left: 0;
+        margin-bottom: 0;
+        list-style: none;
+        flex-direction: row
+    }
+
+    .navbar-nav-sup{
+        border: 2px solid rgb(47, 0, 255);
+        margin-left: 50px;
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            padding-left: 0;
+            margin-bottom: 0;
+            list-style: none;
+            flex-direction: row
+        }
+    
+    .nav-link-box1{
+        margin-left: 800px;
+        width: 60px;
+    }
