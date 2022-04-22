@@ -37,3 +37,5 @@ Comida brasileira
 nome: do oiapoque ao chuí
 paleta: #295135 (verde escuro)
         #B9A992 (Bege)
+	#fa6f19 (laranja - circulo)
+	#fba406 (mapa)
