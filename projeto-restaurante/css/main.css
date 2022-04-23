@@ -1,0 +1,459 @@
+
+/* Global */
+/* Fonte:  */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{   
+    margin: 0 auto;
+}
+
+body{
+    background-color: #F6F6F1;
+}
+.img-logo{
+    width: 150px;
+    height: 150px;
+    margin-left: 0px;
+}
+
+.img-icon1{
+    position: relative;
+
+}
+
+.banner-cardapio img{
+    width: 100%;
+    height: 500px;
+}
+
+#main{
+    width: 100%;
+    /* height: 3000px; */
+    border: 2px solid red;
+}
+
+
+/* PRENAV */
+.navbar-brand-icon1{
+    border: 2px solid red;
+    width: 40px;
+    margin-left: 1200px;
+}
+
+.navbar-brand-icon2{
+    border: 2px solid red;
+    width: 40px;
+    /* margin-left: 1200px; */
+}
+
+.navbar-brand-icon3{
+    border: 2px solid red;
+    width: 40px;
+    /* margin-left: 1200px; */
+}
+
+/* Header - NavBar */
+#main-header{
+    border: 2px solid rgb(0, 68, 255);
+    width: 100%;
+    height: 150px;
+}
+
+.navbar{
+    /* border: 2px solid rgb(72, 255, 0); */
+    /* background-color: #dacb8d   ; */
+    height: 118px;
+    background-color:#dacb8d;
+    /* margin-top: 1px; */
+    padding-top: 10px;
+}
+
+a.nav-link{
+    color: white;
+    font-size: 15pt;
+    font-weight: bold;
+}
+
+.navbar-brand-logo{
+    width: 150px;
+    /* border: 2px solid red; */
+    margin-left: 30px;
+
+}
+.navbar-expand-lg{
+    border: 2px solid red;
+
+}
+
+.nav-item-left{
+    border: 2px solid red;
+    margin-left: 20px;
+}
+
+.nav-item-right{
+    border: 2px solid red;
+    margin-left: 20px;
+}
+
+.navbar-brand {
+    display: inline-block;
+    padding-top: 0.3125rem;
+    padding-bottom: 0.3125rem;
+    /* margin-right: rem; */
+    font-size: 1.25rem;
+    line-height: inherit;
+    /* white-space: nowrap; */
+    margin: 0;
+    padding: 0;
+    margin-left: -40px;
+}
+.navbar-prenav {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+    height: 50px;
+    flex-direction: column;
+    border: 2px blue solid;
+    background-color:black;
+    padding: 10px;
+}
+
+.box-nav{
+    
+        width: 2000px;
+        /* padding-right: 15px; */
+        /* padding-left: 15px; */
+        margin-right: auto;
+        margin-left: auto;
+        border: 2px solid green;
+    
+}
+
+.navbar-nav-left{
+    border: 2px solid rgb(47, 0, 255);
+    margin-left: 350px;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        padding-left: 0;
+        margin-bottom: 0;
+        list-style: none;
+        flex-direction: row
+    }
+
+    .navbar-nav{
+        border: 2px solid rgb(0, 255, 42);
+        margin: 0;
+
+    }
+
+.navbar-nav-right{
+    border: 2px solid rgb(47, 0, 255);
+    margin-left: 50px;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        padding-left: 0;
+        margin-bottom: 0;
+        list-style: none;
+        flex-direction: row
+    }
+
+    .navbar-nav-sup{
+        border: 2px solid rgb(47, 0, 255);
+        margin-left: 50px;
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            padding-left: 0;
+            margin-bottom: 0;
+            list-style: none;
+            flex-direction: row
+        }
+    
+    .nav-link-box1{
+        margin-left: 800px;
+        width: 60px;
+    }
+
+    .row-separete{
+        width: 100%;
+        /* border: 2px solid rgb(47, 0, 255); */
+        height: 5px;
+        margin-top: 1px;
+        background-color: #295135 ;
+    }
+
+    /* SECTION */
+
+    #main-banner{
+        margin-top: 10px;
+    }
+    #section-banner{
+        border: 2px solid rgb(47, 0, 255);
+    }
+
+    #section-articles{
+        border: 2px solid rgb(47, 0, 255);
+    }
+
+    #section-historia{
+        border: 2px solid rgb(47, 0, 255);
+    }
+
+    #section-depoimentos{
+        border: 2px solid rgb(47, 0, 255);
+    }
+
+    #section-perguntas{
+        border: 2px solid rgb(47, 0, 255);
+
+    }
+    
+    #section-delivery{
+        border: 2px solid rgb(47, 0, 255);
+
+    }
+
+    #section-reserva{
+        border: 2px solid rgb(47, 0, 255);
+
+    }
+
+
+    .banner-carousell{
+        height: 600px;
+        width: 100%;
+    }
+
+    .carousel-item{
+        border: 2px solid rgb(47, 0, 255);
+        height: 600px;
+
+    }
+
+    .col-md-3{
+        border: 2px solid rgb(47, 0, 255);
+        width: 450px;
+        height: 400px;
+        margin: 0;
+    }
+
+    .col-md-3-regiao{
+        border: 2px solid rgb(47, 0, 255);
+        width: 350px;
+        height: 250px;
+        margin-left: 20px;
+    }
+
+
+    .col-md-3-norte{
+        border: 2px solid rgb(47, 0, 255);
+        width: 450px;
+        height: 400px;
+        margin: 0;
+        background-image: url("../img/banners/norte.png");
+    }
+
+    .col-md-3-norte{
+        border: 2px solid rgb(47, 0, 255);
+        width: 450px;
+        height: 400px;
+        margin: 0;
+        background-image: url("../img/banners/norte.png");
+    }
+    .col-md-3-nordeste{
+        border: 2px solid rgb(47, 0, 255);
+        width: 450px;
+        height: 400px;
+        margin: 0;
+        background-image: url("../img/banners/nordeste.png");
+    }
+    .col-md-3-sudeste{
+        border: 2px solid rgb(47, 0, 255);
+        width: 450px;
+        height: 400px;
+        margin: 0;
+        background-image: url("../img/banners/sudeste.png");
+    }
+    .col-md-3-centroeste{
+        border: 2px solid rgb(47, 0, 255);
+        width: 450px;
+        height: 400px;
+        margin: 0;
+        background-image: url("../img/banners/centroeste.png");
+    }
+    .col-md-3-sul{
+        border: 2px solid rgb(47, 0, 255);
+        width: 450px;
+        height: 400px;
+        margin: 0;
+        background-image: url("../img/banners/sul.png");
+    }
+
+    .img-regioes{
+        width: 440px;
+        height: 400px;
+    }
+
+
+    .col-md-2{
+        border: 2px solid rgb(47, 0, 255);
+        width: 670px;
+        height: 400px;
+        margin: 0;
+    }
+
+.row-title{
+    border: 2px solid rgb(47, 0, 255);
+    margin: 0;
+    height: 80px;
+}
+
+.row-title-regioes{
+    border: 2px solid rgb(47, 0, 255);
+    margin: 0;
+    height: 80px;
+    background-image: url("../img/banners/banner-titulo-regioes.png");
+}
+
+.row{
+    border: 2px solid rgb(47, 0, 255);
+    
+}
+.row-dep{
+    border: 2px solid rgb(47, 0, 255);
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    /* margin-top: calc(-1 * var(--bs-gutter-y)); */
+    /* margin-right: calc(-.5 * var(--bs-gutter-x)); */
+    /* margin-left: calc(-.5 * var(--bs-gutter-x)); */
+    margin: 0;
+    padding-left: 220px;
+}
+.col-md-dep{
+    border: 2px solid rgb(47, 0, 255);
+    width: 300px;
+    height: 250px;
+    /* margin-left: 10px; */
+    padding: 0;
+    margin: 0;
+}
+
+/* FOOTER */
+
+#main-footer{
+    border: 2px solid rgb(0, 255, 76);
+    width: 100%;
+    height: 250px;
+}
+
+ul{
+    margin-left: 250px;
+}
+ul li{
+    float: left;
+    list-style:none;
+}
+
+li{
+    margin-left:20px ;
+}
+
+.box-img-footer{
+    border: 2px solid rgb(47, 0, 255);
+    height: 150px;
+    width: 150px;
+    margin-top: 40px;
+}
+
+/* CARDÁPIO */
+
+#section-cardapio{
+    width: 100%;
+    /* height:; */
+    border: 2px solid rgb(0, 68, 255);
+}
+
+.banner-cardapio{
+    width: 100%;
+    height: 500px;
+}
+
+.banner-historia{
+    width: 100%;
+    height: 500px;
+}
+
+.img-banner-historia{
+    width: 100%;
+    height: 500px;
+}
+
+.img-banner-cardapio{
+    width: 100%;
+    height: 500px;
+}
+
+.img-banner-delivery{
+    width: 100%;
+    height: 400px;
+}
+
+footer{
+    border: 2px solid rgb(0, 68, 255);
+    width: 50%;
+    height: 200px;
+    background-color:#dacb8d;
+}
+
+/* REGIÕES */
+.title-reg{
+    border: 2px solid rgb(0, 68, 255);
+    height: 80px;
+    margin: 0;
+    padding: 0;
+}
+
+.card-body{
+    width: 300px;
+    height: 240px;
+    margin: 0;
+}
+
+/* FORMULÁRIO - RESERVA */
+
+.row g-3{
+    width: 650px;
+    height: 380px;
+    border: 2px solid rgb(255, 0, 119);
+}
+
+.row-reserva {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(-1 * var(--bs-gutter-y));
+    margin-right: calc(-.5 * var(--bs-gutter-x));
+    margin-left: calc(-.5 * var(--bs-gutter-x));
+    border: 2px solid rgb(255, 0, 119);
+    width: 650px;
+    height: 380px;
+    padding: 10px;
+}
+
+
+/*  */
