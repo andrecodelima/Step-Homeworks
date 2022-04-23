@@ -27,9 +27,9 @@ body{
 }
 
 #main{
-    width: 100%;
-    /* height: 3000px; */
+    width: 1400px;
     border: 2px solid red;
+    position: relative;
 }
 
 
@@ -37,19 +37,23 @@ body{
 .navbar-brand-icon1{
     border: 2px solid red;
     width: 40px;
+    position: absolute;
     margin-left: 1200px;
 }
 
 .navbar-brand-icon2{
     border: 2px solid red;
     width: 40px;
-    /* margin-left: 1200px; */
+    position: absolute;
+    margin-left: 1315px;
+
 }
 
 .navbar-brand-icon3{
     border: 2px solid red;
     width: 40px;
-    /* margin-left: 1200px; */
+    position: absolute;
+    margin-left: 1428px;
 }
 
 /* Header - NavBar */
@@ -57,6 +61,7 @@ body{
     border: 2px solid rgb(0, 68, 255);
     width: 100%;
     height: 150px;
+    position: relative;
 }
 
 .navbar{
@@ -69,10 +74,22 @@ body{
 }
 
 a.nav-link{
-    color: white;
-    font-size: 15pt;
+    color: #F6F6F1;
+    font-size: 13pt;
     font-weight: bold;
 }
+
+a.nav-link.active{
+    color: #fa6f19;
+    font-size: 13pt;
+    font-weight: bold;
+}
+a.nav-link:hover{
+    color: #fa6f19 ;
+    font-size: 13pt;
+    font-weight: bold;
+}
+
 
 .navbar-brand-logo{
     width: 150px;
@@ -205,8 +222,62 @@ a.nav-link{
 
     #section-articles{
         border: 2px solid rgb(47, 0, 255);
+        position: relative;
+        padding-left: 10px;
     }
 
+    
+
+    .box-title h2{
+        font-size: 40pt;
+    }
+
+    .box-title{
+        position: absolute;
+        color: white;
+        margin-left: 112px;
+        margin-top: 11px;
+        /* display: grid; */
+        letter-spacing: 10px;
+        background-color: 255,255,255,0.1;
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+    }
+
+    .col-md-3-nordeste .box-title{
+        position: absolute;
+        margin-top: 10px;
+        margin-left: 50px
+    }
+
+    .col-md-3-sudeste .box-title{
+        position: absolute;
+        margin-top: 9px;
+        margin-left: 72px
+    }
+
+    .col-md-3-centroeste .box-title{
+        position: absolute;
+        margin-top: 11px;
+        margin-left: 2px
+    }
+
+    .col-md-3-sul .box-title{
+        position: absolute;
+        margin-top: 14px;
+        margin-left: 156px
+    }
+
+
+
+    .box-paragrafo{
+        position: absolute;
+        color: white;
+        margin-top: 177px;
+        font-weight: 700;
+        font-size: 17pt;
+
+    }
     #section-historia{
         border: 2px solid rgb(47, 0, 255);
     }
@@ -222,6 +293,7 @@ a.nav-link{
     
     #section-delivery{
         border: 2px solid rgb(47, 0, 255);
+        position: relative;
 
     }
 
@@ -241,6 +313,8 @@ a.nav-link{
         height: 600px;
 
     }
+
+
 
     .col-md-3{
         border: 2px solid rgb(47, 0, 255);
@@ -263,21 +337,17 @@ a.nav-link{
         height: 400px;
         margin: 0;
         background-image: url("../img/banners/norte.png");
+        position: relative;
     }
 
-    .col-md-3-norte{
-        border: 2px solid rgb(47, 0, 255);
-        width: 450px;
-        height: 400px;
-        margin: 0;
-        background-image: url("../img/banners/norte.png");
-    }
+
     .col-md-3-nordeste{
         border: 2px solid rgb(47, 0, 255);
         width: 450px;
         height: 400px;
         margin: 0;
         background-image: url("../img/banners/nordeste.png");
+        position: relative;
     }
     .col-md-3-sudeste{
         border: 2px solid rgb(47, 0, 255);
@@ -285,13 +355,20 @@ a.nav-link{
         height: 400px;
         margin: 0;
         background-image: url("../img/banners/sudeste.png");
+        position: relative;
+
     }
+
+  
+
     .col-md-3-centroeste{
         border: 2px solid rgb(47, 0, 255);
         width: 450px;
         height: 400px;
         margin: 0;
         background-image: url("../img/banners/centroeste.png");
+        position: relative;
+
     }
     .col-md-3-sul{
         border: 2px solid rgb(47, 0, 255);
@@ -299,6 +376,8 @@ a.nav-link{
         height: 400px;
         margin: 0;
         background-image: url("../img/banners/sul.png");
+        position: relative;
+
     }
 
     .img-regioes{
@@ -390,6 +469,9 @@ li{
 .banner-cardapio{
     width: 100%;
     height: 500px;
+    background-image: url(../img/banners/banner-cardapio.png);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .banner-historia{
