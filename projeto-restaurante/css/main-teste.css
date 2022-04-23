@@ -21,26 +21,15 @@ body{
 
 }
 
-<<<<<<< HEAD
 .banner-cardapio img{
     width: 100%;
     height: 500px;
 }
 
-=======
-.img-icon2{
-}
-
-.img-icon2{
-}
-
-
->>>>>>> ef613284240a861061218fa069d4ba11cc60db29
 #main{
     width: 100%;
     /* height: 3000px; */
     border: 2px solid red;
-<<<<<<< HEAD
 }
 
 
@@ -61,19 +50,13 @@ body{
     border: 2px solid red;
     width: 40px;
     /* margin-left: 1200px; */
-=======
->>>>>>> ef613284240a861061218fa069d4ba11cc60db29
 }
 
 /* Header - NavBar */
 #main-header{
     border: 2px solid rgb(0, 68, 255);
     width: 100%;
-<<<<<<< HEAD
     height: 150px;
-=======
-    height: 200px;
->>>>>>> ef613284240a861061218fa069d4ba11cc60db29
 }
 
 .navbar{
@@ -85,39 +68,15 @@ body{
     padding-top: 10px;
 }
 
-<<<<<<< HEAD
 a.nav-link{
     color: white;
     font-size: 15pt;
     font-weight: bold;
-=======
-/* PRENAV */
-.navbar-brand-icon1{
-    border: 2px solid red;
-    width: 40px;
-    margin-left: 1200px;
-}
-
-.navbar-brand-icon2{
-    border: 2px solid red;
-    width: 40px;
-    /* margin-left: 1200px; */
-}
-
-.navbar-brand-icon3{
-    border: 2px solid red;
-    width: 40px;
-    /* margin-left: 1200px; */
->>>>>>> ef613284240a861061218fa069d4ba11cc60db29
 }
 
 .navbar-brand-logo{
     width: 150px;
-<<<<<<< HEAD
     /* border: 2px solid red; */
-=======
-    border: 2px solid red;
->>>>>>> ef613284240a861061218fa069d4ba11cc60db29
     margin-left: 30px;
 
 }
@@ -229,27 +188,17 @@ a.nav-link{
 
     .row-separete{
         width: 100%;
-<<<<<<< HEAD
         /* border: 2px solid rgb(47, 0, 255); */
         height: 5px;
         margin-top: 1px;
         background-color: #295135 ;
-=======
-        border: 2px solid rgb(47, 0, 255);
-        height: 10px;
-        margin-top: 1px;
-        background-color: black;
->>>>>>> ef613284240a861061218fa069d4ba11cc60db29
     }
 
     /* SECTION */
 
-<<<<<<< HEAD
     #main-banner{
         margin-top: 10px;
     }
-=======
->>>>>>> ef613284240a861061218fa069d4ba11cc60db29
     #section-banner{
         border: 2px solid rgb(47, 0, 255);
     }
@@ -307,7 +256,6 @@ a.nav-link{
         margin-left: 20px;
     }
 
-<<<<<<< HEAD
 
     .col-md-3-norte{
         border: 2px solid rgb(47, 0, 255);
@@ -359,8 +307,6 @@ a.nav-link{
     }
 
 
-=======
->>>>>>> ef613284240a861061218fa069d4ba11cc60db29
     .col-md-2{
         border: 2px solid rgb(47, 0, 255);
         width: 670px;
@@ -371,7 +317,6 @@ a.nav-link{
 .row-title{
     border: 2px solid rgb(47, 0, 255);
     margin: 0;
-<<<<<<< HEAD
     height: 80px;
 }
 
@@ -380,12 +325,6 @@ a.nav-link{
     margin: 0;
     height: 80px;
     background-image: url("../img/banners/banner-titulo-regioes.png");
-=======
-}
-
-.row-title-reg{
-    
->>>>>>> ef613284240a861061218fa069d4ba11cc60db29
 }
 
 .row{
@@ -453,7 +392,6 @@ li{
     height: 500px;
 }
 
-<<<<<<< HEAD
 .banner-historia{
     width: 100%;
     height: 500px;
@@ -464,29 +402,21 @@ li{
     height: 500px;
 }
 
-=======
->>>>>>> ef613284240a861061218fa069d4ba11cc60db29
 .img-banner-cardapio{
     width: 100%;
     height: 500px;
 }
 
-<<<<<<< HEAD
 .img-banner-delivery{
     width: 100%;
     height: 400px;
 }
 
-=======
->>>>>>> ef613284240a861061218fa069d4ba11cc60db29
 footer{
     border: 2px solid rgb(0, 68, 255);
     width: 50%;
     height: 200px;
-<<<<<<< HEAD
     background-color:#dacb8d;
-=======
->>>>>>> ef613284240a861061218fa069d4ba11cc60db29
 }
 
 /* REGIÕES */
@@ -501,7 +431,6 @@ footer{
     width: 300px;
     height: 240px;
     margin: 0;
-<<<<<<< HEAD
 }
 
 /* FORMULÁRIO - RESERVA */
@@ -526,8 +455,66 @@ footer{
     padding: 10px;
 }
 
-
-/*  */
-=======
+/* testmony container */
+#testmony-container {
+	background: url('../img/banner7.jpg') no-repeat;
+	background-size: cover;
+	padding: 10em 0;
 }
->>>>>>> ef613284240a861061218fa069d4ba11cc60db29
+
+#testmony-container h2, #testmony-container p {
+	color: #FFF;
+	text-align: center;
+}
+
+#testmony-container h2 {
+	font-size: 36px;
+	margin-bottom: 50px;
+}
+
+#testmony-container p {
+	margin-bottom: 50px;
+}
+
+.testmony-box {
+	display: inline-block;
+	width: 24.5%;
+	text-align: center;
+}
+
+#testmony-container .testmony-box .testmony-msg {
+	background-color: #FFF;
+	color: #666;
+	border-radius: 10px;
+	padding: 20px;
+	width: 50%;
+	position: relative;
+	margin: 35px auto;
+	font-style: italic;
+}
+
+.testmony-msg:after {
+	content: "";
+	width: 0; 
+	height: 0; 
+	border-left: 20px solid transparent;
+	border-right: 20px solid transparent;
+	border-top: 20px solid #FFF;
+	position: absolute;
+	bottom: -20px;
+	left: 0;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.testmony-box img {
+	width: 100px;
+	height: 100px;
+	border: 1px solid #CCC;
+	border-radius: 50%;
+}
+
+.testmony-name {
+	font-weight: bold;
+}
