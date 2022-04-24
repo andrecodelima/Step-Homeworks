@@ -1,0 +1,40 @@
+Projeto de Avaliação
+====================
+
+Entrega 26/04/2022 (7 dias)
+
+Entrega do código do projeto em arquivo ".zip" ou ".rar" como DEVER DE CASA à ser entregue na última aula.
+
+Entrega do vídeo demonstrando o funcionamento do projeto em: MYSTAT, PERFORMANCE ACADÊMICA, EXAMES, HTML5 E CSS3. Conforme vídeo encaminhado no grupo do zap.
+
+--VÍDEO-> menos de 5 minutos. Deverá mostrar a página funcionando e, caso tenha algo que você gostaria de destacar, mostre funcionando e o código. ATENÇÃO: O Mystat não aceita arquivos maiores de 100MB.
+
+-------------------------REQUISITOS-------------------------------------
+
+TEMA 3: Restaurante
+    -Home
+    -Cardápio (foto e descrição dos pratos)
+    -Reservas (formulário de Reserva de mesa)
+    -Como Chegar (mapa e formulário de contato)
+
+-------Critérios de Avaliação
+
+-Layout organizado (alinhamento das divs, textos e imagens)
+-Conteúdo das páginas ( coloque mais de um item)
+-Uso de grid CSS ou BS
+-Uso de componentes externos (mapa, vídeos, etc)
+
+-------ATENÇÃO-> fazer apenas o solicitado terá nota apenas o suficiente para passar (7);
+
+
+Comida brasileira
+nome: BRAZUCAS
+paleta: #295135 (verde escuro)
+	#dacb8d(bege)
+	#fa6f19(laranja)
+	#F6F6F1(cinzaclaro)
+
+
+
+facebook: https://www.facebook.com/profile.php?id=100080356372776
+instagram: https://www.instagram.com/brazucasstep/

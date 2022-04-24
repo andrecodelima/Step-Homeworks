@@ -1,0 +1,662 @@
+
+/* Global */
+/* Fonte:  */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{   
+    margin: 0 auto;
+}
+
+body{
+    background-color: #F6F6F1;
+}
+.img-logo{
+    width: 150px;
+    height: 150px;
+    margin-left: 0px;
+}
+
+.img-icon1{
+    position: relative;
+
+}
+
+.banner-cardapio img{
+    width: 100%;
+    height: 500px;
+}
+
+#main{
+    width: 1400px;
+    /* border: 2px solid red; */
+    position: relative;
+}
+
+
+/* PRENAV */
+.navbar-brand-icon1{
+    /* border: 2px solid red; */
+    width: 30px;
+    position: absolute;
+    margin-left: 1165px;
+    
+}
+
+.navbar-brand-icon2{
+    /* border: 2px solid red; */
+    width: 30px;
+    position: absolute;
+    margin-left: 1254px;
+
+}
+
+.navbar-brand-icon3{
+    /* border: 2px solid red; */
+    width: 30px;
+    position: absolute;
+    margin-left: 1344px;
+}
+
+/* Header - NavBar */
+
+#main-header{
+    /* border: 2px solid rgb(0, 68, 255); */
+    width: 100%;
+    height: 150px;
+    position: relative;
+    /* background-color: black; */
+    
+}
+
+.navbar{
+    /* border: 2px solid rgb(72, 255, 0); */
+    /* background-color: #dacb8d   ; */
+    height: 118px;
+    /* background-color:#dacb8d; */
+    /* margin-top: 1px; */
+    
+}
+
+a.nav-link{
+    color: #5c493b;
+    font-size: 13pt;
+    font-weight: bold;
+}
+
+a.nav-link.active{
+    color: #fa6f19;
+    font-size: 13pt;
+    font-weight: bold;
+}
+a.nav-link:hover{
+    color: #fa6f19 ;
+    font-size: 13pt;
+    font-weight: bold;
+}
+
+
+.navbar-brand-logo{
+    width: 150px;
+    margin-left: 30px;
+    margin-top: 5px;
+}
+.navbar-expand-lg{
+    /* border: 2px solid red; */
+}
+
+.nav-item-left{
+    /* border: 2px solid red; */
+    margin-left: 20px;
+}
+
+.nav-item-right{
+    /* border: 2px solid red; */
+    margin-left: 20px;
+}
+
+.navbar-brand {
+    display: inline-block;
+    padding-top: 0.3125rem;
+    padding-bottom: 0.3125rem;
+    /* margin-right: rem; */
+    font-size: 1.25rem;
+    line-height: inherit;
+    /* white-space: nowrap; */
+    margin: 0;
+    padding: 0;
+    margin-left: -40px;
+
+}
+.navbar-prenav {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+    height: 45px;
+    flex-direction: column;
+    background-color:#295135;
+    padding: 10px;
+}
+
+.box-nav{
+        width: 2000px;
+        /* padding-right: 15px; */
+        /* padding-left: 15px; */
+        margin-right: auto;
+        margin-left: auto;
+}
+
+.navbar-nav-left{
+    /* border: 2px solid rgb(47, 0, 255); */
+    margin-left: 350px;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        padding-left: 0;
+        margin-bottom: 0;
+        list-style: none;
+        flex-direction: row
+    }
+
+    .navbar-nav{
+        /* border: 2px solid rgb(0, 255, 42); */
+        margin: 0;
+
+    }
+
+.navbar-nav-right{
+    /* border: 2px solid rgb(47, 0, 255); */
+    margin-left: 50px;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        padding-left: 0;
+        margin-bottom: 0;
+        list-style: none;
+        flex-direction: row
+    }
+
+    .navbar-nav-sup{
+        /* border: 2px solid rgb(47, 0, 255); */
+        margin-left: 50px;
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            padding-left: 0;
+            margin-bottom: 0;
+            list-style: none;
+            flex-direction: row
+        }
+    
+    .nav-link-box1{
+        margin-left: 800px;
+        width: 60px;
+    }
+
+    /* .row-separete{
+        width: 100%;
+        height: 15px;
+        margin-top: 1px;
+        background-color: #fff ;
+    } */
+
+    /* SECTION */
+
+    #main-banner{
+        margin-top: 10px;
+    }
+    #section-banner{
+        /* border: 2px solid rgb(47, 0, 255); */
+    }
+
+    #section-articles{
+        /* border: 2px solid rgb(47, 0, 255); */
+        position: relative;
+        padding-left: 10px;
+        margin-top: 20px;
+    }
+
+    #section-articles-reserva{
+        border: 2px solid rgb(47, 0, 255);
+        position: relative;
+        /* padding-left: 10px; */
+        margin-top: 20px;
+        height: 500px;
+        /* background-image: url("../img/banners/banner-reserva.png"); */
+        /* background-repeat: no-repeat; */
+        background-size: cover;
+    }
+
+    #section-articles-comochegar{
+        border: 2px solid rgb(47, 0, 255);
+        position: relative; 
+        /* padding-left: 10px; */
+        margin-top: 20px;
+        height: 500px;
+        background-image: url("../img/banners/banner-comochegar.png");
+        /* background-repeat: no-repeat; */
+        background-size: cover;
+    }
+
+
+    .box-title h2{
+        font-size: 30pt;
+    }
+
+    .box-title{
+        position: absolute;
+        color: rgb(17, 17, 17);
+        margin-top: 24px;
+        margin-left: 48px;
+        /* display: grid; */
+        letter-spacing: 1px;   
+        /* background-color: 255,255,255,0.1;
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px); */
+    }
+
+    .col-md-3-nordeste .box-title{
+        position: absolute;
+        margin-top: 24PX;
+        margin-left: 14PX
+    }
+
+    .col-md-3-sudeste .box-title{
+        position: absolute;
+        margin-top: 22px;
+        margin-left: 39px
+    }
+
+    .col-md-3-centroeste .box-title{
+        position: absolute;
+        margin-top: 21px;
+        margin-left: -11px
+    }
+
+    .col-md-3-sul .box-title{
+        position: absolute;
+        margin-top: 23px;
+        margin-left: 82px
+    }
+
+
+
+    .box-paragrafo{
+        position: absolute;
+        color: white;
+        margin-top: 177px;
+        font-weight: 700;
+        font-size: 17pt;
+        margin-top: 26px;
+        padding-left: 202px;
+    }
+
+
+    #section-historia{
+        /* border: 2px solid rgb(47, 0, 255); */
+    }
+
+    #section-depoimentos{
+        border: 2px solid rgb(47, 0, 255);
+    }
+
+    #section-perguntas{
+        border: 2px solid rgb(47, 0, 255);
+
+    }
+    
+    #section-delivery{
+        border: 2px solid rgb(47, 0, 255);
+        position: relative;
+        width: 100%;
+        height: 600px;
+    }
+
+    #section-reserva{
+        border: 2px solid rgb(47, 0, 255);
+
+    }
+
+
+    .banner-carousell{
+        height: 600px;
+        width: 100%;
+    }
+
+    .carousel-item{
+        border: 2px solid rgb(47, 0, 255);
+        height: 600px;
+
+    }
+
+.row{
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    width: 1400px;
+    flex-wrap: wrap;
+    margin-top: calc(-1 * var(--bs-gutter-y));
+    margin-right: calc(-.5 * var(--bs-gutter-x));
+    /* margin-left: calc(-.5 * var(--bs-gutter-x)); */
+    margin-left: -9px;
+    height: 600px;
+    background-color: #295135 ;
+    }
+
+    .row-regiao{
+        --bs-gutter-x: 1.5rem;
+        --bs-gutter-y: 0;
+        display: flex;
+        width: 1400px;
+        flex-wrap: wrap;
+        margin-top: calc(-1 * var(--bs-gutter-y));
+        margin-right: calc(-.5 * var(--bs-gutter-x));
+        /* margin-left: calc(-.5 * var(--bs-gutter-x)); */
+        margin-left: -9px;
+        height: 300px;
+        background-color: #fff;
+        }
+    
+    .col-md-3-regiao article{
+        background-color: #fa6f19;
+    }
+
+    .col-md-3{
+        border: 2px solid rgb(47, 0, 255);
+        width: 450px;
+        height: 400px;
+        margin: 0;
+    }
+
+    .col-md-3-regiao{
+        /* border: 2px solid rgb(47, 0, 255); */
+        width: 350px;
+        height: 250px;
+        margin-left: 20px;
+        border-radius: 8px;
+    }
+
+
+    .col-md-3-norte{
+        border: 5px solid #fff ;
+        width: 270px;
+        height: 400px;
+        margin: 0;
+        background-image: url("../img/banners/norte/norte.png");
+        position: relative;
+        margin-right: 10px;
+        border-radius: 8px;
+        box-shadow: 10px 10px 20px;
+        margin-top: 88px;
+    }
+
+
+    .col-md-3-nordeste{
+        border: 5px solid #fa6f19;
+        width: 270px;
+        height: 400px;
+        margin: 0;
+        background-image: url("../img/banners/nordeste/nordeste.png");
+        position: relative;
+        margin-right: 10px;
+        border-radius: 8px;
+        box-shadow: 10px 10px 20px;
+        margin-top: 88px;
+
+    }
+    .col-md-3-sudeste{
+        border: 5px solid #fff ;
+        width: 270px;
+        height: 400px;
+        margin: 0;
+        background-image: url("../img/banners/sudeste/sudeste.png");
+        position: relative;
+        margin-right: 10px;
+        border-radius: 8px;
+        box-shadow: 10px 10px 20px;
+        margin-top: 88px;
+
+    }
+
+
+    .col-md-3-centroeste{
+        border: 5px solid #fa6f19;
+        width: 270px;
+        height: 400px;
+        margin: 0;
+        background-image: url("../img/banners/centroeste/centroeste.png");
+        position: relative;
+        margin-right: 10px;
+        border-radius: 8px;
+        box-shadow: 10px 10px 20px;
+        margin-top: 88px;
+
+
+    }
+    .col-md-3-sul{
+        border: 5px solid #fff;
+        width: 270px;
+        height: 400px;
+        margin: 0;
+        background-image: url("../img/banners/sul/sul.png");
+        position: relative;
+        border-radius: 8px;
+        box-shadow: 10px 10px 20px;
+        margin-top: 88px;
+
+    }
+
+    .img-regioes{
+        width: 440px;
+        height: 400px;
+    }
+
+
+    .col-md-2{
+        width: 100%;
+        height: 600px;
+        background-image: url("../img/banners/banner-delivery.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    
+    .col-md-2-reserva{
+        width: 100%;
+        height: 500px;
+        /* height: 450px; */
+        background-image: url("../img/banners/banner-reserva.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        border: 2px solid rgb(47, 0, 255);
+
+    }
+
+.row-title{
+    border: 2px solid rgb(47, 0, 255);
+    margin: 0;
+    height: 80px;
+}
+
+.row-title-regioes{
+    border: 2px solid rgb(47, 0, 255);
+    margin: 0;
+    height: 80px;
+    background-image: url("../img/banners/banner-titulo-regioes.png");
+}
+
+.row{
+    border: 2px solid rgb(47, 0, 255);
+    
+}
+.row-dep{
+    border: 2px solid rgb(47, 0, 255);
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    /* margin-top: calc(-1 * var(--bs-gutter-y)); */
+    /* margin-right: calc(-.5 * var(--bs-gutter-x)); */
+    /* margin-left: calc(-.5 * var(--bs-gutter-x)); */
+    margin: 0;
+    padding-left: 220px;
+}
+.col-md-dep{
+    border: 2px solid rgb(47, 0, 255);
+    width: 300px;
+    height: 250px;
+    /* margin-left: 10px; */
+    padding: 0;
+    margin: 0;
+}
+
+/* FOOTER */
+
+#main-footer{
+    /* border: 2px solid rgb(0, 255, 76); */
+    width: 100%;
+    height: 200px;
+}
+
+ul{
+    margin-left: 250px;
+}
+ul li{
+    float: left;
+    list-style:none;
+}
+
+li{
+    margin-left:20px ;
+}
+
+.box-img-footer{
+    /* border: 2px solid rgb(47, 0, 255); */
+    height: 150px;
+    width: 150px;
+    margin-top: 20px;
+}
+
+/* CARDÁPIO */
+
+#section-cardapio{
+    width: 100%;
+    /* height:; */
+    /* border: 2px solid rgb(0, 68, 255); */
+    margin-top: 10px;
+}
+
+.banner-cardapio{
+    width: 100%;
+    height: 500px;
+    background-image: url(../img/banners/banner-cardapio.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.banner-historia{
+    width: 100%;
+    height: 600px;
+    background-image: url("../img/banners/banner-historia.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+
+.img-banner-cardapio{
+    width: 100%;
+    height: 500px;
+}
+
+footer{
+    /* border: 2px solid rgb(0, 68, 255); */
+    width: 50%;
+    height: 200px;
+    background-color:#dacb8d;
+    margin-top: 20px;
+
+}
+
+/* REGIÕES */
+.title-reg{
+    border: 2px solid rgb(0, 68, 255);
+    height: 80px;
+    margin: 0;
+    padding: 0;
+}
+
+.card-body{
+    width: 300px;
+    height: 240px;
+    margin: 0;
+}
+
+/* FORMULÁRIO - RESERVA */
+
+
+.row-form {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 653px;
+    margin-top: 120px;
+    /* margin-top: calc(-1 * var(--bs-gutter-y));
+    margin-right: calc(-.5 * var(--bs-gutter-x)); */
+    /* margin-left: -10px; */
+    /* border: 2px solid rgb(255, 0, 119); */
+    width: 731px;
+    height: 380px;
+    padding: 10px;
+    position: absolute;
+    border: 5px solid rgb(0, 68, 255);
+
+}
+
+.col-md-6{
+    width: 300px;
+}
+
+.row-form .col-md-4{
+    border: 5px solid rgb(0, 68, 255);
+    font-size: 13pt;
+    font-weight: bold;
+    width: 170px;
+    height: 100px;
+    margin: 0px;
+}
+
+
+.row-form .col-md-6{
+    border: 5px solid rgb(0, 68, 255);
+    font-size: 13pt;
+    font-weight: bold;
+    margin: 0px;
+
+}
+
+.row-form .col-md-6-tel{
+    border: 5px solid rgb(0, 68, 255);
+    font-size: 13pt;
+    font-weight: bold;
+    margin: 0px;
+    width: 170px;
+
+}
+
+iframe{
+    position: absolute;
+    margin-left: 657px;
+    width: 739px;
+    height: 495px;
+}
