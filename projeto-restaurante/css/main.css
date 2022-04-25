@@ -13,9 +13,13 @@ body{
 .img-logo{
     width: 150px;
     height: 150px;
-    margin-left: 0px;
+    margin-left: -220px;
 }
 
+.box-img-footer .img-logo{
+    margin-left: -7px;
+    margin-top: 10px;
+}
 .img-icon1{
     position: relative;
 
@@ -64,7 +68,6 @@ body{
     width: 100%;
     height: 150px;
     position: relative;
-    /* background-color: black; */
     
 }
 
@@ -94,10 +97,13 @@ a.nav-link:hover{
     font-weight: bold;
 }
 
+li.nav-item-left{
+    margin-left: 0px;
+}
 
 .navbar-brand-logo{
     width: 150px;
-    margin-left: 30px;
+    margin-left: 281px;
     margin-top: 5px;
 }
 .navbar-expand-lg{
@@ -151,10 +157,15 @@ a.nav-link:hover{
         margin-right: auto;
         margin-left: auto;
 }
+.container-fluid{
+    /* border: 2px solid rgb(47, 0, 255); */
+    height: 100px;
+    position: relative;
+}
 
 .navbar-nav-left{
     /* border: 2px solid rgb(47, 0, 255); */
-    margin-left: 350px;
+    margin-left: 10px;
         display: -ms-flexbox;
         display: flex;
         -ms-flex-direction: column;
@@ -162,8 +173,22 @@ a.nav-link:hover{
         padding-left: 0;
         margin-bottom: 0;
         list-style: none;
-        flex-direction: row
+        flex-direction: row;
+        display: inline-block;
+
     }
+.box-ul-navbar-nav-left{
+    width: 400px;
+    /* border: 2px solid rgb(47, 0, 255); */
+    margin-left: 157px;
+}
+
+#navbarSupportedContent{
+    /* border: 2px solid rgb(47, 0, 255); */
+    width: 100px;
+    margin-left: -200px;
+
+}
 
     .navbar-nav{
         /* border: 2px solid rgb(0, 255, 42); */
@@ -327,6 +352,106 @@ a.nav-link:hover{
         top: -468px;
         text-align: center;
     }
+
+    
+    .h2-delivery{
+        font-size: 35pt;
+        margin-left: 803px;
+        font-size: 29pt;
+        color: #295135;
+        /* border: 2px solid rgb(47, 0, 255); */
+        width: 481px;
+        position: absolute;
+        /* margin-bottom: auto; */
+        top: 33px;
+        text-align: center;
+    }
+
+    .h2-cardapio{
+        font-size: 35pt;
+        margin-left: 316px;
+        font-size: 29pt;
+        font-weight: bold;
+        color: #111;
+        /* border: 2px solid rgb(47, 0, 255); */
+        width: 800px;
+        position: absolute;
+        /* margin-bottom: auto; */
+        top: 411px;
+        text-align: center;
+    }
+    .p-delivery{
+        /* margin-bottom: 116px; */
+        margin-left: 816px;
+        font-size: 18pt;
+        color: #111;
+        /* border: 2px solid rgb(47, 0, 255); */
+        width: 481px;
+        position: absolute;
+        /* margin-bottom: auto; */
+        top: 90px;
+        font-weight: bold;
+        }
+
+    .h2-faq{
+        font-size: 35pt;
+        margin-left: 44px;
+        font-size: 29pt;
+        color: #111;
+        /* border: 2px solid rgb(47, 0, 255); */
+        width: 481px;
+        position: absolute;
+        /* margin-bottom: auto; */
+        top: 251px;
+        text-align: center;
+        font-weight: bold;
+    }
+
+    .p-faq{
+        /* margin-bottom: 116px; */
+        margin-left: 697px;
+        font-size: 18pt;
+        color: #fff;
+        /* border: 2px solid rgb(47, 0, 255); */
+        width: 531px;
+        position: absolute;
+        /* margin-bottom: auto; */
+        top: 387px;
+        font-weight: bold;
+        text-align: center;
+        }
+
+    .h2-quemsomos{
+        font-size: 35pt;
+        margin-left: 189px;
+        font-size: 22pt;
+        color: #295135;
+        /* border: 2px solid rgb(47, 0, 255); */
+        width: 481px;
+        position: absolute;
+        /* margin-bottom: auto; */
+        top: 231px;
+        text-align: center;
+    }
+
+    .p-quemsomos{
+        /* margin-bottom: 116px; */
+        margin-left: 89px;
+        font-size: 18pt;
+        color: #111;
+        /* border: 2px solid rgb(47, 0, 255); */
+        width: 681px;
+        position: absolute;
+        /* margin-bottom: auto; */
+        top: 320px;
+        text-align: center;
+        }
+        .h3-quemsomos {
+            color: #295135;
+            top: 615px;
+            position: absolute;
+            margin-left: 346px;
+        }
     .p-banner1{
         /* margin-bottom: 116px; */
         margin-left: 275px;
@@ -558,7 +683,7 @@ a.nav-link:hover{
     .col-md-2{
         width: 100%;
         height: 600px;
-        background-image: url("../img/banners/banner-delivery.png");
+        background-image: url("../img/banners/banner-delivey.png");
         background-repeat: no-repeat;
         background-size: cover;
     }
@@ -649,10 +774,56 @@ li{
     margin-top: 10px;
 }
 
+#section-faq{
+    width: 100%;
+    height:600px;
+    /* border: 2px solid rgb(0, 68, 255); */
+    margin-top: 50px;
+    background-color:#F6F6F1;
+}
+
 .banner-cardapio{
     width: 100%;
     height: 550px;
     background-image: url(../img/banners/banner-cardapio.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.banner-faq{
+    width: 100%;
+    height: 550px;
+    background-image: url(../img/banners/banner-faq.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.accordion-item{
+    background-color: #fff;
+    border: 1px solid rgba(0,0,0,.125);
+    width: 900px;
+    /* background-color: #295135; */
+}
+
+
+#accordionFlushExample{
+    border: 6px solid #fa6f19;
+    width: 920px;
+    margin-left: 270px;
+    box-shadow: 4px 6px 11px;
+}
+
+.accordion-flush .accordion-item .accordion-button {
+    border-radius: 8px;
+    height: 80px;
+    font-size: 15pt;
+}
+
+
+.banner-quemsomos{
+    width: 100%;
+    height: 550px;
+    background-image: url(../img/banners/banner-quemsomos.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
