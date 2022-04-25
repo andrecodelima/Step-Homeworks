@@ -210,7 +210,11 @@ a.nav-link:hover{
     } */
 
     /* SECTION */
+    video{
+     background-color: #295135;
+    }
 
+  
     #main-banner{
         margin-top: 10px;
     }
@@ -296,8 +300,81 @@ a.nav-link:hover{
         margin-top: 177px;
         font-weight: 700;
         font-size: 17pt;
-        margin-top: 26px;
+        margin-top: -6px;
         padding-left: 202px;
+    }
+
+    .box-paragrafo h2{
+        font-size: 19pt;
+        font-weight: bold;
+        color: #fa6f19;
+        margin-top: 5px;
+    }
+
+    .p-descricao{
+        margin-top: -13px;
+    }
+
+    .h1-banner1{
+        font-size: 35pt;
+        margin-left: 277px;
+        font-size: 35pt;
+        color: white;
+        /* border: 2px solid rgb(47, 0, 255); */
+        width: 481px;
+        position: absolute;
+        /* margin-bottom: auto; */
+        top: -468px;
+        text-align: center;
+    }
+    .p-banner1{
+        /* margin-bottom: 116px; */
+        margin-left: 275px;
+        font-size: 35pt;
+        color: white;
+        /* border: 2px solid rgb(47, 0, 255); */
+        width: 481px;
+        position: absolute;
+        /* margin-bottom: auto; */
+        top: -275px;
+        }
+        
+    .p-banner2{
+    /* margin-bottom: 116px; */
+    margin-left: 658px;
+    font-size: 35pt;
+    color: white;
+    border: 2px solid rgb(47, 0, 255);
+    width: 481px;
+    position: relative;
+    /* margin-bottom: auto; */
+    top: -179px;
+    }
+    
+    .p-banner3{
+        /* margin-bottom: 116px; */
+        margin-left: -163px;
+        font-size: 35pt;
+        color: white;
+        border: 2px solid rgb(47, 0, 255);
+        width: 481px;
+        position: relative;
+        /* margin-bottom: auto; */
+        top: -151px;
+    }
+
+    .p-historia{
+        /* margin-bottom: 116px; */
+        margin-left: 483px;
+        font-size: 22pt;
+        font-weight: bold;
+        color: #0d0e0e;
+        border: 2px solid rgb(47, 0, 255);
+        width: 481px;
+        position: relative;
+        /* margin-bottom: auto; */
+        top: -373px;
+        text-align: center;
     }
 
 
@@ -377,6 +454,16 @@ a.nav-link:hover{
         margin: 0;
     }
 
+    .alink-card{
+        /* border: 2px solid rgb(47, 0, 255); */
+        width: 273px;
+        height: 400px;
+        margin-left:2px;
+        padding: 0;
+        position: relative;
+        margin-top: 90px;  
+    }
+
     .col-md-3-regiao{
         /* border: 2px solid rgb(47, 0, 255); */
         width: 350px;
@@ -395,8 +482,11 @@ a.nav-link:hover{
         position: relative;
         margin-right: 10px;
         border-radius: 8px;
-        box-shadow: 10px 10px 20px;
-        margin-top: 88px;
+        box-shadow: 4px 6px 11px #fa6f19;
+        margin-top: -2px;
+        margin-left: 0px;
+        position: absolute;
+        
     }
 
 
@@ -409,8 +499,9 @@ a.nav-link:hover{
         position: relative;
         margin-right: 10px;
         border-radius: 8px;
-        box-shadow: 10px 10px 20px;
-        margin-top: 88px;
+        box-shadow: 4px 6px 11px #fa6f19;
+        margin-top: -2px;
+        position: absolute;
 
     }
     .col-md-3-sudeste{
@@ -422,8 +513,9 @@ a.nav-link:hover{
         position: relative;
         margin-right: 10px;
         border-radius: 8px;
-        box-shadow: 10px 10px 20px;
-        margin-top: 88px;
+        box-shadow: 4px 6px 11px #fa6f19;
+        margin-top: -2px;
+        position: absolute;
 
     }
 
@@ -437,8 +529,9 @@ a.nav-link:hover{
         position: relative;
         margin-right: 10px;
         border-radius: 8px;
-        box-shadow: 10px 10px 20px;
-        margin-top: 88px;
+        box-shadow: 4px 6px 11px #fa6f19;
+        margin-top: -2px;
+        position: absolute;
 
 
     }
@@ -450,8 +543,9 @@ a.nav-link:hover{
         background-image: url("../img/banners/sul/sul.png");
         position: relative;
         border-radius: 8px;
-        box-shadow: 10px 10px 20px;
-        margin-top: 88px;
+        box-shadow: 4px 6px 11px #fa6f19;
+        margin-top: -2px;
+        position: absolute;
 
     }
 
@@ -557,7 +651,7 @@ li{
 
 .banner-cardapio{
     width: 100%;
-    height: 500px;
+    height: 550px;
     background-image: url(../img/banners/banner-cardapio.png);
     background-repeat: no-repeat;
     background-size: cover;
@@ -581,7 +675,7 @@ li{
 footer{
     /* border: 2px solid rgb(0, 68, 255); */
     width: 50%;
-    height: 200px;
+    height: 150px;
     background-color:#dacb8d;
     margin-top: 20px;
 
@@ -621,6 +715,21 @@ footer{
     position: absolute;
     border: 5px solid rgb(0, 68, 255);
 
+}
+
+.row-footer{
+    width: 100%;
+    height: 40px;
+    /* border: 5px solid rgb(0, 68, 255); */
+
+}
+.col-md-1-footer{
+    width: 100%;
+    height: 40px;
+    /* border: 5px solid rgb(0, 68, 255); */
+    text-align: center;
+    color: #295135 ;
+    font-weight: 600;
 }
 
 .col-md-6{

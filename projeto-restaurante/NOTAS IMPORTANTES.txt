@@ -1,14 +1,41 @@
 PENDÊNCIAS
 
 PENDENCIAS GERAIS
-1.LINKAR TODAS AS PÁGINAS
+1 -  1.LINKAR TODAS AS PÁGINAS - OK
+2 - 2. COLOCAR FAVICON - OK
 
 PENDÊNCIAS DO INDEX
-1. DECIDIR COMO MANTER O CAROUSSEL AGORA TENDO O VÍDEO
-	1A. SE SIM - INSERIR TEXTOS NOS BANNERS
+3 - 1. DECIDIR COMO MANTER O CAROUSSEL AGORA TENDO O VÍDEO - MANTIVE
+	1A. SE SIM - INSERIR TEXTOS NOS BANNERS - OK 
 
-2. INSERIR TEXTO NO BANNER HISTÓRIA
+4 - 2. INSERIR TEXTO NO BANNER HISTÓRIA - OK
 
-3. PREENCHER O FOOTER
+5 - 3. PREENCHER O FOOTER - OK
 
-.col-md-2-reserva
+PENDÊNCIAS DO CARDÁPIO
+6 - 1. FORMATAR O TEXTO DO BANNER
+7 - 2. TORNAR OS CARDS CLICÁVEIS E COM LINKS PARA SUAS PÁGINAS. - OK
+
+PENDÊNCIAS DO FORMULÁRIO
+8 - 1.INSERIR TEXTO
+9 - 2. ESTILIZAR
+10 - CRIAR PAGINA DE RESPOSTA
+
+Projetado por Xequemate® | Joaquina Bar e Restaurante - Todos os direitos reservados
+
+
+            BÁ TECHE! VENHA EXPERIMENTAR O PRATO FARROUPILHA!
+
+ <h2 class="">NORTE</h2>
+            <hr>
+            <p class="p-descricao">
+              MERGULHE NOS PRATOS DA CULINÁRIA TÍPICA NORTISTA NUMA VIAGEM DE SABORES DELICIOSA.
+            </p>
+
+NOSSA HISTÓRIA
+
+ Inaugurado em 2010, o Brazucas valoriza os sabores da gastronomia brasileira com pratos tradicionais de cada região do nosso vasto país.
+Construímos durante esses anos uma história, e a nossa motivação sempre foi encantar as pessoas com um atendimento atencioso e um ambiente e uma comida reconfortante.
+Todos os pratos são feitos na casa e temos chefs originários das 5 regiões do país com o objetivo de trazer a mais pura fidelidade dos sabores do Brasil, afinal todos somos BRAZUCAS.
+
+A UNIÃO DE TODOS OS SABORES DO BRASIL REUNIDOS NUM ÚNICO LUGAR...
