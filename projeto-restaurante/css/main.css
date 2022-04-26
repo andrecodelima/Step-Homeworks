@@ -1076,7 +1076,7 @@ footer{
 }
 
 #inputnumberl4, #inputdatel4{
-    width: 170px;
+    width: 174px;
 }
 
 .inputState{
@@ -1099,6 +1099,11 @@ footer{
     text-align: center;
     color: #295135 ;
     font-weight: 600;
+    font-size: 13pt;
+}
+
+.col-md-1-footer h5{
+ font-size: 13pt;
 }
 
 .col-md-6{
@@ -1119,9 +1124,9 @@ footer{
     /* border: 5px solid rgb(0, 68, 255); */
     font-size: 13pt;
     font-weight: bold;
-    margin-right: 3px;
+    margin-right: 6px;
     width: 275px;
-    /* margin: -9px; */
+    margin-left: -1px;
     margin-top: 0px;
     display: inline-block;
 
@@ -1168,15 +1173,26 @@ footer{
 .form-label-row1{
     background-color: #fa6f19;
     padding: 5px;
-    width: 170px;
+    width: 174px;
     color: #fff;
 }
 
-.form-label-row2{
+.form-label-nome{
     background-color: #fa6f19;
     width: 275px;
     color: #fff;
     padding: 5px;
+    /* margin-left: ; */
+    
+}
+
+.form-label-email{
+    background-color: #fa6f19;
+    width: 275px;
+    color: #fff;
+    padding: 5px;
+    margin-left:8px;
+    
 }
 
 .form-label-tel{
@@ -1184,11 +1200,32 @@ footer{
     width: 150px;
     color: #fff;
     padding: 5px;
-
+    margin-left: 12px;
 }
+
+#inputTel4{
+    margin-left:12px;
+}
+
+#inputEmail4{
+    margin-left: 8px;
+}
+
 iframe{
     position: absolute;
     margin-left: 657px;
     width: 739px;
     height: 495px;
+}
+
+.p-css-selo1{
+    position: absolute;
+    margin-top: -21px;
+    margin-left: 1263px;
+}
+
+.p-css-selo2{
+    position: absolute;
+    margin-top: -21px;
+    margin-left: 1167px;
 }
