@@ -21,21 +21,3 @@ PENDÊNCIAS DO FORMULÁRIO
 9 - 2. ESTILIZAR
 10 - CRIAR PAGINA DE RESPOSTA
 
-Projetado por Xequemate® | Joaquina Bar e Restaurante - Todos os direitos reservados
-
-
-            BÁ TECHE! VENHA EXPERIMENTAR O PRATO FARROUPILHA!
-
- <h2 class="">NORTE</h2>
-            <hr>
-            <p class="p-descricao">
-              MERGULHE NOS PRATOS DA CULINÁRIA TÍPICA NORTISTA NUMA VIAGEM DE SABORES DELICIOSA.
-            </p>
-
-NOSSA HISTÓRIA
-
- Inaugurado em 2010, o Brazucas valoriza os sabores da gastronomia brasileira com pratos tradicionais de cada região do nosso vasto país.
-Construímos durante esses anos uma história, e a nossa motivação sempre foi encantar as pessoas com um atendimento atencioso e um ambiente e uma comida reconfortante.
-Todos os pratos são feitos na casa e temos chefs originários das 5 regiões do país com o objetivo de trazer a mais pura fidelidade dos sabores do Brasil, afinal todos somos BRAZUCAS.
-
-A UNIÃO DE TODOS OS SABORES DO BRASIL REUNIDOS NUM ÚNICO LUGAR...
