@@ -1,14 +1,226 @@
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro");
 
+/* O que tiver comentado é pq não entendi ainda */
+
 *{
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
     margin: 0;
     padding: 0;
-    outline: 0;
+    /* outline: 0; */
 
 }
 html, body{
     min-height: 100vh;
     font-family: "Source Sans Pro";
+    /* text-rendering: optimizelegibility; */
+    /* -webkit-font-smoothing: antialiased; */
+}
+
+header{
+    border: 2px solid red;
+    background-color: #7159c1;
+}
+
+/* Editando o container do Header */
+header .container{
+    /* Dentro de header edite a classe ".container" */
+
+    border: 2px solid blue;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    justify-content: space-between;
+
+    width: 920px;
+    margin: auto;
+}
+
+header img{
+    width: 150px;
+    margin-left: 20px;
+    padding: 15px 0;
+}
+
+header nav ul{
+   border: 1px solid rgb(8, 235, 38);
+
+   /* novo */
+   display: flex;
+}
+
+header nav ul li{
+    list-style: none;
+}
+
+header nav ul li a{
+    text-decoration: none;
+    color: white;
+
+    /* novo */
+    text-transform:uppercase;
+    
+    font-size: 14px;
+    padding: 24px;
+    /* transition: all 250ms linear 0s; */
 
 }
+
+header nav ul li a:hover{
+    background: rgba(255,255,255, 0.15)
+
+}
+
+h2{
+    color: rgb(75, 75, 75);
+    font-size: 36px;
+    line-height: 46px;
+}
+
+h3{
+    color: rgb(75, 75, 75);
+    font-size: 28px;
+    line-height: 38px;
+}
+
+.hero, main, #form{
+    border: 2px solid red;
+
+}
+
+.button {
+    /* display: inline-block; */
+    font-size: 16px;
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+    background-color: rgb(113, 89, 193);
+    margin: 15px 0px 0px;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    /* transition: all 150ms linear 0s; */
+
+  }
+  
+
+  .button:hover{
+    opacity: 0.9;
+  }
+
+
+  /*=============== 
+HERO
+==================*/
+
+section.hero{
+    /* Edite a classe "hero" 
+    O section foi posto aí só pra especificar que essa classe é dele, mas pode-se omitir isso. */
+    margin: 80px 0;
+}
+
+.hero .container{
+    width: 980px;
+    margin: auto;
+
+    display: flex;
+}
+
+.hero p{
+    color: rgb(154, 142, 191);
+    font-size: 18px;
+    line-height: 32px;
+    margin: 10px 0px 0px;
+}
+
+/*=============== 
+MAIN
+==================*/
+
+main{
+    margin-bottom: 80px;
+
+}
+
+/*=============== 
+CARDS
+==================*/
+.cards {
+    border: 2px solid blue;
+    width: 980px;
+    margin: auto;
+    
+    display: grid;
+    grid-template-columns: 310px 310px 310px;
+    grid-gap: 20px;
+}
+
+.text--medium {
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 400;
+    color: #ecf0f1;
+  }
+
+  .card {
+    border: 2px solid blue;
+    display: flex;
+    flex-direction: column;
+    background-color: #7159c1;
+
+    /* NOVO */
+    cursor:pointer;
+    /* transition: all 0.3s ease 0s; */
+  
+  }
+
+  .card:hover {
+    transform: translateY(-7px);
+  }
+
+  .image{
+    width: 100%;
+    padding-top: 56.25%;
+
+    /* NOVO - NÃO ENTENDI MAS PRECISO MANTER */
+    overflow: hidden;
+
+    position: relative;
+  }
+
+  .image img{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    /* NOVO - NÃO ENTENDI MAS PRECISO MANTER */
+    transform: translate(-50%, -50%);
+
+  }
+
+  .content {
+    border: 2px solid blue;
+    margin: 20px;
+  }
+
+  .title {
+    border: 2px solid blue;
+    margin-bottom: 20px;
+  }
+
+  .info {
+    border: 2px solid rgb(255, 0, 242);
+
+    display: flex;
+    /* align-self: end; */
+    /* align-items: center; */
+  }
+
+  .price {
+    border: 2px solid rgb(255, 0, 242);
+
+    margin-left: auto;
+    padding: 5px 20px;
+    border-radius: 20px;
+    background-color: #7159c1;
+    filter: brightness(90%);
+  }
