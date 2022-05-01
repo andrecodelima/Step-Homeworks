@@ -93,3 +93,11 @@ Usamos a tag `<picture>` para que as imagens sejam responsivas.
 ```
 
 Sempre que possível, usar SVG ao invés de JPG, PNG
+
+
+- RESUMO
+1. Usar as unidades de medidas corretas para um layout flexivel.
+    Laytouts fluídos
+    Textos Fluídos
+
+2. Usar o @media query e aplicar as regras nele.
