@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Alunos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+
+    
+    <script>
+        var nota1a = 7.1;
+        var nota2a = 7.2;
+        var nota3a = 9.4;
+        var nota4a = 8.0;
+
+        var nota1c = 4.1;
+        var nota2c = 8.2;
+        var nota3c = 5.4;
+        var nota4c = 3.2;
+
+        var nota1r = 4.0;
+        var nota2r = 5.2;
+        var nota3r = 3.4;
+        var nota4r = 3.1;
+
+        var mediaa = (nota1a + nota2a + nota3a + nota4a)/4
+
+        var mediac = (nota1c + nota2c + nota3c + nota4c)/4
+
+        var mediar = (nota1r + nota2r + nota3r + nota4r)/4
+
+   
+    </script>
+
+</head>
+<body>
+        <header>
+            <div class="container">
+                <div class="menu-section on">
+                    <div class="menu-toogle">
+                        <div class="um"></div>
+                        <div class="dois"></div>
+                        <div class="tres"></div>
+                    </div>
+                    <nav>
+                        <ul>
+                            <li>
+                                <a href="#">Exemplo 1</a>
+                            </li>
+                            <li>|</li>
+                            <li>
+                                <a href="#">Exemplo 2</a>
+                            </li>
+                            <li>|</li>
+                            <li>
+                                <a href="#">Exemplo 3</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <section class="conteudo">
+            <div class="container">
+                <div class="box-title">
+                    <h1>Média de Alunos com JAVASCRIPT</h1>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <h2>Nome do Aluno: </h2>
+                        <div class="nome-aluno">
+                            <script>
+                                var nome = "André";
+                                document.write("<h3>" + nome + "</h3>");
+                            </script>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-md">
+                        <h2>Nota - 1º Bim: </h2>
+                        <div class="dados">
+                            <script>
+                                document.write(nota1a);
+                            </script>
+                        </div>
+                    </div>
+
+                    <div class="col-md">
+                        <h2>Nota - 2º Bim: </h2>
+                        <div class="dados">
+                            <script>
+                                document.write(nota2a);
+                            </script>
+                        </div>
+                    </div>
+
+                    <div class="col-md">
+                        <h2>Nota - 3º Bim: </h2>
+                        <div class="dados">
+                            <script>
+                                document.write(nota3a);
+                            </script>
+                        </div>
+                    </div>
+
+                    <div class="col-md">
+                        <h2>Nota - 4º Bim: </h2>
+                        <div class="dados">
+                            <script>
+                                document.write(nota4a);
+                            </script>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md">
+                        <h2>Média: </h2>
+                        <div class="media">
+                            <script>
+                                document.write(mediaa);
+                            </script>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md">
+                        <h2>situação: </h2>
+                        <div class="situacao">
+                            <script>
+                                if (mediaa < 7 && mediaa > 5){
+                                    document.write("<h3>" + "em recuperação" +"</h3>");
+                                }else if (mediaa < 5 ){
+                                    document.write("<h3>" + "Reprovado(a)" + "</h3>")
+                                }else{
+                                    document.write("<h3>" + "Aprovado(a)" + "</h3>")
+                                }
+                                
+                            </script>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="conteudo">
+            <div class="container">
+                <div class="box-title">
+                    <h1>Média de Alunos com JAVASCRIPT</h1>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <h2>Nome do Aluno: </h2>
+                        <div class="nome-aluno">
+                            <script>
+                                var nome = "Laura";
+                                document.write("<h3>" + nome + "</h3>");
+                            </script>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-md">
+                        <h2>Nota - 1º Bim: </h2>
+                        <div class="dados">
+                            <script>
+                                document.write(nota1c);
+                            </script>
+                        </div>
+                    </div>
+
+                    <div class="col-md">
+                        <h2>Nota - 2º Bim: </h2>
+                        <div class="dados">
+                            <script>
+                                document.write(nota2c);
+                            </script>
+                        </div>
+                    </div>
+
+                    <div class="col-md">
+                        <h2>Nota - 3º Bim: </h2>
+                        <div class="dados">
+                            <script>
+                                document.write(nota3c);
+                            </script>
+                        </div>
+                    </div>
+
+                    <div class="col-md">
+                        <h2>Nota - 4º Bim: </h2>
+                        <div class="dados">
+                            <script>
+                                document.write(nota4c);
+                            </script>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md">
+                        <h2>Média: </h2>
+                        <div class="media">
+                            <script>
+                                document.write(mediac);
+                            </script>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md">
+                        <h2>situação: </h2>
+                        <div class="situacao">
+                            <script>
+                                if (mediac < 7 && mediac > 5){
+                                    document.write("<h3>" + "em recuperacção" +"</h3>");
+                                }else if (mediac < 5 ){
+                                    document.write("<h3>" + "Reprovado(a)" + "</h3>")
+                                }else{
+                                    document.write("<h3>" + "Aprovado(a)" + "</h3>")
+                                }
+                                
+                            </script>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="conteudo">
+            <div class="container">
+                <div class="box-title">
+                    <h1>Média de Alunos com JAVASCRIPT</h1>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <h2>Nome do Aluno: </h2>
+                        <div class="nome-aluno">
+                            <script>
+                                var nome = "Reulison";
+                                document.write("<h3>" + nome + "</h3>");
+                            </script>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-md">
+                        <h2>Nota - 1º Bim: </h2>
+                        <div class="dados">
+                            <script>
+                                document.write(nota1r);
+                            </script>
+                        </div>
+                    </div>
+
+                    <div class="col-md">
+                        <h2>Nota - 2º Bim: </h2>
+                        <div class="dados">
+                            <script>
+                                document.write(nota2r);
+                            </script>
+                        </div>
+                    </div>
+
+                    <div class="col-md">
+                        <h2>Nota - 3º Bim: </h2>
+                        <div class="dados">
+                            <script>
+                                document.write(nota3r);
+                            </script>
+                        </div>
+                    </div>
+
+                    <div class="col-md">
+                        <h2>Nota - 4º Bim: </h2>
+                        <div class="dados">
+                            <script>
+                                document.write(nota4r);
+                            </script>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md">
+                        <h2>Média: </h2>
+                        <div class="media">
+                            <script>
+                                document.write(mediar);
+                            </script>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md">
+                        <h2>situação: </h2>
+                        <div class="situacao">
+                            <script>
+                                if (mediar < 7 && mediar > 5){
+                                    document.write("<h3>" + "em recuperacção" +"</h3>");
+                                }else if (mediar < 5 ){
+                                    document.write("<h3>" + "Reprovado(a)" + "</h3>")
+                                }else{
+                                    document.write("<h3>" + "Aprovado(a)" + "</h3>")
+                                }
+                                
+                            </script>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+</body>
+</html>
