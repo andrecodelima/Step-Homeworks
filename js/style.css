@@ -33,7 +33,7 @@ header .container{
 }
 
 header nav ul{
-    border: 2px solid rgba(241, 166, 3, 0.993);
+    border: 2px solid rgb(253, 175, 7);
     display: flex;
 
 }
@@ -153,7 +153,6 @@ section.conteudo{
 }
 
 .col-md .situacao{
-    /* border: 2px solid red; */
     display: flex;
     width: 20%;
     margin-left: 2.1%;
