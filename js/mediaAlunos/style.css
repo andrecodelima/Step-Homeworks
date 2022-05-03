@@ -158,3 +158,26 @@ section.conteudo{
     margin-left: 2.1%;
 
 }
+
+
+@media(max-width:630px){
+    nav{
+        display: none;
+    }   
+
+    .um,
+    .dois,
+    .tres{
+        border: 2px solid #fff;
+        background-color: #fff;
+        height: 5px;
+        width: 50px;
+        margin: 6px auto;
+    }
+
+     .menu-toggle {
+        width: 40px;
+        height: 30px;
+        margin-right: 20px;
+    }
+}
