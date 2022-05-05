@@ -27,6 +27,8 @@ window.alert("Olá " + nome + "," + " Segue a baixo a sua média: "
 + "Muito obrigado!" + "\n" 
 + "Para fechar cliquem em 'OK'");
 
-//Selecionando as casas decimais: ToFixed();
+//============DESAFIO SOLUCIONADO. ====================//
+
+//Selecionando as casas decimais: ToFixed(x quantidade de casas);
 //Atenção que ele transforma o valor em String, tive que converter em Number.
-//Usei typeof pra descobrir o tipo da variável
+//Usei typeof pra descobrir o tipo da variável.
