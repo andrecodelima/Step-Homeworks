@@ -15,7 +15,7 @@ notaSurpresa = Number(notaSurpresa.toFixed(1));
 var media = (nota1 + nota2 + nota3 + notaSurpresa)/4;
 media = media.toFixed(1);
 
-window.alert("Olá " + nome + "," + " Segue a baixo a sua média: " 
+window.alert("Olá " + nome + "," + " Segue a baixo seu resultado: " 
 + "\n" + "\n"
 
 + "Nota 1: " + nota1 + "\n"
