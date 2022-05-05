@@ -82,6 +82,15 @@ section.conteudo{
     margin: 30px 0px;
 }
 
+.container-exemplo2{
+    background-image: url("https://c.wallhere.com/photos/fb/a1/JavaScript_minimalism-1227036.jpg!d");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 2px solid #fff;
+    height: 100vh;
+
+}
+
 .conteudo .container{
     border: 4px dashed #141414;
     background-color: rgba(241, 241, 241, 0.863);

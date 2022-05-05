@@ -19,6 +19,10 @@
         notaSurpresa = (sorteio * (6)+5);
         notaSurpresa = Number(notaSurpresa.toFixed(1));
 
+        if (notaSurpresa > 10){
+            notaSurpresa = 10;
+        }
+
         var media = (nota1 + nota2 + nota3 + notaSurpresa)/4;
         media = media.toFixed(1);
 

@@ -11,12 +11,22 @@
 </head>
 <body>
         <script>
-            sorteio = Math.random();
-            notaSurpresa = (sorteio * (10)+1);
-            notaSurpresa = notaSurpresa.toFixed(1);
-            notaSurpresa = Number(notaSurpresa);
+            // sorteio = Math.random();
+            // notaSurpresa = (sorteio * (10)+1);
+            // notaSurpresa = notaSurpresa.toFixed(1);
+            // notaSurpresa = Number(notaSurpresa);
 
-            window.alert((typeof(notaSurpresa)));
+            // window.alert((typeof(notaSurpresa)));
+
+            sorteio = Math.random();
+            notaSurpresa = (sorteio * (6)+5);
+
+            if (notaSurpresa > 10){
+                notaSurpresa = 10;
+            }
+
+            notaSurpresa = Number(notaSurpresa.toFixed(1));
+            window.alert(notaSurpresa);
 
         </script>
 
