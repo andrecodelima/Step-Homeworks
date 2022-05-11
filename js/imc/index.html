@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMC</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+
+   <script>
+
+            //  Entrada de dados //
+
+    var nome = window.prompt("Informe seu nome: ");
+
+    var idade = Number(window.prompt("Informe sua idade: "));
+
+    var peso = Number(window.prompt("Informe o seu peso seguindo esse modelo: (Ex: 90.0)"
+    + "\n" + "Peso: "));
+
+    var altura = Number(window.prompt("Informe a sua altura seguindo esse modelo: (Ex: 1.78)"
+    + "\n" + "Altura: "));
+
+    var imc = Number((peso/(Math.pow(altura, 2))).toFixed(1));
+
+
+            // Validação dos dados //
+
+        if(nome == null){
+            nome = "Nome inválido";
+        }
+        
+        if (isNaN(idade)){
+            peso = "Número válido.";
+        }
+
+        if (isNaN(peso)){
+            peso = "Número válido.";
+        }
+
+       if (isNaN(altura)){
+            altura = "Número válido.";
+       }
+
+
+       if (isNaN(imc)){
+           imc = "Número válido.";
+       }
+
+       if(isNaN(classificacao)){
+           classificacao = "Não foi possível obter a classificação. Recarregue a página e tente de novo.";
+
+       }
+        // Definição da Classificação //
+
+    var classificacao;
+    if (imc < 18.5){
+        classificacao = "Magreza - Procure um nutricionista.";
+    }else if (imc >= 18.5 && imc <= 24.9){
+        classificacao = "Saudável";
+    }else if (imc >= 25 && imc <= 29.9){
+        classificacao = "Sobrepeso";
+    }else if(imc >= 30 && imc <= 34.9){
+        classificacao = "Obesidade Grau I - Procure um nutricionista.";
+    }else if(imc >= 35 && imc <= 39.9){
+        classificacao = "Obesidade Severa Grau  II - Procure um nutricionista.";    
+    }else if (imc >= 40){
+        classificacao = "Obesidade Mórbida Grau III - Procure um nutricionista.";
+    }
+    
+
+   </script>
+</head>
+<body>
+        <header>
+            <div class="container">
+                <div class="menu-section">
+                    <div class="menu-toogle">
+                        <div class="um"></div>
+                        <div class="dois"></div>
+                        <div class="tres"></div>
+                    </div>
+                    <nav>
+                        <ul>
+                            <!-- <li>
+                                <a href="./index1.html">exemplo 1</a>
+                            </li>
+                            <li>|</li>
+                            <li>
+                                <a href="./index2.html">exemplo 2</a>
+                            </li>
+                            <li>|</li> -->
+                            <li>
+                                <a href="https://itstep.com.br/" target="blank">Step Computer Academy</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+    <main>
+        <!-- ENTRADA DE DADOS -->
+        <section class="conteudo">
+            <div class="container">
+                <div class="box-title">
+                    <h1>Cálculo do IMC</h1>
+                </div>
+                <div class="box-title">
+                    <p>Báse do cálculo: imc = peso / (altura²)  </p>
+                </div>
+
+                <div class="row">
+                    <div class="col-md">
+                        <h2>Nome: </h2>
+                        <div class="dados-nome">
+                            <script>
+                                document.write(nome);
+                            </script>
+                        </div>
+                    </div>
+
+                    <div class="col-md">
+                        <h2>Idade: </h2>
+                        <div class="dados">
+                            <script>
+                                document.write(idade + " anos");
+                            </script>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md">
+                        <h2>Peso: </h2>
+                        <div class="dados">
+                            <script>
+                                document.write(peso + " Kg");
+                            </script>
+                        </div>
+                    </div>
+
+                    <div class="col-md">
+                        <h2>Altura: </h2>
+                        <div class="dados">
+                            <script>
+                                document.write(altura + " m");
+                            </script>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="row">
+                    <div class="col-md">
+                        <h2>IMC: </h2>
+                        <div class="media">
+                            <script>
+                                document.write(imc);
+                            </script>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CONDIÇÕES -->
+                <div class="row">
+                    <div class="col-md">
+                        <h2>Classificação: </h2>
+                        <div class="situacao">
+                            <script>
+                                document.write(classificacao);
+                            </script>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="conteudo-table">
+            <img src="./img/imc tabela.jpg" alt="">
+        </section>
+    </main>
+        <!-- <script src="./script.js"></script> -->
+
+</body>
+</html>

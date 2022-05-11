@@ -1,0 +1,238 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-size: 1.6rem;
+}
+
+html, body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+}
+
+header{
+    /* background-color: rgb(36 35 35 / 91%); */
+    filter: drop-shadow(2px 4px 6px black);
+    padding: 1.5%;
+}
+header .container{
+    /* border: 2px solid red; */
+    width: 90%;
+    height: 10vh;
+    margin: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 960px;
+}
+
+header nav ul{
+    border: 2px solid rgb(253, 175, 7);
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li{
+    color: #fff;
+}
+
+header nav ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 3rem;
+    padding: 25px;
+    text-transform: uppercase;
+}
+
+header nav ul li a:hover{
+    background-color: rgba(238, 238, 238, 0.46);
+    color: #141414;
+    transition-duration: 2s;
+    /* display: inline; */
+}
+
+
+/* 
+.menu-section on{
+
+}
+
+.menu-toogle{
+
+} */
+
+h3{
+    text-transform: uppercase;
+}
+
+
+nav ul li{
+    list-style: none;
+}
+
+main{
+    /* border: 2px solid blue; */
+    padding-top: 10px;
+    background-image: url("./img/imc-fundo3.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+section.conteudo, .conteudo-table{
+    /* border: 2px solid red; */
+    margin: 30px 0px;
+}
+
+section.conteudo-table{
+    height: 40vh;
+    display: flex;
+    align-items: center; /*Deixa centralizado*/
+    justify-content: center; /*Deixa no centro da página*/
+    position: relative;
+}
+
+section.conteudo-table img{
+    width: 57%;
+    position: absolute;
+}
+
+.container-exemplo2{
+    background-image: url("https://c.wallhere.com/photos/fb/a1/JavaScript_minimalism-1227036.jpg!d");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 2px solid #fff;
+    height: 100vh;
+
+}
+
+.conteudo .container{
+    border: 4px double #0a0a0a;
+    background-color: rgba(241, 241, 241, 0.863);
+    width: 90%;
+    max-width: 960px;
+    display: block;
+    margin: auto;
+    padding: 1.5%;
+}
+
+.box-title{
+    background-color: #44D185;
+    /* border-radius: 6px; */
+    color: #fff;
+    width: 100%;
+    height: 5vh;
+    max-width: 960px;
+
+    display:flex;
+    justify-content: center;
+    align-items: center;    
+    padding: 10px;
+    padding-top: 3%;
+}
+
+.col-md-6{
+    /* border: 2px solid red; */
+    display: flex;
+    margin-right: 10px;
+    margin-top:30px;
+}
+
+.col-md-6 .nome-aluno{
+    /* border: 2px solid red; */
+    margin-left: 20px;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    text-transform: capitalize;    
+
+}
+
+.col-md-6 h2,
+.col-md h2{
+    font-weight: 600;
+    font-size: 1.6rem;
+}
+
+.col-md{
+    /* border: 2px solid red; */
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    padding-top: 3px;
+    margin-right: 10px;
+    text-transform: capitalize;
+}
+
+.col-md .dados-nome{
+    /* border: 2px solid rgb(0, 89, 255); */
+    border-radius: 20%;
+    margin-left: 1%;
+    /* width: 30%; */
+    display: flex;
+    justify-content: center;
+    text-transform: capitalize;
+
+}
+
+.col-md .dados{
+    /* border: 2px solid rgb(0, 89, 255); */
+    border-radius: 20%;
+    margin-left: 1%;
+    /* width: 30%; */
+    display: flex;
+    justify-content: center;
+    text-transform: none;
+    /* margin-top: -2%; */
+
+}
+
+
+.col-md .media{
+    /* border: 2px solid red; */
+    display: flex;
+    /* width: 40%; */
+    margin-left: 1%;
+    padding-left: 5px;
+    text-transform: none;
+}
+
+.col-md .situacao{
+    display: flex;
+    /* width: 40%; */
+    margin-left: 2.1%;
+    text-transform: none;
+
+}
+
+
+@media(max-width:630px){
+    nav{
+        display: none;
+    }   
+
+    .um,
+    .dois,
+    .tres{
+        border: 2px solid #fff;
+        background-color: #fff;
+        height: 5px;
+        width: 50px;
+        margin: 6px auto;
+    }
+
+     .menu-toggle {
+        width: 40px;
+        height: 30px;
+        margin-right: 20px;
+    }
+}
