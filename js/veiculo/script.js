@@ -18,3 +18,20 @@ function localize(){
     document.getElementById("resp-placa").innerHTML = placa;
     document.getElementById("resp-cor").innerHTML = cor;
 }
+
+// function limpe(){
+
+//     var fabricante = document.getElementById("resp-fab").innerHTML;
+//     var modelo = document.getElementById("resp-model").innerHTML;
+//     var ano = document.getElementById("resp-ano").innerHTML;
+//     var placa = document.getElementById("resp-placa").innerHTML;
+//     var cor = document.getElementById("resp-cor").innerHTML;
+
+   
+//     fabricante = fabricante.replace(fabricante, " ");
+//     fabricante = document.getElementById("resp-fab").innerHTML;
+
+//     // window.alert(fabricante);
+
+//     // document.location.reload();
+// }

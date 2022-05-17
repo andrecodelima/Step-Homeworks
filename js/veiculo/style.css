@@ -91,19 +91,28 @@ section{
     position: relative;
 }
 
+
 .container{
     display: flex;
     justify-content: center;
     /* border: 2px solid red; */
+    width: 50vw;
+
+}
+
+.container-carousell{
+        
+    /* border: 2px solid rgb(47, 0, 255); */
+    /* height: 80%; */
 }
 
 .container-resp{
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
-    border: 5px solid rgb(255, 254, 254);
     width: 60%;
-    height: 30vh;
+    height: 50vh;
+    margin-left: 15%;
 }
 
 form{
@@ -250,11 +259,11 @@ option, label{
     flex-direction: row;
     justify-content: space-evenly;
     align-items: baseline;
-    padding-top: 3px;
+    padding-top:3%;
     text-transform: capitalize;
     padding: 15px;
     width: 45vw;
-    height: 12vh;
+    height: 15vh;
     margin-left: 0px;
 }
 
@@ -295,7 +304,21 @@ option, label{
         color: #e5eaec;
     }
 
+    .col-md-1 input{
+        width: 100%;
+        padding: 15px;
+        font-size: 1.8rem;
+        font-weight: 800;
+        background-color: #3f474a;
+        border: 2px solid #fff;
+        color: #e5eaec;
+    }
+
     input:hover{
+        background-color: #1af025;
+    }
+
+    .col-md-1 input:hover{
         background-color: #f0a51a;
     }
 

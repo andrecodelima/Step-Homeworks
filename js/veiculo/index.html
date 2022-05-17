@@ -59,7 +59,7 @@
 
         <section>
             <div class="container">
-                <form action="">
+                <form id="formulario" action="">
                     <div class="col-md-1">             
                         <label for="">Fabricante</label>
                         <select name="" id="fabricante">
@@ -141,7 +141,7 @@
                 </form>
             </div>
 
-            <div class="container">
+            <div class="container-carousell">
                 <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
                       <div class="carousel-item active">
@@ -175,42 +175,47 @@
             </div>
         </section>
 
-        <section>
-            <div class="container-resp">
-              <div class="row">
-                <div class="col-md-1">
-                    <div class="box-nome">
-                        <label for="">Fabricante:</label>
-                        <div class="box-dados" id="resp-fab"></div>
+            <section>
+                    <div class="container-resp">
+                        <div class="row">
+                            <div class="col-md-1">
+                                <div class="box-nome">
+                                    <label for="">Fabricante:</label>
+                                    <div class="box-dados" id="resp-fab"></div>
+                                </div>
+                            
+                                <div class="box-nome">
+                                    <label for="">Modelo: </label>
+                                    <div class="box-dados" id="resp-model"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-1">
+                                <div class="box-nome">
+                                    <label for="">Ano: </label>
+                                    <div class="box-dados" id="resp-ano"></div>
+                                </div>
+                            
+                                <div class="box-nome">
+                                    <label for="">Placa: </label>
+                                    <div class="box-dados" id="resp-placa"></div>
+                                </div>
+                            
+                                <div class="box-nome">
+                                    <label for="">Cor: </label>
+                                    <div class="box-dados" id="resp-cor"></div>
+                                </div>
+                                
+                            </div>
+
+                            <!-- <div class="col-md-1">
+                                <input type="button" value="Limpar" onclick="limpe()">
+                            </div>
+                             -->
+                        </div>
                     </div>
-                   
-                    <div class="box-nome">
-                        <label for="">Modelo: </label>
-                        <div class="box-dados" id="resp-model"></div>
-                    </div>
-                </div>
-                
-                <div class="col-md-1">
-                    <div class="box-nome">
-                        <label for="">Ano: </label>
-                        <div class="box-dados" id="resp-ano"></div>
-                    </div>
-                   
-                    <div class="box-nome">
-                        <label for="">Placa: </label>
-                        <div class="box-dados" id="resp-placa"></div>
-                    </div>
-                   
-                    <div class="box-nome">
-                        <label for="">Cor: </label>
-                        <div class="box-dados" id="resp-cor"></div>
-                    </div>
-                    
-                </div>
-                
-              </div>
-            </div>
-        </section>
+            </section>
+
 
         <script src="./script.js"></script>
 </body>
