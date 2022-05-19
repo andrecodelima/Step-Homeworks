@@ -126,7 +126,7 @@ section.conteudo-table img{
 }
 
 .box-title{
-    background-color: #44D185;
+    background-color: rgb(47, 201, 85);
     /* border-radius: 6px; */
     color: #fff;
     width: 100%;
@@ -153,6 +153,7 @@ section.conteudo-table img{
 .container-multiplicacao{
     /* border: 2px solid red; */
     position: absolute;
+    margin-top: 10px;
     margin-left: 9%;
     padding: 0;
 }
@@ -164,17 +165,18 @@ section.conteudo-table img{
 }
 
 .col-md{
-    border: 2px solid red;
+    border: 2px solid #212121;
     margin-top: 10px;
     display: flex;
     align-items: center;
+    padding: 15px;
     padding-top: 3px;
     margin-right: 10px;
     text-transform: capitalize;
 }
 
 .col-md .dados{
-    border: 2px solid rgb(0, 89, 255);
+    border: 2px solid rgb(186, 189, 196);
     background-color: #fff;
     border-radius: 4%;
     margin-left: 2%;
@@ -192,13 +194,27 @@ section.conteudo-table img{
 
 .button-content{
     width: 20%;
-    border: 2px solid rgb(0, 89, 255);
+    border: 2px solid #e9ecef;
     margin-left: 2%;
-    background-color: rgba(47, 219, 41, 0.877);
+    background-color: #2370e2;
+    color: #fff;
 
 }
 
-input{
+input.input-content-reset{
+    width: 20%;
+    border: 2px solid rgb(186, 189, 196);
+    background-color: rgb(47, 201, 85);
+    margin-left: 2%;
+    color: #fff;
+    font-weight: bold;
+    /* display: flex;
+    justify-content: center; */
+}
+
+
+
+input.dados{
     display: flex;
     justify-content: center;
     padding-left: 5%;

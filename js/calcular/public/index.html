@@ -47,15 +47,6 @@
                     <h1>Calculadora Fácil</h1>
                 </div>
 
-                <div class="row">
-                    <div class="col-md">
-                        <h2>Nome: </h2>
-                        <div class="dados-nome">
-                            
-                        </div>
-                    </div>
-                </div>
-
                 <!-- SOMA -->
                 <div class="row">
                     <div class="col-md">
@@ -68,9 +59,10 @@
                                 <input class="dados" type="text" id="valor2-soma">
 
                                 <button  class="button-content" onclick="soma()">calcular</button>
-
                                 <div class="operacao">=</div>
                                 <div class="dados" id="resultado-soma"></div>
+
+                                <input class="input-content-reset" type="reset" value="Limpar">
 
                             </form>
                         </div>
@@ -93,6 +85,8 @@
                                 <div class="operacao">=</div>
                                 <div class="dados" id="resultado-diminui"></div>
 
+                                <input class="input-content-reset" type="reset" value="Limpar">
+
                             </form>
                         </div>
                     </div>
@@ -113,6 +107,8 @@
 
                                 <div class="operacao">=</div>
                                 <div class="dados" id="resultado-divide"></div>
+
+                                <input class="input-content-reset" type="reset" value="Limpar">
 
                             </form>
                         </div>
@@ -135,6 +131,8 @@
                                 <div class="operacao">=</div>
                                 <div class="dados" id="resultado-produto"></div>
 
+                                <input class="input-content-reset" type="reset" value="Limpar">
+
                             </form>
                         </div>
                     </div>
@@ -145,7 +143,7 @@
     </main>
 
   
-    <script src="../src/App.js"></script>
+    <script src="../src/script.js"></script>
     
 </body>
 </html>
