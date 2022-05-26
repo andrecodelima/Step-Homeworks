@@ -42,8 +42,8 @@ function igual(){
     }else if(operador == '√'){
         total = (Math.sqrt(valor1, 2))
         visor.value = total;
-    }else if(operador == 'x²'){
-        total = (Math.pow(valor1, 2))
+    }else if(operador == '%'){
+        total = (valor1 * Number(visor.value))/100;
         visor.value = total;
     }
 }
