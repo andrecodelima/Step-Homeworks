@@ -22,34 +22,35 @@
             </div>
 
             <div class="row-btn">
-                <div class="col-md-btn-left" >
-                    <button onclick="">%</button>
+                <div class="col-md-btn-left-op" >
+                    <button onclick="limpe()">C</button>
                 </div>
-                <div class="col-md-btn-left" onclick="">
-                    <button onclick="">SQRT</button>
+                <div class="col-md-btn-left-op" onclick="">
+                    <button onclick="btn_operador('√')">√</button>
                 </div>
-                <div class="col-md-btn-left" onclick="">
-                    <button onclick="">POW</button>
+                <div class="col-md-btn-left-op" onclick="">
+                    <button onclick="btn_operador('x²')">x²</button>
                 </div>
                 <div class="col-md-btn-rigth" onclick="">
-                    <button onclick="">/</button>
+                    <button onclick="btn_operador('/')">/</button>
                 </div>
             </div>
+
 
             <!-- 2. LINHA -->
 
             <div class="row-btn">
                 <div class="col-md-btn-left" >
-                    <button onclick="">7</button>
+                    <button onclick="btn_numero(7)">7</button>
                 </div>
                 <div class="col-md-btn-left" onclick="">
-                    <button onclick="">8</button>
+                    <button onclick="btn_numero(8)">8</button>
                 </div>
                 <div class="col-md-btn-left" onclick="">
-                    <button onclick="">9</button>
+                    <button onclick="btn_numero(9)">9</button>
                 </div>
                 <div class="col-md-btn-rigth" onclick="">
-                    <button onclick="">X</button>
+                    <button onclick="btn_operador('x')">X</button>
                 </div>
             </div>
 
@@ -57,16 +58,16 @@
 
             <div class="row-btn">
                 <div class="col-md-btn-left" >
-                    <button onclick="">4</button>
+                    <button onclick="btn_numero(4)">4</button>
                 </div>
                 <div class="col-md-btn-left" onclick="">
-                    <button onclick="">5</button>
+                    <button onclick="btn_numero(5)">5</button>
                 </div>
                 <div class="col-md-btn-left" onclick="">
-                    <button onclick="">6</button>
+                    <button onclick="btn_numero(6)">6</button>
                 </div>
                 <div class="col-md-btn-rigth" onclick="">
-                    <button onclick="">-</button>
+                    <button onclick="btn_operador('-')">-</button>
                 </div>
             </div>
 
@@ -74,34 +75,36 @@
 
             <div class="row-btn">
                 <div class="col-md-btn-left" >
-                    <button onclick="">1</button>
+                    <button onclick="btn_numero(1)">1</button>
                 </div>
                 <div class="col-md-btn-left" onclick="">
-                    <button onclick="">2</button>
+                    <button onclick="btn_numero(2)">2</button>
                 </div>
                 <div class="col-md-btn-left" onclick="">
-                    <button onclick="">3</button>
+                    <button onclick="btn_numero(3)">3</button>
                 </div>
                 <div class="col-md-btn-rigth" onclick="">
-                    <button onclick="">+</button>
+                    <button onclick="btn_operador('+')">+</button>
                 </div>
             </div>
 
             <div class="row-btn">
                 <div class="col-md-btn-left-0" onclick="">
-                    <button onclick="">0</button>
+                    <button onclick="btn_numero(0)">0</button>
                 </div>
                 <div class="col-md-btn-left" onclick="">
-                    <button onclick="">,</button>
+                    <button onclick="pont()">,</button>
                 </div>
                 <div class="col-md-btn-rigth" onclick="">
-                    <button onclick="">=</button>
+                    <button onclick="igual()">=</button>
                 </div>
             </div>
         </div>
 
     </div>
 
-    <script src="./script.js"></script>
+    <script src="../calculadora/script.js"></script>
 </body>
 </html>
+
+
