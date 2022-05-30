@@ -29,11 +29,12 @@ html, body{
 .calculadora{
     /* border: 1px solid red; */
     width: 50%;
-    height: 80%;
+    height: 50vh;
     border-radius: 10px;
     border: 2px solid black;
     background-color: #551c5c;
     margin-right: 24%;
+    position: relative;
 }
 .row-visor{
     /* border: 1px solid black; */
@@ -43,19 +44,36 @@ html, body{
 
 }
 
+.row-visor2{
+    /* border: 1px solid black; */
+    height: 13%;
+    display: flex;
+    border-radius: 3px;
+    background-color: #989299;
+    font-size: 15pt;
+    padding: 7px;
+    padding-left: 60%;
+    text-align: right;
+
+}
 .row-btn{
     border: 1px solid rgb(75, 73, 73);
-    height: 15%;
+    height: 12.5%;
     display: flex;
     padding-left: -1%;
     border-radius: 7px;
-    margin-top: 1.5px;
+    margin-top: 0.5px;
 }
 .col-md-calc{
     /* border: 2px solid blue; */
     width: 100%;
     height: 100%;
-
+}
+.col-md-calc2{
+    /* border: 2px solid blue; */
+    width: 100%;
+    height: 30%;
+   
 }
 
 .col-md-calc input{
