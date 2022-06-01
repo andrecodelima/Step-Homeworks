@@ -1,0 +1,102 @@
+/* ESTILOS. GLOBAIS */
+*{
+    margin: 0 auto;
+    padding: 0;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-size: 1.6rem;
+    
+}
+
+html, body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+}
+.header-container{
+    border: 2px solid rgb(0, 38, 255);
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #06AA48;
+    text-transform: capitalize;
+
+}
+    .box-title{
+        border: 2px solid red;
+        padding: 10px;
+        text-align: center;
+    }
+
+main.container{
+    border: 2px solid red;
+    width: 50%;
+    /* height: 70vh; */
+    padding: 14px;
+    position: relative;
+    max-width: 930px;
+
+}
+
+.container header{
+    border: 2px solid red;
+    width: 100%;
+}
+
+.row{
+    border: 1px solid blue;
+    padding: 8px;
+}
+
+.col-md-1{
+    border: 1px solid blue;
+    width: 5%;
+    display: flex;
+    justify-content: center;
+    font-size: 1.4rem;
+    font-weight: 800;
+}
+
+section.container{
+    border: 2px solid red;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-transform: capitalize;
+
+}
+
+article{
+    border: 2px solid red;
+    width: 30%;
+    height: 25vh;
+    padding: 20px;
+    justify-content: center;
+
+}
+
+button.btn{
+    width: 50%;
+    height: 10vh;
+    border: 2px solid red;
+    margin-left: 25%;
+    margin-top: 10%;
+
+    font-size: 1.7rem;
+    font-weight: bold;
+
+}
+
+#resp1{
+    font-size: 2rem;
+    font-weight: bold;
+    padding-top: 20px;
+    margin-left: 40%;
+}

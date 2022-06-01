@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab</title>
+
+    <style>
+ 
+        input{
+            text-align: right;
+            font-size: 25pt;
+
+        }
+        .box-input2{
+            width: 292px;
+            height: 40px;
+            background-color: gray;
+            text-align: right;
+        }
+
+        .box-input1{
+            width: 292px;
+            height: 70px;
+            border: 2px solid black;
+        }
+
+    
+        .box-button{
+            width: 300px;
+            height: 50px;
+            border: 2px solid black;
+        }
+ 
+    </style>
+</head>
+<body>
+    <div class="box-input2" id="tela2"></div>
+    <div>
+        <input class="box-input1" type="text" name="" id="tela1">
+    </div>
+    <div>
+        <button onclick="exibir()" class="box-button" id="btn">Enter</button>
+    </div>
+    
+    <div>
+        <button onclick="btn(8)" class="box-button" id="btn">8</button>
+    </div>
+
+    <script>
+        var visor1 = document.getElementById('tela1'); // tela branca
+        var visor2 = document.getElementById('tela2'); // tela cinza
+        function exibir(){
+            document.getElementById("tela2").innerHTML = visor1.value;
+
+        }
+
+        function btn(n){
+            visor1.value = n;
+        }
+
+        // var modelo = document.getElementById("modelo").value; //Armazeno o valor na variavel modelo.
+        // document.getElementById("resp-model").innerHTML = modelo; //Exibo valor da variavel modelo com o Inner
+
+    </script>
+
+</body>
+</html>

@@ -1,7 +1,7 @@
 
 function localize(){
     var fabricante = document.getElementById("fabricante").value;
-    var modelo = document.getElementById("modelo").value;
+    var modelo = document.getElementById("modelo").value; //Armazeno o valor na variavel modelo.
     var ano = document.getElementById("ano").value;
     var placa = document.getElementById("placa").value;
     var cor = document.getElementById("cor").value;
@@ -13,7 +13,7 @@ function localize(){
     // + "\n" + "Cor: " + cor);
 
     document.getElementById("resp-fab").innerHTML = fabricante;
-    document.getElementById("resp-model").innerHTML = modelo;
+    document.getElementById("resp-model").innerHTML = modelo; //Exibo valor da variavel modelo com o Inner
     document.getElementById("resp-ano").innerHTML = ano;
     document.getElementById("resp-placa").innerHTML = placa;
     document.getElementById("resp-cor").innerHTML = cor;

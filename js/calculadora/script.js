@@ -1,4 +1,4 @@
-const valorTela = document.getElementById('visor'); //Recebe os valores da tela
+var valorTela = document.getElementById('visor'); //Recebe os valores da tela
 var tela2 = ''; // Recebe os valores da segunda tela
 var valor2 = 0;
 var operador = '';
