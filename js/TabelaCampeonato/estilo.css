@@ -10,7 +10,12 @@ html{
 
 body{
     font-size: 1.6rem;
-    
+}
+
+body{
+    background-image: url("./fundo.png");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 html, body{
@@ -55,7 +60,6 @@ html, body{
     }
 
 main.container{
-    border: 2px solid rgb(128, 121, 121);
     width: 50%;
     /* height: 70vh; */
     padding: 14px;
@@ -71,18 +75,41 @@ main.container{
 
 .row{
     padding: 8px;
-    border-bottom: 1px solid #CCC;
+    border-bottom: 1px solid #fff;
 
 }
 
 .col-md-1{
-    border-left: 4px solid #1e44ee;
+    /* border-left: 4px solid #1e44ee; */
     width: 5%;
     display: flex;
     justify-content: center;
     font-size: 1.4rem;
     font-weight: 800;
     padding-left: 20px;
+}
+
+.col-md-11{
+    color: #fff;
+}
+#lin1, #lin2, #lin3, #lin4{
+    border-left: 4px solid #25ee1e;
+}
+
+#lin5, #lin6{
+    border-left: 4px solid #1ed6ee;
+}
+
+#lin7, #lin8, #lin9, #lin10, #lin11, #lin12{
+    border-left: 4px solid #0f641a;
+}
+
+#lin13, #lin14, #lin15, #lin16 {
+    border-left: 4px solid #a4a8a8;
+}
+
+#lin17, #lin18, #lin19, #lin20 {
+    border-left: 4px solid #fc0c0c;
 }
 
 section.container{
@@ -104,6 +131,7 @@ article{
 
 }
 
+
 article .box-title{
     background-color: #434443;
     /* border: 2px solid #777a77; */
@@ -115,18 +143,40 @@ article .box-title{
 button.btn{
     width: 50%;
     height: 10vh;
-    border: 2px solid red;
+    border: 2px solid rgb(0, 81, 255);
+    background-color: rgb(67, 113, 238);
     margin-left: 25%;
     margin-top: 10%;
-
+    color: #fff;
     font-size: 1.7rem;
     font-weight: bold;
 
 }
 
+.btn:hover{
+    background-color: #25ee1e;
+}
+
 #resp1{
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-weight: bold;
-    padding-top: 20px;
+    padding-top: 15%;
     margin-left: 40%;
+    color: #fff;
+}
+
+ol{
+    border: 2px dotted #434443;
+    width: 50%;
+    color: #fff;
+
+}
+ol h2{
+    text-align: center;
+    padding: 10px;
+    background-color: #434443;
+    color: #fff;
+}
+.box-lista{
+    margin-top: 40px;
 }

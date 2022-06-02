@@ -100,9 +100,9 @@ document.getElementById('resp1').innerHTML = quantidade;
 
 //LISTAGEM DE TIMES NO INDEX POR ORDEM ALFABÉTICA
 for(let time in brasileirao22.sort()){
-    document.getElementById('resp2').innerHTML = brasileirao22[time];
+    // document.getElementById('resp2').innerHTML = brasileirao22[time];
     console.log(brasileirao22[time])
-    // document.write("<p class='resp2'>"+ brasileirao22[time] + "</p>");
+    document.write("<ol>"+ brasileirao22[time] + "</ol>");
 }
 
 // TIME ALEATÓRIO
