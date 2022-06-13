@@ -1,0 +1,45 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-size: 1.6rem;
+    background-color: rgba(241, 241, 241, 0.863);
+
+}
+
+html, body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+}
+
+section.container{
+    margin: 0 auto;
+    width: 90%;
+    height: 90vh;
+    background-image: url("../assets/img/banner-2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+}
+
+.row{
+    border: 2px solid red;
+    margin-top: 15%;
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn-play{
+    width: 20%;
+    height: 10vh;
+    border-radius: 30px;
+}
