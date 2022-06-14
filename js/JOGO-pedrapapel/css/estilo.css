@@ -42,8 +42,13 @@ section.container{
     width: 20%;
     height: 15vh;
     border-radius: 40px;
-    /* border: 2px solid red; */
+    border: 2px solid #fff;
     background-color: rgb(250, 12, 12);
+}
+.btn-play:hover{
+    background-color: blueviolet;
+    border: 6px dotted #fff;
+    transition: 1.4s;
 }
 
 h2{
@@ -88,7 +93,7 @@ h2{
     height: 20vh;
     /* display: flex; */
     justify-content: center;
-    margin-top: -20%;
+    margin-top: -27%;
     text-align: center;
 }
 
