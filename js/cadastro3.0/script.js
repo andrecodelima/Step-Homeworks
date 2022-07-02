@@ -32,7 +32,6 @@ function exibe(){
                     </div>`)
 
     }document.getElementById('cadastro').innerHTML += card; 
-
 }
 
 
