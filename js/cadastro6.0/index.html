@@ -14,7 +14,7 @@
 
     <nav class="navbar navbar-light bg-dark fixed-top">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">SANTANDRÉ</a>
+          <a class="navbar-brand" href="#">SANTANDRE</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -62,15 +62,15 @@
                 <input type="text" class="form-control" id="inputNome" placeholder="Nome do Titular">
             </div>
 
-            <div class="col-md-3">
+            <!-- <div class="col-md-3">
                 <label for="" class="form-label">CPF</label>
                 <input type="text" class="form-control" id="inputCpf" placeholder="CPF do Titular">
-            </div>
+            </div> -->
 
-            <div class="col-md-3">
+            <!-- <div class="col-md-3">
                 <label for="" class="form-label">Telefone</label>
                 <input type="tel" class="form-control" id="inputTel" placeholder="Telefone do Titular">
-            </div>
+            </div> -->
 
             <hr>
 
@@ -86,7 +86,7 @@
 
             <div class="col-md-4">
                 <label for="" class="form-label">Tipo de Conta</label>
-                <select id="inputEstado" class="form-select">
+                <select id="inputTipo" class="form-select">
                   <option selected>Escolha...</option>
                   <option id="corrente">Corrente</option>
                   <option id="poupanca">Poupança</option>
@@ -95,7 +95,7 @@
             
             <hr>
 
-            <div class="col-12">
+            <!-- <div class="col-12">
               <label for="inputAddress" class="form-label">Endereço</label>
               <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
             </div>
@@ -114,7 +114,7 @@
                 <option>MG</option>
                 <option>RS</option>
               </select>
-            </div>
+            </div> -->
             
             <div class="col-12">
               <div class="form-check">
@@ -126,11 +126,14 @@
             </div>
 
             <div class="col-12">
-              <button type="submit" class="btn btn-primary">Cadastre</button>
+              <button type="button" id="enviar" class="btn btn-primary" onclick="cadastrar()">Cadastre</button>
             </div>
           </form>
 
       </section>
 
+      <section id="resposta"></section>
+
+      <script src="./js/script.js"></script>
 </body>
 </html>
