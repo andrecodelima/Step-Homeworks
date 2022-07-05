@@ -1,7 +1,7 @@
 
 class ClienteModelo{
     constructor(conta, agencia, nome, tipoConta, cpf){
-        this.conta = conta
+        this.s = conta
         this.agencia = agencia
         this.nome = nome
         this.tipoConta = tipoConta  
