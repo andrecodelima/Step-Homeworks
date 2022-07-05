@@ -7,20 +7,37 @@ class ClienteModelo{
         this.tipoConta = tipoConta  
         
     }
+
 }
 
-// Globais
+// Var Globais
 var banco           =      []
-cadastroNome        =      document.getElementById('InputNome').value
-cadastroConta       =      document.getElementById('inputConta').value
-cadastroAgencia     =      document.getElementById('inputAgencia').value
-cadastroTipo        =      document.getElementById('inputTipo').value
+var nome        =      document.getElementById('InputNome') 
+var conta       =      document.getElementById('inputConta')
+var agencia     =      document.getElementById('inputAgencia')
+var tipo        =      document.getElementById('inputTipo')
 
 
 function cadastrar(){
     // var cliente = new ClienteModelo()
-    banco.push(new ClienteModelo(cadastroNome, // Inicializei o objeto no array
-                                 cadastroConta,
-                                 cadastroAgencia,
-                                 cadastroTipo))
+
+    banco.push(new ClienteModelo(nome.value, // Inicializei o objeto no array
+                                 conta.value,
+                                 agencia.value,
+                                 tipo.value))
+
+    exibir()
+}
+
+
+function exibir(){
+    for(c=0; c<=banco.length; c++){
+        var card = (`<div class="resposta card" >
+                      Nome: ${nome}<br>
+                      Conta: ${conta} <br>
+                      Agencia: ${agencia}<br>
+                      Tipo da Conta: ${tipo}
+                      </div>`)
+    }document.getElementById('resposta').innerHTML += card                   
+    
 }
