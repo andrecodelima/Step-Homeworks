@@ -1,38 +1,39 @@
 
 class Equipamento{
-    constructor(p_nome, p_atividade, p_descricao, p_preco){
+    constructor(p_nome){
         this.nome = p_nome
-        this.atividade = p_atividade
-        this.descricao = p_descricao
-        this.preco = p_preco
     }
+
+    
 }
 
 // Variaveis Globais
 
 var estoque = []
-
 InputNome = document.getElementById('inputNome')
-InputAtividade = document.getElementById('inputTipo')
-InputDescricao = document.getElementById('inputDescricao')
-InputPreco = document.getElementById('inputPreco')
 
 
 // Funções  Globais
 
 function cadastrar(){
     // Usando o Objeto
-    estoque.push(new Equipamento(inputNome, InputAtividade, InputDescricao, InputPreco))
+    estoque.push(new Equipamento(inputNome.value))
     // O inputNome envia o valor para o parametro do construtor
     console.log(`Nome: ${this.nome}`)
     // O this. referencia o valor na classe
 
 }
 
+
+
 function exibir(){
-    for(c in estoque){
+    
+    for(c=0; c<= estoque.length; c++){
         var card = (`<div class="col-md-2 card">
-                    Nome: 
+
+                    Nome:       ${this.nome}
+                    
                 </div>`)
     }
-}document.getElementById('resposta').innerHTML = card
+    document.getElementById('resposta').innerHTML += card
+}
