@@ -104,6 +104,12 @@ carro3.placa = 'SP32A'
 
 var garagem = [carro1, carro2, carro3]
 
+
+console.log(garagem[0]) // Acessando todo o conteúdo do objeto no índice 0
+
+
+// Acessando propriedades especificas dos objetos nos índices
+
 for(c=0; c<garagem.length; c++){
 
     console.log(`Carro ${c+1}`)
@@ -115,3 +121,4 @@ for(c=0; c<garagem.length; c++){
     console.log('================')
 
 }
+
