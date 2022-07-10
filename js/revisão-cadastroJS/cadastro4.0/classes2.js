@@ -19,7 +19,6 @@ var InputTurno = document.getElementById('turno')
 function cadastrar(){
     aluno.nome = InputNome.value  // Aqui atribuímos as propriedades do objeto os valores dos inputs.
     // Atributo nome do objeto aluno recebe valor do InputNome.
-
     aluno.dataNascimento = InputNascimento.value
     aluno.turma = InputTurma.value
     aluno.turno = InputTurno.value
@@ -37,6 +36,7 @@ function exibir(){
         //Fazendo o acesso e exibição dos atributos do objeto.
         card = (`Nome: ${aluno.nome} 
                  Turma: ${aluno.turma}
+                 Turno: ${aluno.turno}
                  Sala: ${sala}<br>`) //Exibindo o array
                  
     }document.getElementById('resposta').innerHTML += card
