@@ -48,7 +48,7 @@ section{
 }
 
 .div-content{
-    border: 2px solid red;
+    border: 6px solid rgb(240, 240, 240);
     max-width: 960px;
     justify-content: center;
 
@@ -102,6 +102,7 @@ button{
     font-size: 14pt;
     font-weight: 900;
     color:blueviolet;
+    border: 6px solid rgb(240, 240, 240);
 
 }
 
