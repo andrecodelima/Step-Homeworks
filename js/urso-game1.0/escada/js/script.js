@@ -75,7 +75,7 @@ setTimeout(function(){
             imgUrso.style.marginTop = '0px'
         }
 
-        if(margem >= w - 765){
+        if(margem >= w - 745){
             clearInterval(timer)
         }
 
