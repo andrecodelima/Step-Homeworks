@@ -16,6 +16,18 @@
     <style>
 
     </style>
+
+    <script>
+      window.onload = function(){
+                alert(`Seja bem vindo! \n
+
+                      Para interromper a caminhada - [ STOP    ]
+                      Para reiniciar a caminhada   - [ RESTART ] 
+                      Para ir para a próxima fase  - [ NEXT    ]
+                      
+                    `)
+              }
+    </script>
 </head>
 <body>
 
@@ -39,11 +51,22 @@
 
         <!-- SESSÃO -->
         <section class="container-buttons">
-          <button type="button" class="btn-pare" onclick="parar()">PARE NA VOLTA!</button>
+          <button type="button" class="btn-pare" onclick="parar()">STOP</button>
+      
+          <button type="button" class="btn-again" onclick="denovo()">RESTART</button>
+
           <a href="./fase-escada/index.html"><button type="button" class="btn-netx">NEXT</button></a>
+        
         </section>
+
+        
     </main>
-    <script src="./js/script.js"></script>
+    <script src="./js/script.js">
+      function msg(){
+          alert()
+        }
+
+    </script>
     
 </body>
 </html>
