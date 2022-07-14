@@ -49,15 +49,45 @@ setTimeout(function(){
 
                 },100)
 
-                if(margem <= w-900){
-                    clearInterval(timer)
-                }
+                
             },1000)
         }
 
     },100)
-
+    
 },3000)
+parar()
+
+function parar(){
+    clearInterval(timer)
+}
+
+// /// Escada
+
+// setTimeout(function(){
+//     timer = setInterval(function(){
+//         if(quadroAtual % 2 == 0){
+//             imgUrso.src = Ursos[0]
+//             quadroAtual ++
+//             imgUrso.style.marginLeft = '10px'
+
+//         }else{
+//            imgUrso.src = Ursos[1]
+//            quadroAtual ++
+//         }
+
+//         imgUrso.style.marginLeft = margem + 'px'
+//         margem += 10
+//     },200)
+// },1000)
+
+
+
+
+
+
+
+
 
 
 function clique(){
