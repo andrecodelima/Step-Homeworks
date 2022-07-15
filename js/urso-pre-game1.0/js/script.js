@@ -47,55 +47,63 @@ setTimeout(function(){
                     imgUrso.style.marginLeft = margem + 'px'
                     margem -= 10
 
-                },100)
+                },500)
 
                 
             },1000)
         }
 
-    },100)
+    },500)
     
-},3000)
+},2000)
 parar()
 
 function parar(){
     clearInterval(timer)
 }
 
-// /// Escada
+function denovo(){
+    
+setTimeout(function(){
+    timer = setInterval(function(){
+        if(quadroAtual % 2 == 0){
+            imgUrso.src = Ursos[0]
+            quadroAtual ++
+            imgUrso.style.marginLeft = '10px'
 
-// setTimeout(function(){
-//     timer = setInterval(function(){
-//         if(quadroAtual % 2 == 0){
-//             imgUrso.src = Ursos[0]
-//             quadroAtual ++
-//             imgUrso.style.marginLeft = '10px'
+        }else{
+           imgUrso.src = Ursos[1]
+           quadroAtual ++
+        }
 
-//         }else{
-//            imgUrso.src = Ursos[1]
-//            quadroAtual ++
-//         }
+        imgUrso.style.marginLeft = margem + 'px'
+        margem += 10
 
-//         imgUrso.style.marginLeft = margem + 'px'
-//         margem += 10
-//     },200)
-// },1000)
+        if(margem >= w-800){
+            clearInterval(timer)
 
+            setTimeout(function(){
+                timer = setInterval(function(){
+                    if(quadroAtual % 2 == 0){
+                        imgUrso.src = Ursos[0]
+                        quadroAtual ++
+                        imgUrso.style.marginLeft = '10px'
+            
+                    }else{
+                       imgUrso.src = Ursos[1]
+                       quadroAtual ++
+                    }
 
+                    imgUrso.style.marginLeft = margem + 'px'
+                    margem -= 10
 
+                },500)
 
+                
+            },1000)
+        }
 
-
-
-
-
-
-function clique(){
-    w = innerWidth
-    h = innerHeight
-
-    x = document.getElementById('demo')
-
-    x.innerHTML="Largura: " + w + " Altura: " + h;
-
+    },500)
+    
+},2000)
 }

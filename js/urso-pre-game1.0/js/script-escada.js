@@ -1,8 +1,8 @@
 
 var Ursos = [
-                './img/urso1.png',
-                './img/urso2.png',
-                './img/urso3.png'
+                '../img/urso1.png',
+                '../img/urso2.png',
+                '../img/urso3.png'
             ]
 
 
@@ -12,8 +12,6 @@ var margem = 1
 var timer
 w = innerWidth, h = innerHeight
 
-//415
-/// Escada
 imgUrso.style.marginLeft = '1px'
 
 setTimeout(function(){
@@ -75,8 +73,9 @@ setTimeout(function(){
             imgUrso.style.marginTop = '0px'
         }
 
-        if(margem >= w - 745){
+        if(margem >= w - 765){
             clearInterval(timer)
+            alert('PARABÉNS VOCÊ VENCEU!')
         }
 
     },500)
