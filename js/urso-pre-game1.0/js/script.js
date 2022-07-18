@@ -63,7 +63,6 @@ function parar(){
 }
 
 function denovo(){
-    
 setTimeout(function(){
     timer = setInterval(function(){
         if(quadroAtual % 2 == 0){
