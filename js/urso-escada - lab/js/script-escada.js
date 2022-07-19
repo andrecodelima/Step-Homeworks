@@ -70,11 +70,15 @@ setTimeout(function(){
 
         if(margemTela >= largura - 786){
             imgUrso.style.marginTop ='0px'
-
+            if(margemTela >= largura - 760){
+                imgUrso.style.marginLeft = margemTela + 'px'
+                margemTela -= 20
+                imgUrso.style.marginTop = '55px'
+            }
         }
 
 
-    },100)
+    },200)
 
 },1000)
 
