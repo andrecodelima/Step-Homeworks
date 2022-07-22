@@ -29,7 +29,7 @@ function cadastrar(){
 }
 
 function exibir(){
-    for(c=0; c<escola.length; c++){
+    for(c=0; c<escola.length; c++){ 
                               // escola -> (array) | [c] -> Indice do array (objeto que foi enviado) | .nome - atributo do objeto
         card = (`Nome:       ${escola[c].nome} 
                  Nascimento: ${escola[c].nascimento}

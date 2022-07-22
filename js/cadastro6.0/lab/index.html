@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testes</title>
+</head>
+<body>
+
+    <h1>LAB</h1>
+    <h2>OPERADOR IN - BUSCANDO ÍNDICE NO ARRAY</h2>
+
+    <h3>Sintaxe</h3>
+    <p>
+        for ([indice] in [objeto]) <br>
+        declaração                 <br>
+        Verifica se há (ou proucra) um ÍNDICE no objeto.
+    </p>
+    
+    <hr>
+
+    <h2>INDEX OF - BUSCANDO ELEMENTOS NO ARRAY</h2>
+
+    <h3>Sintaxe</h3>
+    <p>
+        string.indexOf(elemento, [posicaoInicial])
+        
+
+    </p>
+    
+    <hr>
+
+
+    <script>
+
+        var box = [3,1,6,11]
+        
+        if(2 in box){
+            console.log(true)
+        }else{
+            console.log(false)
+        }
+
+        //////////////////////////////////////////////////////
+
+        const cores = ['verde', 'Amarelo', 'Azul', 'Vermelho']
+
+        for(let index in cores){ // Copia os índices do array cores para a var 'index'
+            console.log(index, cores[index])
+        }
+
+
+    </script>
+    
+</body>
+</html>

@@ -56,7 +56,7 @@
     
       <section>
 
-        <form class="row g-3">
+        <form class="row g-3" id="formConta">
             <div class="col-md-6">
                 <label for="" class="form-label">Nome</label>
                 <input type="text" class="form-control" id="inputNome" placeholder="Nome do Titular">
@@ -125,15 +125,20 @@
               </div>
             </div>
 
-            <div class="col-12">
+            <div class="col-6">
               <button type="button" id="enviar" class="btn btn-primary" onclick="cadastrar()">Cadastre</button>
             </div>
+
+            <div class="col-6">
+              <button type="button" id="" class="btn btn-primary" onclick="exibir()">Exibir</button>
+            </div>
+
           </form>
 
       </section>
 
-      <section id="resposta"></section>
+      <div id="resposta"></div>
 
-      <script src="./js/script-lab.js"></script>
+      <script src="./js/script.js"></script>
 </body>
 </html>

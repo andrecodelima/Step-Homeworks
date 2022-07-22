@@ -1,59 +1,66 @@
 
-class ClienteModelo{
-    constructor(conta, agencia, nome, tipoConta, cpf){
-        this.s = conta
-        this.agencia = agencia
-        this.nome = nome
-        this.tipoConta = tipoConta  
-        this.cpf = cpf
-        
+class cadastro{
+    constructor(pConta, pAgencia, pTitular, pTipo, pCpf){
+
+        this.conta      = pConta
+        this.agencia    = pAgencia
+        this.titular    = pTitular
+        this.tipo       = pTipo
+        this.cpf        = pCpf
+               
     }
+
+    card = function(){
+        let cartao = '<div class = "card">'               +  
+                     
+                            'Titular: ' + this.titular    + '<br>' +
+                            'Agência: ' + this.agencia    + '<br>' +
+                            'Conta: '   + this.conta      + '<br>' +
+                            'Tipo: '    + this.tipo       + '<br>' +
+                            'CPF: '     + this.cpf        + '<br>' +
+
+                     '</div>'
+        
+        return cartao
+    }
+
+
 }
 
-   
+
+var banco           = []
+var divResposta     = document.getElementById('resposta')
+
+var inputTitular    = document.getElementById('inputNome')
+var inputCpf        = document.getElementById('inputCpf')
+var inputConta      = document.getElementById('inputConta')
+var inputAgencia    = document.getElementById('inputAgencia')
+var inputTipo       = document.getElementById('inputTipo')
+
+var limpaForm       = document.getElementById('formConta')
+
 function cadastrar(){
     
-    var banco = []
-    var cliente = new ClienteModelo()
-
-    cliente.nome =      document.getElementById('inputNome')    .value    
-    cliente.conta =     document.getElementById('inputConta')   .value
-    cliente.agencia =   document.getElementById('inputAgencia') .value
-    cliente.tipoConta = document.getElementById('inputTipo')    .value
-    cliente.cpf =       document.getElementById('inputCpf')     .value
-
-    banco.push(cliente.nome, cliente.conta, cliente.agencia, cliente.tipoConta)
-
-    document.getElementById('inputNome')    .value = ''
-    document.getElementById('inputConta')   .value = ''
-    document.getElementById('inputAgencia') .value = ''
-    document.getElementById('inputTipo')    .value = ''
-
-    // exibir()
-
-    for(c=0; c<= banco.length; c++){
-        var card = (`<div class="col-md-2 card">
-                        Titular:        ${cliente.nome}           <br>
-                        Conta:          ${cliente.conta}            <br>
-                        Agência:        ${cliente.agencia}          <br>
-                        Tipo de Conta:  ${cliente.tipoConta}
-                    </div>`)
-    }
-    document.getElementById('resposta').innerHTML += card //0 + 1 ; 1 + 1 ...
-
-
-
+    
+    banco.push(new cadastro(inputConta.value,
+                            inputAgencia.value,
+                            inputTitular.value,
+                            inputTipo.value,
+                            inputCpf.value)
+                )
+    
+    limpaForm.reset()
 }
 
-// function exibir(){
-//     for(c=0; c<= banco.length; c++){
-//         var card = (`<div class="col-md-2 card">
-//                         Titular:        ${cliente.nome}           <br>
-//                         Conta:          ${cliente.conta}            <br>
-//                         Agência:        ${cliente.agencia}          <br>
-//                         Tipo de Conta:  ${cliente.tipoConta}
-//                     </div>`)
-//     }
-//     document.getElementById('resposta').innerHTML += card //0 + 1 ; 1 + 1 ...
-// }
+function exibir(){
+    let cartoes = ''
+
+    for(let c in banco){ // c pega os indices do array banco
+        cartoes += banco[c].card()
+
+    }
+    divResposta.innerHTML = cartoes
+    console.log(banco)
+
+}
 

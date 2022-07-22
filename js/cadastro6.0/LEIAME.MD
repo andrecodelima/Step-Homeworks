@@ -9,7 +9,7 @@ Usando o dever de casa da aula 16, faça as seguintes adaptações:
 ================================================================
 AULA 16
 Crie uma página para cadastro de contas bancárias, tendo:
-Número da contas
+Número da conta
 Número da Agência
 Nome do Titular
 Tipo da Conta, sendo: Poupança ou Corrente
