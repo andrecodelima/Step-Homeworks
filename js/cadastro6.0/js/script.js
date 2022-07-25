@@ -41,13 +41,16 @@ var limpaForm       = document.getElementById('formConta')
 
 function cadastrar(){
     
-    
+    while(banco.indexOf(banco[4] = -1)){
+        alert('!')
+    }
     banco.push(new cadastro(inputConta.value,
                             inputAgencia.value,
                             inputTitular.value,
                             inputTipo.value,
                             inputCpf.value)
                 )
+    
     
     limpaForm.reset()
 }
