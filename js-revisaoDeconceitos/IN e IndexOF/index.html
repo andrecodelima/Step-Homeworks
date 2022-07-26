@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testes</title>
+</head>
+<body>
+
+    <h1>LAB</h1>
+    <h2>OPERADOR IN - BUSCANDO ÍNDICE NO ARRAY</h2>
+
+    <h3>Sintaxe</h3>
+    <p>
+        for ([indice] in [objeto]) <br>
+        declaração                 <br>
+        Verifica se há (ou proucra) um ÍNDICE no objeto.
+    </p>
+    
+    <hr>
+
+    <h2>INDEX OF - BUSCANDO ELEMENTOS NO ARRAY</h2>
+
+    <h3>Sintaxe</h3>
+    <p>
+        string.indexOf(elemento)
+        
+    </p>
+
+    <h2>Como Buscar um Elemento em Arrays: Método indexOf</h2>
+    <p>
+        Todo objeto do tipo Array possui um método próprio, nativo, o indexOf.      <br>                                                                 
+
+        Para usá-lo, basta colocar um ponto após o nome do array, escrever indexOf  <br>
+        e passar como argumento o elemento que você deseja buscar.                  <br>
+
+        Por exemplo, se quisermos encontrar o número 10 em um array chamado vetor:  <br>
+        vetor.indexOf(10);
+    </p>
+    
+    <hr>
+
+
+    <script>
+
+        // OPERADOR IN
+
+        var box = [3,1,6,11]
+        
+        if(2 in box){
+            console.log(true)
+        }else{
+            console.log(false)
+        }
+
+        // FOR IN
+
+        const cores = ['verde', 'Amarelo', 'Azul', 'Vermelho']
+
+        for(let index in cores){ // Copia os índices do array cores para a var 'index'
+            console.log(index, cores[index])
+        }
+
+        ///////////////////////////////////////////////////////
+
+        let numeros = [2,5,6,7,8]
+        console.log(numeros.indexOf(5)) //1
+
+        let cpfs = ['126.924.727.13','124.443.157.58']
+        console.log(cpfs.indexOf('124.443.157.58'))
+        console.log(cpfs[cpfs.indexOf('124.443.157.58')])
+        /*
+
+        Note que o que aparecerá no console será o número 1, porque ele está na segunda posição do array, e como o array começa em 0, a segunda posição é 1.
+
+        Outro ponto importante é que ele retorna a posição na qual o número se encontra, e não o número.
+
+        */
+
+        /////
+        // #Ex1
+
+  
+
+        while(true){
+            var box = []
+            n = window.prompt('N: ')
+            box.push(n)
+
+            if(box.indexOf('4')){
+                alert('Número 4 já existe. Digite outro número: ')
+            }else{
+                alert('Erro')
+            }
+        }
+
+    </script>
+    
+</body>
+</html>
