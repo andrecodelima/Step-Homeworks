@@ -19,17 +19,32 @@ class cadastro{
     }
 }
 
-var banco       = []
-var Limpar      = document.getElementById('formulario')
-var divResposta = document.getElementById('resposta')
+var banco           = []
+var volutarios      = []
+var funcionarios    = []
+var atendidos       = []
 
-var nome        = document.getElementById('inputNome')
-var cpf         = document.getElementById('inputIdade')
-var cidade      = document.getElementById('inputCidade')
-var tipo        = document.getElementById('inputTipo')
+var Limpar          = document.getElementById('formulario')
+var divResposta     = document.getElementById('resposta')
+
+var nome            = document.getElementById('inputNome')
+var cpf             = document.getElementById('inputIdade')
+var cidade          = document.getElementById('inputCidade')
+var tipo            = document.getElementById('inputTipo')
+
+var chekVol            = document.getElementById('chkVoluntarios')
+var chekFun            = document.getElementById('chkFuncionarios')
+// var chekVol            = document.getElementById('chkVoluntarios')
+
 
 function cadastrar(){
-    banco.push(new cadastro(nome.value, cpf.value, cidade.value, tipo.value))
+
+    switch(chekVol){
+        case chekVol:
+            console.log(chekVol.value)
+    }
+
+    banco.push(new cadastro(nome.value, cpf.value, cidade.value))
     console.log(banco)
 }
 
