@@ -19,40 +19,66 @@ class cadastro{
     }
 }
 
-var banco           = []
-var volutarios      = []
-var funcionarios    = []
-var atendidos       = []
+var banco               = []
 
-var Limpar          = document.getElementById('formulario')
-var divResposta     = document.getElementById('resposta')
+var voluntarios         = []
+var funcionarios        = []
+var atendidos           = []
 
-var nome            = document.getElementById('inputNome')
-var cpf             = document.getElementById('inputIdade')
-var cidade          = document.getElementById('inputCidade')
-var tipo            = document.getElementById('inputTipo')
+var limpa               = document.getElementById('formulario')
+var divResposta         = document.getElementById('resposta')
 
-var chekVol            = document.getElementById('chkVoluntarios')
-var chekFun            = document.getElementById('chkFuncionarios')
-// var chekVol            = document.getElementById('chkVoluntarios')
+var nome                = document.getElementById('inputNome')
+var cpf                 = document.getElementById('inputIdade')
+var cidade              = document.getElementById('inputCidade')
 
 
 function cadastrar(){
+let chekVol             = document.getElementById('chkVoluntarios')     .checked
+let chekFun             = document.getElementById('chkFuncionarios')    .checked
+let chekAtn             = document.getElementById('chkAtendidos')       .checked
 
-    switch(chekVol){
-        case chekVol:
-            console.log(chekVol.value)
-    }
+let tipo = [chekVol, chekFun, chekAtn].indexOf(true)
+    switch(tipo){
+       case 0:
+            if(chekVol.value == undefined){
+                voluntarios.push(new cadastro(nome.value, cpf.value, cidade.value, 'Voluntários'))
+                console.log(voluntarios)
+            }
+            break
+       
+        case 1:
+            if(chekFun.value == undefined){
+                funcionarios.push(new cadastro(nome.value, cpf.value, cidade.value, 'Funcionários'))
+                console.log(funcionarios)
+            }
+            break
 
-    banco.push(new cadastro(nome.value, cpf.value, cidade.value))
-    console.log(banco)
+        case 2:
+            if(chekAtn.value == undefined){
+                atendidos.push(new cadastro(nome.value, cpf.value, cidade.value, 'Atendidos'))
+                console.log(atendidos)
+            }
+            break
+
+       }
+    
+    limpa.reset()
 }
 
 
 function exibir(){
     let cartoes = ''
-    for(c in banco){
-        cartoes += banco[c].card()
+    for(c in voluntarios){
+        cartoes += voluntarios[c].card()
+    }
+
+    for(c in funcionarios){
+        cartoes += funcionarios[c].card()
+    }
+
+    for(c in atendidos){
+        cartoes += atendidos[c].card()
     }
 
     divResposta.innerHTML = cartoes

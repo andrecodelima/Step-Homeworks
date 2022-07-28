@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Uber</h1>
+
+    <p>Tipo de Uber</p>
+
+
+    <section class="alinhaBox">
+        <input class="uber" type="checkbox" value="Uber X" name="uber" id="uberX"> Uber X </input>
+        <input class="uber" type="checkbox" name="uber" id="uberSelect"> Uber Select </input>
+        <input class="uber" type="checkbox" name="uber" id="uberBlack"> Uber Black </input>
+    </section>
+
+    <br>
+
+    <p>Local de Saída:</p>
+    <input type="text" name="localSaida" id="localSaida">
+    <p>Local de Destino:</p>
+    <input type="text" name="localDestino" id="localDestino">
+
+    <br>
+
+    <p>Forma de Pagamento:</p>
+    <input type="checkbox" name="cartao" id="cartao">Cartão de Crédito</input>
+    <input type="checkbox" name="dinheiro" id="dinheiro">Dinheiro</input>
+
+    <br>
+
+    <br>
+
+    <button onclick="executar()">Pedir Uber</button>
+    <script>
+        
+function executar() {
+
+let uberX = document.getElementById("uberX").checked;
+let uberSelect = document.getElementById("uberSelect").checked;
+let uberBlack = document.getElementById("uberBlack").checked;
+let tipoUber = [uberX,uberSelect,uberBlack].indexOf(true)
+let tipoEscolhido
+
+switch (tipoUber) {
+    case -1:
+        tipoEscolhido = "Tipo de uber não informado"
+        break;
+    case 0:
+        console.log(uberX.value)
+        break;
+    case 1:
+        tipoEscolhido = "Uber Select"
+        break;
+    case 2:
+        tipoEscolhido = "Uber Black"
+        break;
+}
+
+alert(tipoEscolhido)
+
+}
+    </script>
+</body>
+</html>
