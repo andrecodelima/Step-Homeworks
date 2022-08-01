@@ -1,0 +1,97 @@
+body{
+    background-color: rgb(212, 211, 211);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.container-fluid{
+    border: 3px rgb(240, 237, 237) solid;
+    background-color: rgb(211, 50, 58);
+    /* flex-direction: row; */
+    display: flex;
+    justify-content: center;
+    padding-left: 40%;
+}
+
+.navbar-light .navbar-brand {
+    color: rgba(243, 236, 236, 0.9);
+    font-weight: bolder;
+
+}
+
+main{
+    border: 5px double rgb(248, 247, 247);
+    background-color: rgb(112, 172, 212);
+
+    padding: 15px;
+    margin-top: 1%;
+    width: 80%;
+    margin: auto;
+    font-size: 14pt;
+    color: rgb(17, 17, 17);
+    
+}
+
+#resposta{
+    display: flex;
+}
+
+.col-md-2{
+    border: 2px solid red;
+    display: flex;
+
+    margin-left: 4%;
+}
+
+
+.col-md-1, .col-md-3, .col-md-4, .col-md-6{
+    margin-left: 4%;
+}
+.box-submit .col-md-3{
+    margin-left: 50px;
+}
+
+
+.card{
+    width: 200px;
+    border: 2px solid blue;
+    display: flex;
+    padding: 8px;
+}
+.row{
+    margin-top: 10px;
+    display: flex;
+    /* justify-content: center; */
+}
+
+.box-submit{
+    /* padding: 2%; */
+    padding-left: 1%;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.box-tipo{
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+select{
+    width: 200px;
+    height: 35px;
+    border: 1px solid rgb(207, 207, 207);
+    border-radius: 3px;
+}
+
+button{
+    background-color: rgb(12, 204, 60);
+}
+
+.box-moto,
+.box-barco{
+    display: none;
+}
+
+/* .box-barco{
+    display: none;
+} */
