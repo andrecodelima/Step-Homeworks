@@ -36,18 +36,18 @@ class Cadastro{
         return card
     }
 
-    // barco = function(){
-    //     let card = "<div class='card'>"                       + 
+    cardBarco = function(){
+        let card = "<div class='card'>"                       + 
 
-    //                     "Tipo: "          + this.tipo         + "<br>"   +
-    //                     "Modelo: "        + this.modelo       + "<br>"   +
-    //                     "Cor: "           + this.cor          + "<br>"   +
-    //                     "Fabricante: "    + this.fabricante   + "<br>"   +
-    //                     "Pés: "           + this.pes          + "<br>"   +
+                        "Tipo: "          + this.tipo         + "<br>"   +
+                        "Modelo: "        + this.modelo       + "<br>"   +
+                        "Cor: "           + this.cor          + "<br>"   +
+                        "Fabricante: "    + this.fabricante   + "<br>"   +
+                        "Pés: "           + this.pes          + "<br>"   +
             
-    //                 "</div>"
-    //     return card
-    // }
+                    "</div>"
+        return card
+    }
 
 
 }
@@ -63,22 +63,28 @@ var pes             = document.getElementById('inputPes')
 
 var limpa           = document.getElementById('formulario')
 var div             = document.getElementById('resposta')
-var tipo            = document.getElementById('inputTipo')
 
 
 function cadastrar(){
+    
 
     switch(tipo.value){
         case "carro":
             banco.push(new Cadastro(tipo.value, modelo.value, cor.value, fabricante.value))
+            // tipo.setAttribute('enable')
             break
 
         case "moto":
             banco.push(new Cadastro(tipo.value, modelo.value, cor.value, fabricante.value, cilindrada.value))
+            tipo.setAttribute('enable')
+            // for(c in banco){
+            //     cartoes += (banco[c].cardMoto())
+            // }document.write(cartoes)
             break
 
         case "barco": 
             banco.push(new Cadastro(tipo.value, modelo.value, cor.value, fabricante.value, pes.value))
+            tipo.setAttribute('enable')
             break
 
         default:
@@ -92,19 +98,19 @@ function exibir(){
     let tipo = document.getElementById('inputTipo')
     let cartoes = ''
 
-    if(tipo = 'carro'){
+    // if(tipo = 'carro'){
 
-        for(c in banco){
-            cartoes += (banco[c].cardCarro())
-            div.innerHTML = cartoes
-        }
-    }else if(tipo = 'moto'){
-        for(c in banco){
-            cartoes += (banco[c].cardMoto())
-            div.innerHTML = cartoes
-        }
+    //     for(c in banco){
+    //         cartoes += (banco[c].cardCarro())
+    //         div.innerHTML = cartoes
+    //     }
+    // }else if(tipo = 'moto'){
+    //     for(c in banco){
+    //         cartoes += (banco[c].cardMoto())
+    //         div.innerHTML = cartoes
+    //     }
 
-    }
+    // }
 
     // if(tipo = 'moto'){
     //     for(c in banco){
@@ -112,26 +118,29 @@ function exibir(){
     //     }div.innerHTML = cartoes
     // }
 
-    // switch(tipo.value){
+    switch(tipo.value){
         
-    //     case 'carro':        
-    //         for(c in banco){
-    //             cartoes += (banco[c].cardCarro())
-    //         }div.innerHTML = cartoes
-    //     break
+        case 'carro':        
+            for(c in banco){
+                cartoes += (banco[c].cardCarro())
+            }div.innerHTML = cartoes
+        break
 
-    //     case 'moto':
-    //         for(c in banco){
-    //             cartoes += (banco[c].cardMoto())
-    //         }div.innerHTML = cartoes
-    //     break
+        case 'moto':
+            for(c in banco){
+                cartoes += (banco[c].cardMoto())
+            }div.innerHTML = cartoes
+        break
 
-    //     // case 'barco':
-    //     //     for(c in banco){
-    //     //         cartoes += (banco[c].barco())
-    //     //     }div.innerHTML = cartoes
-    //     // break
-    // }
+        case 'barco':
+            for(c in banco){
+                cartoes += (banco[c].cardBarco())
+            }div.innerHTML = cartoes
+        break
+
+        default:
+            alert('Exiba um cadastro válido')
+    }
 
 }
 
