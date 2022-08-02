@@ -1,16 +1,16 @@
 /////////////////////// CADASTRO DE VEÍCULOS \\\\\\\\\\\\\\\\\\\\\\\\
         
     /*|------- CRIAÇÃO DE CLASSE - INÍCIO ------ |*/
-    
+
 class Cadastro{
-    constructor(pTipo, pModelo, pCor, pFabricante, pCilindrada, pPes){
+    constructor(pTipo, pModelo, pCor, pFabricante, pCilindrada, Ppes){
 
         this.tipo           = pTipo
         this.modelo         = pModelo
         this.cor            = pCor
         this.fabricante     = pFabricante
         this.cilindrada     = pCilindrada
-        this.pes            = pPes
+        this.pes            = Ppes
 
     }
 
@@ -62,15 +62,15 @@ var bancoCarro           = []
 var bancoMoto            = []
 var bancoBarco           = []
 
-var tipo            = document.getElementById('inputTipo')
-var modelo          = document.getElementById('inputModelo')
-var cor             = document.getElementById('inputCor')
-var fabricante      = document.getElementById('inputFaber')
-var cilindrada      = document.getElementById('inputCilindrada')
-var pes             = document.getElementById('inputPes')
+var tipo                 = document.getElementById('inputTipo')
+var modelo               = document.getElementById('inputModelo')
+var cor                  = document.getElementById('inputCor')
+var fabricante           = document.getElementById('inputFaber')
+var cilindrada           = document.getElementById('inputCilindrada')
+var pes                  = document.getElementById('inputPes')
 
-var limpa           = document.getElementById('formulario')
-var div             = document.getElementById('resposta')
+var limpa                = document.getElementById('formulario')
+var div                  = document.getElementById('resposta')
 
 
 
@@ -97,6 +97,7 @@ function cadastrar(){
             bancoBarco.push(new Cadastro(tipo.value, modelo.value, cor.value, fabricante.value, pes.value))
             tipo.setAttribute('enable')
             banco.push(bancoBarco)
+            console.log(pes.value)
             break
 
         default:
@@ -135,6 +136,7 @@ function exibir(){
         default:
             alert('Exiba um cadastro válido')
     }
+
     limpa.reset()
     div.innerHTML = cartoes
 }
@@ -143,9 +145,9 @@ function exibir(){
     /*|------- FUNÇÃO EXIBIR TIPO ------ |*/
 
 function exibirTipo(){
-    let divMoto = document.getElementById('box-moto')
-    let divBarco = document.getElementById('box-barco')
-    let tipo = document.getElementById('inputTipo')
+    let divMoto     =   document.getElementById('box-moto')
+    let divBarco    =   document.getElementById('box-barco')
+    let tipo        =   document.getElementById('inputTipo')
    
     switch(tipo.value){
         case 'moto':
