@@ -1,4 +1,7 @@
-////////////////// CADASTRO DO FORM - INÍCIO \\\\\\\\\\\\\\\\
+/////////////////////// CADASTRO DE VEÍCULOS \\\\\\\\\\\\\\\\\\\\\\\\
+        
+    /*|------- CRIAÇÃO DE CLASSE - INÍCIO ------ |*/
+    
 class Cadastro{
     constructor(pTipo, pModelo, pCor, pFabricante, pCilindrada, pPes){
 
@@ -51,8 +54,13 @@ class Cadastro{
 
 
 }
+    /*|------- CRIAÇÃO DE CLASSE - FIM ------ |*/
 
-var banco           = []
+    /*|------- VAR GLOBAIS - INÍCIO ------ |*/
+
+var bancoCarro           = []
+var bancoMoto            = []
+var bancoBarco           = []
 
 var tipo            = document.getElementById('inputTipo')
 var modelo          = document.getElementById('inputModelo')
@@ -65,92 +73,74 @@ var limpa           = document.getElementById('formulario')
 var div             = document.getElementById('resposta')
 
 
+
+    /*|------- FUNÇÕES GLOBAIS  ------ |*/
+
+    /*|------- FUNÇÃO CADASTRAR ------ |*/
+
 function cadastrar(){
     
-
     switch(tipo.value){
         case "carro":
-            banco.push(new Cadastro(tipo.value, modelo.value, cor.value, fabricante.value))
-            // tipo.setAttribute('enable')
+            bancoCarro.push(new Cadastro(tipo.value, modelo.value, cor.value, fabricante.value))
+            tipo.setAttribute('enable')
+            banco.push(bancoCarro)
             break
 
         case "moto":
-            banco.push(new Cadastro(tipo.value, modelo.value, cor.value, fabricante.value, cilindrada.value))
+            bancoMoto.push(new Cadastro(tipo.value, modelo.value, cor.value, fabricante.value, cilindrada.value))
             tipo.setAttribute('enable')
-            // for(c in banco){
-            //     cartoes += (banco[c].cardMoto())
-            // }document.write(cartoes)
+            banco.push(bancoMoto)
             break
 
         case "barco": 
-            banco.push(new Cadastro(tipo.value, modelo.value, cor.value, fabricante.value, pes.value))
+            bancoBarco.push(new Cadastro(tipo.value, modelo.value, cor.value, fabricante.value, pes.value))
             tipo.setAttribute('enable')
+            banco.push(bancoBarco)
             break
 
         default:
             alert('Tipo de veículo inválido')
     }
     
-    limpa.reset()
+    
 }
+
+
+    /*|------- FUNÇÃO EXIBIR ------ |*/
 
 function exibir(){
     let tipo = document.getElementById('inputTipo')
     let cartoes = ''
 
-    // if(tipo = 'carro'){
-
-    //     for(c in banco){
-    //         cartoes += (banco[c].cardCarro())
-    //         div.innerHTML = cartoes
-    //     }
-    // }else if(tipo = 'moto'){
-    //     for(c in banco){
-    //         cartoes += (banco[c].cardMoto())
-    //         div.innerHTML = cartoes
-    //     }
-
-    // }
-
-    // if(tipo = 'moto'){
-    //     for(c in banco){
-    //         cartoes += (banco[c].cardMoto())
-    //     }div.innerHTML = cartoes
-    // }
-
     switch(tipo.value){
         
         case 'carro':        
-            for(c in banco){
-                cartoes += (banco[c].cardCarro())
-            }div.innerHTML = cartoes
-        break
+            for(c in bancoCarro){
+                cartoes += (bancoCarro[c].cardCarro())
+            } 
 
         case 'moto':
-            for(c in banco){
-                cartoes += (banco[c].cardMoto())
-            }div.innerHTML = cartoes
+            for(c in bancoMoto){
+                cartoes += (bancoMoto[c].cardMoto())
+            } 
         break
 
         case 'barco':
-            for(c in banco){
-                cartoes += (banco[c].cardBarco())
-            }div.innerHTML = cartoes
+            for(c in bancoBarco){
+                cartoes += (bancoBarco[c].cardBarco())
+            } 
         break
 
         default:
             alert('Exiba um cadastro válido')
     }
-
+    limpa.reset()
+    div.innerHTML = cartoes
 }
 
-////////////////// CADASTRO DO FORM - FIM \\\\\\\\\\\\\\\\
 
-/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
-
-////////////////// OUTRAS FUNÇÕES \\\\\\\\\\\\\\\\
-
-
+    /*|------- FUNÇÃO EXIBIR TIPO ------ |*/
 
 function exibirTipo(){
     let divMoto = document.getElementById('box-moto')
