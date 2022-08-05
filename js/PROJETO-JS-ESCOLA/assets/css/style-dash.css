@@ -123,18 +123,53 @@ html{
     background-color: #444;
   }
   
+  .btn{
+    border: 2px solid #CEA347;
+    color: #fff;
+    margin-top: 20px;
+    height: 50px;
+    width: 200px;
+    font-size: 1.6rem;
+    font-weight: 800;
+  }
+
+  .btn:hover{
+    background-color: #fff;
+    color: #000;
+  }
+
+#section-dashboard .dropdown-menu{
+  width: 200px;
+}
+
+#section-dashboard .form-select{
+  width: 200px;
+  display: none;
+}
+
+
+/* --------------------------------------------------------
+                           MAIN                         
+   -------------------------------------------------------- */
+
   #main {
     transition: margin-left .5s;
     padding: 16px;
-    border: 2px solid rgb(31, 32, 32);
-    margin-top: -30%;
+    width: 100%;
+    height: 100vh;
+    border: 4px solid rgb(31, 32, 32);
+    margin-left: 20%;
+
   }
 
+  #main .container{
+    border: 4px solid rgb(219, 53, 23);
+    width: 100%;
+    height: 70vh;
+  }
 
-  .btn{
-    border: 2px solid rgb(238, 42, 7);
-    color: #fff;
-
-    height: 50px;
-    width: 200px;
+  #divCadastroAlunos,
+  #divCadastroProfessores,
+  #divCadastroCursos{
+    display: none;
   }
