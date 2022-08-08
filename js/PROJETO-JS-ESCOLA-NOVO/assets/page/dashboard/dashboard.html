@@ -5,8 +5,12 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- LINKS CSS - BOOSTRAP -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+
+  <!-- LINKS CSS - LOCAL -->
   <link rel="stylesheet" href="../../css/style-dash.css">
 
 
@@ -26,58 +30,212 @@
           Cadastro
         </button>
 
-        <ul class="dropdown-menu" id="ListCadastro" onclick="exibeOptionCadastro()">
-          <li onclick="exibeOption(0)"><a class="dropdown-item" href="#">Alunos</a></li>
-          <li onclick="exibeOption(1)"><a class="dropdown-item" href="#">Professores</a></li>
-          <li onclick="exibeOption(2)"><a class="dropdown-item" href="#">Cursos</a></li>
+
+        <ul class="dropdown-menu" id="ListCadastro" onclick="">
+          <li onclick="exibeOptionAluno(0)"><a class="dropdown-item" href="#">Alunos</a></li>
+          <li onclick="exibeOptionAluno(1)"><a class="dropdown-item" href="#">Professores</a></li>
+          <li onclick="exibeOptionAluno(2)"><a class="dropdown-item" href="#">Turmas</a></li>
         </ul>
       </div>
 
-      <div class="dropdown" id="drop-consulta">
+      <div class="dropdown" id="drop-cadastro">
         <button class="btn  dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
           Consulta
         </button>
 
-        <ul class="dropdown-menu">
-          <li ><a class="dropdown-item" href="">Alunos</a></li>
-          <li><a class="dropdown-item" href="#">Professores</a></li>
-          <li><a class="dropdown-item" href="#">Turmas</a></li>
-          <li><a class="dropdown-item" href="#">Geral</a></li>
+        <!-- | ***************************************** CONSULTA ************************************** |-->
+
+        <ul class="dropdown-menu" id="ListCadastro" onclick="">
+          <ul class=""><h4>Alunos</h4> 
+            <li onclick="exibeAlunosConsulta(0)"><a class="dropdown-item" href="#">Todos</a></li>
+            <li onclick="exibeAlunosConsulta(1)"><a class="dropdown-item" href="#">Maiores de Idade</a></li>
+            <li onclick="exibeAlunosConsulta(2)"><a class="dropdown-item" href="#">Menores de Idade</a></li>
+          </ul>
+          <ul class=""><h4>Professores</h4> 
+            <li onclick="exibeProfConsulta(0)"><a class="dropdown-item" href="#">Todos</a></li>
+          </ul>
+
+          <ul class=""><h4>Turmas</h4> 
+              <li onclick="exibeTurmasConsulta(0)"><a class="dropdown-item" href="#">Todas</a></li>
+
+              <ul><h4>Turnos</h4>
+                <li onclick="exibeTurnoManha(1)"><a class="dropdown-item" href="#">Manhã</a></li>
+                <li onclick="exibeTurnoTarde(2)"><a class="dropdown-item" href="#">Tarde</a></li>
+                <li onclick="exibeTurnoNoite(3)"><a class="dropdown-item" href="#">Noite</a></li>
+              </ul>
+          </ul>
+
+          <ul><h4>Geral</h4>
+            <li onclick="exibeGeral(0)"><a class="dropdown-item" href="#">Alunos</a></li>
+            <li onclick="exibeGeral(1)"><a class="dropdown-item" href="#">Professores</a></li>
+            <li onclick="exibeGeral(2)"><a class="dropdown-item" href="#">Turmas</a></li>
+          </ul>
+
         </ul>
       </div>
-<!-- 
-      <button class="btn" type="button" data-bs-toggle="" 
-            data-bs-auto-close="true" aria-expanded="false" onclick="exibeselect()">
-              Consultas
-            </button>
-            <select class="form-select" id="form-select" onmouseout="ocultaselect()">
-              <option>Selecione</option>
-              <option value="1">One</option>
-              <option value="2">Two</option>
-              <option value="3">Three</option>
-            </select> -->
+      
     </div>
-  
+
     <div id="main">
       <button class="openbtn" onclick="openNav()">☰</button>
+
+      <!-- AREA DE CADASTROS -->
+
+      <div id="container-cadastro" class="container">
+
+        <!-- CADASTRO DE ALUNOS -->
+        <div id="divCadastroAlunos">
+
+          <div class="box-text">
+            <h3>Alunos</h3>
+          </div>
+
+          <form class="row g-3" id="formaluno">
+            <div class="col-md-6">
+              <label for="" class="form-label">Nome</label>
+              <input type="text" class="form-control" id="inputNome">
+            </div>
       
-      <div id="container" class="container">
-        <a href="#alunos">
-          <div id="divCadastroAlunos">ALUNOS</div>
-        </a>
+            <div class="col-md-6">
+              <label for="" class="form-label">Sobrenome</label>
+              <input type="text" class="form-control" id="inputSobrenome">
+            </div>
+      
+            <div class="col-md-4">
+              <label for="" class="form-label">Idade</label>
+              <input type="text" class="form-control" id="inputIdade">
+            </div>
+            
+            
+            <div class="col-md-4">
+              <label for="" class="form-label">Curso</label>
+              <input type="text" class="form-control" id="inputCurso">
+            </div>
 
-        <a href="#professor">
-          <div id="divCadastroProfessores">PROFESSORES</div>
-        </a>
+            <div class="col-md-4">
+              <label for="inputState" class="form-label">Turma</label>
+              <select id="inputTurma" class="form-select">
+                <option>Escolha...</option>
+                <option>STP072022</option>
+                <option>STP082022</option>
+                <option>STP092022</option>
+                <option>STP0102022</option>
+                <option>STP0112022</option>
 
-        <a href="#cursos">
-          <div id="divCadastroCursos">CURSOS</div>
-        </a>
+              </select>
+            </div>
+   
+            <div class="col-md-4">
+              <label for="inputState" class="form-label">Turno</label>
+              <select id="inputTurno" class="form-select">
+                <option>Escolha...</option>
+                <option>Manhã</option>
+                <option>Tarde</option>
+                <option>Noite</option>
+              </select>
+            </div>
+
+            <div class="col-12">
+              <button onclick="cadastrarAlunos()" class="btn btn-primary" type="button">Cadastrar</button>
+            </div>
+          </form>
+
+        </div>
 
 
-      </div>
-    </div>
+        <!-- |*******************************************************************************| -->
+        <!-- CADASTRO - PROFESSORES -->
+        <div id="divCadastroProfessores">
+
+          <div class="box-text">
+            <h3>Professores</h3>
+          </div>
+
+         <form class="row g-3" id="formProf">
+            <div class="col-md-6">
+              <label for="" class="form-label">Nome</label>
+              <input type="text" class="form-control" id="inputProfNome">
+            </div>
+      
+            <div class="col-md-6">
+              <label for="" class="form-label">Sobrenome</label>
+              <input type="email" class="form-control" id="inputProfSobrenome">
+            </div>
+      
+            <div class="col-md-4">
+              <label for="" class="form-label">Idade</label>
+              <input type="text" class="form-control" id="inputProfIdade">
+            </div>
+      
+            <div class="col-md-4">
+              <label for="" class="form-label">Curso</label>
+              <input type="text" class="form-control" id="inputProfCurso">
+            </div>
+
+            <div class="col-md-4">
+              <label for="inputState" class="form-label">Turno</label>
+              <select id="inputProfTurno" class="form-select">
+                <option>Escolha...</option>
+                <option>Manhã</option>
+                <option>Tarde</option>
+                <option>Noite</option>
+              </select>
+            </div>
   
+            <div class="col-12">
+              <button onclick="cadastrarProfessores()" class="btn btn-primary" type="button">Cadastrar</button>
+            </div>
+          </form>
+        </div>
+           
+        <!-- CADASTRO - TURMAS -->
+        <div id="divCadastroCursos">
+
+          <div class="box-text">
+            <h3>Turmas</h3>
+          </div>
+
+          <form class="row g-3" id="formTurma">
+            <div class="col-md-4">
+              <label for="validationDefault01" class="form-label">Nome</label>
+              <input type="text" class="form-control" id="inputTurmaNome">
+            </div>
+
+
+            <div class="col-md-4">
+              <label for="inputState" class="form-label">Turno</label>
+              <select id="inputTurmaTurno" class="form-select">
+                <option>Escolha...</option>
+                <option>Manhã</option>
+                <option>Tarde</option>
+                <option>Noite</option>
+              </select>
+            </div>
+
+            <div class="col-12">
+              <button onclick="cadastrarTurmas()" class="btn btn-primary" type="button">Cadastrar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+
+    <div id="container-consulta" class="container">
+      <div id="divConsultaAlunos">
+      </div>
+
+      <div id="divConsultaProfessores">
+      </div>
+
+
+      <div id="divConsultaTurmas">
+      </div>
+
+      <div id="divConsultaGeral">
+      </div>
+
+    </div>
+    
   </section>
 
 
@@ -85,36 +243,13 @@
     integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
     crossorigin="anonymous"></script>
 
+  <script src="../../js/main-dash.js"></script>
   <script src="../../js/main.js"></script>
 
 
-  <script>
-    function exibeOption(tipo){
-      let opAluno = document.getElementById('divCadastroAlunos')
-      let opProfessor = document.getElementById('divCadastroProfessor')
-      let opCurso = document.getElementById('divCadastroCurso')
+<script>
 
-      // O valor de tipo vem do param 'tipo' que cada função 'exibeOption' recebe
-      switch(tipo){
-        case 0:
-          alert()
-          break
-
-        case 1:
-          alert()
-          break
-
-        case 2:
-          alert()
-          break
-      }
-    }
-
-    function exibeOptionCadastro(){
-      let opAluno = document.getElementById('divCadastroAlunos')
-      // opAluno.style.display = 'block'
-    }
-  </script>
+</script>
 
 </body>
 

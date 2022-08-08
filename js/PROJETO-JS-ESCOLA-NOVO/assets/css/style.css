@@ -22,9 +22,11 @@ body{
    -------------------------------------------------------- */
 
 #header{
-    border: 4px solid rgb(38, 0, 255);
+    border: 4px solid rgb(255, 0, 0);
     width: 100%;
+    height: 80px;
     position: fixed;
+    margin: 0;
     background: rgb(32 102 92 / 100%);
     backdrop-filter: blur(42px);
     /* margin-top: -140px; */
@@ -34,10 +36,13 @@ body{
     border: 2px solid blue;
     width: 200px;
     height:90px;
+    margin-top: -25px;
 }
 
 #header .container{
-    border: 2px solid blue;
+    border: 2px solid rgb(255, 0, 200);
+    height: 80px;
+
 }
 
 .nav{
@@ -159,6 +164,148 @@ body{
 }
 
 
+/* --------------------------------------------------------
+                          SECTION - CURSOS                         
+   -------------------------------------------------------- */
+
+#section-cursos{
+    border: 2px solid red;
+    width: 100%;
+    /* height: 200px; */
+}
+
+#section-cursos .box-text{
+    border: 2px solid red;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+}
+
+#section-cursos .card-body{
+    border: 2px solid rgb(0, 255, 42);
+}
+
+.box-text .card{
+    border: 2px solid red;
+    margin-left: 1%;
+    height: 40vh;
+}
+
+#section-cursos .img-card{
+    border: 2px solid red;
+    width: 100%;
+    height: 12vh;
+    display: flex;
+    /* justify-content:flex-end; */
+    padding: 15px;
+}
+
+/* --------------------------------------------------------
+                           LOGIN                         
+   -------------------------------------------------------- */
+
+#section-login{
+    border: 2px solid red;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    background-size: cover;
+}  
+
+#section-login .container{
+    border: 4px solid rgb(194, 193, 193);
+    width: 35%;
+    background-color: #20665C;
+    justify-content: center;
+    font-size: 14pt;
+    color: #fff;
+}
+
+#section-login .box-txt{
+    width: 90%;
+    /* height: 15vh; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5%;
+    margin-top: 20px;
+    /* background-color: #fff; */
+}
+
+#section-login .box-login{
+    /* border: 2px solid rgb(31, 177, 11); */
+    width: 90%;
+    display: flex;
+    margin-left: 5%;
+    padding: 20px;
+    /* margin-top: 10px; */
+}
+
+#section-login .form-control{
+    height: 50px;
+    font-size: 14pt;
+}
+#section-login .btn{
+    height: 50px;
+    font-size: 14pt;
+}
+
+/* --------------------------------------------------------
+                           CADASTRO                         
+   -------------------------------------------------------- */
+
+#section-cadastro{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-size: cover;
+}  
+
+#section-cadastro .container{
+    border: 4px solid rgb(194, 193, 193);
+    width: 60%;
+    background-image: url("../img/bg-cadastro.png");
+    padding: 10px;
+    font-size: 14pt;
+    color: #fff;
+}
+
+#section-cadastro .box-txt{
+    width: 90%;
+    height: 50px;
+    display: flex;
+    margin-left: 5%;
+}
+
+
+.col-md-4{
+    width: 350px;
+
+}
+
+#section-cadastro .form-control, .form-select{
+    height: 50px;
+    font-size: 14pt;
+}
+
+
+#section-cadastro .btn{
+    height: 50px;
+    font-size: 14pt;
+}
+
+#section-cadastro .row{
+    font-size: 14pt;
+    margin-left: 5%;
+    margin-bottom: 15px;
+}
+
+#section-cadastro .span{
+    /* border: 2px solid red; */
+    display: flex;
+}
 
 /* --------------------------------------------------------
                           FOOTER                         
@@ -174,3 +321,4 @@ body{
     height: 40vh;
 
 } */
+
