@@ -37,7 +37,7 @@ body::-webkit-scrollbar {
     border: 4px solid rgb(255, 0, 0);
     width: 100%;
     height: 80px;
-    position: fixed;
+    /* position: fixed; */
     margin: 0;
     background: rgb(32 102 92 / 100%);
     backdrop-filter: blur(42px);
@@ -57,17 +57,64 @@ body::-webkit-scrollbar {
 
 }
 
-.nav{
+#header .nav{
     border: 2px solid rgb(81, 255, 0);
     display: flex;
     align-content: center;
-    /* margin-left: 200px; */
+    margin-top: -25px;
 }
 
-.nav-link{
-    margin-left: 80px;
+#header .nav-item{
+    border: 2px solid #0d6efd;
+    background-color: #0d6efd;
+    margin-left: 26px;
+    border-radius: 11px;
+}
+#header .nav-link{
+    
+    color: #fff;
+    font-weight: 700;
 }
 
+#header .nav-link:hover{
+    color: #0d6efd;
+    font-weight: 700;
+}
+
+#header .nav-pills{
+    border: 2px solid rgb(81, 255, 0);
+}
+
+#header .nav-pills .nav-link.active{
+    background-color: #fff;
+    color: #0d6efd;
+    border-radius: 11px;
+    height: 48px;
+}
+
+#header .nav-item:hover{
+    background-color: #fff;
+    color: #0d6efd;
+    
+}
+
+
+#header .btn{
+    border: 2px solid #fff;
+    border-radius: 11px;
+    width: 81px;
+    height: 49px;
+    margin-left: 55px;
+    font-weight: 700;
+
+}
+
+/* Login */
+#header .btn:hover{
+    background-color: #fff;
+    color: #0d6efd;
+    font-weight: 700;
+}
 /* --------------------------------------------------------
                           SECTION                         
    -------------------------------------------------------- */
@@ -100,6 +147,12 @@ body::-webkit-scrollbar {
     margin-top: 150px;
 }
 
+#section-hero .overflow-hidden{
+    border: 2px solid rgb(68, 0, 255);
+    height: 541px;
+    display: flex;
+
+}
 
 
 /* --------------------------------------------------------
@@ -134,7 +187,18 @@ body::-webkit-scrollbar {
     /* height: 200px; */
 }
 
+.d-block{
+    border: 2px solid red;
+    width: 300px;
+    height: 200px;
 
+}
+#section-clientes .overflow-hidden{
+    border: 2px solid rgb(68, 0, 255);
+    height: 500px;
+    display: flex;
+
+}
 /* --------------------------------------------------------
                           SECTION - VAGAS                         
    -------------------------------------------------------- */
@@ -175,6 +239,34 @@ body::-webkit-scrollbar {
     padding: 15px;
 }
 
+.btn-close{
+    border: 6px solid #20665C;
+    color: #000;
+}
+
+.btn-close:hover{
+    border: 6px solid red;
+}
+
+#section-mapa{
+    width: 100%;
+    height:100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.modal{
+    border: 2px solid rgb(25, 0, 255);
+    width: 700px;
+    height: 700px;
+ 
+
+}
+::-webkit-scrollbar {
+    display: none;
+    }
 
 /* --------------------------------------------------------
                           SECTION - CURSOS                         
