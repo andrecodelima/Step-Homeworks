@@ -10,7 +10,7 @@
 
 body{
     font-family: 'Raleway', sans-serif;
-    color: #444444;
+    color: #000000;
     font-size: 1.6rem;
 }
 
@@ -41,7 +41,6 @@ html{
  
 
 #section-dashboard .sidebar{
-    border: 4px solid rgb(31, 177, 11);
     width: 20%;
     height: 100%;
     padding-left: 2%;
@@ -60,20 +59,21 @@ html{
     padding-top: 60px;
     
   }
-  
-  /* .sidebar a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #fff;
-    display: block;
-    transition: 0.3s;
+  #section-dashboard .sidebar::-webkit-scrollbar {
+    width: 12px;               /* width of the entire scrollbar */
   }
   
-  .sidebar a:hover {
-    color: #f1f1f1;
-  } */
+  #section-dashboard .sidebar::-webkit-scrollbar-track {
+    background: #fff;        /* color of the tracking area */
+  }
   
+  #section-dashboard .sidebar::-webkit-scrollbar-thumb {
+    background-color: #20665C;    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+    border: 3px solid #fff;  /* creates padding around scroll thumb */
+  }
+  
+ 
   .sidebar .closebtn {
     position: absolute;
     top: 0;
@@ -109,6 +109,7 @@ html{
   .btn:hover{
     background-color: #fff;
     color: #000;
+    border-color: #fff ;
   }
 
 #section-dashboard .dropdown-menu{
