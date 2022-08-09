@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400&display=swap');
+@media screen and (max-height: 450px) {
+    .sidebar {padding-top: 15px;}
+    .sidebar a {font-size: 18px;}
+  }
+/* --------------------------------------------------------
+                           GENERAL                         
+   -------------------------------------------------------- */
+
+
+body{
+    font-family: 'Raleway', sans-serif;
+    color: #000000;
+    font-size: 1.6rem;
+}
+
+a{
+    color: #106eea;
+    text-decoration: none;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+.form-control,
+.form-select{
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+input{
+  text-transform: uppercase;
+}
+
+/* --------------------------------------------------------
+                           SECTION                         
+   -------------------------------------------------------- */
+#section-dashboard{
+    /* border: 4px solid red; */
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+ 
+
+#section-dashboard .sidebar{
+    width: 20%;
+    height: 100%;
+    padding-left: 2%;
+}
+
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #20665C;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    
+  }
+  #section-dashboard .sidebar::-webkit-scrollbar {
+    width: 12px;               /* width of the entire scrollbar */
+  }
+  
+  #section-dashboard .sidebar::-webkit-scrollbar-track {
+    background: #fff;        /* color of the tracking area */
+  }
+  
+  #section-dashboard .sidebar::-webkit-scrollbar-thumb {
+    background-color: #20665C;    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+    border: 3px solid #fff;  /* creates padding around scroll thumb */
+  }
+  
+ 
+  .sidebar .closebtn {
+    width: 34px;
+    height: 63px;
+    position: absolute;
+    top: -3px;
+    right: 25px;
+    font-size: 56px;
+    margin-left: 50px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    color: #CEA347;
+  }
+  
+  .sidebar .closebtn:hover{
+    color: #000;
+  }
+  .openbtn {
+
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #111;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+  }
+  
+  .openbtn:hover {
+    background-color: #444;
+  }
+  
+  .btn{
+    border: 2px solid #CEA347;
+    color: #fff;
+    margin-top: 20px;
+    height: 50px;
+    width: 200px;
+    font-size: 1.6rem;
+    font-weight: 800;
+  }
+
+  .btn:hover{
+    background-color: #20665C;
+    color: #fff;
+    border-color: #fff ;
+  }
+
+#section-dashboard .dropdown-menu{
+  width: 200px;
+}
+
+.dropdown-menu{
+  font-size: 1.4rem;
+}
+ul{
+  list-style: none;
+}
+
+.dropdown-item:hover{
+  background-color: #CEA347;
+}
+#h3{
+  font-size: 2.0rem;
+  font-weight: bolder;
+  color: #20665C;
+}
+h4{
+  font-weight: 800;
+  color: #0d6efd;
+}
+
+/* #section-dashboard .form-select{
+  width: 200px;
+  display: none;
+} */
+
+
+/* --------------------------------------------------------
+                           MAIN                         
+   -------------------------------------------------------- */
+
+  #main {
+    transition: margin-left .5s;
+    padding: 16px;
+    width: 100%;
+    height: 100vh;
+    /* border: 4px solid rgb(31, 32, 32); */
+    margin-left: 20%;
+
+  }
+
+  #main .container{
+    border: 1px solid #CEA347;
+    width: 100%;
+    padding: 20px;
+  }
+
+  #container-cadastro,
+  #container-consulta-alunos,
+  #container-consulta-prof,
+  #container-consulta-turmas
+  {
+    display: none;
+  }
+
+
+  #divCadastroAlunos,
+  #divCadastroProfessores,
+  #divCadastroCursos
+  {
+    display: none;
+  }
+
+
+  #divConsultaAlunos,
+  #divConsultaProfessores,
+  #divConsultaTurmas,
+  #divConsultaGeral
+  {
+    display: none;
+  }
+
+
+  .box-text{
+    /* border-bottom: 1px solid #6a726f; */
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5%;
+    margin-top: 10px;
+    font-weight: bolder;
+  }
+
+  .card{
+    width: 400px;
+    border: 1px double #c9c1c1;
+    display: flex;
+    padding: 15px;
+    box-shadow: inset 0px 1px 10px 1px #6a726f;
+    float: left;
+    font-size: 1.7rem;
+    font-weight: 400;
+    margin-left: 58px;
+    margin-top: 24px;
+}
+
+
+#divConsultaAlunos{
+  border: 1px solid #20665C;
+  display: flex;
+}
