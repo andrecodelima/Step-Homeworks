@@ -46,6 +46,3 @@ font-style:
 Raleway
 
 
-BUGS OU  MELHORIAS
-//Carregar pagina quando clicar em cadastrar para limpar o conteúdo da div
-
