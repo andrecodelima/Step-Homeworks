@@ -45,9 +45,9 @@ function cadastrar(){
 }
 
 function login(){
-  if (usuario.value == "jw" && senha.value == "jw") {
+  if (usuario.value == "step@gmail.com" && senha.value == "jw") {
       alert("Seja Bem-Vindo ao Newton System!");
-      window.location.href = 'file:///C:/Users/Andr%C3%A9%20Lima/Documents/GITHUB/Step-Homeworks/js/PROJETO-JS-ESCOLA-NOVO/assets/page/dashboard/dashboard.html#'
+      window.location.href = 'file:///C:/Users/Andr%C3%A9%20Lima/Documents/GITHUB/Step-Homeworks/js/PROJETO-JS-ESCOLA-ATUAL%20-%20LAB/assets/page/dashboard/dashboard.html'
     }else{
       alert("Dados incorretos, tente novamente");
     }

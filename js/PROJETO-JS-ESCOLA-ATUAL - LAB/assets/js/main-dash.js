@@ -13,12 +13,12 @@ class cadastroAluno{
     cardAluno = function(){
         let cardAluno = '<div class="card">' +
         
-                        "Nome: "            + this.nome         + "<br/>" +
-                        "Sobrenome: "       + this.sobrenome    + "<br/>" +
-                        "Idade: "           + this.idade        + "<br/>" +
-                        "Curso: "           + this.curso        + "<br/>" +
-                        "Turma: "           + this.turma        + "<br/>" +
-                        "Turno: "           + this.turno        + "<br/>" +
+                        "Nome: "             + this.nome         + "<br/>" +
+                        "Sobrenome: "        + this.sobrenome    + "<br/>" +
+                        "Idade: "            + this.idade        + "<br/>" +
+                        "Curso: "            + this.curso        + "<br/>" +
+                        "Turma: "            + this.turma        + "<br/>" +
+                        "Turno: "            + this.turno        + "<br/>" +
 
                     '</div>';
 
@@ -29,11 +29,11 @@ class cadastroAluno{
 // VAR GLOBAIS
 
 
-var bancoAlunos                 = []
-var bancoAlunosMenorIdade       = []
-var bancoAlunosMaiorIdade       = []
+var bancoAlunos                       = []
+var bancoAlunosMenorIdade             = []
+var bancoAlunosMaiorIdade             = []
 
-var divCardAlunos                = document.getElementById('divConsultaAlunos')
+var divCardAlunos                     = document.getElementById('divConsultaAlunos')
 
 var bancoProfessores                  = []
 var divCardProfessores                = document.getElementById('divConsultaProfessores')
@@ -43,12 +43,12 @@ var divCardProfessores                = document.getElementById('divConsultaProf
 // ALUNO
 
 function cadastrarAlunos(){
-    let InputNome       = document.getElementById('inputlAlunoNome')
-    let inputSobrenome  = document.getElementById('inputAlunoSobrenome')
-    let inputIdade      = document.getElementById('inputAlunoIdade')
-    let inputCurso      = document.getElementById('inputAlunoCurso')
-    let inputTurma      = document.getElementById('inputAlunoTurma')
-    let inputTurno      = document.getElementById('inputAlunoTurno')
+    let InputNome                       = document.getElementById('inputlAlunoNome')
+    let inputSobrenome                  = document.getElementById('inputAlunoSobrenome')
+    let inputIdade                      = document.getElementById('inputAlunoIdade')
+    let inputCurso                      = document.getElementById('inputAlunoCurso')
+    let inputTurma                      = document.getElementById('inputAlunoTurma')
+    let inputTurno                      = document.getElementById('inputAlunoTurno')
 
     let form = document.getElementById('formaluno')
 
@@ -145,10 +145,10 @@ function exibeOptionAluno(tipo) {
 
 // FUNÇÃO DE EXIBIÇÃO DE CONSULTA NA TELA
 function exibeAlunosConsulta(tipo) {
-    let sessaoConsulta          = document.getElementById('container-consulta')
-    let opAlunoTodos            = document.getElementById('divConsultaAlunos')
-    let opAlunoMaior            = document.getElementById('divConsultaAlunos')
-    let opAlunoMenor            = document.getElementById('divConsultaAlunos')
+    let sessaoConsulta                  = document.getElementById('container-consulta')
+    let opAlunoTodos                    = document.getElementById('divConsultaAlunos')
+    let opAlunoMaior                    = document.getElementById('divConsultaAlunos')
+    let opAlunoMenor                    = document.getElementById('divConsultaAlunos')
 
 
     switch (tipo) {
@@ -197,7 +197,7 @@ function exibeAlunosConsulta(tipo) {
         
                         "Nome: "            + this.nomeP         + "<br/>" +
                         "Sobrenome: "       + this.sobrenomeP    + "<br/>" +
-                        "Idade: "           + this.idadeP       + "<br/>" +
+                        "Idade: "           + this.idadeP        + "<br/>" +
                         "Curso: "           + this.cursoP        + "<br/>" +
                         "Turno: "           + this.turnoP        + "<br/>" +
 
@@ -254,7 +254,7 @@ function exibeProfConsulta(tipo) {
 
         case 0:
             sessaoConsulta.style.display = 'block'
-            opProfTodos.style.display = 'block'
+            opProfTodos.style.display    = 'block'
             exibirProfTodos()
             break
 
