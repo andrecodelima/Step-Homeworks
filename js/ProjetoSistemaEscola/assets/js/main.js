@@ -22,25 +22,46 @@ function exibeselect() {
 
 // LOGIN
 class cadastroLogin{
-  constructor(pUser, pSenha){
-      this.usuario = pUser
-      this.senha  = pSenha
+  constructor(pNome, pSobrenome, pCidade, pEstado, pUser, pSenha){
+
+      this.nome         = pNome
+      this.sobrenome    = pSobrenome
+      this.cidade       = pCidade
+      this.estado       = pEstado
+      this.usuario      = pUser
+      this.senha        = pSenha
   }
 }
 
-var usuario = document.getElementById('InputUser')
-var senha = document.getElementById('InputSenha')
+var nome              = document.getElementById('InputNome')
+var sobrenome         = document.getElementById('InputSobrenome')
+var cidade            = document.getElementById('InputCidade')
+var estado            = document.getElementById('InputUF')
+var usuario           = document.getElementById('InputUser')
+var senha             = document.getElementById('InputSenha')
 
-var bancoSenhas = []
+var bancoCadastro     = []
+
+var bancoSenhas       = []
+var formulario        = document.getElementById('form')
+
 
 function cadastrar(){
-  bancoSenhas.push(new cadastroLogin(usuario.value, senha.value))
-  alert('Usuário Cadastrado com sucesso!')
-  // if(usuario.value == usuario.value){
-  //     alert('Já existe um usuário com esse nome. Escolha outro.')
-  // }
-  alert()
-  console.log(bancoSenhas)
+  bancoCadastro.push(new cadastroLogin(nome.value, 
+                                      sobrenome.value, 
+                                      cidade.value,
+                                      estado.value,
+                                      usuario.value,
+                                      senha.value
+                                      ))
+    
+    if((nome.value && sobrenome.value && cidade.value && estado.value && usuario.value && senha.value) != ''){
+      alert('CADASTRO REALIZADO COM SUCESSO!')
+    }else{
+      alert('Atenção! Pelo menos um campo não foi preenchido!')
+    }
+    formulario.reset()
+
 
 }
 
@@ -51,5 +72,18 @@ function login(){
     }else{
       alert("Dados incorretos, tente novamente");
     }
+
 }
 
+
+
+// function cadastrar(){
+//   bancoSenhas.push(new cadastroLogin(usuario.value, senha.value))
+//   alert('Usuário Cadastrado com sucesso!')
+
+//   // if(usuario.value == usuario.value){
+//   //     alert('Já existe um usuário com esse nome. Escolha outro.')
+//   // }
+//   // console.log(bancoSenhas)
+
+// }
