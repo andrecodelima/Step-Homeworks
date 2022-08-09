@@ -38,6 +38,13 @@ var divCardAlunos                     = document.getElementById('divConsultaAlun
 var bancoProfessores                  = []
 var divCardProfessores                = document.getElementById('divConsultaProfessores')
 
+var opProfTodos                       = document.getElementById('divConsultaProfessores')
+var opAlunoTodos                      = document.getElementById('divConsultaAlunos')
+var opTurmaTodas                      = document.getElementById('divConsultaTurmas')
+
+var sessaoConsulta                    = document.getElementById('container-consulta')
+var sessaoCadastro                    = document.getElementById('container-cadastro')
+
 
 // FUNÇÕES DE CADASTRO
 // ALUNO
@@ -122,28 +129,41 @@ function exibeOptionAluno(tipo) {
     let sessaoCadastro          = document.getElementById('container-cadastro')
     let opAluno                 = document.getElementById('divCadastroAlunos')
     let opProfessor             = document.getElementById('divCadastroProfessores')
-    let opCurso                 = document.getElementById('divCadastroCursos')
+    let opTurmas                 = document.getElementById('divCadastroTurmas')
 
     // O valor de tipo vem do param 'tipo' que cada função 'exibeOption' recebe
     switch (tipo) {
       case 0:
         sessaoCadastro.style.display    = 'block'
+        sessaoConsulta.style.display    = 'none'
         opAluno.style.display           = 'block'
+        opProfessor.style.display       = 'none'
+        opTurmas.style.display          = 'none'
         break
 
       case 1:
         sessaoCadastro.style.display    = 'block'
+        sessaoConsulta.style.display    = 'none'
+
         opProfessor.style.display       = 'block'
+        opAluno.style.display           = 'none'
+        opTurmas.style.display          = 'none'
         break
 
       case 2:
         sessaoCadastro.style.display    = 'block'
-        opCurso.style.display           = 'block'
+        sessaoConsulta.style.display    = 'none'
+
+        opTurmas.style.display          = 'block'
+        opAluno.style.display           = 'none'
+        opProfessor.style.display       = 'none'
+
         break
     }
   }
 
-// FUNÇÃO DE EXIBIÇÃO DE CONSULTA NA TELA
+  
+// FUNÇÃO DE EXIBIÇÃO DE CONSULTA NA TELA - ALUNOS
 function exibeAlunosConsulta(tipo) {
     let sessaoConsulta                  = document.getElementById('container-consulta')
     let opAlunoTodos                    = document.getElementById('divConsultaAlunos')
@@ -156,6 +176,12 @@ function exibeAlunosConsulta(tipo) {
         case 0:
             sessaoConsulta.style.display    = 'block'
             opAlunoTodos.style.display      = 'block'
+
+            sessaoCadastro.style.display    = 'none'
+
+            opProfTodos.style.display       = 'none'
+            opTurmaTodas.style.display      = 'none'
+
             exibirAlunoTodos()
             break
 
@@ -163,18 +189,28 @@ function exibeAlunosConsulta(tipo) {
 
             sessaoConsulta.style.display    = 'block'
             opAlunoMaior.style.display      = 'block'
+            sessaoCadastro.style.display    = 'none'
+
+            opProfTodos.style.display       = 'none'
+            opTurmaTodas.style.display      = 'none'
+
             exibirAlunoMaior()
             break
     
         case 2:
             sessaoConsulta.style.display    = 'block'
             opAlunoMenor.style.display      = 'block'
+
+            sessaoCadastro.style.display    = 'none'
+
+            opProfTodos.style.display       = 'none'
+            opTurmaTodas.style.display      = 'none'
+
             exibirAlunoMenor()
             break
 
         default:
             alert('ERRO')
-    
 
 }
   }
@@ -244,7 +280,7 @@ function exibirProfTodos(){
 }
 
 
-
+/// CONSULTA - PROFESSORES
 function exibeProfConsulta(tipo) {
     let sessaoConsulta  = document.getElementById('container-consulta')
     let opProfTodos     = document.getElementById('divConsultaProfessores')
@@ -255,13 +291,15 @@ function exibeProfConsulta(tipo) {
         case 0:
             sessaoConsulta.style.display = 'block'
             opProfTodos.style.display    = 'block'
+
+            sessaoCadastro.style.display    = 'none'
+
+            opAlunoTodos.style.display    = 'none'
             exibirProfTodos()
             break
 
         default:
             alert('ERRO')
-    
-
 }
   }
 
@@ -375,7 +413,7 @@ function exibeTurnoNoite(){
 }
 
 
-
+/////// CONSULTA TURMA 
 function exibeTurmasConsulta(tipo) {
     let sessaoConsulta = document.getElementById('container-consulta')
     let opTurmaTodas = document.getElementById('divConsultaTurmas')
@@ -389,6 +427,12 @@ function exibeTurmasConsulta(tipo) {
         case 0:
             sessaoConsulta.style.display    = 'block'
             opTurmaTodas.style.display      = 'block'
+
+            sessaoCadastro.style.display    = 'none'
+            
+            opAlunoTodos.style.display       = 'none'
+            opProfTodos.style.display        = 'none'
+
             exibirTurmas()
             break
         
