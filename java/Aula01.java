@@ -68,8 +68,8 @@ public class Aula01 {
         Scanner leia =  new Scanner(System.in);
         System.out.print("Digite o nome: ");
         nome = leia.nextLine(); // Precisa saber o que está lendo.
-        //System. in = Está entrando dados no sistem.
-        // Mas precisa saber depois o que está sendor recebido
+        //System. in = Está entrando dados no sistema.
+        // Mas precisa saber depois o que está sendo recebido
         
         System.out.println("Nome: " + nome);
         
