@@ -31,21 +31,26 @@ public class Homework02Matriz {
       
         String [] [] matriz =  {
                                     
-                                  {"Ana", "André", "Amanda", "Antonia"},
-                                  {"Nanda", "Noemia", "Nelson", "Nilce"},
-                                  {"Dagoberto", "Damaris", "Diva", "Dulce"},
-                                  {"Rodrigo", "Romario", "Robson", "Rildo"}
+                                  {"Ana",  "André", "Amanda", "Agata"},
+                                  {"Nei", "Noemi", "Nelson", "Nilce"},
+                                  {"Dil",  "Nildo", "Dulcir", "Dulce"},
+                                  {"Rui",  "Ronan", "Robson", "Rildo"}
         
                                 };
-        
+
+        System.out.println(" ");
+        System.out.println("===================== MATRIZES ===================");
+        System.out.println(" ");
         for(int i=0; i<matriz.length; i++){
             for(int c=0; c<matriz[i].length; c++){
-                System.out.print(matriz[i][c] + " " + " - ");
+                System.out.print(+ (i+1) + " | " + (matriz[i][c]) + " " + " | ");
             };
             
             System.out.println("");
         };
-        
+        System.out.println(" ");
+        System.out.println("==================================================");
+        System.out.println(" ");
         
     }
     
