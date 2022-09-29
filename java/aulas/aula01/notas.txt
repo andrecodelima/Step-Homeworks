@@ -1,0 +1,16 @@
+JVM - Maquina Virtual Java
+Onde roda o código fonte do Java.
+Traz segurança, portabilidade.
+
+O Java que você instala na verdade é maquina virtual do Java (JVM)
+
+Hardware - JVM - Aplicação Java
+Linguagems de baixo nível (Proximo da maquina)
+C -> C++ -> Java e C#
+Linguagens alto nível (Linguagem humana)
+Java Script - Python 
+
+A diferença é o nível de controle que você exerce
+Java SE -> Desktop (JVM)
+Java EE -> Web (Servidor Java Web)
+
