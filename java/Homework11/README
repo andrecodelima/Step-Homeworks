@@ -1,0 +1,19 @@
+
+        Crie uma classe conta.
+           1. Fase:
+            Conta tem número, agencia e saldo
+            Crie as sublclasses:
+
+            * ContaPF que terá: nome e cpf
+            e ContaPJ que terá: RazaoSocial e cnpj
+
+           2. FASE:
+           Crie um menu, dando a opção de cadastrar conta PF ou PJ.
+           Ao escolher cadastrar Pf cadastre um item no array contasPF,
+           caso escolha PJ, cadastres no array contasPJ
+
+           3. FASE:
+           No menu de opção de exibir os cadastros. O usuário pode escolher exibir todas as contas de PF ou PJ.
+
+           Lembrando da técnica de encapsulamento, crie métodos estáticos no Main para fazer cada funcionalidade,
+           deixando o PSVM o mais curto possível.
