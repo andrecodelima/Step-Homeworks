@@ -7,7 +7,8 @@ public class Main {
         CadastroConta cadastro = new CadastroConta();
         cadastro.Cadastro();
 
-
+        CadastroConta exibir = new CadastroConta();
+        exibir.exibirPF();
         }
 
 

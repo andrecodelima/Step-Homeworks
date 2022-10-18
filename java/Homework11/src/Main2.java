@@ -48,9 +48,9 @@ public class Main2 {
                     cpf = lerStr.next();
 
                     contaPF[contadorPF] = new ContaPF(numero, agencia, saldo, nome, cpf);
+
                     contadorPF += 1;
 
-//                    System.out.println(contaPF[contadorPF].getNome());
                     break;
 
                 case 2:
@@ -82,13 +82,20 @@ public class Main2 {
 
             }contadorPF += 1;
              contadorPJ += 1;
-            System.out.println("Contador: " + contadorPF);
+
+
+
 
         }
 
 
 
-
-
     }
+        public void exibirPF(){
+            System.out.println("Número: " + contaPF[contadorPF].getNome() + "\n"
+                    +  "Agência: " + contaPF[contadorPF].getAgencia() + "\n"
+                    +   "Saldo: "  + contaPF[contadorPF].getSaldo() + "\n"
+                    +   "Nome: "  + contaPF[contadorPF].getNome() + "\n"
+                    +   "CPF: "   + contaPF[contadorPF].getCpf());
+        }
 }

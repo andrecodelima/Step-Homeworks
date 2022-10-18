@@ -20,10 +20,15 @@ public class CadastroConta {
         while (contadorPF <=10 && contadorPJ <=10){
             System.out.println(" ");
             System.out.println("=== CADASTRO DE CONTAS ===");
-            System.out.print("Para cadastro de Pessoa Física - Digite [1]" + "\n"
-                    +"Para cadastro de Pessoa Jurídica: Digite [2]" + "\n" +
-                    "Digite Aqui: ");
-            System.out.print(" ");
+
+            System.out.println(   "Cadastro de Pessoa Física:          Digite [1]"       + "\n" +
+                                "Cadastro de Pessoa Jurídica:        Digite [2]"       + "\n" +
+                                "Exibir cadastro de Pessoa Física:   Digite [3]"       + "\n" +
+                                "Exibir cadastro de Pessoa Jurídica: Digite [4]"       + "\n" +
+                                "Sair:                               Digite [5]        ");
+
+            System.out.println("");
+            System.out.print("Digite Aqui: ");
 
             opcao = lerInt.nextInt();
 
@@ -49,8 +54,6 @@ public class CadastroConta {
 
                     contaPF[contadorPF] = new ContaPF(numero, agencia, saldo, nome, cpf);
                     contadorPF += 1;
-
-//                    System.out.println(contaPF[contadorPF].getNome());
                     break;
 
                 case 2:
@@ -77,15 +80,47 @@ public class CadastroConta {
 
                     break;
 
-                default:
-                    System.out.println("ERRO");
+                case 3:
+                    exibirPF();
+                    break;
 
-            }contadorPF += 1;
+                case 4:
+//                    exibirPJ();
+                    break;
+
+                case 5:
+                    System.out.println("Encerrando Cadastro... Volte Sempre!");
+                    break;
+
+                default:
+                    System.out.println("ERRO! Escolha uma opção entre 1 e 5!");
+
+            }
+
+            contadorPF += 1;
             contadorPJ += 1;
             System.out.println("Contador: " + contadorPF);
 
         }
 
+
+    }
+
+    public void exibirPF(){
+            System.out.println( "Número: "  + contaPF[contadorPF].getNumero()     + "\n"
+                    +           "Agência: " + contaPF[contadorPF].getAgencia()    + "\n"
+                    +           "Saldo: "   + contaPF[contadorPF].getSaldo()      + "\n"
+                    +           "Nome: "    + contaPF[contadorPF].getNome()       + "\n"
+                    +           "CPF: "     + contaPF[contadorPF].getCpf());
+        }
+
+
+    public void exibirPJ(){
+        System.out.println( "Número: "  + contaCNPJ[contadorPJ].getNumero()          + "\n"
+                +           "Agência: " + contaCNPJ[contadorPJ].getAgencia()         + "\n"
+                +           "Saldo: "   + contaCNPJ[contadorPJ].getSaldo()           + "\n"
+                +           "Nome: "    + contaCNPJ[contadorPJ].getRazaoSocial()     + "\n"
+                +           "CPF: "     + contaCNPJ[contadorPJ].getCnpj());
     }
 
 }
