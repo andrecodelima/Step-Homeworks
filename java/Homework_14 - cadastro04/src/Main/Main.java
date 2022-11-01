@@ -22,9 +22,9 @@ public class Main {
     public static void menu() {
             while (true) {
                 System.out.println("\nBANCO SANTANDRÉ");
-                System.out.println("Selecione o tipo de Conta");
+                System.out.println("\nSelecione o tipo de Conta");
                 System.out.println("[1] - Pessoa Física || [2] - Pessoa Jurídica || [3] Sair");
-                System.out.print("\nDigite Aqui: ");
+                System.out.print("Digite Aqui: ");
                 opcao = read.nextInt();
 
                 switch (opcao) {
@@ -45,11 +45,9 @@ public class Main {
             }
         }
 
-
-
     public static void PF(){
-        System.out.println("\nÁREA DE PESSOA FÍSICA\n");
-        System.out.println("[1] - Cadastro || [2] - Consulta || [3] Saque || [4] Sair");
+        System.out.println("\nÁREA DE PESSOA FÍSICA");
+        System.out.println("[1] - Cadastro || [2] - Consulta || [3] Depósito || [4] Saque [5] Sair");
         System.out.print("\nDigite Aqui: ");
         opcao = read.nextInt();
 
@@ -63,29 +61,36 @@ public class Main {
                 break;
 
             case 3:
-                System.out.print("Informe o valor do saque: ");
+                System.out.print("Informe o valor do Depósito: ");
+                double valorDep = read.nextDouble();
+                contaPF.deposito(valorDep);
+                break;
+
+            case 4:
+                System.out.print("Informe o valor do Saque: ");
                 double valor = read.nextDouble();
                 contaPF.saque(valor);
                 break;
 
-            case 4:
+            case 5:
                 System.out.println("Obrigado pela preferência! Obrigado!");
                 System.exit(0);
+
         }
 
 
     }
 
     public static void PJ(){
-        System.out.println("\nÁREA DE PESSOA JÚRIDICA\n");
-        System.out.println("[1] - Cadastro || [2] - Consulta || [3] Saque || [4] Sair");
+        System.out.println("\nÁREA DE PESSOA JÚRIDICA");
+        System.out.println("[1] - Cadastro || [2] - Consulta || [3] Depósito || [4] Saque [5] Sair");
         System.out.print("\nDigite Aqui: ");
         opcao = read.nextInt();
 
         switch (opcao){
             case 1:
 
-                ContaPessoasJuridica.cadastroPJ(regPJ, qtdPJ);
+                ContaPessoasJuridica.cadastroPJ(regPJ, qtdPJ++);
                 break;
 
             case 2:
@@ -93,20 +98,24 @@ public class Main {
                 break;
 
             case 3:
-                System.out.print("Informe o valor do saque: ");
+                System.out.print("Informe o valor do Depósito: ");
+                double valorDep = read.nextDouble();
+                contaPJ.deposito(valorDep);
+                break;
+
+            case 4:
+                System.out.print("Informe o valor do Saque: ");
                 double valor = read.nextDouble();
                 contaPJ.saque(valor);
                 break;
 
-            case 4:
+            case 5:
                 System.out.println("Obrigado pela preferência! Obrigado!");
                 System.exit(0);
         }
 
 
     }
-
-
 
     public static void consultaPF(){
         System.out.println("\nCONSULTA PESSOA FÍSICA\n");
@@ -135,19 +144,22 @@ public class Main {
 
     public static void consultaPJ() {
         System.out.println("\nCONSULTA PESSOA FÍSICA\n");
-        if (regPJ[qtdPJ] == null) {
+        if (regPJ[0] == null) {
             System.out.println("Nenhum registro encontrado!");
         } else {
             for (int c = 0; c < regPJ.length; c++) {
                 if (regPJ[c] == null) {
                     break;
                 } else {
-                    System.out.println("Razão Social: " + regPJ[c].getDadosEmpresa().getRazaoSocial());
-                    System.out.println("Nome Fantasia: " + regPJ[c].getDadosEmpresa().getNomeFantasia());
-                    System.out.println("CNPJ    " + regPJ[c].getDadosEmpresa().getCnpj());
-                    System.out.println("Agência:  " + regPJ[c].getAgencia());
-                    System.out.println("Conta:    " + regPJ[c].getConta());
-                    System.out.println("Saldo:    " + regPJ[c].getSaldo());
+                    System.out.println("\n===================================================");
+                    System.out.println("Razão Social: "   + regPJ[c].getDadosEmpresa().getRazaoSocial());
+                    System.out.println("Nome Fantasia: "  + regPJ[c].getDadosEmpresa().getNomeFantasia());
+                    System.out.println("CNPJ    "         + regPJ[c].getDadosEmpresa().getCnpj());
+                    System.out.println("Agência:  "       + regPJ[c].getAgencia());
+                    System.out.println("Conta:    "       + regPJ[c].getConta());
+                    System.out.println("Saldo:    "       + regPJ[c].getSaldo());
+                    System.out.println("====================================================\n");
+
                 }
 
             }

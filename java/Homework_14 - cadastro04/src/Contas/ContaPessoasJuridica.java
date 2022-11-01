@@ -12,18 +12,9 @@ public class ContaPessoasJuridica extends Conta{
     public ContaPessoasJuridica(String agencia, String conta, double saldo, String razaoSocial, String nomeFantasia, String cnpj) {
         super(agencia, conta, saldo);
         this.dadosEmpresa = new PessoaJuridica(razaoSocial, nomeFantasia, cnpj);
-        //Voce instancia a propriedade dadosEmpresa com a Classe Pessoa Juridica.
 
         this.limiteDeCredito = 1000;
 
-    }
-
-    public PessoaJuridica getDadosEmpresa() {
-        return dadosEmpresa;
-    }
-
-    public void setDadosEmpresa(PessoaJuridica dadosEmpresa) {
-        this.dadosEmpresa = dadosEmpresa;
     }
 
     public double getLimiteDeCredito() {
@@ -42,6 +33,14 @@ public class ContaPessoasJuridica extends Conta{
         }else{
             System.err.println("Saldo insuficiente para realizar o saque!");
         }
+    }
+
+    public PessoaJuridica getDadosEmpresa() {
+        return dadosEmpresa;
+    }
+
+    public void setDadosEmpresa(PessoaJuridica dadosEmpresa) {
+        this.dadosEmpresa = dadosEmpresa;
     }
 
     public static void cadastroPJ(ContaPessoasJuridica [] arrayPJ, int qtd){

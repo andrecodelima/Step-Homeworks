@@ -4,8 +4,6 @@ import Pessoas.PessoaFisica;
 
 public class ContaPessoaFisica extends Conta{
     private PessoaFisica dadosPessoais;
-    // A criação dessa propriedade é pra deixar certos dados ainda mais encapsulados.
-
     public ContaPessoaFisica() {
     }
 
@@ -35,6 +33,8 @@ public class ContaPessoaFisica extends Conta{
             System.err.println("Saldo insuficiente!");
         }
     }
+    double valor2 = super.getSaldo();
+
 
     public static void cadastroPF(ContaPessoaFisica [] arrayPF, int qtd){
         Scanner read = new Scanner(System.in);
@@ -47,7 +47,7 @@ public class ContaPessoaFisica extends Conta{
 
         System.out.print("Saldo: ");
         double saldo = read.nextDouble();
-
+        
         System.out.print("Nome: ");
         String nome = read.next();
 
