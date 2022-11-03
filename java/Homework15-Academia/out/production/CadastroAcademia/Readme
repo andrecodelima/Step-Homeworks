@@ -1,0 +1,11 @@
+
+Crie um programa de cadastro de alunos de uma academia.
+deverá ser possível cadastrar nome, idade, peso e altura para cada aluno.
+
+Se for aluno de musculação ou crossfit, ao exibir os dados deverá aparecer também o IMC.
+Caso seja aluno de luta deverá aparecer uma das seguintes categorias:
+
+até 65 GALO
+Até 75 LEVE
+Até 85 MEDIO
+Acima de 85kg PESADO
