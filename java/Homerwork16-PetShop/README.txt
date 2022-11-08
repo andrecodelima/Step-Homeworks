@@ -5,3 +5,4 @@ Gato acompanha caixa de transporte;
 Peixe acompanha saco de transporte;
 
 Pergunte quantos o usuário precisa cadastrar e, ao final imprima os animais e seus brindes.
+teste
