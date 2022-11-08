@@ -2,7 +2,7 @@ package Pet;
 import java.util.Scanner;
 public class Cachorro extends Animal {
 
-    public Animal cadastro(){
+    public static Animal cadastro(){
        Animal pet = new Cachorro();
        Scanner read = new Scanner(System.in);
 
@@ -33,4 +33,6 @@ public class Cachorro extends Animal {
        System.out.println("----- | Cachorro | ------");
        System.out.println("Brinde: Coleira e Pote de Ração");
     }
+
+
 }
