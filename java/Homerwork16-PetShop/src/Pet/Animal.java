@@ -80,15 +80,14 @@ public abstract class Animal {
     }
 
     public void imprime(){
-        System.out.println("CADASTRO DE PET");
-        System.out.println("----------------");
+        System.out.println("\n----------------");
 
-        System.out.println("Nome" + getNome());
-        System.out.println("Raça: " + getRaca());
-        System.out.println("Cor: " + getCor());
-        System.out.println("Dono: " + getDono());
-        System.out.println("CPF do Dono: " + getCpfDono());
-        System.out.println("Telefone do Dono: " + getTelDono());
+        System.out.println("Nome: " + nome);
+        System.out.println("Raça: " + raca);
+        System.out.println("Cor: " + cor);
+        System.out.println("Dono: " + dono);
+        System.out.println("CPF do Dono: " + cpfDono);
+        System.out.println("Telefone do Dono: " + telDono);
 
 
     }

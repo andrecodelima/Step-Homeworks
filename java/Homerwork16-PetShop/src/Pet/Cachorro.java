@@ -24,7 +24,7 @@ public class Cachorro extends Animal {
        pet.setCpfDono(read.next());
 
        System.out.print("Tel do Dono: ");
-       pet.setTelDono(read.nextLine());
+       pet.setTelDono(read.next());
 
         return pet;
 
@@ -32,9 +32,9 @@ public class Cachorro extends Animal {
 
     @Override
     public void imprime(){
-       System.out.println("----- | Cachorro | ------");
-       System.out.println("Brinde: Coleira e Pote de Ração");
        super.imprime();
+        System.out.println("\n----- | BRINDE | ------");
+        System.out.println("Coleira e Pote de Ração");
 
     }
 

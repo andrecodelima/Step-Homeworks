@@ -8,7 +8,6 @@ public class Gato extends Animal{
 
         System.out.println("Cadastro  || Gato\n");
 
-
         System.out.print("Nome: ");
         pet.setNome(read.nextLine());
 
@@ -30,5 +29,10 @@ public class Gato extends Animal{
         return pet;
     }
 
+    public void imprime(){
+        super.imprime();
+        System.out.println("\n----- | BRINDE | ------");
+        System.out.println("Caixa de transporte");
+    }
 
 }

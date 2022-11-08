@@ -28,4 +28,10 @@ public class Peixe extends Animal{
 
         return pet;
     }
+    @Override
+    public void imprime(){
+        super.imprime();
+        System.out.println("\n----- | BRINDE | ------");
+        System.out.println("Saco de transporte");
+    }
 }
