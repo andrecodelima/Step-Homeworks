@@ -11,6 +11,9 @@ public class Peixe extends Animal{
         System.out.print("Nome: ");
         pet.setNome(read.nextLine());
 
+        System.out.print("Raça: ");
+        pet.setRaca(read.nextLine());
+
         System.out.print("Idade: ");
         pet.setIdade(read.nextInt());
 
@@ -24,7 +27,7 @@ public class Peixe extends Animal{
         pet.setCpfDono(read.next());
 
         System.out.print("Tel do Dono: ");
-        pet.setTelDono(read.nextLine());
+        pet.setTelDono(read.next());
 
         return pet;
     }

@@ -11,6 +11,9 @@ public class Cachorro extends Animal {
        System.out.print("Nome: ");
        pet.setNome(read.nextLine());
 
+       System.out.print("Raça: ");
+       pet.setRaca(read.nextLine());
+
        System.out.print("Idade: ");
        pet.setIdade(read.nextInt());
 
