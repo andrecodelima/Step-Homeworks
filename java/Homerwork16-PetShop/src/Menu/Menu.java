@@ -35,6 +35,19 @@ public class Menu {
                     arrayPet[c] = Cachorro.cadastro();
                     break;
 
+                case 2:
+                    arrayPet[c] = Gato.cadastro();
+                    break;
+
+                case 3:
+                    arrayPet[c] = Peixe.cadastro();
+                    break;
+
+                default:
+                    System.out.println("Informe uma opção válida");
+                    c--;
+                    break;
+
             }
 
         }

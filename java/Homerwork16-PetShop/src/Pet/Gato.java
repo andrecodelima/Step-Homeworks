@@ -2,10 +2,12 @@ package Pet;
 import java.util.Scanner;
 public class Gato extends Animal{
 
-    public Animal cadastro(){
+    public static Animal cadastro(){
         Animal pet = new Gato();
-
         Scanner read = new Scanner(System.in);
+
+        System.out.println("Cadastro  || Gato\n");
+
 
         System.out.print("Nome: ");
         pet.setNome(read.nextLine());

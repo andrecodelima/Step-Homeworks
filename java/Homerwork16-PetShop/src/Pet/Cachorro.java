@@ -6,6 +6,8 @@ public class Cachorro extends Animal {
        Animal pet = new Cachorro();
        Scanner read = new Scanner(System.in);
 
+       System.out.println("Cadastro  || Cachorro\n");
+
        System.out.print("Nome: ");
        pet.setNome(read.nextLine());
 
@@ -33,7 +35,7 @@ public class Cachorro extends Animal {
        System.out.println("----- | Cachorro | ------");
        System.out.println("Brinde: Coleira e Pote de Ração");
        super.imprime();
-       
+
     }
 
 
