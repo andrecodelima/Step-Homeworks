@@ -1,4 +1,6 @@
 package Pet;
+import java.util.Scanner;
+import java.text.DecimalFormat;
 
 public abstract class Animal {
     private String nome;
@@ -64,4 +66,20 @@ public abstract class Animal {
     public void setTelDono(String telDono) {
         this.telDono = telDono;
     }
+
+    public void imprime(){
+        System.out.println("CADASTRO DE PET");
+        System.out.println("----------------");
+
+        System.out.println("Nome" + getNome());
+        System.out.println("Raça: " + getRaca());
+        System.out.println("Cor: " + getCor());
+        System.out.println("Dono: " + getDono());
+        System.out.println("CPF do Dono: " + getCpfDono());
+        System.out.println("Telefone do Dono: " + getTelDono());
+
+
+    }
+
+
 }
