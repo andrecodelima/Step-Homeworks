@@ -32,6 +32,8 @@ public class Cachorro extends Animal {
     public void imprime(){
        System.out.println("----- | Cachorro | ------");
        System.out.println("Brinde: Coleira e Pote de Ração");
+       super.imprime();
+       
     }
 
 

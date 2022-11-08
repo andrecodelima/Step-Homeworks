@@ -33,6 +33,8 @@ public class Menu {
             switch (opcao){
                 case 1:
                     arrayPet[c] = Cachorro.cadastro();
+                    break;
+
             }
 
         }
