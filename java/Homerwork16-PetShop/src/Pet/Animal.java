@@ -11,6 +11,18 @@ public abstract class Animal {
     private String cpfDono;
     private String telDono;
 
+    public Animal(String nome, String raca, int idade, String cor, String dono, String cpfDono, String telDono) {
+        this.nome = nome;
+        this.raca = raca;
+        this.idade = idade;
+        this.cor = cor;
+        this.dono = dono;
+        this.cpfDono = cpfDono;
+        this.telDono = telDono;
+    }
+
+    public Animal(){}
+
     public String getNome() {
         return nome;
     }
