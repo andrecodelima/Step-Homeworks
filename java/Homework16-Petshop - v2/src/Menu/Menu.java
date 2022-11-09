@@ -34,20 +34,19 @@ public class Menu {
 
             switch (opcao){
                 case 1:
-                    arrayPet.get(c, Cachorro.cadastro());
+                    arrayPet.add(c, Cachorro.cadastro());
                     break;
 
-                case 2:
-                    arrayPet.set(c, Gato.cadastro());
-                    break;
-
-                case 3:
-                    arrayPet.set(c, Peixe.cadastro());
-                    break;
+//                case 2:
+//                    arrayPet.set(c, Gato.cadastro());
+//                    break;
+//
+//                case 3:
+//                    arrayPet.set(c, Peixe.cadastro());
+//                    break;
 
                 default:
                     System.out.println("Informe uma opção válida");
-                    c--;
                     break;
             }
 
