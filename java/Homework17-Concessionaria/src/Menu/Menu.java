@@ -8,7 +8,7 @@ public class Menu {
 
     public static void menu(){
 
-        ArrayList<Veiculo> listVeiculo = new ArrayList<>();
+        ArrayList<Veiculo> listVeiculo = new ArrayList<Veiculo>();
         int qtd = 0;
 
         Scanner read = new Scanner(System.in);
@@ -27,6 +27,7 @@ public class Menu {
 
         for(Veiculo v : listVeiculo){
             v.imprime();
+
         }
 
 

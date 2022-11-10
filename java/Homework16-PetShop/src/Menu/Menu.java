@@ -54,6 +54,7 @@ public class Menu {
 
         for(Animal a : arrayPet){
             a.imprime();
+
         }
 
 

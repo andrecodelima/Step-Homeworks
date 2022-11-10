@@ -35,6 +35,7 @@ public class Carro extends Veiculo{
     public static Veiculo cadastro(){
 
         Veiculo v = new Carro();
+        Carro c = new Carro();
         Scanner read = new Scanner(System.in);
 
         System.out.print("Modelo: ");
@@ -50,10 +51,10 @@ public class Carro extends Veiculo{
         v.setAnoFabricacao(read.nextInt());
 
         System.out.print("Tipo de Direção: ");
-        String tipoDirecao = read.next();
+        c.setTipoDirecao(read.next());
 
         System.out.print("Tipo de Combustível: ");
-        String tipoCombustivel = read.next();
+        c.setTipoCombustivel(read.next());
 
         return v;
     }
@@ -61,9 +62,11 @@ public class Carro extends Veiculo{
     @Override
     public void imprime(){
         System.out.println("==== Carro ====");
-        super.imprime();
         System.out.println("Tipo de direção: " + tipoDirecao);
-        System.out.println("Tipo de Combustível: " + tipoCombustivel);
+        System.out.println("Tipo de Combustível: " + getTipoCombustivel());
+        System.out.println();
+        super.imprime();
+
 
     }
 
