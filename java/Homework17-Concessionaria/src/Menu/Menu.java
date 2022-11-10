@@ -18,16 +18,14 @@ public class Menu {
 
         listVeiculo = new ArrayList<>(qtd);
 
-        for(int c=0; c<=listVeiculo.size(); c++){
+        for(int c = 0; c<=listVeiculo.size(); c++){
 
             listVeiculo.add(c,Carro.cadastro());
-            break;
-
+            c++;
         }
 
         for(Veiculo v : listVeiculo){
             v.imprime();
-
         }
 
 
