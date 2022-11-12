@@ -62,8 +62,8 @@ public class Carro extends Veiculo{
     @Override
     public void imprime(){
         System.out.println("==== Carro ====");
-        System.out.println("Tipo de direção: " + tipoDirecao);
-        System.out.println("Tipo de Combustível: " + getTipoCombustivel());
+        System.out.println("Tipo de direção: " + getTipoDirecao());
+//        System.out.println("Tipo de Combustível: " + getTipoCombustivel());
         System.out.println();
         super.imprime();
 
