@@ -10,6 +10,8 @@ public abstract class Veiculo {
         this.ano = ano;
     }
 
+    public Veiculo(){}
+
     public String getModelo() {
         return modelo;
     }
@@ -28,7 +30,7 @@ public abstract class Veiculo {
 
     public void imprime(){
         System.out.println("Veículos");
-        System.out.println("Modelo: " + modelo);
+        System.out.println("Modelo: " + getModelo());
         System.out.println("Ano: " + getAno());
 
     }
