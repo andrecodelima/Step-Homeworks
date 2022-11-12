@@ -2,7 +2,7 @@ package Veiculos;
 
 import java.util.Scanner;
 
-public class Carro extends Veiculo{
+public class Carro extends Veiculo {
 
     private String cor;
 
@@ -10,7 +10,6 @@ public class Carro extends Veiculo{
         super(modelo, ano);
         this.cor = cor;
     }
-    public Carro(){}
 
     public String getCor() {
         return cor;
@@ -20,7 +19,7 @@ public class Carro extends Veiculo{
         this.cor = cor;
     }
 
-    public static Veiculo cadastro(){
+    public static Veiculo cadastro() {
         Veiculo v = new Carro();
         Carro c = new Carro();
 
@@ -38,10 +37,5 @@ public class Carro extends Veiculo{
         return v;
 
     }
-
-    public void imprime(){
-        super.imprime();
-        System.out.println("Cor: " + getCor());
-
-    }
 }
+
