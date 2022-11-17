@@ -17,7 +17,7 @@ public class Menu {
 
         for(int c = 0; c < box.length; c++){
 
-            box[c] = 
+            box[c] =
         }
 
     }
