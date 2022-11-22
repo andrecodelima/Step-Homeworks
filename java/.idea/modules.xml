@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/aulas/Aula18/Aula18.iml" filepath="$PROJECT_DIR$/aulas/Aula18/Aula18.iml" />
+      <module fileurl="file://$PROJECT_DIR$/aulas/CadastroDeAlunos-v5/CadastroDeAlunos-v5.iml" filepath="$PROJECT_DIR$/aulas/CadastroDeAlunos-v5/CadastroDeAlunos-v5.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ConcessionariaVteste2/ConcessionariaVteste2.iml" filepath="$PROJECT_DIR$/ConcessionariaVteste2/ConcessionariaVteste2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Homework10/Homework10.iml" filepath="$PROJECT_DIR$/Homework10/Homework10.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Homework11/Homework11.iml" filepath="$PROJECT_DIR$/Homework11/Homework11.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Homework12-cadastro03/Homework12-cadastro03.iml" filepath="$PROJECT_DIR$/Homework12-cadastro03/Homework12-cadastro03.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Homework14-cadastro04/Homework14-cadastro04.iml" filepath="$PROJECT_DIR$/Homework14-cadastro04/Homework14-cadastro04.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Homework15-Academia/Homework15-Academia.iml" filepath="$PROJECT_DIR$/Homework15-Academia/Homework15-Academia.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Homework16-Petshop/Homework16-Petshop.iml" filepath="$PROJECT_DIR$/Homework16-Petshop/Homework16-Petshop.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Homework16-Petshop-v2/Homework16-Petshop-v2.iml" filepath="$PROJECT_DIR$/Homework16-Petshop-v2/Homework16-Petshop-v2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Homework17-Concessionaria/Homework17-Concessionaria.iml" filepath="$PROJECT_DIR$/Homework17-Concessionaria/Homework17-Concessionaria.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Step-Homeworks.iml" filepath="$PROJECT_DIR$/Step-Homeworks.iml" />
+      <module fileurl="file://$PROJECT_DIR$/aulas/aula12-revisao/aula12-revisao.iml" filepath="$PROJECT_DIR$/aulas/aula12-revisao/aula12-revisao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/aulas/aulas.iml" filepath="$PROJECT_DIR$/aulas/aulas.iml" />
+    </modules>
+  </component>
+</project>
