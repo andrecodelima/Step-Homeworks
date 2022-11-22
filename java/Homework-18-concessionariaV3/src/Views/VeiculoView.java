@@ -21,8 +21,10 @@ public class VeiculoView {
 
     public static void printByCor(ArrayList<Veiculo> lista){
 
-        for(Veiculo v : VeiculoController.getByCor(lista, cor)){
-
+        for(Veiculo v : VeiculoController.getByCor(lista)){
+            System.out.println("Modelo: " + v.getModelo());
+            System.out.println("Ano: " + v.getAno());
+            System.out.println("Cor: "  + v.getCor());
         }
     }
 

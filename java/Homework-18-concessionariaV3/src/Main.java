@@ -9,6 +9,7 @@ public class Main {
         ArrayList<Veiculo> lista = new ArrayList<>();
 
         VeiculoView.cadastra(lista);
+        VeiculoView.printByCor(lista);
 
 
     }

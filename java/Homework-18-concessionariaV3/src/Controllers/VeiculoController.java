@@ -1,14 +1,13 @@
 package Controllers;
 
 import Models.Veiculo;
-import Views.VeiculoView;
 
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class VeiculoController {
 
-    public static ArrayList<Veiculo> getByCor(ArrayList<Veiculo> lista, String cor){
+    public static ArrayList<Veiculo> getByCor(ArrayList<Veiculo> lista){
         ArrayList<Veiculo> result = new ArrayList();
         for(Veiculo v : lista){
             if(v.getCor().toLowerCase().equals("Azul")){
