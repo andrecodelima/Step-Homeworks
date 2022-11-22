@@ -5,8 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bb2616bd-8565-41f4-8246-94475e24a4a1" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/out/production/Homework18-Concessionaria/Menu/Menu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Homework18-Concessionaria/Menu/Menu.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Menu/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Menu/Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Homework17-Concessionaria-v2/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Homework17-Concessionaria-v2/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Homework17-Concessionaria-v2/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Homework17-Concessionaria-v2/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Homework17-Concessionaria-v2/Homewok17-v2.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Homework17-Concessionaria-v2/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Homework17-Concessionaria-v2/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Homework17-Concessionaria-v2/src/Veiculos/Veiculo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Homework17-Concessionaria-v2/src/Veiculos/Veiculos.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Homework17-Concessionaria-v2/src/Veiculos/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
