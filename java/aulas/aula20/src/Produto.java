@@ -1,3 +1,7 @@
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
 public class Produto {
 
     private int id = 0; // Pode ser que não haja ID preenchido ainda por isso
@@ -6,9 +10,7 @@ public class Produto {
     private String fabricante;
     private double preco;
 
-    public Produto(){
-
-    }
+    public Produto(){}
 
     public Produto(int id, String nome, String fabricante, double preco) {
         this.id = id;
