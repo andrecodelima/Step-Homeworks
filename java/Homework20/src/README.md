@@ -1,10 +1,13 @@
-Dever de casa
+
+DEVER DE CASA
 =============
 
-Crie um programa que cadastre produtos com nome, fabricante e preço.
+USANDO O MVC  e um banco de dados MySQL, faça um sistema
+de cadastro de veículos com modelo, fabricante, ano, cor
+e preço;
+Dê a opção de cadastrar e consultar os veículos.
 
+DESAFIO --> Ao consultar dê a opção de TODOS, por Fabricante
+(O usuário deverá escrever o nome ou parte do nome do fabricante)
+ou até mesmo um preço.
 
-Ele precisa deixar você escolher se quer cadastrar ou
-exibir os produtos cadastrados;
-
-DEVERÁ ESTAR CONECTADO AO BANCO DE DADOS
