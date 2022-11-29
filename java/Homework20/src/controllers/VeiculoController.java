@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 public class VeiculoController {
 
-    public static void addProduto(VeiculoModel v){
+    public static void addVeiculo(VeiculoModel v){
 
         Connection conn = Db.getConn();
         if(conn == null){
@@ -78,5 +78,5 @@ public class VeiculoController {
 
         return VecList;
     }
-    
+
 }
