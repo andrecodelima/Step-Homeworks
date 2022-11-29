@@ -35,12 +35,12 @@ public class Receber {
         }
 
     public static double numeroDouble(){
+        Scanner sc = new Scanner(System.in);
         double valor = 0;
         boolean acertou = false;
 
         while (acertou != true){
             try{
-                Scanner sc = new Scanner(System.in);
                 valor = sc.nextInt();
                 acertou = true;
 
@@ -49,7 +49,7 @@ public class Receber {
                 System.out.print("Tente novamente: ");
             }
 
-            return sc.nextInt();
+            return sc.nextDouble();
 
         }
         return valor;
