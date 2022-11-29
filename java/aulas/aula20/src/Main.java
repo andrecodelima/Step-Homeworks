@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
+            Menu.menu();
 
         }
 
@@ -58,7 +59,7 @@ public class Main {
                 return produtoList;
             }
 
-            String sql = "SELECT * FROM produto";
+            String sql = "SELECT * FROM produtos";
 
             try {
                 Statement st = conect.createStatement();
