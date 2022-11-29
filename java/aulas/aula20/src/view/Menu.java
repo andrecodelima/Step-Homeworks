@@ -1,11 +1,16 @@
-import java.sql.SQLOutput;
+package view;
+
+import controllers.ProdutoController;
+import models.ProdutoModel;
+import services.Receber;
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Menu {
 
+    // INTERFACE DO PROGRAMA, É AQUI QUE O USUARIO INTERAGE
     public static void menu(){
-        Scanner sc = new Scanner(System.in);
 
         while (true){
 
@@ -18,7 +23,7 @@ public class Menu {
             System.out.println("[2] CONSULTAR");
 
             System.out.print("Escolha uma opção: ");
-            int op = sc.nextInt();
+            int op = Receber.numeroInteiro();
 
             switch (op){
                 case 0:
@@ -41,31 +46,30 @@ public class Menu {
 
     }
     private static void cadastrar(){
-        Scanner sc = new Scanner(System.in);
-        Produto p = new Produto();
+        ProdutoModel p = new ProdutoModel();
 
         System.out.print("Nome: ");
-        p.setNome(sc.nextLine());
+        p.setNome(Receber.texto());
 
         System.out.print("Fabricante: ");
-        p.setFabricante(sc.nextLine());
+        p.setFabricante(Receber.texto());
 
         System.out.print("Preço: ");
-        p.setPreco(sc.nextDouble());
+        p.setPreco(Receber.numeroDouble());
 
-        Main.addProduto(p);
+        ProdutoController.addProduto(p);
 
     }
 
     public static void consultar(){
         System.out.println("\n\nConsulta de Produtos\n");
 
-        ArrayList<Produto> produtos = Main.getAllProduto();
+        ArrayList<ProdutoModel> produtos = ProdutoController.getAllProduto();
         if(produtos.size() == 0){
             System.out.println("Não há produtos cadastrados");
         }else{
-            for(Produto p : produtos){
-                System.out.println("Produto: " + p.getNome());
+            for(ProdutoModel p : produtos){
+                System.out.println("models.Produto: " + p.getNome());
                 System.out.println("Fabricante: " + p.getFabricante());
                 System.out.println("Preço R$: " + p.getPreco());
                 System.out.println("---------------------------");

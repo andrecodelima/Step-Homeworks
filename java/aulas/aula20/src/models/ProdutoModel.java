@@ -1,18 +1,21 @@
+package models;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-public class Produto {
-
+public class ProdutoModel{
+    //PROUDUTO EXAMENTE COMO É COMO COLOCADO NO BANCO DE DADOS,
+    // COM AS MESMAS PROPRIEDADES QUE POSSUI NO BANCO
     private int id = 0; // Pode ser que não haja ID preenchido ainda por isso
     // ele ser iniciado com "zero".
     private String nome;
     private String fabricante;
     private double preco;
 
-    public Produto(){}
+    public ProdutoModel(){}
 
-    public Produto(int id, String nome, String fabricante, double preco) {
+    public ProdutoModel(int id, String nome, String fabricante, double preco) {
         this.id = id;
         this.nome = nome;
         this.fabricante = fabricante;
