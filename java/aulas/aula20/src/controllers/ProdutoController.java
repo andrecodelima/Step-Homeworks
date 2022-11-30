@@ -29,7 +29,7 @@ public class ProdutoController {
 
                 if(rows > 0){ // Se alterou uma linha  produto cadastrado
                     System.out.println("\n=============");
-                    System.out.println("models.Produto cadastrado");
+                    System.out.println("Produto cadastrado");
                     System.out.println("=============\n");
 
                 }

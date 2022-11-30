@@ -5,15 +5,12 @@ import modules.VeiculoModel;
 import services.Entrada;
 
 import java.util.ArrayList;
-import java.util.Scanner;
 
 public class Menu {
 
     public static void menu(){
 
         while (true){
-
-            Scanner leia = new Scanner(System.in);
 
             System.out.println("======================");
             System.out.println("Concessionária MILECAR");
@@ -24,22 +21,22 @@ public class Menu {
             System.out.println("[3] - Sair");
 
             System.out.print("Escolha uma opção: ");
-            String op = leia.nextLine();
+            int op = Entrada.numInteiro();
 
             switch (op){
-                case "1": // cadastrar
+                case 1:
                     System.out.println("Cadastro de Veículo");
                     System.out.println("-------------------");
                     cadastrar();
                     break;
 
-                case "2": // consultar
+                case 2:
                     System.out.println("Consulta de Veículo");
                     System.out.println("-------------------");
                     consulta();
                     break;
 
-                case "3": // sair
+                case 3:
                     System.out.println("Encerrando o Sistema ...");
                     System.exit(0);
 
@@ -51,10 +48,10 @@ public class Menu {
     }
 
     private static void cadastrar(){
-        Scanner leia = new Scanner(System.in);
         VeiculoModel v = new VeiculoModel();
 
         System.out.print("Modelo: ");
+        v.setModelo(Entrada.texto());
 
         System.out.print("Fabricante: ");
         v.setFabricante(Entrada.texto());
@@ -68,7 +65,7 @@ public class Menu {
         System.out.print("Preço: ");
         v.setPreco(Entrada.numDouble());
 
-
+        VeiculoController.addVeiculo(v);
 
     }
 

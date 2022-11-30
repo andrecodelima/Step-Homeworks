@@ -41,11 +41,11 @@ public class Receber {
 
         while (acertou != true){
             try{
-                valor = sc.nextInt();
+                valor = sc.nextDouble();
                 acertou = true;
 
             }catch (Exception e){
-                System.out.println("Erro - Necessário numero inteiro");
+                System.out.println("Erro - Necessário numero decimal");
                 System.out.print("Tente novamente: ");
             }
 

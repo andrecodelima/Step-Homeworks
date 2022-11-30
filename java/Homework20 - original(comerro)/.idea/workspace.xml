@@ -9,13 +9,8 @@
       <change beforePath="$PROJECT_DIR$/out/production/Homework20/controllers/VeiculoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Homework20/controllers/VeiculoController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Homework20/services/Entrada.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Homework20/services/Entrada.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Homework20/view/Menu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Homework20/view/Menu.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controllers/VeiculoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/VeiculoController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/services/Entrada.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/Entrada.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/Menu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../aulas/aula20/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../aulas/aula20/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../aulas/aula20/src/controllers/ProdutoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../aulas/aula20/src/controllers/ProdutoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../aulas/aula20/src/services/Receber.java" beforeDir="false" afterPath="$PROJECT_DIR$/../aulas/aula20/src/services/Receber.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
