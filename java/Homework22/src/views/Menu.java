@@ -94,8 +94,9 @@ public class Menu {
         System.out.println("[1] - CONSULTAR TODOS OS VEÍCULOS");
         System.out.println("[2] - CONSULTAR POR FABRICANTE");
         System.out.println("[3] - CONSULTAR POR MODELO");
-        System.out.println("[4] - CONSULTAR POR COR");
-        System.out.println("[5] - CONSULTAR POR PREÇO");
+        System.out.println("[4] - CONSULTAR POR ANO");
+        System.out.println("[5] - CONSULTAR POR COR");
+        System.out.println("[6] - CONSULTAR POR PREÇO");
 
         System.out.print("Escolha uma das opções acima: ");
         String op = Entrada.texto();
@@ -112,8 +113,9 @@ public class Menu {
 
                 if (list1.isEmpty()) {
                     System.out.println("Ná há veículos cadastrados");
-                    break;
                 }
+
+                break;
 
             case "2":
                 System.out.println("\nPOR FABRICANTE");
@@ -128,11 +130,82 @@ public class Menu {
                 }
 
                 if (list2.isEmpty()) {
-                    System.out.println("Ná há cadastros com fabricante");
+                    System.out.println("Ná há cadastros com Fabricante informado");
 
                 }
+                break;
+
+            case "3":
+                System.out.println("\nPOR MODELO");
+                System.out.println("Informe o modelo: ");
+                String modelo = Entrada.texto();
+
+                ArrayList<Veiculo> list3 = VeiculoController.getModelo(modelo);
+
+                for (Veiculo v : list3) {
+                    VeiculoController.exibir(v);
+                    System.out.println("------------------");
+                }
+
+                if (list3.isEmpty()) {
+                    System.out.println("Ná há cadastros com Modelo informado");
+
+                }
+                break;
+
+            case "4":
+                System.out.println("\nPOR ANO");
+                System.out.println("Informe o ano: ");
+                int ano = Entrada.numInteiro();
+
+                ArrayList<Veiculo> list4 = VeiculoController.getAno(ano);
+
+                for (Veiculo v : list4) {
+                    VeiculoController.exibir(v);
+                    System.out.println("------------------");
+                }
+
+                if (list4.isEmpty()) {
+                    System.out.println("Ná há cadastros com ano informado");
+
+                }
+                break;
+
+            case "5":
+                System.out.println("\nPOR COR");
+                System.out.println("Informe a cor: ");
+                String cor = Entrada.texto();
+
+                ArrayList<Veiculo> list5 = VeiculoController.getCor(cor);
+
+                for (Veiculo v : list5) {
+                    VeiculoController.exibir(v);
+                    System.out.println("------------------");
+                }
+
+                if (list5.isEmpty()) {
+                    System.out.println("Ná há cadastros com a cor informada");
+
+                }
+                break;
 
         }
 
     }
-}
+
+    public static void vender(){
+
+        Veiculo v = new Veiculo();
+
+        System.out.println("VENDA DE VEÍCULOS");
+
+        System.out.print("INFORME O ID DO VEÍCULO QUE DESEJA VENDER: ");
+        v.setId(Entrada.numInteiro());
+
+        VeiculoController.Venda(v);
+
+
+        }
+
+    }
+

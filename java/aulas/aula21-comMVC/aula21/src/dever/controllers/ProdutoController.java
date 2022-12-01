@@ -6,7 +6,7 @@ import dever.services.BD;
 import java.sql.*;
 import java.util.ArrayList;
 
-public class ProdutoController {
+public class    ProdutoController {
 
     public static void addProduto(ProdutoModel p){
         Connection conn = BD.getConn();

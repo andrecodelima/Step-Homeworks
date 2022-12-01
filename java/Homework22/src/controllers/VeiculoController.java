@@ -136,8 +136,7 @@ public class VeiculoController {
     }
 
 
-    //VENDA
-    public static ArrayList<Veiculo>getVenda(String fabricante){
+    public static ArrayList<Veiculo>getModelo(String modelo){
         ArrayList<Veiculo> vecList = new ArrayList<Veiculo>();
         Connection conect  = Db.conect();
 
@@ -147,7 +146,7 @@ public class VeiculoController {
 
         }else{
 
-            String sql = "SELECT * FROM veiculo WHERE FABRICANTE LIKE '%" + fabricante + "%'";
+            String sql = "SELECT * FROM veiculo WHERE MODELO LIKE '%" + modelo + "%'";
 
             try{
                 Statement st = conect.createStatement();
@@ -173,6 +172,111 @@ public class VeiculoController {
 
             return vecList;
 
+        }
+
+    }
+
+    public static ArrayList<Veiculo>getAno(int ano){
+        ArrayList<Veiculo> vecList = new ArrayList<Veiculo>();
+        Connection conect  = Db.conect();
+
+        if(conect == null){
+            System.out.println("Erro ao conectar ao Banco");
+            return vecList;
+
+        }else{
+
+            String sql = "SELECT * FROM veiculo WHERE ANO is " + ano;
+
+            try{
+                Statement st = conect.createStatement();
+                ResultSet result = st.executeQuery(sql);
+
+                while (result.next()){
+                    vecList.add(new Veiculo(result.getInt("id"),
+                                    result.getString("modelo"),
+                                    result.getString("fabricante"),
+                                    result.getInt("ano"),
+                                    result.getString("cor"),
+                                    result.getDouble("preco")
+                            )
+                    );
+                }
+
+                conect.close();
+                st.close();
+
+            }catch (SQLException error){
+                System.out.println(error);
+            }
+
+            return vecList;
+
+        }
+
+    } // Ano
+
+    public static ArrayList<Veiculo>getCor(String cor){// Cor
+        ArrayList<Veiculo> vecList = new ArrayList<Veiculo>();
+        Connection conect  = Db.conect();
+
+        if(conect == null){
+            System.out.println("Erro ao conectar ao Banco");
+            return vecList;
+
+        }else{
+
+            String sql = "SELECT * FROM veiculo WHERE COR LIKE '%" + cor + "%'";
+
+            try{
+                Statement st = conect.createStatement();
+                ResultSet result = st.executeQuery(sql);
+
+
+                while (result.next()){
+                    vecList.add(new Veiculo(result.getInt("id"),
+                                    result.getString("modelo"),
+                                    result.getString("fabricante"),
+                                    result.getInt("ano"),
+                                    result.getString("cor"),
+                                    result.getDouble("preco")
+                            )
+                    );
+                }
+
+                conect.close();
+                st.close();
+
+            }catch (SQLException error){
+                System.out.println(error);
+            }
+
+            return vecList;
+
+        }
+
+    }
+
+
+
+    //VENDA
+    public static void Venda(Veiculo v) {
+        Connection conect = Db.conect();
+        try{
+
+            String sql = "DELETE FROM veiculo WHERE id = ?";
+            PreparedStatement st = conect.prepareStatement(sql);
+
+            st.setInt(1, v.getId());
+            st.execute();
+
+            System.out.println("\nVeículo Vendido");
+            conect.close();
+            st.close();
+
+        }catch (SQLException e){
+            System.out.println("Erro na venda");
+            System.out.println(e);
         }
 
     }
