@@ -7,7 +7,7 @@ import services.Entrada;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Menu {
+public class    Menu {
 
     public static void menu(){
 
