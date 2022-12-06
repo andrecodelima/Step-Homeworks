@@ -1,6 +1,7 @@
 package views;
 
 import controllers.VeiculoController;
+import controllers.VendaController;
 import modules.Veiculo;
 import services.Entrada;
 
@@ -42,7 +43,7 @@ public class Menu {
                     break;
 
                 case 3:
-//                    vender();
+                    vender();
                     break;
 
                 default:
@@ -85,8 +86,11 @@ public class Menu {
         System.out.println("CONSULTA DE VÉICULOS");
 
         System.out.println("[1] - TODOS OS VEÍCULOS");
-
-
+        System.out.println("[2] - MODELO");
+        System.out.println("[3] - FABRICANTE");
+        System.out.println("[4] - ANO");
+        System.out.println("[5] - COR");
+        System.out.println("[6] - PRECO");
 
 
         System.out.println("");
@@ -96,6 +100,7 @@ public class Menu {
 
         switch (op){
             case 1:
+                System.out.println("TODOS");
                 ArrayList<Veiculo> list1 = VeiculoController.getAll();
                 for(Veiculo vec: list1){
                     VeiculoController.exibir(vec);
@@ -108,9 +113,131 @@ public class Menu {
 
                 break;
 
+            case 2:
+                System.out.println("MODELO");
+                System.out.println("------");
+
+                System.out.print("Modelo: ");
+                String modelo = Entrada.texto();
+
+                ArrayList<Veiculo> list2 = VeiculoController.getModelo(modelo);
+                for(Veiculo vec: list2){
+                    VeiculoController.exibir(vec);
+                    System.out.println("------------");
+                }
+
+                if(list2.isEmpty()){
+                    System.out.println("Não há veículos cadastrados");
+                }
+
+                break;
+
+            case 3:
+                System.out.println("FABRICANTE");
+                System.out.println("------");
+
+                System.out.print("Fabricante: ");
+                String fabricante = Entrada.texto();
+
+                ArrayList<Veiculo> list3 = VeiculoController.getModelo(fabricante);
+                for(Veiculo vec: list3){
+                    VeiculoController.exibir(vec);
+                    System.out.println("------------");
+                }
+
+                if(list3.isEmpty()){
+                    System.out.println("Não há veículos cadastrados");
+                }
+
+                break;
+
+            case 4:
+                System.out.println("ANO");
+                System.out.println("------");
+
+                System.out.print("Ano: ");
+                int ano = Entrada.numInt();
+
+                ArrayList<Veiculo> list4 = VeiculoController.getAno(ano);
+                for(Veiculo vec: list4){
+                    VeiculoController.exibir(vec);
+                    System.out.println("------------");
+                }
+
+                if(list4.isEmpty()){
+                    System.out.println("Não há veículos cadastrados");
+                }
+
+                break;
+
+            case 5:
+                System.out.println("COR");
+                System.out.println("------");
+
+                System.out.print("Ano: ");
+                String cor = Entrada.texto();
+
+                ArrayList<Veiculo> list5 = VeiculoController.getCor(cor);
+                for(Veiculo vec: list5){
+                    VeiculoController.exibir(vec);
+                    System.out.println("------------");
+                }
+
+                if(list5.isEmpty()){
+                    System.out.println("Não há veículos cadastrados");
+                }
+
+                break;
+
+            case 6:
+                System.out.println("PREÇO");
+                System.out.println("------");
+
+                System.out.print("Ano: ");
+                double preco = Entrada.numDouble();
+
+                ArrayList<Veiculo> list6 = VeiculoController.getPreco(preco);
+                for(Veiculo vec: list6){
+                    VeiculoController.exibir(vec);
+                    System.out.println("------------");
+                }
+
+                if(list6.isEmpty()){
+                    System.out.println("Não há veículos cadastrados");
+                }
+
+                break;
+
         }
+
+
+
+    }
+
+    public static void vender(){
+        System.out.println("\n\n===== VENDA DE VEÍCULOS =====");
+        System.out.println("----------------------------------");
+        System.out.println("[1] - POR ID");
+        System.out.println("[2] - POR DIA");
+        System.out.println("[3] - POR VEÍCULO");
+
+        System.out.print("Escolha: ");
+
+        int op = Entrada.numInt();
+        switch (op){
+            case 1:
+                VendaController.addVenda(VendaController.vendaID());
+                break;
+        }
+
+
+
 
     }
 
 
+
 }
+
+
+

@@ -15,3 +15,7 @@ Ao consultar, de a opão de TODOS
 Finalize permitindo a venda de veículos.
 Crie a opção de vender veículos e lembre:
 Não pode vender duas vezes o mesmo veículo.
+
+Crie opções de pesquisa de vendas:
+vendas por dia
+vendas por veículo

@@ -1,5 +1,7 @@
 package services;
 
+import javax.xml.crypto.Data;
+import java.util.Date;
 import java.util.Scanner;
 
 public class Entrada {
@@ -46,6 +48,29 @@ public class Entrada {
             }catch (Exception e){
                 System.out.print("Errou!\n" +
                                 "Digite um valor decimal: ");
+            }
+        }
+
+        return valor;
+
+    }
+
+    public static Data numDouble(){
+        Date valor = new Date();
+
+        valor.getTime();
+
+        boolean acertou = false;
+
+        while (!acertou){
+
+            try {
+                Scanner sc = new Scanner(System.in);
+                valor = sc.nextDouble();
+                acertou = true;
+            }catch (Exception e){
+                System.out.print("Errou!\n" +
+                        "Digite um valor decimal: ");
             }
         }
 

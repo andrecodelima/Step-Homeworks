@@ -8,16 +8,19 @@ public class Veiculo {
     private int ano;
     private String cor;
     private double preco;
+    private boolean vendido;
+
 
     public Veiculo(){}
 
-    public Veiculo(int id, String modelo, String fabricante, int ano, String cor, double preco) {
+    public Veiculo(int id, String modelo, String fabricante, int ano, String cor, double preco, boolean vendido) {
         this.id = id;
         this.modelo = modelo;
         this.fabricante = fabricante;
         this.ano = ano;
         this.cor = cor;
         this.preco = preco;
+        this.vendido = vendido;
     }
 
     public int getId() {
@@ -66,5 +69,12 @@ public class Veiculo {
 
     public void setPreco(double preco) {
         this.preco = preco;
+    }
+
+    public boolean isVendido() {
+        return vendido;
+    }
+    public void setVendido(boolean vendido) {
+        this.vendido = vendido;
     }
 }
