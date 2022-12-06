@@ -23,6 +23,9 @@ public class Menu {
             System.out.println("-----------------------------");
             System.out.println("[0] - SAIR");
 
+            System.out.println("");
+            System.out.print("Escolha: ");
+
             int op = Entrada.numInt();
 
             switch (op){
@@ -56,7 +59,7 @@ public class Menu {
 
         Veiculo v = new Veiculo();
         System.out.println("\n=+=+=+=+=+=+=+=+=+=+=+");
-        System.out.println("  Cadastro de Véiculos ");
+        System.out.println("Cadastro de Véiculos ");
 
         System.out.print("Modelo: ");
         v.setModelo(Entrada.texto());
@@ -70,7 +73,7 @@ public class Menu {
         System.out.print("Cor: ");
         v.setCor(Entrada.texto());
 
-        System.out.print("Preço");
+        System.out.print("Preço: ");
         v.setPreco(Entrada.numDouble());
 
         VeiculoController.addVeiculo(v);
@@ -79,9 +82,15 @@ public class Menu {
 
     public static void consultar(){
         System.out.println("\n=+=+=+=+=+=+=+=+=+=+=+");
-        System.out.println("   CONSULTA DE VÉICULOS");
+        System.out.println("CONSULTA DE VÉICULOS");
 
         System.out.println("[1] - TODOS OS VEÍCULOS");
+
+
+
+
+        System.out.println("");
+        System.out.print("Escolha: ");
 
         int op = Entrada.numInt();
 
