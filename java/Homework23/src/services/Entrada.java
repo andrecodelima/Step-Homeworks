@@ -55,27 +55,27 @@ public class Entrada {
 
     }
 
-    public static Data numDouble(){
-        Date valor = new Date();
-
-        valor.getTime();
-
-        boolean acertou = false;
-
-        while (!acertou){
-
-            try {
-                Scanner sc = new Scanner(System.in);
-                valor = sc.nextDouble();
-                acertou = true;
-            }catch (Exception e){
-                System.out.print("Errou!\n" +
-                        "Digite um valor decimal: ");
-            }
-        }
-
-        return valor;
-
-    }
+//    public static Data numDouble(){
+//        Date valor = new Date();
+//
+//        valor.getTime();
+//
+//        boolean acertou = false;
+//
+//        while (!acertou){
+//
+//            try {
+//                Scanner sc = new Scanner(System.in);
+//                valor = sc.nextDouble();
+//                acertou = true;
+//            }catch (Exception e){
+//                System.out.print("Errou!\n" +
+//                        "Digite um valor decimal: ");
+//            }
+//        }
+//
+//        return valor;
+//
+//    }
 
 }

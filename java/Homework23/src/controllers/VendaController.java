@@ -86,18 +86,18 @@ public class VendaController {
         return v;
     }
 
-    public static Vendas vendaDia(){
-        Vendas v = new Vendas();
-
-        System.out.println("POR DATA");
-
-        System.out.println("-------------------------");
-        System.out.print("Qual veículo vendido: ");
-
-        v.setDataHora(Entrada.numInt());
-
-        return v;
-    }
+//    public static Vendas vendaDia(){
+//        Vendas v = new Vendas();
+//
+//        System.out.println("POR DATA");
+//
+//        System.out.println("-------------------------");
+//        System.out.print("Qual veículo vendido: ");
+//
+//        v.setDataHora(Entrada.numInt());
+//
+//        return v;
+//    }
 
     public static Vendas vendaVeiculo(){
         Vendas v = new Vendas();
