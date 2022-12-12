@@ -15,7 +15,7 @@ public class Db {
             String pass = "";
 
             conect = DriverManager.getConnection(host,user,pass);
-            System.out.println("CONECTADO!");
+//            System.out.println("CONECTADO!");
 
         }catch (SQLException e){
             System.out.println(e);
@@ -24,10 +24,10 @@ public class Db {
         return conect;
     }
 
-    public static Connection closeConn(Connection c){
+    public static Connection closeConn(){
+        Connection c = null;
 
         try{
-
             c.close();
 
         }catch (SQLException e){

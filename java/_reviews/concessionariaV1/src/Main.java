@@ -1,10 +1,12 @@
 import services.Db;
-
+import services.Entrada;
+import views.Menu;
 public class Main {
     public static void main(String[] args) {
 
-        Db c = new Db();
-        c.getConnect();
+        Menu m = new Menu();
+        m.menu();
+
 
     }
 }

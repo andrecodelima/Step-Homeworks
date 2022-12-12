@@ -37,6 +37,7 @@ public class VeiculoController {
                 st.setString(4, v.getCor());
                 st.setDouble(5, v.getPreco());
 
+
                 int rows = st.executeUpdate();
 
                 if(rows > 0){
