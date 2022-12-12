@@ -1,5 +1,9 @@
+import services.Db;
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+
+        Db con = new Db();
+        con.getConnect();
+
     }
 }
