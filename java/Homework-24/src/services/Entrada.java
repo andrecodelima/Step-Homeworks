@@ -20,6 +20,7 @@ public class Entrada {
             try{
                 Scanner sc = new Scanner(System.in);
                 valor = sc.nextInt();
+                certo = true;
 
             }catch (Exception e){
                 System.out.print("ERRO\n" +

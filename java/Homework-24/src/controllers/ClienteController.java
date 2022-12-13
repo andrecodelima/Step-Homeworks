@@ -9,21 +9,21 @@ import java.util.ArrayList;
 
 public class ClienteController {
 
-    public static void addVeiculo(){
+    public static void addVeiculo(Cliente c){
         Connection conn = Db.Connect();
 
         try {
             String sql = "INSERT INTO cliente (nome,cpf,telefone,email) VALUES (?,?,?,?)";
             PreparedStatement st = conn.prepareStatement(sql);
 
-            st.setString(1, "nome");
-            st.setString(2, "cpf");
-            st.setString(3, "telefone");
-            st.setString(4,"email");
+            st.setString(1,c.getNome());
+            st.setString(2, c.getCpf());
+            st.setString(3, c.getTelefone());
+            st.setString(4,c.getEmail());
 
             int rows = st.executeUpdate();
             if(rows > 0 ){
-                System.out.println("Veículo cadastrado com sucesso!");
+                System.out.println("Cliente cadastrado com sucesso!");
             }else{
                 System.out.println("falha no cadastro");
             }
@@ -52,12 +52,11 @@ public class ClienteController {
         System.out.print("E-mail: ");
         c.setEmail(Entrada.entTexo());
 
-        ClienteController.addVeiculo();
+        ClienteController.addVeiculo(c);
     }
 
 
-    public static void exibir(){
-        Cliente c = new Cliente();
+    public static void exibir(Cliente c){
 
         System.out.println("ID: "       + c.getId());
         System.out.println("Nome: "     + c.getNome());
