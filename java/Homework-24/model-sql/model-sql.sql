@@ -1,0 +1,10 @@
+CREATE DATABASE loja_paper
+
+CREATE TABLE cliente(
+	id int PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR(30) NOT NULL,
+    cpf VARCHAR(15) NOT NULL,
+    telefone VARCHAR(30) NOT NULL,
+    email VARCHAR(40) 
+);
+
