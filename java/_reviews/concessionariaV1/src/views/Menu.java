@@ -1,8 +1,11 @@
 package views;
 
 import controllers.VeiculoController;
+import models.Veiculo;
 import services.Entrada;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Menu {
@@ -23,7 +26,12 @@ public class Menu {
                     break;
 
                 case 3:
-                    VeiculoController.exibir();
+                    ArrayList<Veiculo>list1 = VeiculoController.getAll();
+                    for(Veiculo v : list1){
+                        VeiculoController.exibir(v);
+                        System.out.println("-------------");
+                    }
+
                     break;
 
             }

@@ -11,7 +11,7 @@ public class Db {
         Connection conect = null;
 
         try{
-            String host = "jdbc:mysql://localhost:3306/bd_concessionaria_hm22";
+            String host = "jdbc:mysql://localhost:3306/bd_concessionaria_01";
             String user = "root";
             String pass = "";
 

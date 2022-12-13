@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f3ba0dc3-5391-42a2-8e0e-6b2b6aa567a8" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/java/ConcessionariaVteste2/ConcessionariaVteste2.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/Homework-18-concessionariaV3/Homework-18-concessionariaV3.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/Homework10/Homework10.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/Homework11/Homework11.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/Homework12-cadastro03/Homework12-cadastro03.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/Homework14-cadastro04/Homework14-cadastro04.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/Homework15-Academia/Homework15-Academia.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/Homework16-Petshop-v2/Homework16-Petshop-v2.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/Homework17-Concessionaria-v2/Homework17-Concessionaria-v2.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/Homework17-Concessionaria/Homework17-Concessionaria.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/Homework20/Homework20.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/Homework23-review/Homework23-review.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/Homework23/Homework23.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/Step-Homeworks.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/aulas/Aula18/Aula18.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/aulas/CadastroDeAlunos-v5/CadastroDeAlunos-v5.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/aulas/aulas.iml" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="2IqFmFg6BITX8VUlWV4jlWJ0UPF" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f3ba0dc3-5391-42a2-8e0e-6b2b6aa567a8" name="Changes" comment="" />
+      <created>1670901377401</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1670901377401</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
