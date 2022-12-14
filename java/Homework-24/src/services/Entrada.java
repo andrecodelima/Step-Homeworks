@@ -24,7 +24,28 @@ public class Entrada {
 
             }catch (Exception e){
                 System.out.print("ERRO\n" +
-                        "Número inteiro solicitado\n" +
+                        "Número inteiro solicitado! \n" +
+                        "Tente outra vez: ");
+            }
+        }
+
+        return valor;
+    }
+
+    public static double entDecimal(){
+
+        double valor = 0;
+        boolean certo = false;
+
+        while (certo != true){
+            try{
+                Scanner sc = new Scanner(System.in);
+                valor = sc.nextDouble();
+                certo = true;
+
+            }catch (Exception e){
+                System.out.print("ERRO\n" +
+                        "Número decimal solicitado! \n" +
                         "Tente outra vez: ");
             }
         }
