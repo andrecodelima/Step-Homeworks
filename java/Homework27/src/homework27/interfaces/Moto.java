@@ -2,30 +2,30 @@
 package homework27.interfaces;
 
 
-public class Carro implements Veiculo {
+public class Moto implements Veiculo {
     private boolean ligado = false;
 
-    public Carro(boolean ligado) {
+    public Moto(boolean ligado) {
         this.ligado = ligado;
     }
-      
-  
-    public Carro(){}
-
     
-    public String volante(String direcao){
+    
+  
+    public Moto(){}
+
+   public String guidao(String direcao){
          if(ligado == true){
-            direcao = "Segurar volante e girar para direita";
+            direcao = "Segurar guidao e girar para esquerda";
         }
          return direcao;
     }
-
+   
     @Override
     public String ligarMotor(boolean ligar, String status) {
         
         if(ligado == false){
             ligar = true;
-            status = "Carro ligado";
+            status = "Moto ligada";
         }
         return status;
      }
@@ -34,7 +34,7 @@ public class Carro implements Veiculo {
     public String desligarMotor(boolean desligar, String status) {
           if(ligado == true){
             desligar = false;
-            status = "Carro desligado";
+            status = "Moto desligada";
 
         }
         return status;
@@ -43,7 +43,7 @@ public class Carro implements Veiculo {
     @Override
     public int acelerar(int velocidade) {
          if(ligado == true){
-             velocidade = 80;
+             velocidade = 180;
          }
          return velocidade;
          
@@ -54,7 +54,7 @@ public class Carro implements Veiculo {
         if(ligado == true){
             
         }
-        return "Parar Carro";
+        return "Parar Moto";
      }
 
 

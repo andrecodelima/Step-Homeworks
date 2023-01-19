@@ -1,1 +1,9 @@
 
+DEVER DE CASA
+
+Crie uma interface Veiculo que tenha:
+direção, acelerar, freiar, ligar o motor, desligar o motor.
+
+Implemente esse método nas classes carro, moto e barco.
+
+direção (volante, guidão e timão)
