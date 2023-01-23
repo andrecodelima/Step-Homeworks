@@ -19,10 +19,6 @@ public class ContaPJ implements Conta {
 		this.pass = pass;
 	}
 
-	public double getSaldo() {
-		return saldo;
-	}
-
 	
 	public double getSaque() {
 		return saque;
@@ -52,6 +48,12 @@ public class ContaPJ implements Conta {
 
 	@Override
 	public double depositar(double valor) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public double getSaldo() {
 		// TODO Auto-generated method stub
 		return 0;
 	}

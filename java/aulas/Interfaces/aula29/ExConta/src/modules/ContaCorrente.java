@@ -7,30 +7,17 @@ public class ContaCorrente implements Conta {
 	private double saldo;
 	private double saque;
 	private double deposito;
-	private double chequeEspecial;
+	public final double chequeEspecial = 1000.00;
 	
 	public ContaCorrente() {}
 
-	public ContaCorrente(double saldo, double saque, double deposito, double chequeEspecial) {
+	public ContaCorrente(double saldo, double saque, double deposito) {
 		super();
 		this.saldo = saldo;
 		this.saque = saque;
 		this.deposito = deposito;
-		this.chequeEspecial = chequeEspecial;
 	}
 
-	public double getSaldo() {
-		return saldo;
-	}
-
-	
-	public double getSaque() {
-		return saque;
-	}
-
-	public void setSaque(double saque) {
-		this.saque = saque;
-	}
 
 	public double getDeposito() {
 		return deposito;
@@ -46,14 +33,32 @@ public class ContaCorrente implements Conta {
 
 	@Override
 	public double sacar(double valor) {
-		// TODO Auto-generated method stub
-		return 0;
+		if((chequeEspecial + saldo) > valor) {
+			System.out.println("Saque realizado");
+			System.out.println("Valor do saque: " + valor);
+			System.out.println("Saldo: " + ((chequeEspecial + saldo) - valor));
+			System.out.println("Saldo restante do cheque especial: " + (chequeEspecial-valor));
+
+
+		}else {
+			System.out.println("Saldo insuficiente");
+		}
+		
+		return valor;
 	}
 
 	@Override
 	public double depositar(double valor) {
-		// TODO Auto-generated method stub
 		return 0;
+	}
+	
+
+	@Override
+	public double getSaldo() {
+		saldo += deposito;
+		
+		System.out.println("Valor: " + saldo);
+		return saldo;
 	}
 
 
