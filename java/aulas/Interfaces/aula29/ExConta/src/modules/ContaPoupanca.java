@@ -48,33 +48,45 @@ public class ContaPoupanca implements Conta {
 	public double sacar(double valor) {
 		Scanner sc = new Scanner(System.in);
 				
-		System.out.print("\nPara fazer o saque, digite sua senha: ");
-		String senha = sc.next();
-		for(int i = 0; i<3; i++) {
+		
+		for(int i = 1; i<4; i++) {
+			System.out.print("\nPara fazer o saque, digite sua senha: ");
+			String senha = sc.next();
 			
 			if(senha.equals(pass)) {
 				System.out.println("\nSaque liberado");
-				break;
+				if(saldo > valor) {
+					System.out.println("Saque realizado");
+					System.out.println("Valor do saque: " + valor);
+					System.out.println("Saldo: " + (saldo - valor));
+
+
+				}else {
+					System.out.println("Saldo insuficiente");
+					break;
+				}
 				
 			}else {
-				System.out.println("\nSenha inválida");
-				System.out.print("Tente outra vez: ");
-				senha = sc.next();
+//				for(int c = 1; c<=i; c++ ) {
+//					System.out.println(c);
+//			
+//				}System.out.println("senha inválida");
+//				
+				int c = 0;
+				while(c < i) {
+					c++;
+					System.out.println("senha inválida");
+				}
+				
 			}
-			
-		}
+				
+					
+				
 		
-		if(saldo > valor) {
-			System.out.println("Saque realizado");
-			System.out.println("Valor do saque: " + valor);
-			System.out.println("Saldo: " + (saldo - valor));
+				
 
-
-		}else {
-			System.out.println("Saldo insuficiente");
-		}
-		
-		
+			}
+ 			
 		return valor;
 	}
 
@@ -86,8 +98,10 @@ public class ContaPoupanca implements Conta {
 
 	@Override
 	public double getSaldo() {
-		// TODO Auto-generated method stub
-		return 0;
+		saldo += deposito;
+		
+		System.out.println("Valor: " + saldo);
+		return saldo;
 	}
 
 

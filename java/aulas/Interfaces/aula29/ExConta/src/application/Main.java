@@ -1,6 +1,6 @@
 package application;
 
-import modules.ContaCorrente;
+import modules.ContaPJ;
 import modules.ContaPoupanca;
 public class Main {
 
@@ -15,9 +15,17 @@ public class Main {
 //		
 //		cc.getSaldo();
 		
+		
 		//CONTA POUPANÇA
 		ContaPoupanca cp = new ContaPoupanca();
 		cp.sacar(150);
+//		
+		//CONTA PJ
+//		ContaPJ pj = new ContaPJ();
+////		pj.sacar(450);
+//		
+//		pj.getSaldo();
+//		
 
 	}
 
