@@ -1,0 +1,15 @@
+Dever de casa
+-------------
+
+* entre o btn_0 e o btn_igual, crie um botão para vírgula. Mas lembre-se:
+Não pode começar com vírgula (ex: ,25 , mas sim 0,25) e não pode haver mais de
+uma vírgula no input (ex de erro: 2,14,5).
+
+* ao outro lado do btn_0, crie um botão de +- que inverta o sinal do valor
+do visor.
+
+* ao lado do btn_divir crie um botão de apagar que apague um número por vez.
+ex: 376 <- 37
+
+* ao lado botão de apagar crie o botão com a letra C para zerar a
+calculador no estado inicial.
