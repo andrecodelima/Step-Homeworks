@@ -54,12 +54,16 @@ public class Calculadora extends JFrame {
 		txt_visor = new JTextField(15);
 		txt_visor.setBounds(40, 60, 300, 25);
 		super.getContentPane().add(txt_visor);
+		txt_visor.setBackground(new Color(138,137,136));
+		txt_visor.setForeground(new Color(255, 255, 255));
 
 		// LINHA 1-----------------------------------------------
 
 		btn_divide = new JButton("/");
 		btn_divide.setBounds(290, 100, 50, 25);
 		super.getContentPane().add(btn_divide);
+		btn_divide.setBackground(new Color(245,141,61));
+		btn_divide.setForeground(new Color(255, 255, 255));
 
 		// LINHA 2--------------------------------------------
 
@@ -78,6 +82,8 @@ public class Calculadora extends JFrame {
 		btn_multiplica = new JButton("*");
 		btn_multiplica.setBounds(290, 140, 50, 25);
 		super.getContentPane().add(btn_multiplica);
+		btn_multiplica.setBackground(new Color(245,141,61));
+		btn_multiplica.setForeground(new Color(255, 255, 255));
 
 		// LINHA 3--------------------------------------------
 
@@ -96,6 +102,9 @@ public class Calculadora extends JFrame {
 		btn_subtrai = new JButton("-");
 		btn_subtrai.setBounds(290, 180, 50, 25);
 		super.getContentPane().add(btn_subtrai);
+		btn_subtrai.setBackground(new Color(245,141,61));
+		btn_subtrai.setForeground(new Color(255, 255, 255));
+
 
 		// LINHA 4--------------------------------------------
 
@@ -114,6 +123,10 @@ public class Calculadora extends JFrame {
 		btn_soma = new JButton("+");
 		btn_soma.setBounds(290, 220, 50, 25);
 		super.getContentPane().add(btn_soma);
+		btn_soma.setBackground(new Color(245,141,61));
+		btn_soma.setForeground(new Color(255, 255, 255));
+
+
 
 		// LINHA 5--------------------------------------------
 
@@ -124,6 +137,8 @@ public class Calculadora extends JFrame {
 		btn_igual = new JButton("=");
 		btn_igual.setBounds(290, 260, 50, 25);
 		super.getContentPane().add(btn_igual);
+		btn_igual.setBackground(new Color(138,137,136));
+		btn_igual.setForeground(new Color(255, 255, 255));
 
 		this.eventosBtnNumeros();
 		this.eventosBtnOperacao();
