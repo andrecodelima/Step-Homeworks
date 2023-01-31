@@ -99,6 +99,9 @@ public class Calculadora extends JFrame {
 		Operador op = new Operador(); // Instanciando o operador que escuta evento
 		
 		btn_somar.addActionListener(op);
+		btn_subtrair.addActionListener(op);
+		btn_multiplicar.addActionListener(op);
+		btn_dividir.addActionListener(op);
 		
 		
 
@@ -156,8 +159,19 @@ public class Calculadora extends JFrame {
 					txt_resultado.setText(String.valueOf(Calcule.somar(valor1, valor2)));
 					txt_valor1.setText("");
 					txt_valor2.setText("");
+				}else if(e.getSource() == btn_subtrair) {
+					txt_resultado.setText(String.valueOf(Calcule.subtrair(valor1, valor2)));
+					txt_valor1.setText("");
+					txt_valor2.setText("");
+				}else if(e.getSource() == btn_multiplicar) {
+					txt_resultado.setText(String.valueOf(Calcule.multiplicar(valor1, valor2)));
+					txt_valor1.setText("");
+					txt_valor2.setText("");
+				}else if(e.getSource() == btn_dividir) {
+					txt_resultado.setText(String.valueOf(Calcule.dividir(valor1, valor2)));
+					txt_valor1.setText("");
+					txt_valor2.setText("");
 				}
-				
 				
 			}
 
