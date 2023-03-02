@@ -1,0 +1,47 @@
+DEVER DE CASA
+
+Crie um banco de um mercado com a tabela produto, com nome,fabricante e preço;
+
+insira pelo menos 5 produtos de cada fabricante, sendo no mínimo 2 fabricantes.
+
+exiba o produto mais caro.
+exiba o produto mais barato.
+exiba a média de preços por fabricante.
+exiba a soma de todos os preços.
+
+
+
+
+//////////////////////Código usado em aula
+//////////////////////////////////////////
+
+CREATE TABLE aluno (
+	idAluno SERIAL PRIMARY KEY,
+	nome VARCHAR(50) NOT NULL,
+	idade INT default 0,
+	genero VARCHAR(15) default 'indefinido'
+);
+
+INSERT INTO aluno (nome,idade,genero)
+VALUES ('Juca Bala',22,'Masculino');
+
+SELECT * FROM aluno;
+
+
+-- insira mais 4 alunos e exiba a media de idade entre todos os cadastrados
+-- exiba a média de idade dos alunos de gênero feminino
+
+INSERT INTO aluno (nome,idade,genero)
+VALUES ('Zeca Bala',30,'Masculino'),
+		('Ana Bala',50,'Feminino'),
+		('Vivi Bala',18,'Feminino'),
+		('Tião Bala',60,'Masculino'),
+		('Bela Bala',22,'Feminino');
+		
+SELECT AVG(idade) AS "Média das idades" FROM aluno;
+
+SELECT AVG(idade) AS "Média das idades FEMININO" FROM aluno where genero like 'Feminino';
+
+--EXIBA A MÉDIA DE IDADE POR SEXO
+SELECT AVG(idade) AS "Média das idades", genero AS "Gênero" FROM aluno GROUP BY genero;
+
