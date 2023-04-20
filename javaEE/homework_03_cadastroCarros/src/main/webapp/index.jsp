@@ -7,10 +7,10 @@
 <%
 
  ArrayList<Veiculo> listaCarros = new ArrayList<Veiculo>();
-	listaCarros.add(new Veiculo("FordKa", 62.999));
-	listaCarros.add(new Veiculo("Fiat Uno", 33.998));
-	listaCarros.add(new Veiculo("Renout Sandero", 55.799));
-	listaCarros.add(new Veiculo("HB20", 79.999));
+	listaCarros.add(new Veiculo("FordKa", 62999));
+	listaCarros.add(new Veiculo("Fiat Uno", 33998));
+	listaCarros.add(new Veiculo("Renout Sandero", 55799));
+	listaCarros.add(new Veiculo("HB20", 79999));
 
 
 	String cards = "";
@@ -26,18 +26,14 @@
 			classe = "verde";
 		}
 		
-		cards += "<div class=' " 	+ classe + "'>" 		+
+		cards += "<div class=' " 		+ 	classe + "'>" 			+			
 					
-					"Modelo: " 		+	carro.getModelo()   +
-					"Preço:  "		+ 	carro.getPreco()	+
+					"Modelo: " 			+	carro.getModelo()   	+	"</br>" 	+
+					"Preço:  "			+ 	carro.getPreco()		+	"</br>"		+
 					
 				"</div>";
 				
-				
-	
-		
-		
-		
+			
 	}
 %>
 
@@ -49,8 +45,35 @@
 
 <style>
 	
-	.vermelho{backgroud-color:red;}
-	.verde{backgroud-color:green;}
+	html{
+		font-family: 'helvetica';
+		font-size: 1.1rem;
+	}
+
+	body{
+		font-size: 1.2rem;
+		background-color: #cdcdcd;
+
+	}
+	.container{
+		border: 4px solid #eee8e8;
+		display: grid;
+		grid-template-columns: auto;
+		/* gap: 20px; */
+		padding: 20px 20px;
+		width: 40%;
+		
+	}
+
+	.container div{
+		width: 90%;
+		padding: 20px 20px;
+		margin-top: 10px;
+
+	}
+
+	.vermelho{background-color: rgb(192, 19, 19);}
+	.verde{background-color: green;}
 
 </style>
 
@@ -59,9 +82,8 @@
 
 <h1>Homework 03</h1>
 
-<section>
-
-
+<section class="container">
+	<div><%=cards%></div>
 </section>
 
 </body>
