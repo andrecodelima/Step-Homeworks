@@ -173,15 +173,16 @@ public class DAO {
  	}
 	
 	
-	
-	
-	
-	
 	public static void exibir(JavaBeans aluno) {
-		System.out.print("ID: " + aluno.getId());
-		System.out.print("Nome: " + aluno.getNome());
-		System.out.print("Gênero: " + aluno.getGenero());
-		System.out.print("E-mail: " + aluno.getEmail());
+		
+		System.out.println("");
+
+		System.out.println("ID: 		" 	+ aluno.getId		());
+		System.out.println("Nome: 		" 	+ aluno.getNome		());
+		System.out.println("Gênero: 	" 	+ aluno.getGenero	());
+		System.out.println("E-mail: 	" 	+ aluno.getEmail	());
+		
+		System.out.println("--------------------------------------");
 	}
 
 }
