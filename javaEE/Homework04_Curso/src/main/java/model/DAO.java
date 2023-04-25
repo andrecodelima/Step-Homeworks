@@ -136,6 +136,41 @@ public class DAO {
 	}
 	
 	
+	public static ArrayList<JavaBeans>getGenero(String genero){
+		
+		ArrayList<JavaBeans>list = new ArrayList<>();
+		Connection conn = Db.conecta();
+		
+		if(conn == null){
+			System.out.println("Falha na conexão!");
+		
+		}else {
+			String sql = "SELECT * FROM aluno WHERE genero LIKE '%" + genero + "%";
+						
+		}try {
+			
+			Statement st = conn.createStatement();
+			ResultSet result = st.executeQuery(genero);
+			
+			while(result.next()){
+					list.add(new JavaBeans(result.getInt("id"),
+											result.getString("nome"),
+											result.getString("genero"),
+											result.getString("email")
+											)
+							);
+				
+			}
+			
+			conn.close();
+			st.close();
+			
+		}catch(SQLException e) {
+			System.err.println(e);	
+		}
+		
+		return list;
+ 	}
 	
 	
 	
