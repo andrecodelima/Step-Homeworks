@@ -22,9 +22,14 @@ function validaAluno(){
                 alert("CAMPO GÊNERO VAZIO")
                 formAluno.inputGenero.focus();
                 return
-            }
+                
+            }else if((genero != "Feminino") || (genero != "Masculino")){
+				alert("Campo Gênero inválido");
+		  		formAluno.inputGenero.focus();
+		        return
+	        }
 
-        case email:
+       case email:
             if(email == ""){
                 alert("CAMPO E-MAIL VAZIO")
                 formAluno.inputEmail.focus();
@@ -33,11 +38,10 @@ function validaAluno(){
             }else if(email.indexOf("@") == 0 || (email.indexOf("@") - tam) == -1){
                 alert("E-mail inválido!")
                 formAluno.inputEmail.focus();
-                return;
+                return
              }
 
     }
-
-    formAluno.submit();
+ 
 
 }
