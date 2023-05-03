@@ -19,29 +19,6 @@
         <a href="novo.html" class="btn btn-outline-info" title="Cadastrar novo aluno">Novo</a>
         <hr>
 
-        <section>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Nome</th> <th>Gênero</th> <th>E-mail</th>
-                    </tr>
-                </thead>
-
-                <tbody>
-					
-                </tbody>
-                
-                <tfoot>
-                    <tr>
-                        <th colspan="3">Fim dos Contatos</th>
-                    </tr>
-                </tfoot>
-                
-
-
-            </table>
-
-        </section>
 
     </main>
 

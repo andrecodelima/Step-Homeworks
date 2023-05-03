@@ -5,6 +5,7 @@
 <head>
 <meta charset="ISO-8859-1">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+<link rel="stylesheet" href="./META-INF/shared/estilo.css">
 
 <title>Curso parte 2</title>
 </head>
@@ -19,29 +20,6 @@
         <a href="novo.html" class="btn btn-outline-info" title="Cadastrar novo aluno">Novo</a>
         <hr>
 
-        <section>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Nome</th> <th>Gênero</th> <th>E-mail</th>
-                    </tr>
-                </thead>
-
-                <tbody>
-					
-                </tbody>
-                
-                <tfoot>
-                    <tr>
-                        <th colspan="3">Fim dos Contatos</th>
-                    </tr>
-                </tfoot>
-                
-
-
-            </table>
-
-        </section>
 
     </main>
 

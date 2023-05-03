@@ -62,7 +62,6 @@ public class Controller extends HttpServlet {
 		}
 		
 		
-		
 //		Testando se os dados estão chegando
 //		System.out.println(request.getParameter("inputNome"));
 //		System.out.println(request.getParameter("inputEmail"));
