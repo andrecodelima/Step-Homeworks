@@ -13,16 +13,25 @@ body{
 .container{
     flex-direction:row;
     border:2px solid rgb(214, 221, 129, 1);
-    padding-top: 420px;
     margin-top: 1%;
+    padding-top: 4%;
 }
 
 #form{
+	border: 2px solid red;	
+}
+
+#form .col-md-4{
 	border: 2px solid red;
-    display: inline;
-    width: 100%;
-    margin-top: 10%;
+	height: 4%;
+	margin-top: 6px;	
 	
+}
+
+#form label{
+	border: 2px solid red;	
+	font-weight: bold;
+	color: #fff;
 }
 
 .btn{
@@ -31,11 +40,14 @@ body{
 }
 
 .h1{
-display: flex;
-align-items: center;
-border: 2px solid red;
-height: 114px;
-position: absolute;
-margin-right: 1039px;
-
+	display: flex;
+	align-items: center;
+	border: 2px solid red;
+	height: 58px;
+	position: absolute;
+	margin-right: 1039px;
+	margin-top: -63px;
+	color: #27adee;
 }
+
+
