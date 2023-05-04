@@ -1,0 +1,82 @@
+@charset "ISO-8859-1";
+
+*{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 10px 10px;
+    font-size: 1rem;
+}
+
+body{
+    background-color:rgb(228, 229, 238);
+}
+
+.container{
+    flex-direction:row;
+    border:2px solid rgb(214, 221, 129, 1);
+    margin-top: 1%;
+    padding-top: 4%;
+}
+
+#form{
+	border: 2px dotted #eee8e8;	
+}
+
+#form .col-md-4{
+	height: 4%;
+	margin-top: 6px;	
+	
+}
+
+#form label{
+	color: #fff;
+}
+
+.btn{
+  	font-weight: 600;
+	margin-left: 9px;
+	border: 4px solid #0dcaf0;
+	color:black;
+	
+}
+
+
+.btn:hover{
+	color:#ffff;
+}
+
+.h1{
+	display: flex;
+	align-items: center;
+	height: 58px;
+	position: absolute;
+	margin-right: 1039px;
+	margin-top: -63px;
+	color: #27adee;
+}
+
+
+#tabelaContato{
+	border-collapse: collapse !important;
+}
+
+
+th, td{
+	border: 2px dotted lightgray;
+}
+
+.col-nome{
+	width: 40%;
+}
+
+
+.col-genero{
+	width: 15%;
+}
+
+.col-email{
+	width: 45%;
+}
+
+table{
+	width: 100%;
+}

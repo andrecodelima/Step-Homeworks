@@ -121,8 +121,101 @@ public class DAO {
 				
 		return null;
 	}
+	
+	
+	public static ArrayList<JavaBeans> getGender(String genero){
+		ArrayList<JavaBeans> listGen = new ArrayList<JavaBeans>();
+		Connection conn = Db.conecta();
+		
+		if(conn == null) {
+			System.err.println("ERRO AO CONECTAR AO BANCO");
+			return listGen;
+		
+		}else {
+			
+			String sql = "SELECT * FROM aluno WHERE genero LIKE '%" + genero + "%";
+		
+			try {
+				
+				Statement st = conn.createStatement();
+				ResultSet resultado = st.executeQuery(sql);
+				
+				while(resultado.next()) {
+					
+					listGen.add(new JavaBeans(resultado.getInt("id"),
+											resultado.getString("nome"),
+											resultado.getString("genero"),
+											resultado.getString("email")
+											)
+							);
+				
+					st.close();
+					conn.close();
+				}
+				
+				
+			}catch(SQLException e) {
+				System.err.println("ERRO AO CONSULTAR ALUNO");
+				System.err.println(e);
+			}
+		}
+		
+		return listGen;
 
+	}
+	
+	public static void updateAluno(JavaBeans j) {
+			
+			Connection conn = Db.conecta();
+			
+			if(conn == null) {
+				System.out.println("FALHA NA CONEXÃO");
+					
+			}else {
+				
+				String sql = "UPDATE aluno: " 	+
+							 "nome = ?"			+
+							 "genero = ?"		+
+							 "email = ?"		+
+							 
+							 "WHERE id= ?";
+				
+			try {
+				
+				PreparedStatement st = conn.prepareStatement(sql);
+				st.setString(1, j.getNome());
+				st.setString(2, j.getGenero());
+				st.setString(3, j.getEmail());
+				
+				int rows = st.executeUpdate();
+				if(rows > 0) {
+					
+					System.out.println("ALUNO ATUALIZADO COM SUCESSO");
+				
+				}else {
+					System.err.println("FALHA AO ATUALIZAR ALUNO");
+				
+				}
+				
+				conn.close();
+				st.close();
+				
+				
+			}catch (Exception e) {
+				// TODO: handle exception
+			}	
+				
+			}
+						
+		}
+			
+	
+	
 }
+	
+	
+
+
 
 
 
