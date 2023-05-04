@@ -18,31 +18,35 @@ body{
 }
 
 #form{
-	border: 2px solid red;	
+	border: 2px dotted #eee8e8;	
 }
 
 #form .col-md-4{
-	border: 2px solid red;
 	height: 4%;
 	margin-top: 6px;	
 	
 }
 
 #form label{
-	border: 2px solid red;	
-	font-weight: bold;
 	color: #fff;
 }
 
 .btn{
-    color: aliceblue;
-    font-weight: 500;
+  	font-weight: 600;
+	margin-left: 9px;
+	border: 4px solid #0dcaf0;
+	color:black;
+	
+}
+
+
+.btn:hover{
+	color:#ffff;
 }
 
 .h1{
 	display: flex;
 	align-items: center;
-	border: 2px solid red;
 	height: 58px;
 	position: absolute;
 	margin-right: 1039px;
@@ -51,3 +55,28 @@ body{
 }
 
 
+#tabelaContato{
+	border-collapse: collapse !important;
+}
+
+
+th, td{
+	border: 2px dotted lightgray;
+}
+
+.col-nome{
+	width: 40%;
+}
+
+
+.col-genero{
+	width: 15%;
+}
+
+.col-email{
+	width: 45%;
+}
+
+table{
+	width: 100%;
+}
