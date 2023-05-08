@@ -1,11 +1,14 @@
 package controller;
 
 import java.io.IOException;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import model.JavaBeans;
 
 
 @WebServlet(urlPatterns = {"/main", "/insert"} )
@@ -40,10 +43,11 @@ public class Controller extends HttpServlet {
 		switch(caminho) {
 			case "/main":
 				alunos(request, response);// !! execução do método
-			
+				break;
+				
 			case "/insert":
 				novoAluno(request, response);
-			
+				break;
 		}
 		
 //		if(caminho.equals("/main")) {
@@ -60,9 +64,25 @@ public class Controller extends HttpServlet {
 	}
 
 	public void novoAluno(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		 System.out.println(request.getParameter("inputNome"));
-		 System.out.println(request.getParameter("inputGenero"));
-		 System.out.println(request.getParameter("inputEmail"));
+		 
+		JavaBeans aluno = new JavaBeans(request.getParameter("inputNome"),
+										request.getParameter("inputGenero"),
+										request.getParameter("inputEmail")
+										);
+		 
+		if(DAO.insert(aluno)) {
+			response.getWriter().append("Aluno cadastrado");
+			
+		}else {
+			response.getWriter().append("Aluno não cadastrado");
+		}
+		
+		 
+	}
+	
+	public void deletAluno(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		JavaBeans aluno = new JavaBeans(Integer.parseInt(request.getParameter("id"))));
 	}
 
 	

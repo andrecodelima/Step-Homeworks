@@ -9,7 +9,7 @@ public class Db {
 	public static Connection conecta(){
 		Connection conn = null;
 		
-		String user 		= "root";
+		String user 	= "root";
 		String pass		= "1234567";
 		String port		= "3306";
 		String host		= "localhost";

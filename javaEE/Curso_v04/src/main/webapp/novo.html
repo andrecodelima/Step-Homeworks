@@ -16,38 +16,29 @@
 
 <body>
 
-    <main class="container bg-secondary">
+    <main class="container bg-cinza">
         <h1>NOVO ALUNO</h1>
         
         <form name="formAluno" action="insert">
 
             <section>
 
-                <div class="row">
-                    <div class="col-md-1">
-                        <label for="">Nome</label>
+                    <div class="form-floating col-md-5">
+                        <input type="text" class="form-control" name="inputNome" id="inputNome" placeholder="Nome Completo" maxlength="100">
+                        <label for="inputNome">Nome Completo</label>
                     </div>
-                    <input type="text" name="inputNome" id="" maxlength="100" class="col-md-4">
 
-                </div>
-
-                <div class="row">
-                    <div class="col-md-1">
-                        <label for="">Gênero</label>
+                    <div class="form-floating col-md-3">
+                        <input type="text" class="form-control" name="inputGenero" id="inputGenero" placeholder="Gênero" maxlength="10">
+                        <label for="inputGenero">Gênero</label>
                     </div>
-                    <input type="text" name="inputGenero" id="" maxlength="20" class="col-md-4">
 
-                </div>
-
-                <div class="row">
-                    <div class="col-md-1">
-                        <label for="">E-mail</label>
+                    <div class="form-floating col-md-3">
+                        <input type="text" class="form-control" name="inputEmail" id="inputEmail" placeholder="name@example.com" maxlength="100">
+                        <label for="inputEmail">E-mail</label>
                     </div>
-                    <input type="text" name="inputEmail" id="" maxlength="100" class="col-md-4">
 
-                </div>
-                
-
+                               
                 <div>
                     <button type="button" class="btn btn-success" onclick="validaAluno()">Cadastrar</button>
                 </div>
