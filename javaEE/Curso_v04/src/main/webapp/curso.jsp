@@ -9,7 +9,7 @@
 	String lines = "";
 	
 	if(lista.isEmpty()){
-		lines = "<tr><th colspan='3'> Nï¿½o hï¿½ alunos cadastrados</th></tr>";
+		lines = "<tr><th colspan='3'> Não há alunos cadastrados</th></tr>";
 		
 	}else{
 		
@@ -26,6 +26,7 @@
 								"<td>" + email 		+ "</td>" +
 					
                                 "<td class='table-link'><a class='btn btn-outline-danger' href='delete?id=" + id + "'>EXCLUIR</a></td>" +
+                                
 						"</tr>";
 		}
 	}
@@ -66,7 +67,7 @@
 
                 <thead>
                     <tr>
-                        <th class="col-nome">Nome</th> <th class="col-genero">GÃªnero</th> <th class="col-email">E-mail</th>
+                        <th class="col-nome">Nome</th> <th class="col-genero">Gênero</th> <th class="col-email">E-mail</th>
                     </tr>
                 </thead>
 

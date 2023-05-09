@@ -77,7 +77,7 @@ public class DAO {
 	}
 	
 	
-	public static JavaBeans getId(int id) {
+	public static JavaBeans GetToId(int id) {
 		
 		Connection conn = Db.conecta();
 		
@@ -114,5 +114,28 @@ public class DAO {
 		
 	}
 	
+	
+	public static boolean deleteId(int id) {
+		
+		Connection conn = Db.conecta();
+		
+		String sql = "DELETE FROM aluno WHERE id = ?";
+		
+		try {
+			PreparedStatement st = conn.prepareStatement(sql);
+			st.setInt(1, id);
+			
+			st.execute();
+			System.out.println("USUÁRIO DELETADO");
+			Db.desconecta(conn);
+			return true;
+			
+		}catch(Exception e) {
+			System.out.println("ERRO AO DELETAR ALUNO");
+		}
+		
+		Db.desconecta(conn);
+		return false;
+	}
 
 }

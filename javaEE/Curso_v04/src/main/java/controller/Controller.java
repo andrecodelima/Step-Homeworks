@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import model.JavaBeans;
 
 
-@WebServlet(urlPatterns = {"/main", "/insert"} )
+@WebServlet(urlPatterns = {"/main", "/insert", "/delete"} )
 public class Controller extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -48,6 +48,10 @@ public class Controller extends HttpServlet {
 			case "/insert":
 				novoAluno(request, response);
 				break;
+				
+			case "/delete":
+				deletAluno(request, response);
+				break;
 		}
 		
 //		if(caminho.equals("/main")) {
@@ -65,13 +69,15 @@ public class Controller extends HttpServlet {
 
 	public void novoAluno(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		 
+		//exibição de lista
 		JavaBeans aluno = new JavaBeans(request.getParameter("inputNome"),
 										request.getParameter("inputGenero"),
 										request.getParameter("inputEmail")
 										);
 		 
 		if(DAO.insert(aluno)) {
-			response.getWriter().append("Aluno cadastrado");
+//			response.getWriter().append("Aluno cadastrado");
+			response.sendRedirect("sucesso.jsp?desc=inserir+aluno");
 			
 		}else {
 			response.getWriter().append("Aluno não cadastrado");
@@ -82,7 +88,13 @@ public class Controller extends HttpServlet {
 	
 	public void deletAluno(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		JavaBeans aluno = new JavaBeans(Integer.parseInt(request.getParameter("id"))));
+			if(DAO.deleteId(Integer.parseInt(request.getParameter("id")))){
+				response.sendRedirect("sucesso.jsp?desc=deletar+aluno");
+				
+			}else {
+				response.getWriter().append("FALHA AO DELETAR ALUNO");
+			}
+			
 	}
 
 	
