@@ -57,6 +57,8 @@ ArrayList<Aluno> lista = DAO.getAll();
             <h3>Alunos</h3>
 
             <a href="novo.html" class="btn btn-outline-info" title="Cadastrar novo aluno">NOVO</a>
+            <a href="consulta.jsp" class="btn btn-outline-secondary" title="Cadastrar novo aluno">EXPORTAR</a>
+            
         </main>
 
 
