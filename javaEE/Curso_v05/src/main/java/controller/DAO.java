@@ -7,12 +7,12 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 
-import model.JavaBeans;
+import model.Aluno;
 import services.Db;
 
 public class DAO {
 	
-	public static boolean insert(JavaBeans aluno) {
+	public static boolean insert(Aluno aluno) {
 		
 		Connection conexao = Db.conecta();
 		String sql = "INSERT INTO aluno (nome, genero, email) VALUES (?,?,?)";
@@ -40,7 +40,7 @@ public class DAO {
 	}
 	
 	
-	public static ArrayList<JavaBeans> getAll(){
+	public static ArrayList<Aluno> getAll(){
 		
 		
 		Connection conn = Db.conecta();
@@ -51,11 +51,11 @@ public class DAO {
 			Statement st = conn.createStatement();
 			
 			ResultSet result = st.executeQuery(sql);
-			ArrayList<JavaBeans> lista = new ArrayList<JavaBeans>();
+			ArrayList<Aluno> lista = new ArrayList<Aluno>();
 			
 			while(result.next()) {
 				
-				lista.add(new JavaBeans(result.getInt("id"),
+				lista.add(new Aluno(result.getInt("id"),
 									   result.getString("nome"),
 									   result.getString("genero"),
 									   result.getString("email")
@@ -77,7 +77,7 @@ public class DAO {
 	}
 	
 	
-	public static ArrayList<JavaBeans> GetToId(int id) {
+	public static Aluno GetToId(int id) {
 		
 		Connection conn = Db.conecta();
 		
@@ -93,17 +93,20 @@ public class DAO {
 				Statement st = conn.createStatement();
 				
 				ResultSet result = st.executeQuery(sql);
-				ArrayList<JavaBeans> list = new ArrayList<JavaBeans>();
+				Aluno aluno = new Aluno();
 				
-				JavaBeans aluno = new JavaBeans(result.getInt("id"),
-												result.getString("nome"),
-												result.getString("genero"),
-												result.getString("email")
-												);
-				
+				while(result.next()) {
+						aluno = new Aluno(  result.getInt("id"),
+											result.getString("nome"),
+											result.getString("genero"),
+											result.getString("email")
+								);
+			
+				}
+			
 				st.close();
 				Db.desconecta(conn);
-				return list;			
+				return aluno;							
 								
 			}catch(Exception e) {
 				System.out.println("ERRO AO BUSCAR POR ID");
@@ -112,6 +115,7 @@ public class DAO {
 			}
 		}
 		
+		Db.desconecta(conn);
 		return null;
 		
 	}
@@ -140,31 +144,41 @@ public class DAO {
 		return false;
 	}
 	
-	public static boolean editId(int id) {
+	public static boolean updateAluno(Aluno a) {
 		
 		Connection conn = Db.conecta();
+		if(conn == null) {
+			System.err.println("Falha na conexão");
 		
-		String sql = "UPDATE alunos SET nome, genero, email WHERE id = ?";
+		}
+		
+		String sql = "UPDATE aluno "  + 
+					 "SET nome =  ?,"	 +
+					 "genero = ?,  "		 +
+					 "email = ? "	 +
+					 "WHERE id = ?"	 ;
+				
 		
 		try {
-			
 			PreparedStatement st = conn.prepareStatement(sql);
-			st.setInt(1, id);
+			st.setString(1, a.getNome());
+			st.setString(2, a.getGenero());
+			st.setString(3, a.getEmail());
+			st.setInt(4, a.getId());
+			
 			
 			st.execute();
-			System.out.println("USUÁRIO EDITADO");
+			System.out.println("Usuário atualizado");
 			Db.desconecta(conn);
 			return true;
 			
 		}catch(Exception e) {
-			System.err.println(e);
-			Db.desconecta(conn);
-			
+			System.err.println("Erro durante cadastro");
+			System.out.println(e);
 		}
 		
+		Db.desconecta(conn);
 		return false;
-		
-		
 	}
 
 }

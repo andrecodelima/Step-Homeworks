@@ -8,10 +8,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import model.JavaBeans;
+import model.Aluno;
 
 
-@WebServlet(urlPatterns = {"/main", "/insert", "/delete", "/edit"} )
+@WebServlet(urlPatterns = {"/main", "/insert", "/delete", "/update"} )
 public class Controller extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -53,8 +53,8 @@ public class Controller extends HttpServlet {
 				deletAluno(request, response);
 				break;
 				
-			case "/edit":
-				editAluno(request, response);
+			case "/update":
+				updateAluno(request, response);
 				break;
 		}
 		
@@ -74,7 +74,7 @@ public class Controller extends HttpServlet {
 	public void novoAluno(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		 
 		//exibição de lista
-		JavaBeans aluno = new JavaBeans(request.getParameter("inputNome"),
+		Aluno aluno = new Aluno(request.getParameter("inputNome"),
 										request.getParameter("inputGenero"),
 										request.getParameter("inputEmail")
 										);
@@ -91,8 +91,20 @@ public class Controller extends HttpServlet {
 	}
 	
 	
-	public void editAluno(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		response.sendRedirect("edit.jsp?id="+2);
+	public void updateAluno(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		Aluno aluno = new Aluno (Integer.parseInt(request.getParameter("id")),
+												  request.getParameter("inputNome"),
+												  request.getParameter("inputGenero"),
+												  request.getParameter("inputEmail")
+								);
+				
+		if(DAO.updateAluno(aluno)){
+			response.sendRedirect("sucesso.jsp?desc=atualizar+aluno");
+			
+		}else {
+			response.getWriter().append("Aluno não atualizado");
+		}
+			
 		 
 	}
 	

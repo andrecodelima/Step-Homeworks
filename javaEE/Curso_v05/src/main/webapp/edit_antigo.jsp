@@ -5,7 +5,9 @@
 
 
 <%
-ArrayList<Aluno> lista = DAO.getAll();
+/*
+	int id_aluno = Integer.parseInt((request.getParameter("id")));
+	ArrayList<JavaBeans> lista = DAO.GetToId(id_aluno);
 	String lines = "";
 	
 	if(lista.isEmpty()){
@@ -13,24 +15,24 @@ ArrayList<Aluno> lista = DAO.getAll();
 		
 	}else{
 		
-		for(Aluno aluno : lista){
-	String nome		= aluno.getNome();
-	String genero 	= aluno.getGenero();
-	String email 	= aluno.getEmail();
-	int id			= aluno.getId();
-	
-	lines +=	 "<tr>" +
-	
-						"<td>" + nome 		+ "</td>" +
-						"<td>" + genero 	+ "</td>" +
-						"<td>" + email 		+ "</td>" +
+		for(JavaBeans aluno : lista){
+			int id			= aluno.getId();
+			String nome		= aluno.getNome();
+			String genero 	= aluno.getGenero();
+			String email 	= aluno.getEmail();
 			
-                                "<td class='table-link'><a class='btn btn-outline-warning' href='edit.jsp?id=" + id + "'>EDITAR</a></td>" +
-                                "<td class='table-link'><a class='btn btn-outline-danger' href='delete?id=" + id + "'>EXCLUIR</a></td>" +
-                                
-				"</tr>";
+			lines +=	 "<tr>" +
+			
+								"<td>" + nome 		+ "</td>" +
+								"<td>" + genero 	+ "</td>" +
+								"<td>" + email 		+ "</td>" +
+					
+                                                            
+						"</tr>";
 		}
 	}
+
+*/
 %>
 
     <!DOCTYPE html>
@@ -38,7 +40,7 @@ ArrayList<Aluno> lista = DAO.getAll();
 
     <head>
         <meta charset="ISO-8859-1">
-        <title>Alunos</title>
+        <title>Alunos - EDIÇÃO</title>
 
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
             integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
@@ -54,9 +56,8 @@ ArrayList<Aluno> lista = DAO.getAll();
             
             <hr>
 
-            <h3>Alunos</h3>
+            <h3>Alunos - EDIÇÃO</h3>
 
-            <a href="novo.html" class="btn btn-outline-info" title="Cadastrar novo aluno">NOVO</a>
         </main>
 
 
@@ -70,16 +71,11 @@ ArrayList<Aluno> lista = DAO.getAll();
                     </tr>
                 </thead>
 
-                <tbody>
-                	<%=lines %>
+              	<tbody>
+                	<%= %>
 				</tbody>
 				
-                <tfoot>
-                    <tr>
-                        <th colspan="3">Fim dos Contatos</th>
-                    </tr>
-                </tfoot>
-                
+                               
             </table>
 
         </section>

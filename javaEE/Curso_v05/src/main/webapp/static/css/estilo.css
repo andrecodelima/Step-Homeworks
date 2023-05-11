@@ -44,3 +44,7 @@ th{
 table{
 	width: 100%;
 }
+
+.table-link{
+	border: none !important;
+}
