@@ -5,7 +5,7 @@
 
 
 <%
-	ArrayList<JavaBeans> lista = DAO.getAll();
+ArrayList<JavaBeans> lista = DAO.getAll();
 	String lines = "";
 	
 	if(lista.isEmpty()){
@@ -14,24 +14,22 @@
 	}else{
 		
 		for(JavaBeans aluno : lista){
-			String nome		= aluno.getNome();
-			String genero 	= aluno.getGenero();
-			String email 	= aluno.getEmail();
-			int id			= aluno.getId();
+	String nome		= aluno.getNome();
+	String genero 	= aluno.getGenero();
+	String email 	= aluno.getEmail();
+	int id			= aluno.getId();
+	
+	lines +=	 "<tr>" +
+	
+						"<td>" + nome 		+ "</td>" +
+						"<td>" + genero 	+ "</td>" +
+						"<td>" + email 		+ "</td>" +
 			
-			lines +=	 "<tr>" +
-			
-								"<td>" + nome 		+ "</td>" +
-								"<td>" + genero 	+ "</td>" +
-								"<td>" + email 		+ "</td>" +
-					
                                 "<td class='table-link'><a class='btn btn-outline-danger' href='delete?id=" + id + "'>EXCLUIR</a></td>" +
                                 
-						"</tr>";
+				"</tr>";
 		}
 	}
-
-
 %>
 
     <!DOCTYPE html>

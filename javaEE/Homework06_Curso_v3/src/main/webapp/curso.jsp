@@ -1,34 +1,31 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1" %>
 <%@ page import="model.DAO" %>
-<%@ page import="model.JavaBeans" %>
+<%@ page import="model.Aluno" %>
 <%@ page import="java.util.ArrayList" %>    
     
-<% 
-
-	ArrayList<JavaBeans> list = DAO.getAll();
-	String lines = "";
-	
-	if(list.isEmpty()){
-		lines = "<tr><th colspan='3'> Não há alunos cadastrados </tr></th>";
-	}else{
-		
-		for(JavaBeans aluno : list){
-			String nome 	= aluno.getNome();
-			String genero	= aluno.getGenero();
-			String email 	= aluno.getEmail();
-			
-			lines += "<tr>" +
-							"<td>" 	+ nome		+ "</td>"	+ 
-							"<td>"	+ genero	+ "</td>"	+
-							"<td>"	+ email		+ "</td>"	+
-					
-					"</tr>";
-		}
-	}
-
-
- %>    
+<%
+        ArrayList<Aluno> list = DAO.getAll();
+        	String lines = "";
+        	
+        	if(list.isEmpty()){
+        		lines = "<tr><th colspan='3'> Não há alunos cadastrados </tr></th>";
+        	}else{
+        		
+        		for(Aluno aluno : list){
+        	String nome 	= aluno.getNome();
+        	String genero	= aluno.getGenero();
+        	String email 	= aluno.getEmail();
+        	
+        	lines += "<tr>" +
+        					"<td>" 	+ nome		+ "</td>"	+ 
+        					"<td>"	+ genero	+ "</td>"	+
+        					"<td>"	+ email		+ "</td>"	+
+        			
+        			"</tr>";
+        		}
+        	}
+        %>    
     
            
 <!DOCTYPE html>
