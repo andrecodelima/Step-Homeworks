@@ -1,0 +1,54 @@
+*{
+     padding: 5px;
+}
+form section div{
+     padding: 5px;
+}
+
+ 
+.bg-cinza{
+	background-color: lightgray;
+}
+
+.form-section{
+     width: 75%;
+     margin: 0 auto;
+}
+
+
+#tabelaContato{
+     border-collapse: collapse;
+}
+
+th, td{
+     border: 1px solid;
+     padding: 5px;
+}
+
+th{
+     text-align: center;
+}
+
+.col-nome{
+     width: 50%;
+}
+
+.col-genero{
+     width: 15%;
+}
+
+.col-email{
+     width: 35%;
+}
+
+table{
+	width: 100%;
+}
+
+.table-link{
+	border: none !important;
+}
+
+#section{
+
+}
