@@ -10,7 +10,7 @@
 
     <link rel="stylesheet" href="./static/css/style.css">
 
-    <title>Página Inicial</title>
+    <title>Curso</title>
 </head>
 <body>
 
@@ -23,17 +23,41 @@
         </a>
       </div>
     </nav>
-	<main>
-
-        <section class="box-acesso">
-            <span><img src="https://cdn-icons-png.flaticon.com/512/3022/3022546.png" width="30px" height="30px" alt=""></span>
-
-            <h1>Bem vindo à Step Brasil</h1>
-            <hr>
-			
-			<a href="main" class="btn btn-primary" title="Acessar sistema">Acessar</a>
-        </section>
     
+	<main class="main-default">
+
+        <section class="box-curso">
+ 
+            <h1>Sistema de Gerenciamento de Aluno</h1>
+            <hr>
+
+            <h3>Alunos</h3>
+            <a href="cadastro.html" class="btn btn-outline-info" title="Cadastrar novo aluno">Novo</a>
+            <a href="consulta.jsp" class="btn btn-outline-secondary" title="Consulta de alunos">Exportar</a>
+
+
+            <section class="box-contatos" id="tabelaContato">
+
+                <thead>
+                    <tr>
+                        <th class="col-nome">Nome</th> <th class="col-genero">Gênero</th> <th class="col-idade">Idade</th> <th class="col-email">E-mail</th> <th class="col-telefone">Telefone</th>
+                    </tr>
+                </thead>
+    
+                <tbody>
+                    <tr></tr>
+                </tbody>
+    
+                <tfoot>
+                    <tr>
+                        <th colspan="5">Fim dos contatos</th>
+                    </tr>
+                </tfoot>
+            </section>
+			
+         </section>
+
+            
     </main>
     
 

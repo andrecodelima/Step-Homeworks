@@ -8,6 +8,7 @@ public class Db {
 	
 	public static void main(String[] args) {
 		
+		//Teste de conexão
 		Connect();
 	}
 	
@@ -16,7 +17,7 @@ public class Db {
 		Connection conn = null;
 		
 		final String user = "root";
-		final String pass = "";
+		final String pass = "1234567";
 		final String host = "localhost";
 		
 		final String url = "jdbc:mysql://" + host + ":" + "/dbcursostep?verifyServerCertificate=false&useSSL=true";
@@ -31,7 +32,8 @@ public class Db {
 		}catch(ClassNotFoundException e) {
 		
 			System.err.println(e);
-	
+			System.err.println("Erro na conexão");
+
 		}catch(SQLException e) {
 			
 			System.err.println("Erro na conexão");
@@ -39,6 +41,13 @@ public class Db {
 		
 		
 		return conn;
+		
+	}
+	
+	
+	public static void desconecta(Connection conn) throws SQLException {
+		
+		conn.close();
 		
 	}
 	
