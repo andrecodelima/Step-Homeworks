@@ -58,12 +58,12 @@ public class DAO {
 			
 			while(result.next()) {
 				
-				lista.add(new Pessoa(result.getInt("id"),
-									result.getString("nome"),
-									result.getString("genero"),
-									result.getInt("idade"),
-									result.getString("email"),
-									result.getString("telefone")
+				lista.add(new Pessoa(	result.getInt("id"),
+										result.getString("nome"),
+										result.getString("genero"),
+										result.getInt("idade"),
+										result.getString("email"),
+										result.getString("telefone")
 									)
 						);
 			}
@@ -79,5 +79,112 @@ public class DAO {
 		
 		return null;
 	}
+	
+	
+	public static Pessoa getToId(int id){
+		
+		Connection conn = Db.Connect();
+		
+		try {
+			String sql = "SELECT * FROM pessoa WHERE id = " + id;
+			
+			Statement st = conn.createStatement();
+			ResultSet result = st.executeQuery(sql);
+			
+			Pessoa aluno = new Pessoa();
+			
+			while(result.next()){
+				
+				aluno = new Pessoa(result.getInt("id"),
+								  result.getString("nome"),
+								  result.getString("genero"),
+								  result.getInt("idade"),
+								  result.getString("email"),
+								  result.getString("telefone")
+								  );
+			}
+						
+			Db.desconecta(conn);	
+			st.close();
+			return aluno;
+
+		}catch (Exception e) {
+			System.err.println(e);	
+		}
+		
+		
+		return null;
+ 		
+}
+	
+	
+	public static Boolean deleteAluno(int id){
+		
+		Connection conn = Db.Connect();
+		String sql = "DELETE from pessoa WHERE id=?";
+		
+		try {
+			
+			PreparedStatement st = conn.prepareStatement(sql);
+			st.setInt(1, id);
+			
+			st.execute();
+			System.err.println("Usuário deletado");
+			
+			Db.desconecta(conn);
+			st.close();
+			
+			return true;
+			
+		}catch(SQLException e) {
+			System.out.println(e);
+			System.err.println("Falha ao deletar");
+		}
+		
+			return false;
+	
+	}
+	
+	
+	public static boolean updateAluno(Pessoa p){
+		
+		Connection conn = Db.Connect();
+		
+		String sql = "UPDATE pessoa" 				+ 
+		
+							 "SET nome 		= ?,"	+
+							 "genero	= ?,"		+
+							 "idade		= ?,"		+
+							 "email		= ?,"		+
+							 "telefone  = ?"		+
+							 
+							 "WHERE id		= ?"	;
+						
+		try {
+			
+			PreparedStatement st	=	conn.prepareStatement(sql);
+			st.setString(1, p.getNome());
+			st.setString(2, p.getGenero());
+			st.setInt(3,	p.getIdade());
+			st.setString(4, p.getEmail());
+			st.setString(5, p.getTelefone());
+			
+			st.setInt(6, p.getId());
+			
+			st.execute();
+			System.out.println("Usuário atualizado");
+			
+			st.close();
+			Db.desconecta(conn);
+			
+			return true;
+			
+		}catch (Exception e) {
+			System.out.println(e);
+		}
+		
+		return false;
+	}
+	
 	
 }

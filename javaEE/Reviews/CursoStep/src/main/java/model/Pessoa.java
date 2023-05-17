@@ -2,7 +2,7 @@ package model;
 
 public class Pessoa {
 	
-	private long id;
+	private int id;
 	private String nome;
 	private String genero;
 	private int idade;
@@ -23,7 +23,7 @@ public class Pessoa {
 	}
 
 
-	public Pessoa(long id, String nome, String genero, int idade, String email, String telefone) {
+	public Pessoa(int id, String nome, String genero, int idade, String email, String telefone) {
 		super();
 		this.id = id;
 		this.nome = nome;
@@ -34,12 +34,12 @@ public class Pessoa {
 	}
 
 
-	public long getId() {
+	public int getId() {
 		return id;
 	}
 
 
-	public void setId(long id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 

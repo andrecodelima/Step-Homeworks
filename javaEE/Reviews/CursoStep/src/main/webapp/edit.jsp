@@ -1,3 +1,10 @@
+<%@page import="controller.DAO"%>
+<%@page import="model.Pessoa"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"%>
+
+<% Pessoa aluno = DAO.getToId(Integer.parseInt(request.getParameter("id")));%>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,7 +21,7 @@
 
 <link rel="stylesheet" href="./static/css/style.css">
 
-<title>Cadastro</title>
+<title>Edicão</title>
 </head>
 <body>
 
@@ -32,49 +39,49 @@
 
 		<section class="box-curso">
 
-			<h1>Cadastro de Alunos</h1>
+			<h1>Edição de Alunos</h1>
 			<hr>
 
-			<form name="formAluno" action="insert">
+			<form name="formAluno" action="update">
 
 				<section class="table">
 	
 					<div class="row">
 						<div class="col-md-5">
-							<input type="text" class="form-control" name="inputNome" id="inputNome" placeholder="Nome Completo" maxlength="100">
+							<input type="text" class="form-control" name="inputNome" id="inputNome" placeholder="Nome Completo" maxlength="100" value="<%=aluno.getNome()%>">
 							<label for="inputNome">Nome completo</label>
 						</div>
 	
 						<div class="col-md-3">
-							<input type="text" class="form-control" name="inputGenero" 	id="inputGenero" placeholder="Genero" maxlength="20"> 
-							<label for="inputGenero">GÃªnero</label>
+							<input type="text" class="form-control" name="inputGenero" 	id="inputGenero" placeholder="Genero" maxlength="20" value="<%=aluno.getGenero()%>"> 
+							<label for="inputGenero">Gênero</label>
 							
 						</div>
 					</div>
 	
 					<div class="row">
 						<div class="col-md-1">
-							<input type="text" class="form-control" name="inputIdade" id="inputIdade" placeholder="Idade" maxlength="10"> 
+							<input type="text" class="form-control" name="inputIdade" id="inputIdade" placeholder="Idade" maxlength="10" value="<%=aluno.getIdade()%>"> 
 							<label for="inputNome">Idade</label>
 						</div>
 	
 						<div class="col-md-4">
-							<input type="text" class="form-control" name="inputEmail" id="inputEmail" placeholder="E-mail" maxlength="100">
+							<input type="text" class="form-control" name="inputEmail" id="inputEmail" placeholder="E-mail" maxlength="100" value="<%=aluno.getEmail()%>">
 							 <label for="inputEmail">E-mail</label>
 						</div>
 	
 						<div class="col-md-3">
-							<input type="text" class="form-control" name="inputTelefone" id="inputTelefone" placeholder="Telefone" maxlength="14">
+							<input type="text" class="form-control" name="inputTelefone" id="inputTelefone" placeholder="Telefone" maxlength="14" value="<%=aluno.getTelefone()%>">
 							 <label for="inputTelefone">Telefone</label>
 						</div>
-
-					</div>
+						
+						<input type="hidden" name="id" value="<%=aluno.getId()%>">
 
 					</div>
 
 					<div>
 				
-						<button type=button class="btn btn-success" onclick="validaAluno()">Cadastrar</button>
+						<button type=submit class="btn btn-success">Salvar</button>
 				
 					</div>
 
