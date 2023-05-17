@@ -35,44 +35,54 @@
 			<h1>Cadastro de Alunos</h1>
 			<hr>
 
-			<form name="formAluno" action="">
+			<form name="formAluno" action="insert">
 
 				<section class="table">
+	
+					<div class="row">
+						<div class="col-md-5">
+							<input type="text" class="form-control" name="inputNome"
+								id="inputNome" placeholder="Nome Completo" maxlength="100">
+							<label for="inputNome">Nome completo</label>
+						</div>
+	
+						<div class="col-md-3">
+							<input type="text" class="form-control" name="inputGenero"
+								id="inputGenero" placeholder="Genero" maxlength="20"> <label
+								for="inputGenero">Gênero</label>
+						</div>
+					</div>
+	
+					<div class="row">
+						<div class="col-md-1">
+							<input type="text" class="form-control" name="inputIdade"
+								id="inputIdade" placeholder="Idade" maxlength="10"> <label
+								for="inputNome">Idade</label>
+						</div>
+	
+						<div class="col-md-4">
+							<input type="text" class="form-control" name="inputEmail"
+								id="inputEmail" placeholder="E-mail" maxlength="100"> <label
+								for="inputEmail">E-mail</label>
+						</div>
+	
+						<div class="col-md-3">
+							<input type="text" class="form-control" name="inputTelefone"
+								id="inputTelefone" placeholder="Telefone" maxlength="14"> <label
+								for="inputTelefone">Telefone</label>
+						</div>
 
-					<div>
-						<input type="text" class="form-control" name="inputNome"
-							id="inputNome" placeholder="Nome Completo" maxlength="100">
-						<label for="inputNome">Nome completo</label>
 					</div>
 
 					<div>
-						<input type="text" class="form-control" name="inputGenero"
-							id="inputGenero" placeholder="Genero" maxlength="20"> <label
-							for="inputGenero">Gênero</label>
-					</div>
-
-					<div>
-						<input type="text" class="form-control" name="inputIdade"
-							id="inputIdade" placeholder="Idade" maxlength="10"> <label
-							for="inputNome">Idade</label>
-					</div>
-
-					<div>
-						<input type="text" class="form-control" name="inputEmail"
-							id="inputEmail" placeholder="E-mail" maxlength="100"> <label
-							for="inputEmail">E-mail</label>
-					</div>
-
-					<div>
-						<input type="text" class="form-control" name="inputTelefone"
-							id="inputTelefone" placeholder="Telefone" maxlength="10"> <label
-							for="inputTelefone">Telefone</label>
+				
+						<button type=button class="btn btn-success" onclick="validaAluno()">Cadastrar</button>
+				
 					</div>
 
 				</section>
 
 			</form>
-
 
 		</section>
 

@@ -5,7 +5,7 @@ public class Pessoa {
 	private long id;
 	private String nome;
 	private String genero;
-	private String idade;
+	private int idade;
 	private String email;
 	private String telefone;
 	
@@ -13,7 +13,7 @@ public class Pessoa {
 	public Pessoa() {}
 
 
-	public Pessoa(String nome, String genero, String idade, String email, String telefone) {
+	public Pessoa(String nome, String genero, int idade, String email, String telefone) {
 		super();
 		this.nome = nome;
 		this.genero = genero;
@@ -23,7 +23,7 @@ public class Pessoa {
 	}
 
 
-	public Pessoa(long id, String nome, String genero, String idade, String email, String telefone) {
+	public Pessoa(long id, String nome, String genero, int idade, String email, String telefone) {
 		super();
 		this.id = id;
 		this.nome = nome;
@@ -64,12 +64,12 @@ public class Pessoa {
 	}
 
 
-	public String getIdade() {
+	public int getIdade() {
 		return idade;
 	}
 
 
-	public void setIdade(String idade) {
+	public void setIdade(int idade) {
 		this.idade = idade;
 	}
 

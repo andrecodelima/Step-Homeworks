@@ -8,10 +8,9 @@ body{
 
 main{
 
-    height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: center;
+    
 }
 
 .box-acesso{
@@ -74,9 +73,8 @@ main{
 }
 
 
-.table{
-	display:grid;
-    border: 2px solid red;
-    grid-template-columns: 400px 200px 100px 400px 200px;
-    grid-auto-rows: 200px;
- }
+
+.form-control{
+	    border: 2px solid rgb(255, 247, 247);
+	
+}
