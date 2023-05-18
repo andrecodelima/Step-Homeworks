@@ -152,11 +152,12 @@ public class DAO {
 		
 		}
 		
-		String sql = "UPDATE aluno "  + 
-					 "SET nome =  ?,"	 +
-					 "genero = ?,  "		 +
-					 "email = ? "	 +
-					 "WHERE id = ?"	 ;
+		String sql = "UPDATE aluno  "  		+ 
+					 "SET nome 	= ?,"	 	+
+					 "genero 	= ?,"		+
+					 "email 	= ? "	 	+
+					 
+					 "WHERE id 	= ?"		;
 				
 		
 		try {

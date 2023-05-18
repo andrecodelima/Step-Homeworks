@@ -150,33 +150,32 @@ public class DAO {
 		
 		Connection conn = Db.Connect();
 		
-		String sql = "UPDATE pessoa" 				+ 
+		if(conn == null) {
+			System.err.println("Falha na conexão");
 		
-							 "SET nome 		= ?,"	+
-							 "genero	= ?,"		+
-							 "idade		= ?,"		+
-							 "email		= ?,"		+
-							 "telefone  = ?"		+
-							 
-							 "WHERE id		= ?"	;
-						
+		}
+		
+		String sql = "UPDATE pessoa  "  		+ 
+				 "SET nome 	= ?,"	 	+
+				 "genero 	= ?,"		+
+				 "email 	= ? "	 	+
+				 
+				 "WHERE id 	= ?"		;
+		
+		 						
 		try {
 			
-			PreparedStatement st	=	conn.prepareStatement(sql);
-			st.setString(1, p.getNome());
+			PreparedStatement st = conn.prepareStatement(sql);
+			st.setString(1,p.getNome());
 			st.setString(2, p.getGenero());
-			st.setInt(3,	p.getIdade());
-			st.setString(4, p.getEmail());
-			st.setString(5, p.getTelefone());
+			st.setString(3, p.getEmail());
+			st.setInt(4, p.getId());
 			
-			st.setInt(6, p.getId());
 			
 			st.execute();
 			System.out.println("Usuário atualizado");
 			
-			st.close();
 			Db.desconecta(conn);
-			
 			return true;
 			
 		}catch (Exception e) {
