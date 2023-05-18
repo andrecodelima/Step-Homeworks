@@ -10,7 +10,7 @@ public class Db {
 		Connection conn = null;
 		
 		String user 	= "root";
-		String pass		= "1234567";
+		String pass		= "";
 		String port		= "3306";
 		String host		= "localhost";
 		

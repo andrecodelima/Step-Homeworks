@@ -94,17 +94,12 @@ public class Controller extends HttpServlet {
 	
 	//UPDATE
 	public void updateAluno(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
-		
-		Pessoa aluno = new Pessoa(
-								 
-				                  Integer.parseInt(request.getParameter("id")),
+		Pessoa aluno = new Pessoa (Integer.parseInt(request.getParameter("id")),
 								  request.getParameter("inputNome"),
 								  request.getParameter("inputGenero"),
-								  Integer.parseInt(request.getParameter("inputIdade")),
-								  request.getParameter("inputEmail"),
-								  request.getParameter("inputTelefone")
-								  );
-		
+								  request.getParameter("inputEmail")
+				);
+						
 		if(DAO.updateAluno(aluno)) {
 			
 			response.sendRedirect("sucess.jsp?desc=editar + aluno");

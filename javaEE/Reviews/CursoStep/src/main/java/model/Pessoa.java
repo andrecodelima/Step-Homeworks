@@ -33,6 +33,17 @@ public class Pessoa {
 		this.telefone = telefone;
 	}
 
+	
+	
+
+	public Pessoa(int id, String nome, String genero, String email) {
+		super();
+		this.id = id;
+		this.nome = nome;
+		this.genero = genero;
+		this.email = email;
+	}
+
 
 	public int getId() {
 		return id;

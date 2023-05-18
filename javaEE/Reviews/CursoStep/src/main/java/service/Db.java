@@ -17,7 +17,7 @@ public class Db {
 		Connection conn = null;
 		
 		final String user = "root";
-		final String pass = "1234567";
+		final String pass = "";
 		final String host = "localhost";
 		
 		final String url = "jdbc:mysql://" + host + ":" + "/dbcursostep?verifyServerCertificate=false&useSSL=true";

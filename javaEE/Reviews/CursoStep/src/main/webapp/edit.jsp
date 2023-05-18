@@ -2,8 +2,12 @@
 <%@page import="model.Pessoa"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"%>
 
-<% Pessoa aluno = DAO.getToId(Integer.parseInt(request.getParameter("id")));%>
 
+<%
+
+Pessoa aluno = DAO.getToId(Integer.parseInt(request.getParameter("id")));
+
+%>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -60,20 +64,13 @@
 					</div>
 	
 					<div class="row">
-						<div class="col-md-1">
-							<input type="text" class="form-control" name="inputIdade" id="inputIdade" placeholder="Idade" maxlength="10" value="<%=aluno.getIdade()%>"> 
-							<label for="inputNome">Idade</label>
-						</div>
-	
+				 
 						<div class="col-md-4">
 							<input type="text" class="form-control" name="inputEmail" id="inputEmail" placeholder="E-mail" maxlength="100" value="<%=aluno.getEmail()%>">
 							 <label for="inputEmail">E-mail</label>
 						</div>
 	
-						<div class="col-md-3">
-							<input type="text" class="form-control" name="inputTelefone" id="inputTelefone" placeholder="Telefone" maxlength="14" value="<%=aluno.getTelefone()%>">
-							 <label for="inputTelefone">Telefone</label>
-						</div>
+						 
 						
 						<input type="hidden" name="id" value="<%=aluno.getId()%>">
 
