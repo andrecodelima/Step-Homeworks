@@ -2,6 +2,7 @@ package services;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.SQLException;
 
 public class Db{
 	
@@ -31,6 +32,12 @@ public class Db{
 			return null;
 		}
 		
+	}
+	
+	
+	public static void Desconecta(Connection conn) throws SQLException{
+		
+		conn.close();
 	}
 	
 }
