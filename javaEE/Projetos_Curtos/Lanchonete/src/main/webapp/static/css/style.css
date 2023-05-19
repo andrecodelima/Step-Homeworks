@@ -45,15 +45,17 @@ main{
 }
 /*HOME*/
 .box-acesso{
+	width: 40%;
+	
+    align-items: center;
+    padding: 15px;
+    text-align: center;
+	
 	background-color: rgb(248 248 248 / 17%);
     border: radius;
     border-radius: 10px;
-    width: 40%;
-    align-items: center;
     box-shadow: 4px 4px 7px 2px #555151;
-    padding: 15px;
-    text-align: center
-         
+
 }
 
 
@@ -96,8 +98,32 @@ main{
 }
 
 
+/*CADASTRO*/
 
+#table{
+    margin-top: 2%;
+    background-color: #eeeeee8c;
+    border-radius: 7px;
+    font-weight: bolder;
+    padding: 10px;
+    
+}
+
+#table .button-cadastro{
+	width: 15%;
+	padding: 10px;
+	margin-left: 13px;
+    margin-top: 17px;
+    border: 2px solid #fdfdfdb0;
+    border-radius: 7px;
+    background-color: #1e9715de;
+    
+        
+    font-weight: bold;
+    
+}
 .form-control{
 	    border: 2px solid rgb(255, 247, 247);
 	
 }
+

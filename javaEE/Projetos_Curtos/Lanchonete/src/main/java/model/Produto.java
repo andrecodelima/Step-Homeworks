@@ -7,7 +7,7 @@ public class Produto {
 	private String descricao;
 	private double preco;
 	
-	Produto(){}
+	public Produto(){}
 
 	public Produto(int id, String nome, String descricao, double preco) {
 		super();

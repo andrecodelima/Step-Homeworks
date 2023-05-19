@@ -1,40 +1,3 @@
-<%@page import="java.util.ArrayList"%>
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"%>
-
-<%@page import="model.Produto"%>
-<%@page import="services.ProdutoImplementation"%>
- 
-
-<%
-ArrayList<Produto> lista = ProdutoImplementation.getProduto();
-String line = "";
-
-if(lista.isEmpty()){
-	
-	line = "<tr><th colspan='3'> Não há usuários cadastrados </tr></th>";
-
-}else{
-	
-	for(Produto p : lista){
-		
-		String nome 				= p.getNome();
-		String descricao			= p.getDescricao();
-		Double preco				= p.getPreco();
-		int id						= p.getId();
-				
-		line += "<tr>" 				+		
-		
-						"<td>"		+ nome 			+	"</td>"		+
-						"<td>"		+ descricao		+	"</td>"		+
-						"<td>"		+ preco			+   "</td>"		+
-						
-				"</tr>";
-		
-	}
-}
-
-%>  
-    
   
 <!DOCTYPE html>
 <html lang="en">
@@ -52,7 +15,7 @@ if(lista.isEmpty()){
 
 <link rel="stylesheet" href="./static/css/style.css">
 
-<title>Produtos</title>
+<title>Cadastro</title>
 </head>
 <body>
 
@@ -91,7 +54,7 @@ if(lista.isEmpty()){
 
 		<section class="box-produtos">
 
-			<h1>Catálogo de Produtos</h1>
+			<h1>Cadastro de Produtos</h1>
 			<hr>
 
 			<a href="cadastro.html" class="btn btn-outline-info"
@@ -101,33 +64,46 @@ if(lista.isEmpty()){
 
 			<table class="box-produtos" id="tabelaProduto">
 
-				<thead>
-					<tr>
-						<th class="col-nome">Nome</th>
-						<th class="col-descricao">Descrição</th>
-						<th class="col-preco">Preço</th>
-						 
-					</tr>
-				</thead>
+				<form name="formProduto" action="insert">
 
+					<section class="table" id="table">
 
-				<tbody>
-					<tr>
-						<th><%=line%></th>
-					</tr>
-				</tbody>
+						<div class="row">
 
-				
-				<tfoot>
-					<tr>
-						<th colspan="5">Fim dos contatos</th>
-					</tr>
-				</tfoot>
+							<div class="col-md-4">
+
+								<input type="text" class="form-control" name="inputNome" id="inputNome" placeholder="Nome do produto" maxlength="45">
+								<label for="inputNome">Produto</label>
+
+							</div>
+
+							<div class="col-md-5">
+
+								<input type="text" class="form-control" name="inputDescricao" id="inputDescricao" placeholder="DescriÃ§Ã£o do produto" maxlength="50">
+								<label for="inputDescricao">DescriÃ§Ã£o</label>
+								
+							</div>
+
+							<div class="col-md-2">
+
+								<input type="text" class="form-control" name="inputPreco" id="inputPreco" placeholder="R$" maxlength="15">
+								<label for="inputPreco">PreÃ§o</label>
+								
+							</div>
+
+						</div>
+
+						<div class="row">
+
+							<input class='button-cadastro' type="button" value="Cadastrar" onclick="validaProduto()">
+
+						</div>
+
+					</section>
+
+				</form>
 
 			</table>
-			
-		</section>
-		
 	</main>
 
 

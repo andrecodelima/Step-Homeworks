@@ -8,30 +8,30 @@ public class Db{
 	
 	public static Connection Connecta() {
 		
-		Connection conn = null;
+		Connection conn =null;
 		
 		final String usr 	= "root";
 		final String pass	= "1234567";
 		final String host   = "localhost";
 		
-		final String url    = "jbdc:mysql//" + host + "dblanchonete?verifyServerCertificate=false&useSSL=true";
+		final String url = "jdbc:mysql://" + host + ":" + "/dblanchonete?verifyServerCertificate=false&useSSL=true";
 		
 		try {
 			
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			conn = DriverManager.getConnection(usr, pass, host);
+			conn = DriverManager.getConnection(url, usr, pass);
 			
 			System.out.println("Conectado!");
 			
-			return conn;
 			
 		}catch (Exception e) {
 			System.err.println(e);
 			System.err.println("Falha na conexão");
 			
-			return null;
+			 
 		}
 		
+		return conn;
 	}
 	
 	

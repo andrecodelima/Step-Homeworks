@@ -1,3 +1,6 @@
-/**
- * 
- */
+
+
+function validaProduto(){
+
+    formProduto.submit();
+}
