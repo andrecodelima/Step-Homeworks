@@ -41,47 +41,72 @@ public class ProdutoImplementation {
 	 }
 	 
 	 
-	 public static ArrayList<Produto> getProduto(){
-		 
-		 Connection conn = Db.Connecta();
-		 
-		 try {
-			 
-			 String sql = "SELECT * FROM produto";
-			 
-			 Statement st = conn.createStatement();
-			 ResultSet result = st.executeQuery(sql);
-
-			 ArrayList<Produto> lista = new ArrayList<Produto>();
-			 
-			 
-			 while(result.next()){
-				 
-				 lista.add(new Produto(	  
-						 				  result.getInt("id"),
-							 			  result.getString("nome"),
-							 			  result.getString("descricaco"),
-							 			  result.getDouble("preco")
-						 			  )
-						 );
-			 }
-			 
-			 
-			 System.out.println("Consulta realizada com sucesso");
-			 st.close();
-			 Db.Desconecta(conn);
-			 return lista;
-			 
-		 }catch (SQLException e) {
+		public static ArrayList<Produto>getProduto(){
 			
-			 System.err.println("Erro na consulta");
-			 
-		}return null;	 			 
-		 
-	 }
+			Connection conn = Db.Connecta();
+			
+			try {
+				
+				String sql = "SELECT * FROM produto";	
+				
+				Statement st = conn.createStatement();			
+				ResultSet result = st.executeQuery(sql);
+				
+				ArrayList<Produto> lista = new ArrayList<Produto>();
+				
+				while(result.next()) {
+					
+					lista.add(new Produto(	result.getInt("id"),
+											result.getString("nome"),
+											result.getString("descricao"),
+											result.getDouble("preco")
+									 )
+										
+							);
+				}
+				
+				st.close();
+				Db.Desconecta(conn);
+				return lista;
+				
+			}catch(SQLException e) {
+				
+				System.err.println("Erro na consulta");
+			}
+			
+			return null;
+		}
 	 
 	 
 	 
+		public static boolean delProduto(int id) {
+			
+			Connection conn = Db.Connecta();
+			
+			try {
+				
+				String sql = "DELETE from produto WHERE id=?";
+				PreparedStatement st = conn.prepareStatement(sql);
+				
+				st.setInt(1, id);
+				st.execute();
+				System.out.println("Usuário deletado");
+				
+				Db.Desconecta(conn);
+				st.close();
+				
+				return true;
+				
+				
+			}catch (Exception e) {
+				
+				System.out.println(e);
+				System.err.println("Falha ao deletar");
+
+			}
+			
+			return false;
+		}
 	 
 	 
 	 

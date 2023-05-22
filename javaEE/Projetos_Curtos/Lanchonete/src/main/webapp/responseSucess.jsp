@@ -1,44 +1,8 @@
-<%@page import="java.util.ArrayList"%>
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"%>
-
-<%@page import="model.Produto"%>
-<%@page import="services.ProdutoImplementation"%>
- 
-
-<%
-ArrayList<Produto> lista = ProdutoImplementation.getProduto();
-String line = "";
-
-if(lista.isEmpty()){
-	
-	line = "<tr><th colspan='3'> N�o h� usu�rios cadastrados </tr></th>";
-
-}else{
-	
-	for(Produto p : lista){
-		
-		String nome 				= p.getNome();
-		String descricao			= p.getDescricao();
-		Double preco				= p.getPreco();
-		int id						= p.getId();
-				
-		line += "<tr>" 				+		
-		
-						"<td>"		+ nome 			+	"</td>"		+
-						"<td>"		+ descricao		+	"</td>"		+
-						"<td>"		+ preco			+   "</td>"		+
-						
-						"<td class='table-link'><a class='btn btn-outline-warning' href='edit.jsp?id=" + id + "'>Editar</a></td>"  +
-						"<td class='table-link'><a class='btn btn-outline-danger'  href='delete?id=" 	   + id + "'>Excluir</a></td>"  +
-						
-				"</tr>";
-		
-	}
-}
-
-%>  
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
     
-  
+<% String resp = request.getParameter("resp"); %>
+    
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -55,11 +19,10 @@ if(lista.isEmpty()){
 
 <link rel="stylesheet" href="./static/css/style.css">
 
-<title>Produtos</title>
+<title>P�gina Inicial</title>
 </head>
-<body>
-
-
+<body onload=" ">
+	
 	<!-- NAVBAR -->
 	
 	<header>
@@ -89,48 +52,20 @@ if(lista.isEmpty()){
 			</div>
 		</nav>
 	</header>
-	
-	<main class="main-default">
+	<main>
 
-		<section class="box-produtos">
+		<section class="box-sucess">
+			 
+			<span>Sucesso ao <%=resp%></span> 
 
-			<h1>Cat�logo de Produtos</h1>
-			<hr>
-
-			<a href="cadastro.html" class="btn btn-outline-info"
-				title="Cadastrar novo aluno">Novo</a> <a href="consulta.jsp"
-				class="btn btn-outline-secondary" title="Consulta de alunos">Exportar</a>
-
-
-			<table class="box-produtos" id="tabelaProduto">
-
-				<thead>
-					<tr>
-						<th class="col-nome">Nome</th>
-						<th class="col-descricao">Descri��o</th>
-						<th class="col-preco">Pre�o</th>
-						 
-					</tr>
-				</thead>
-
-
-				<tbody>
-					<tr>
-						<th><%=line%></th>
-					</tr>
-				</tbody>
-
-				
-				<tfoot>
-					<tr>
-						<th colspan="5">Fim dos produtos</th>
-					</tr>
-				</tfoot>
-
-			</table>
+			<div> <button class="btn btn" type="button" disabled >
+				<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+				Retornando á pagina Inicial
+			  </button></div>
 			
+
 		</section>
-		
+
 	</main>
 
 

@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 import model.Produto;
 import services.ProdutoImplementation;
  
-@WebServlet(urlPatterns = {"/main", "/insert"})
+@WebServlet(urlPatterns = {"/main", "/insert", "/delete", "/edit"})
 public class ProdutoController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
     
@@ -33,6 +33,11 @@ public class ProdutoController extends HttpServlet {
 			case "/insert":
 				NovoProduto(request, response);
 				break;
+				
+			case "/delete":
+				deleteProduto(request, response);
+				break;
+				
 				
 		}
 	}
@@ -60,6 +65,20 @@ public class ProdutoController extends HttpServlet {
 		}else {
 			response.getWriter().append("Produto não cadastrado");
 		}
+	}
+	
+	
+	public void deleteProduto(HttpServletRequest request, HttpServletResponse response)throws ServletException, IOException{
+		
+		if(ProdutoImplementation.delProduto(Integer.parseInt(request.getParameter("id")))) {
+			
+			response.sendRedirect("responseSucess.jsp?resp=deletar+produto");
+			
+		}else {
+			
+			response.sendRedirect("responseFailed.jsp?resp=deletar+produto");
+		}
+		
 	}
 	
 		
