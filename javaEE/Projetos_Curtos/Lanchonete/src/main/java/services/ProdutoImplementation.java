@@ -115,8 +115,8 @@ public class ProdutoImplementation {
 			
 			try {
 				
-				String sql = "SELECT * FROM produto WHERE id=?";
-//				String sql = "SELECT * FROM produto WHERE id=" + id;
+//				String sql = "SELECT * FROM produto WHERE id=?";
+				String sql = "SELECT * FROM produto WHERE id=" + id;
 				
 				Statement st = conn.createStatement();
 				ResultSet result = st.executeQuery(sql);

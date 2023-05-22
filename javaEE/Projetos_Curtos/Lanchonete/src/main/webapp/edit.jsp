@@ -5,7 +5,7 @@
 
 
 <%
-	Produto produto = ProdutoImplementation.getId(Integer.parseInt("id"));
+	Produto produto = ProdutoImplementation.getId(Integer.parseInt(request.getParameter("id")));
 %>
     
 <!DOCTYPE html>
@@ -105,7 +105,7 @@
 
 						<div class="row">
 
-							<input class='button-cadastro' type="button" value="Cadastrar" onclick="validaProduto()">
+							<input class='button-cadastro' type="submit" value="Salvar">
 
 						</div>
 
