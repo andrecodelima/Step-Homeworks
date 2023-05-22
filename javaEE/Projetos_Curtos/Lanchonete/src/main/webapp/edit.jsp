@@ -1,7 +1,12 @@
+<%@page import="model.Produto"%>
+<%@page import="services.ProdutoImplementation"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="ISO-8859-1"%>
-    
-<% String resp = request.getParameter("resp"); %>
+
+
+<%
+	Produto produto = ProdutoImplementation.getId(Integer.parseInt("id"));
+%>
     
 <!DOCTYPE html>
 <html lang="en">
@@ -19,10 +24,11 @@
 
 <link rel="stylesheet" href="./static/css/style.css">
 
-<title>Response</title>
+<title>Editar</title>
 </head>
 <body>
-	
+
+
 	<!-- NAVBAR -->
 	
 	<header>
@@ -42,7 +48,7 @@
 						
 						<li class="nav-item"><a class="nav-link" href="#">Clientes</a></li>
 						
-						<li class="nav-item"><a class="nav-link" href="#">Venda de BalcÃ£o</a></li>
+						<li class="nav-item"><a class="nav-link" href="#">Venda de Balcão</a></li>
 						
 						<li class="nav-item"><a class="nav-link" href="#">Entrega</a></li>
 						 
@@ -52,13 +58,62 @@
 			</div>
 		</nav>
 	</header>
-	<main>
+	
+	<main class="main-default">
 
-		<section class="box-failed">
-			 
-			 Falha ao <%=resp%>
-		</section>
+		<section class="box-produtos">
 
+			<h1>EDITAR PRODUTO</h1>
+			<hr>
+
+			<a href="index.html" class="btn btn-outline-info"
+				title="Página inicial">Home</a>  
+
+
+			<table class="box-produtos" id="tabelaProduto">
+
+				<form name="formProduto" action="update">
+
+					<section class="table" id="table">
+
+						<div class="row">
+
+							<div class="col-md-4">
+
+								<input type="text" class="form-control" name="inputNome" id="inputNome" placeholder="Nome do produto" maxlength="45" value="<%=produto.getNome()%>">
+								<label for="inputNome">Produto</label>
+
+							</div>
+
+							<div class="col-md-5">
+
+								<input type="text" class="form-control" name="inputDescricao" id="inputDescricao" placeholder="Descrição do produto" maxlength="50" value="<%=produto.getDescricao()%>">
+								<label for="inputDescricao">Descrição</label>
+								
+							</div>
+
+							<div class="col-md-2">
+
+								<input type="text" class="form-control" name="inputPreco" id="inputPreco" placeholder="R$" maxlength="15" value="<%=produto.getPreco()%>">
+								<label for="inputPreco">Preço</label>
+								
+								<input type="hidden" name="id" value="<%=produto.getId()%>">
+								
+							</div>
+
+						</div>
+
+						<div class="row">
+
+							<input class='button-cadastro' type="button" value="Cadastrar" onclick="validaProduto()">
+
+						</div>
+
+					</section>
+
+				</form>
+
+			</table>
 	</main>
 
 

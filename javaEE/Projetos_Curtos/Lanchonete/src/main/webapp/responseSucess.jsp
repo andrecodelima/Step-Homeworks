@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+<%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="ISO-8859-1"%>
     
 <% String resp = request.getParameter("resp"); %>
@@ -19,9 +19,9 @@
 
 <link rel="stylesheet" href="./static/css/style.css">
 
-<title>P�gina Inicial</title>
+<title>Response</title>
 </head>
-<body onload=" ">
+<body onload="retornarPagina()">
 	
 	<!-- NAVBAR -->
 	
@@ -42,7 +42,7 @@
 						
 						<li class="nav-item"><a class="nav-link" href="#">Clientes</a></li>
 						
-						<li class="nav-item"><a class="nav-link" href="#">Venda de Balc�o</a></li>
+						<li class="nav-item"><a class="nav-link" href="#">Venda de Balcão</a></li>
 						
 						<li class="nav-item"><a class="nav-link" href="#">Entrega</a></li>
 						 
@@ -60,7 +60,7 @@
 
 			<div> <button class="btn btn" type="button" disabled >
 				<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
-				Retornando á pagina Inicial
+				Retornando à pagina Inicial
 			  </button></div>
 			
 

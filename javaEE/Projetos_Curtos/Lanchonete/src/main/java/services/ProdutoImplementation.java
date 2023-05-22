@@ -108,7 +108,41 @@ public class ProdutoImplementation {
 			return false;
 		}
 	 
-	 
+	
+		public static Produto getId(int id){
+			
+			Connection conn = Db.Connecta();
+			
+			try {
+				
+				String sql = "SELECT * FROM produto WHERE id=?";
+//				String sql = "SELECT * FROM produto WHERE id=" + id;
+				
+				Statement st = conn.createStatement();
+				ResultSet result = st.executeQuery(sql);
+				
+				Produto produto = new Produto();
+				
+				while(result.next()) {
+					
+					produto = new Produto(result.getInt("id"),
+										 result.getString("nome"),
+										 result.getString("descricao"),
+										 result.getDouble("preco")
+										 );
+				}
+				
+				Db.Desconecta(conn);
+				st.close();
+				return produto;
+				
+				
+			}catch (Exception e) {
+				System.out.println(e);
+			}
+			
+			return null;
+		}
 	 
 	 
 	 

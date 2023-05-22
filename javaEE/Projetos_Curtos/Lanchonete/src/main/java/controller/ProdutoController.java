@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 import model.Produto;
 import services.ProdutoImplementation;
  
-@WebServlet(urlPatterns = {"/main", "/insert", "/delete", "/edit"})
+@WebServlet(urlPatterns = {"/main", "/insert", "/delete", "/update"})
 public class ProdutoController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
     
@@ -36,6 +36,10 @@ public class ProdutoController extends HttpServlet {
 				
 			case "/delete":
 				deleteProduto(request, response);
+				break;
+				
+			case "/update":
+				updateProduto(request, response);
 				break;
 				
 				
@@ -81,6 +85,19 @@ public class ProdutoController extends HttpServlet {
 		
 	}
 	
+	
+	public void updateProduto(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
+		
+		Produto produto = new Produto(
+										Integer.parseInt(request.getParameter("id")),
+										request.getParameter("nome"),
+										request.getParameter("descricao"),
+										Double.parseDouble(request.getParameter("preco")
+										)
+							
+									);
+		
+	}
 		
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		 

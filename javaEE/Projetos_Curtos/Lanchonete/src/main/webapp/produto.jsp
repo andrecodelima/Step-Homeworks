@@ -1,5 +1,5 @@
 <%@page import="java.util.ArrayList"%>
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"%>
 
 <%@page import="model.Produto"%>
 <%@page import="services.ProdutoImplementation"%>
@@ -11,7 +11,7 @@ String line = "";
 
 if(lista.isEmpty()){
 	
-	line = "<tr><th colspan='3'> N�o h� usu�rios cadastrados </tr></th>";
+	line = "<tr><th colspan='3'> Não há produtos cadastrados </tr></th>";
 
 }else{
 	
@@ -79,7 +79,7 @@ if(lista.isEmpty()){
 						
 						<li class="nav-item"><a class="nav-link" href="#">Clientes</a></li>
 						
-						<li class="nav-item"><a class="nav-link" href="#">Venda de Balc�o</a></li>
+						<li class="nav-item"><a class="nav-link" href="#">Venda de Balcão</a></li>
 						
 						<li class="nav-item"><a class="nav-link" href="#">Entrega</a></li>
 						 
@@ -94,7 +94,7 @@ if(lista.isEmpty()){
 
 		<section class="box-produtos">
 
-			<h1>Cat�logo de Produtos</h1>
+			<h1>Catálogo de Produtos</h1>
 			<hr>
 
 			<a href="cadastro.html" class="btn btn-outline-info"
@@ -107,8 +107,8 @@ if(lista.isEmpty()){
 				<thead>
 					<tr>
 						<th class="col-nome">Nome</th>
-						<th class="col-descricao">Descri��o</th>
-						<th class="col-preco">Pre�o</th>
+						<th class="col-descricao">Descrição</th>
+						<th class="col-preco">Preço</th>
 						 
 					</tr>
 				</thead>
