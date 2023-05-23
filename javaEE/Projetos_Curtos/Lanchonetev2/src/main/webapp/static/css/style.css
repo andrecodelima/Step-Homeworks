@@ -61,6 +61,19 @@ main{
 
 
 /*PRODUTOS*/
+
+.table-produtos{
+ 	width: 95%;
+    align-items: center;
+    box-shadow: 1px 1px 2px 1px #555151;
+    padding: 10px;
+    margin-top: 52px;
+    background-color: rgb(248 248 248 / 17%);
+    color: #fff;
+    border-collapse: unset;
+            
+}
+
 .box-produtos{
     border-radius: 3px;
     width: 90%;
@@ -107,7 +120,7 @@ main{
     border-radius: 7px;
     font-weight: bolder;
     padding: 10px;
-    
+
 }
 
 #table .button-cadastro{
@@ -232,3 +245,5 @@ main{
     color:#fff;
 }
 
+
+ 

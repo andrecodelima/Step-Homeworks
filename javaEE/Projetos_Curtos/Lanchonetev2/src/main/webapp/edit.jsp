@@ -1,4 +1,13 @@
-  
+<%@page import="model.Produto"%>
+<%@page import="services.ProdutoImplementation"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="ISO-8859-1"%>
+
+
+<%
+	Produto produto = ProdutoImplementation.getId(Integer.parseInt(request.getParameter("id")));
+%>
+    
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,7 +24,7 @@
 
 <link rel="stylesheet" href="./static/css/style.css">
 
-<title>Cadastro</title>
+<title>Editar</title>
 </head>
 <body>
 
@@ -39,7 +48,7 @@
 						
 						<li class="nav-item"><a class="nav-link" href="#">Clientes</a></li>
 						
-						<li class="nav-item"><a class="nav-link" href="#">Venda de Balc√£o</a></li>
+						<li class="nav-item"><a class="nav-link" href="#">Venda de Balc„o</a></li>
 						
 						<li class="nav-item"><a class="nav-link" href="#">Entrega</a></li>
 						 
@@ -54,17 +63,16 @@
 
 		<section class="box-produtos">
 
-			<h1>Cadastro de Produtos</h1>
+			<h1>EDITAR PRODUTO</h1>
 			<hr>
 
-			<a href="cadastro.html" class="btn btn-outline-info"
-				title="Cadastrar novo aluno">Novo</a> <a href="consulta.jsp"
-				class="btn btn-outline-light" title="Consulta de alunos">Exportar</a>
+			<a href="index.html" class="btn btn-outline-info"
+				title="P·gina inicial">Home</a>  
 
 
-			<table class="box-cadastro-produto" id="tabelaProduto">
+			<table class="box-produtos" id="tabelaProduto">
 
-				<form name="formProduto" action="insert">
+				<form name="formProduto" action="update">
 
 					<section class="table" id="table">
 
@@ -72,22 +80,24 @@
 
 							<div class="col-md-4">
 
-								<input type="text" class="form-control" name="inputNome" id="inputNome" placeholder="Nome do produto" maxlength="45">
+								<input type="text" class="form-control" name="inputNome" id="inputNome" placeholder="Nome do produto" maxlength="45" value="<%=produto.getNome()%>">
 								<label for="inputNome">Produto</label>
 
 							</div>
 
 							<div class="col-md-5">
 
-								<input type="text" class="form-control" name="inputDescricao" id="inputDescricao" placeholder="Descri√ß√£o do produto" maxlength="50">
-								<label for="inputDescricao">Descri√ß√£o</label>
+								<input type="text" class="form-control" name="inputDescricao" id="inputDescricao" placeholder="DescriÁ„o do produto" maxlength="50" value="<%=produto.getDescricao()%>">
+								<label for="inputDescricao">DescriÁ„o</label>
 								
 							</div>
 
 							<div class="col-md-2">
 
-								<input type="text" class="form-control" name="inputPreco" id="inputPreco" placeholder="R$" maxlength="15">
-								<label for="inputPreco">Pre√ßo</label>
+								<input type="text" class="form-control" name="inputPreco" id="inputPreco" placeholder="R$" maxlength="15" value="<%=produto.getPreco()%>">
+								<label for="inputPreco">PreÁo</label>
+								
+								<input type="hidden" name="id" value="<%=produto.getId()%>">
 								
 							</div>
 
@@ -95,7 +105,7 @@
 
 						<div class="row">
 
-							<input class='button-cadastro' type="button" value="Cadastrar" onclick="validaProduto()">
+							<input class='button-cadastro' type="submit" value="Salvar">
 
 						</div>
 

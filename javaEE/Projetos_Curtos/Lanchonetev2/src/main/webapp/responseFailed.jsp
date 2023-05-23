@@ -1,4 +1,8 @@
-  
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="ISO-8859-1"%>
+    
+<% String resp = request.getParameter("resp"); %>
+    
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,11 +19,10 @@
 
 <link rel="stylesheet" href="./static/css/style.css">
 
-<title>Cadastro</title>
+<title>Response</title>
 </head>
-<body>
-
-
+<body onload="retornarPaginaLogar()">
+	
 	<!-- NAVBAR -->
 	
 	<header>
@@ -49,61 +52,16 @@
 			</div>
 		</nav>
 	</header>
-	
-	<main class="main-default">
+	<main>
 
-		<section class="box-produtos">
+		<section class="box-failed">
+			 <div class="spinner-grow text-warning" role="status">
+				  <span class="visually">Loading...</span>
+				   Falha ao <%=resp%>
+			</div>
+			
+		</section>
 
-			<h1>Cadastro de Produtos</h1>
-			<hr>
-
-			<a href="cadastro.html" class="btn btn-outline-info"
-				title="Cadastrar novo aluno">Novo</a> <a href="consulta.jsp"
-				class="btn btn-outline-light" title="Consulta de alunos">Exportar</a>
-
-
-			<table class="box-cadastro-produto" id="tabelaProduto">
-
-				<form name="formProduto" action="insert">
-
-					<section class="table" id="table">
-
-						<div class="row">
-
-							<div class="col-md-4">
-
-								<input type="text" class="form-control" name="inputNome" id="inputNome" placeholder="Nome do produto" maxlength="45">
-								<label for="inputNome">Produto</label>
-
-							</div>
-
-							<div class="col-md-5">
-
-								<input type="text" class="form-control" name="inputDescricao" id="inputDescricao" placeholder="Descrição do produto" maxlength="50">
-								<label for="inputDescricao">Descrição</label>
-								
-							</div>
-
-							<div class="col-md-2">
-
-								<input type="text" class="form-control" name="inputPreco" id="inputPreco" placeholder="R$" maxlength="15">
-								<label for="inputPreco">Preço</label>
-								
-							</div>
-
-						</div>
-
-						<div class="row">
-
-							<input class='button-cadastro' type="button" value="Cadastrar" onclick="validaProduto()">
-
-						</div>
-
-					</section>
-
-				</form>
-
-			</table>
 	</main>
 
 
