@@ -64,11 +64,16 @@
                             <input type="password" name="inputPassword" class="form-control" placeholder="Password*"/>
                         </div>
                         <div class="form-group">
-                            <input type="submit"name="submit" class="btnSubmit" value="Login"/>
+                        
+                            <input type="submit" name="submit" class="btnLogin" value="Login"/>
+                         <a href="cadastroUser.html"><input type="button" name="cadastro" class="btnLogin" value="Cadastro"/></a>   
+                            
                         </div>
+                        
+                        
                         <div class="form-group">                  
 
-                            <a href="#" class="btnForgetPwd" value="Login">Forget Password?</a>
+                            <a href="#" class="btnForgetPwd" value="Login"><h7>Forget Password?</h7></a>
                         </div>
                     </form>
                 </div>

@@ -192,9 +192,20 @@ main{
 	width: 100%;
 }
 
-.form-login .form-group{
- 	margin-top:10px;
-}
+    .form-login .form-group{
+        margin-top:10px;
+    }
+
+    .form-login .btnLogin{
+        margin-top:5px;
+        
+    }
+
+    .form-login .btnLogin:hover{
+        margin-top:5px;
+        background-color: #ff4200;
+    
+    }
 
 .login-container{
     margin-top: 5%;
@@ -226,7 +237,7 @@ main{
     margin-bottom:12%;
     color: #fff;
 }
-.btnSubmit{
+.btnLogin{
     font-weight: 600;
     width: 50%;
     color: #282726;
@@ -234,6 +245,7 @@ main{
     border: none;
     border-radius: 1.5rem;
     padding:2%;
+    text-align: center;
 }
 .btnForgetPwd{
     color: #fff;
