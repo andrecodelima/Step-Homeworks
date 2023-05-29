@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="ISO-8859-1"%>
+    pageEncoding="UTF-8"%>
     
 <% String resp = request.getParameter("resp"); %>
     
@@ -55,7 +55,7 @@
 	<main>
 
 		<section class="box-failed">
-			 <div class="spinner-grow text-warning" role="status">
+			 <div class="text-warning" role="status">
 				  <span class="visually">Loading...</span>
 				   Falha ao <%=resp%>
 			</div>

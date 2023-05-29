@@ -7,6 +7,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.eclipse.jdt.internal.compiler.ast.AND_AND_Expression;
+
 import model.Produto;
 import model.Usuario;
 import services.ProdutoImplementation;
@@ -78,12 +80,16 @@ public class UsuarioController extends HttpServlet {
 		
 //		response.getWriter().append(usuario + "" + password);
 		
-		if(usr.getPassword() != null)
-			if(usr.getPassword().equals(password)) {
+ 		
+		if(usr != null){
+			if((usr.getUsuario().equals(usuario)) && (usr.getPassword().equals(password))){
 				response.sendRedirect("produto.jsp");
 			}else {
-				response.sendRedirect("responseFailed.jsp?resp=acessar+sistema");
+				response.sendRedirect("responseFailed.jsp?resp=acessar+sistema. Usuario+ou+senha+invalido");
+
 			}
+			
+		}
 		
 		
 	}
