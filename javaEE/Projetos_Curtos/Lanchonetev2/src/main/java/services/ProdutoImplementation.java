@@ -144,45 +144,44 @@ public class ProdutoImplementation {
 			return null;
 		}
 		
-		public static boolean updateProduto(Produto p){
+		public static boolean updateProduto(Produto p) throws SQLException {
 			
 			Connection conn = Db.Connecta();
+			if(conn == null) {
+				System.err.println("Falha na conexão");
 			
-			String sql = "UPDATE produto"		+
+			}
+			
+			String sql = "UPDATE produto 	"  		+ 
+			
+						 "SET nome 		=  		?,"	 	+
+						 "descricao   	= 		?,"		+
+						 "preco   		= 		? "	 	+
+						 
+						 "WHERE id 		= 		?"	 	;
 					
-							  "SET nome		=?,"	+
-							  
-							  "descricao	=?,"	+
-							  "preco		=?"		+
-							  
-							  "WHERE id		=?"		;
 			
 			try {
-			
-			
 				PreparedStatement st = conn.prepareStatement(sql);
-				
 				st.setString(1, p.getNome());
 				st.setString(2, p.getDescricao());
 				st.setDouble(3, p.getPreco());
-				
 				st.setInt(4, p.getId());
 				
+				
 				st.execute();
-				System.out.println("Usuário atualizado");
-				
-				st.close();
+				System.out.println("Produto atualizado");
 				Db.Desconecta(conn);
-				
 				return true;
 				
-			}catch (Exception e) {
+			}catch(Exception e) {
+				System.err.println("Erro durante cadastro");
 				System.out.println(e);
 			}
 			
+			Db.Desconecta(conn);
 			return false;
 		}
-	 
 	 
 	 
 	 

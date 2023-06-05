@@ -81,12 +81,22 @@ public class UsuarioController extends HttpServlet {
 //		response.getWriter().append(usuario + "" + password);
 		
  		
+//		if(usr != null){
+//			if((usr.getUsuario().equals(usuario)) && (usr.getPassword().equals(password))){
+//				response.sendRedirect("produto.jsp");
+//			}else {
+//				response.sendRedirect("responseFailed.jsp?resp=acessar+sistema. Usuario+ou+senha+invalido");
+//
+//			}
+//			
+//		}
+//		
+		
 		if(usr != null){
-			if((usr.getUsuario().equals(usuario)) && (usr.getPassword().equals(password))){
+			if((usuario.isEmpty()) || (password.isEmpty())){
+				response.sendRedirect("responseFailed.jsp?resp=acessar+sistema. Usuario+ou+senha+invalido.");
+			}else if((usr.getUsuario().equals(usuario)) && (usr.getPassword().equals(password))) {
 				response.sendRedirect("produto.jsp");
-			}else {
-				response.sendRedirect("responseFailed.jsp?resp=acessar+sistema. Usuario+ou+senha+invalido");
-
 			}
 			
 		}

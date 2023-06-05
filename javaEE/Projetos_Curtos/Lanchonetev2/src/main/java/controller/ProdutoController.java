@@ -1,6 +1,8 @@
 package controller;
 
 import java.io.IOException;
+import java.sql.SQLException;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -39,7 +41,12 @@ public class ProdutoController extends HttpServlet {
 				break;
 				
 			case "/update":
+			try {
 				updateProduto(request, response);
+			} catch (ServletException | IOException | SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 				break;
 				
 				
@@ -86,7 +93,7 @@ public class ProdutoController extends HttpServlet {
 	}
 	
 	//UPDATE
-	public void updateProduto(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
+	public void updateProduto(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException, SQLException{
 		
 		Produto produto = new Produto(
 										Integer.parseInt(request.getParameter("id")),

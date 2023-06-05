@@ -1,3 +1,4 @@
 eclipse.preferences.version=1
-encoding//src/main/webapp/responseFailed.jsp=UTF-8
-encoding//src/main/webapp/responseSucess.jsp=UTF-8
+encoding//src/main/java/controller/UsuarioController.java=ISO-8859-1
+encoding//src/main/webapp/responseFailed.jsp=ISO-8859-1
+encoding//src/main/webapp/responseSucess.jsp=ISO-8859-1

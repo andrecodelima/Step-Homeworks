@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
     
 <% String resp = request.getParameter("resp"); %>
     
@@ -21,7 +21,7 @@
 
 <title>Response</title>
 </head>
-<body onload="retornarPaginaLogar()">
+<body onload="retornarPagina()">
 	
 	<!-- NAVBAR -->
 	
@@ -29,7 +29,7 @@
 		<nav class="navbar navbar-expand-lg" id="navbar">
 			<div class="container-fluid">
 			
-				<a class="navbar-brand" href="index.html">LimaLanches</a>
+				<a class="navbar-brand" href="index.html">Lima Lanches</a>
 				
 				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" 	aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
@@ -56,8 +56,9 @@
 
 		<section class="box-failed">
 			 <div class="text-warning" role="status">
+						 Falha ao <%=resp%><br>
 				  <span class="visually">Loading...</span>
-				   Falha ao <%=resp%>
+				   
 			</div>
 			
 		</section>
