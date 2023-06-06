@@ -2,24 +2,24 @@ package model;
 
 import java.time.LocalDate;
 
-public class Vendas {
+public class Venda {
 	
 	private int id;
-	private LocalDate data;
+	private LocalDate datahora;
 	private boolean entrega;
 	
-	public Vendas() {}
+	public Venda() {}
 
-	public Vendas(LocalDate data, boolean entrega) {
+	public Venda(LocalDate data, boolean entrega) {
 		super();
-		this.data = data;
+		this.datahora = data;
 		this.entrega = entrega;
 	}
 
-	public Vendas(int id, LocalDate data, boolean entrega) {
+	public Venda(int id, LocalDate data, boolean entrega) {
 		super();
 		this.id = id;
-		this.data = data;
+		this.datahora = data;
 		this.entrega = entrega;
 	}
 
@@ -32,11 +32,11 @@ public class Vendas {
 	}
 
 	public LocalDate getData() {
-		return data;
+		return datahora;
 	}
 
 	public void setData(LocalDate data) {
-		this.data = data;
+		this.datahora = data;
 	}
 
 	public boolean isEntrega() {
