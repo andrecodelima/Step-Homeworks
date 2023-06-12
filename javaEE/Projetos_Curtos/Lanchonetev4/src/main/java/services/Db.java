@@ -33,7 +33,7 @@ public class Db {
 	}
 	
 	
-	public static void Unconect(Connection conn) throws SQLException {
+	public static void Disconnect(Connection conn) throws SQLException {
 		
 		conn.close();
 		
