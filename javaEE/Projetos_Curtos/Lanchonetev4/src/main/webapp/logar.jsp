@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,7 +16,7 @@
 
 <link rel="stylesheet" href="./static/css/style.css">
 
-<title>Página Inicial</title>
+<title>Login</title>
 </head>
 <body>
 	
@@ -49,12 +51,32 @@
 	</header>
 	<main>
 
-		<section class="box-acesso">
+		<section class="box-login">
 			 
-			<h1>Bem vindo ao Lima Lanches - V4.0</h1>
-			<hr>
+			<div class="col-md-6 login-form-2">
+              
+                  <form class="form-login" action="logar">
+                    <h3>Login</h3>
+                        <div class="form-group">
+                            <input type="text" name="inputUsuario" class="form-control" placeholder="User*"/>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" name="inputPassword" class="form-control" placeholder="Password*"/>
+                        </div>
+                        <div class="form-group">
+                        
+                            <input type="submit" name="submit" class="btnLogin" value="Login"/>
+                         <a href="cadastroUser.html"><input type="button" name="cadastro" class="btnLogin" value="Cadastro"/></a>   
+                            
+                        </div>
+                        
+                        
+                        <div class="form-group">                  
 
-			<a href="acesso" class="btn btn-primary" title="Acessar sistema">Acessar</a> <!-- controller url -->
+                            <a href="#" class="btnForgetPwd" value="Login"><h7>Forget Password?</h7></a>
+                        </div>
+                    </form>
+                </div>
 		</section>
 
 	</main>

@@ -1,3 +1,8 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+    
+<% String resp = request.getParameter("resp"); %>
+    
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,9 +19,9 @@
 
 <link rel="stylesheet" href="./static/css/style.css">
 
-<title>Página Inicial</title>
+<title>Response</title>
 </head>
-<body>
+<body onload="retornarPagina()">
 	
 	<!-- NAVBAR -->
 	
@@ -49,12 +54,16 @@
 	</header>
 	<main>
 
-		<section class="box-acesso">
+		<section class="box-sucess">
 			 
-			<h1>Bem vindo ao Lima Lanches - V4.0</h1>
-			<hr>
+			<span>Sucesso ao <%=resp%></span> 
 
-			<a href="acesso" class="btn btn-primary" title="Acessar sistema">Acessar</a> <!-- controller url -->
+			<div> <button class="btn btn" type="button" disabled >
+				<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+				Retornando à pagina Inicial
+			  </button></div>
+			
+
 		</section>
 
 	</main>

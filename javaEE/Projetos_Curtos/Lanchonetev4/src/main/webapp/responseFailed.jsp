@@ -1,3 +1,8 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+    
+<% String resp = request.getParameter("resp"); %>
+    
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,9 +19,9 @@
 
 <link rel="stylesheet" href="./static/css/style.css">
 
-<title>Página Inicial</title>
+<title>Response</title>
 </head>
-<body>
+<body onload="retornarPagina()">
 	
 	<!-- NAVBAR -->
 	
@@ -49,12 +54,13 @@
 	</header>
 	<main>
 
-		<section class="box-acesso">
-			 
-			<h1>Bem vindo ao Lima Lanches - V4.0</h1>
-			<hr>
-
-			<a href="acesso" class="btn btn-primary" title="Acessar sistema">Acessar</a> <!-- controller url -->
+		<section class="box-failed">
+			 <div class="text-warning" role="status">
+						 Falha ao <%=resp%><br>
+				  <span class="visually">Loading...</span>
+				   
+			</div>
+			
 		</section>
 
 	</main>
