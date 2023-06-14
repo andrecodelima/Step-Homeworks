@@ -90,7 +90,7 @@ public class ProdutoImplementation {
 				
 				st.setInt(1, id);
 				st.execute();
-				System.out.println("Usuário deletado");
+				System.out.println("Produto deletado");
 				
 				Db.Desconecta(conn);
 				st.close();

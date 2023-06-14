@@ -44,7 +44,6 @@ public class ProdutoController extends HttpServlet {
 			try {
 				updateProduto(request, response);
 			} catch (ServletException | IOException | SQLException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 				break;

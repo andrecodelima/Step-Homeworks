@@ -1,6 +1,7 @@
 package controller;
 
 import java.io.IOException;
+import java.sql.SQLException;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -12,7 +13,7 @@ import model.Produto;
 import services.ProdutoServiceImplementation;
 
 
-@WebServlet(urlPatterns = {"/main", "/insert"})
+@WebServlet(urlPatterns = {"/main", "/insert", "/delete", "/update"})
 public class ProdutoController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -23,34 +24,55 @@ public class ProdutoController extends HttpServlet {
     }
 
 
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		 String address = request.getServletPath();
-		 
-		 switch (address) {
-		 
-			case "/main": {
-				Product(request, response);
-				break;
-			}
-			
-			case "/insert":{
-				NewProduct(request, response);
-				break;
-			}
-			
-			default:
-				throw new IllegalArgumentException("Unexpected value: " + address);
-			}
-	}
+    	String address = request.getServletPath();
+    		 
+    	switch (address) {
+    		 
+    		case "/main": {
+    			product(request, response);
+    			break;
+    		}
+    			
+    		case "/insert": {
+    			newProduct(request, response);
+    			break;
+    		}
+    		
+    		case "/delete": {
+    			delProduct(request, response);
+    			break;
+    		}
+    			
+    		case "/update": {
+    			try {
+					updateProduto(request, response);
+				} catch (ServletException | IOException | SQLException e) {
+					 
+					e.printStackTrace();
+				}
+    			break;
+    		}
+    			
+    		default: {
+    			response.sendError(HttpServletResponse.SC_NOT_FOUND);
+    			break;
+    		}
+    			 
+    	}
 
-
-	protected void Product(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    }
+	
+	//Catálogo
+    public void product(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		  response.sendRedirect("produto.jsp");
 		 
 	}
 	
-	protected void NewProduct(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	
+	//Novo Produto
+	public void newProduct(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		 Produto produto = new Produto(
 				 						request.getParameter("inputNome"),
 				 						request.getParameter("inputDescricao"),
@@ -63,6 +85,39 @@ public class ProdutoController extends HttpServlet {
 		 }else {
 			 
 			 response.getWriter().append("Falha no cadastro");
+		 }
+		 
+	}
+	
+	
+	public void delProduct(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	
+		if(ProdutoServiceImplementation.delProduto(Integer.parseInt(request.getParameter("id")))) {
+			response.sendRedirect("responseSucess.jsp?resp=deletar+produto");
+
+		}else{
+			
+			response.sendRedirect("responseFailed.jsp?resp=deletar+produto");
+
+		}
+	}
+	
+	//Update
+	public void updateProduto(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException, SQLException {
+		 Produto produto = new Produto(
+				 						Integer.parseInt(request.getParameter("id")),
+				 						request.getParameter("inputNome"),
+				 						request.getParameter("inputDescricao"),
+				 						Double.parseDouble(request.getParameter("inputPreco"))
+				 						
+				 					);  
+		
+		 if(ProdutoServiceImplementation.updateProduct(produto)) {
+				response.sendRedirect("responseSucess.jsp?resp=editar+produto");
+		 
+		 }else {
+			 
+				response.sendRedirect("responseFailed.jsp?resp=editar+produto");
 		 }
 		 
 	}
