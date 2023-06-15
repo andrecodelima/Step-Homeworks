@@ -48,7 +48,7 @@
 						
 						<li class="nav-item"><a class="nav-link" href="#">Clientes</a></li>
 						
-						<li class="nav-item"><a class="nav-link" href="#">Venda de Balcão</a></li>
+						<li class="nav-item"><a class="nav-link" href="venda.jsp">Venda de Balcão</a></li>
 						
 						<li class="nav-item"><a class="nav-link" href="#">Entrega</a></li>
 						 

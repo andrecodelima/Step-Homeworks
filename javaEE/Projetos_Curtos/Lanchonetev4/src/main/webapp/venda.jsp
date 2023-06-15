@@ -1,4 +1,47 @@
+
+<%@page import="services.VendaProdutoServiceImplamentation"%>
+<%@page import="model.VendaProduto"%>
+<%@page import="java.util.ArrayList"%>
+<%@ page import="model.Venda" %>> 
+<%@ page import="services.VendaServiceImplementation"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+ 
+ <%
+ 	String p = request.getParameter("idVenda");
+ 	int idVenda;
+ 	
+ 	if(p == null){
+ 		
+ 		VendaServiceImplementation.insert(new Venda());
+ 		idVenda = VendaServiceImplementation.getUltimaVenda();
+ 	
+ 	}else{
+ 		idVenda = Integer.parseInt(p);
+ 	}
+ 	
+ 	Venda v = VendaServiceImplementation.getId(idVenda);
+ 	
+ 	ArrayList<VendaProduto> produtosVendidos = VendaProdutoServiceImplamentation.getPorVenda(idVenda);
+ 	
+ 	String produtos = "";
+ 	for(VendaProduto produto : produtosVendidos){
+ 		
+ 		produtos += 
+ 				"<tr>"	+
+ 				
+ 						"<td>" + produto.getIdProduto() 	+ "<td>" + 
+ 						"<td>" + produto.getQuantidade() 	+ "<td>" + 
+ 						"<td>" + produto.getPreco() 		+ "<td>" +
+ 						
+ 				"</tr>";
+ 	}
+ 	
+ 	
+ 
+ %>
   
+ 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,7 +58,7 @@
 
 <link rel="stylesheet" href="./static/css/style.css">
 
-<title>Cadastro</title>
+<title>Venda</title>
 </head>
 <body>
 
@@ -39,7 +82,7 @@
 						
 						<li class="nav-item"><a class="nav-link" href="#">Clientes</a></li>
 						
-						<li class="nav-item"><a class="nav-link" href="venda.jsp">Venda de Balcão</a></li>
+						<li class="nav-item"><a class="nav-link" href="venda.jsp">Venda de Balc�o</a></li>
 						
 						<li class="nav-item"><a class="nav-link" href="#">Entrega</a></li>
 						 
@@ -54,7 +97,7 @@
 
 		<section class="box-produtos">
 
-			<h1>Cadastro de Produtos</h1>
+			<h1>Venda de Produtos</h1>
 			<hr>
 
 			<a href="cadastro.html" class="btn btn-outline-info"
@@ -64,38 +107,50 @@
 
 			<table class="box-produtos" id="tabelaProduto">
 
-				<form name="formProduto" action="insert">
+				<form name="formProduto" action="insertVendaProduto">
 
 					<section class="table" id="table">
 
 						<div class="row">
+						
+							<div>
+								id da venda: <%=v.getId() %>
+								Data: <%=v.getDataHora() %>
+								
+							</div>
+							
+											
+				    	<table>
+				    		<thead>
+				    			<tr>
+				    				<th>ID Produto</th><th>Quantidade</th><th>Pre�o R$</th>
+				    			</tr>
+				    		</thead>
+				    		<tbody><%=produtos%></tbody>
+				    	</table>
+											<div class="col-md-4">
 
+								<input type="text" class="form-control" name="inputIdProduto" id="inputIdProduto" placeholder="Nome do produto" maxlength="45">
+								<label for="inputIdProduto">ID do Produto</label>
+
+							</div>
+							
+							
 							<div class="col-md-4">
 
-								<input type="text" class="form-control" name="inputNome" id="inputNome" placeholder="Nome do produto" maxlength="45">
-								<label for="inputNome">Produto</label>
+								<input type="text" class="form-control" name="inputQuantidade" id="inputQuantidade" placeholder="Nome do produto" maxlength="45">
+								<label for="inputNome">Quantidade</label>
 
 							</div>
 
-							<div class="col-md-5">
-
-								<input type="text" class="form-control" name="inputDescricao" id="inputDescricao" placeholder="Descrição do produto" maxlength="50">
-								<label for="inputDescricao">Descrição</label>
-								
-							</div>
-
-							<div class="col-md-2">
-
-								<input type="text" class="form-control" name="inputPreco" id="inputPreco" placeholder="R$" maxlength="15">
-								<label for="inputPreco">Preço</label>
-								
-							</div>
-
+							 
+							 <input type="hidden" class="form-control" name="idVenda" value="<%=v.getId()%>">
+							 
 						</div>
 
 						<div class="row">
 
-							<input class='button-cadastro' type="button" value="Cadastrar" onclick="validaProduto()">
+							<input class='button-cadastro' type="button" value="Cadastrar">
 
 						</div>
 
