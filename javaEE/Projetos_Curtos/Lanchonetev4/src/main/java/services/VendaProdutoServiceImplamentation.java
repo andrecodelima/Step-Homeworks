@@ -74,13 +74,14 @@ public class VendaProdutoServiceImplamentation {
 												  ));
 					}
 					
-			
+					Db.Disconnect(conn);
+					return list;
 		}catch (Exception e) {
 			 
 		}
 		
 		
-		return null;
+		return new ArrayList<VendaProduto>();
 	}
 }
 

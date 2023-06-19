@@ -106,57 +106,59 @@
 
 
 			<table class="box-produtos" id="tabelaProduto">
-
-				<form name="formProduto" action="insertVendaProduto">
-
-					<section class="table" id="table">
+				<section class="table" id="table">
 
 						<div class="row">
 						
 							<div>
 								id da venda: <%=v.getId() %>
-								Data: <%=v.getDataHora() %>
-								
+								Data: <%=v.getDataHora() %>	
 							</div>
 							
-											
+						</div>	
+										
 				    	<table>
 				    		<thead>
 				    			<tr>
 				    				<th>ID Produto</th><th>Quantidade</th><th>Preço R$</th>
 				    			</tr>
 				    		</thead>
+				    		
 				    		<tbody><%=produtos%></tbody>
+				    		
 				    	</table>
-											<div class="col-md-4">
-
-								<input type="text" class="form-control" name="inputIdProduto" id="inputIdProduto" placeholder="Nome do produto" maxlength="45">
+				   
+				   	<form name="formProduto" action="insertVendaProduto">
+				    	
+				    	<div class=row>
+							<div class="col-md-4">
 								<label for="inputIdProduto">ID do Produto</label>
+								<input type="text" class="form-control" name="inputIdProduto" id="inputIdProduto" placeholder="Id do produto" maxlength="45">
 
 							</div>
 							
 							
 							<div class="col-md-4">
-
-								<input type="text" class="form-control" name="inputQuantidade" id="inputQuantidade" placeholder="Nome do produto" maxlength="45">
 								<label for="inputNome">Quantidade</label>
+								<input type="text" class="form-control" name="inputQuantidade" id="inputQuantidade" placeholder="Quantidade" maxlength="45">
 
 							</div>
 
-							 
+						</div>
+						
+ 							 
 							 <input type="hidden" class="form-control" name="idVenda" value="<%=v.getId()%>">
-							 
-						</div>
-
+ 
 						<div class="row">
-
-							<input class='button-cadastro' type="button" value="Cadastrar">
-
+							<div class="col-md-2">
+								<input class='btn btn-outline-dark button-cadastro' type="submit" value="Próximo Produto">
+							</div>
 						</div>
 
-					</section>
-
-				</form>
+					</form>
+					
+				</section>
+			</section>
 
 			</table>
 	</main>

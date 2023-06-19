@@ -13,7 +13,7 @@ import services.ProdutoServiceImplementation;
 import services.VendaProdutoServiceImplamentation;
 
  
-@WebServlet("/VendaProdutoController")
+@WebServlet(urlPatterns = {"/insertVendaProduto"})
 public class VendaProdutoController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -23,9 +23,15 @@ public class VendaProdutoController extends HttpServlet {
      }
  
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
- 		response.getWriter().append("Served at: ").append(request.getContextPath());
+		String action = request.getServletPath();
+		
+		switch(action) {
+			case "/insertVendaProduto":
+				func_VendaProduto(request,response);
+			break;
+		}
 	}
-
+	
  
 	protected void func_VendaProduto(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		 
