@@ -2,44 +2,50 @@
 <%@page import="services.VendaProdutoServiceImplamentation"%>
 <%@page import="model.VendaProduto"%>
 <%@page import="java.util.ArrayList"%>
-<%@ page import="model.Venda" %>> 
+<%@ page import="model.Venda" %>
 <%@ page import="services.VendaServiceImplementation"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
  
- <%
- 	String p = request.getParameter("idVenda");
- 	int idVenda;
- 	
- 	if(p == null){
- 		
- 		VendaServiceImplementation.insert(new Venda());
- 		idVenda = VendaServiceImplementation.getUltimaVenda();
- 	
- 	}else{
- 		idVenda = Integer.parseInt(p);
- 	}
- 	
- 	Venda v = VendaServiceImplementation.getId(idVenda);
- 	
- 	ArrayList<VendaProduto> produtosVendidos = VendaProdutoServiceImplamentation.getPorVenda(idVenda);
- 	
- 	String produtos = "";
- 	for(VendaProduto produto : produtosVendidos){
- 		
- 		produtos += 
- 				"<tr>"	+
- 				
- 						"<td>" + produto.getIdProduto() 	+ "<td>" + 
- 						"<td>" + produto.getQuantidade() 	+ "<td>" + 
- 						"<td>" + produto.getPreco() 		+ "<td>" +
- 						
- 				"</tr>";
- 	}
- 	
- 	
- 
- %>
+<%
+    String p = request.getParameter("idVenda");
+    int idVenda;
+    
+    if(p == null){
+        
+        VendaServiceImplementation.insert(new Venda());
+        idVenda = VendaServiceImplementation.getUltimaVenda();
+    
+    }else{
+        idVenda = Integer.parseInt(p);
+    }
+    
+    Venda v = VendaServiceImplementation.getId(idVenda);
+    ArrayList<VendaProduto> lista = VendaProdutoServiceImplamentation.getByVenda(idVenda);
+    
+    String linhas = "";
+    
+    if(lista.isEmpty()){
+    	linhas += 
+                "<tr>"  +
+                        "<td> Não há produtos vendidos</td>" +                
+                "</tr>";
+        } else {
+        	
+        	for(VendaProduto produtos : lista){
+        		
+        		linhas += "<tr>"  														+
+        						
+        						"<td>" + produtos.getNomeProduto() 	+ 		"</td>"		+
+        						"<td>" + produtos.getQuantidade()	+ 		"</td>"		+
+        						"<td>" + produtos.getPreco() 		+ 		"</td>"		+
+        						
+        				 "</tr>"														;
+        	}
+        	
+        }
+     
+%>
   
  
 <!DOCTYPE html>
@@ -112,20 +118,20 @@
 						
 							<div>
 								id da venda: <%=v.getId() %>
+							</div>
+							<div>
 								Data: <%=v.getDataHora() %>	
 							</div>
 							
 						</div>	
 										
-				    	<table>
+				 		<table>
 				    		<thead>
 				    			<tr>
 				    				<th>ID Produto</th><th>Quantidade</th><th>Preço R$</th>
 				    			</tr>
 				    		</thead>
-				    		
-				    		<tbody><%=produtos%></tbody>
-				    		
+				    		<tbody><%=linhas%></tbody>
 				    	</table>
 				   
 				   	<form name="formProduto" action="insertVendaProduto">
@@ -151,7 +157,7 @@
  
 						<div class="row">
 							<div class="col-md-2">
-								<input class='btn btn-outline-dark button-cadastro' type="submit" value="Próximo Produto">
+								<input class='btn btn-outline-dark button-cadastro' type="submit" value="Cadastrar">
 							</div>
 						</div>
 

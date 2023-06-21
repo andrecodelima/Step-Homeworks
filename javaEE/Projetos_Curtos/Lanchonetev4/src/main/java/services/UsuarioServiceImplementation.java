@@ -17,20 +17,22 @@ public class UsuarioServiceImplementation {
 		
 		try {
 			
-			String sql = "INSERT INTO (usuario, password) VALUES (?,?)";
+			String sql = "INSERT INTO  usuario(usuario, password) VALUES (?,?)";
 			PreparedStatement st = conn.prepareStatement(sql);
 			
 			st.setString(1, usuario.getUsuario());
 			st.setString(2, usuario.getPassword());
 			
 			st.execute();
+     		System.out.println("Cadastro realizado");
+
 			st.close();
 			
 			return true;
 			
 			
 		}catch (Exception e) {
-			System.out.println("Falha no cadastro");
+			System.out.println("Falha no cadastro" + e);
 		}
 		
 		return false;

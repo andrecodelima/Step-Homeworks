@@ -3,30 +3,27 @@ package model;
 public class VendaProduto {
 	
 	private int id;
+	private int idVenda;
 	private int idProduto;
 	private String nomeProduto;
-	private double preco;
-	private double quantidade;
-	private int idVenda;
+	private Double preco;
+	private Double quantidade;
 	
-	public VendaProduto() {}
-
-	public VendaProduto(int id, int idProduto, int idVenda, String nomeProduto, double preco, double quantidade) {
-		super();
+	
+	public VendaProduto(int id,int idVenda, int idProduto, String nomeProduto, Double preco, Double quantidade) {
 		this.id = id;
-		this.idProduto = idProduto;
 		this.idVenda = idVenda;
+		this.idProduto = idProduto;
 		this.nomeProduto = nomeProduto;
 		this.preco = preco;
 		this.quantidade = quantidade;
 	}
 
-	public VendaProduto(int idProduto, double preco, double quantidade, int idVenda) {
-		super();
+	public VendaProduto(int idVenda,int idProduto, Double preco, Double quantidade) {
+		this.idVenda = idVenda;
 		this.idProduto = idProduto;
 		this.preco = preco;
 		this.quantidade = quantidade;
-		this.idVenda = idVenda;
 	}
 
 	public int getId() {
@@ -35,6 +32,14 @@ public class VendaProduto {
 
 	public void setId(int id) {
 		this.id = id;
+	}
+
+	public int getIdVenda() {
+		return idVenda;
+	}
+
+	public void setIdVenda(int idVenda) {
+		this.idVenda = idVenda;
 	}
 
 	public int getIdProduto() {
@@ -53,30 +58,24 @@ public class VendaProduto {
 		this.nomeProduto = nomeProduto;
 	}
 
-	public double getPreco() {
+	public Double getPreco() {
 		return preco;
 	}
 
-	public void setPreco(double preco) {
+	public void setPreco(Double preco) {
 		this.preco = preco;
 	}
 
-	public double getQuantidade() {
+	public Double getQuantidade() {
 		return quantidade;
 	}
 
-	public void setQuantidade(double quantidade) {
+	public void setQuantidade(Double quantidade) {
 		this.quantidade = quantidade;
 	}
 
-	public int getIdVenda() {
-		return idVenda;
-	}
 
-	public void setIdVenda(int idVenda) {
-		this.idVenda = idVenda;
-	}
-	
+	 
 	
 	
 }
