@@ -1,13 +1,4 @@
-<%@page import="model.Produto"%>
-<%@page import="services.ProdutoImplementation"%>
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="ISO-8859-1"%>
-
-
-<%
-	Produto produto = ProdutoImplementation.getId(Integer.parseInt(request.getParameter("id")));
-%>
-    
+  
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,7 +15,7 @@
 
 <link rel="stylesheet" href="./static/css/style.css">
 
-<title>Editar</title>
+<title>Cadastro</title>
 </head>
 <body>
 
@@ -35,7 +26,7 @@
 		<nav class="navbar navbar-expand-lg" id="navbar">
 			<div class="container-fluid">
 			
-				<a class="navbar-brand" href="index.html">LimaLanches</a>
+				<a class="navbar-brand" href="index.html">Lima Lanches</a>
 				
 				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" 	aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
@@ -46,9 +37,11 @@
 					
 						<li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Home</a></li>
 						
-						<li class="nav-item"><a class="nav-link" href="#">Clientes</a></li>
+						<li class="nav-item"><a class="nav-link" href="cliente.jsp">Clientes</a></li>
 						
-						<li class="nav-item"><a class="nav-link" href="#">Venda de Balcão</a></li>
+						<li class="nav-item"><a class="nav-link" href="cadastroCliente">Cadastro de Clientes</a></li>
+						
+						<li class="nav-item"><a class="nav-link" href="venda.jsp">Venda de BalcÃ£o</a></li>
 						
 						<li class="nav-item"><a class="nav-link" href="#">Entrega</a></li>
 						 
@@ -63,16 +56,15 @@
 
 		<section class="box-produtos">
 
-			<h1>EDITAR PRODUTO</h1>
+			<h1>Cadastro de Cliente</h1>
 			<hr>
 
-			<a href="index.html" class="btn btn-outline-info"
-				title="Página inicial">Home</a>  
+			<a href="consulta.jsp" class="btn btn-outline-light" title="Consulta de clientes">Exportar</a>
 
 
 			<table class="box-produtos" id="tabelaProduto">
 
-				<form name="formProduto" action="update">
+				<form name="formProduto" action="insertClient">
 
 					<section class="table" id="table">
 
@@ -80,32 +72,42 @@
 
 							<div class="col-md-4">
 
-								<input type="text" class="form-control" name="inputNome" id="inputNome" placeholder="Nome do produto" maxlength="45" value="<%=produto.getNome()%>">
-								<label for="inputNome">Produto</label>
+								<input type="text" class="form-control" name="inputNome" id="inputNome" placeholder="Nome" maxlength="45">
+								<label for="inputNome">Nome</label>
 
-							</div>
-
-							<div class="col-md-5">
-
-								<input type="text" class="form-control" name="inputDescricao" id="inputDescricao" placeholder="Descrição do produto" maxlength="50" value="<%=produto.getDescricao()%>">
-								<label for="inputDescricao">Descrição</label>
-								
 							</div>
 
 							<div class="col-md-2">
 
-								<input type="text" class="form-control" name="inputPreco" id="inputPreco" placeholder="R$" maxlength="15" value="<%=produto.getPreco()%>">
-								<label for="inputPreco">Preço</label>
+								<input type="text" class="form-control" name="inputTelefone" id="inputTelefone" placeholder="00-0000-0000" maxlength="20">
+								<label for="inputTelefone">Telefone</label>
 								
-								<input type="hidden" name="id" value="<%=produto.getId()%>">
+							</div>
+						</div>
+
+
+						<div class="row">
+							
+							<div class="col-md-4">
+
+								<input type="text" class="form-control" name="inputEndereco" id="inputEndereco" placeholder="EndereÃ§o" maxlength="100">
+								<label for="inputEndereco">EndereÃ§o</label>
+								
+							</div>
+							
+							<div class="col-md-3">
+
+								<input type="text" class="form-control" name="inputEmail" id="inputEmail" placeholder="nome@exemplo.com" maxlength="100">
+								<label for="inputEmail">E-mail</label>
 								
 							</div>
 
 						</div>
 
+ 
 						<div class="row">
 
-							<input class='button-cadastro' type="submit" value="Salvar">
+							<input class='button-cadastro' type="button" value="Cadastrar" onclick="validaCliente()">
 
 						</div>
 

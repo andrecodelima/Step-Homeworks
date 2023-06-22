@@ -15,7 +15,11 @@
 	crossorigin="anonymous">
 
 <link rel="stylesheet" href="./static/css/style.css">
-
+<style>
+	li{
+		display:none;
+	}
+</style>
 <title>Login</title>
 </head>
 <body>

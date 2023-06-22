@@ -1,3 +1,8 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+    
+<% String resp = request.getParameter("resp"); %>
+    
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,9 +19,9 @@
 
 <link rel="stylesheet" href="./static/css/style.css">
 
-<title>Página Inicial</title>
+<title>Response</title>
 </head>
-<body>
+<body onload="retornarPaginaLogar()">
 	
 	<!-- NAVBAR -->
 	
@@ -49,24 +54,16 @@
 	</header>
 	<main>
 
-		<section class="box-login">
+		<section class="box-sucess">
 			 
-			<div class="col-md-6 login-form-2">
-              
-                  <form class="form-login" action="insertUser">
-                    <h3>Cadastro</h3>
-                        <div class="form-group">
-                            <input type="text" name="inputUsuario" class="form-control" placeholder="Your Email *">
-                        </div>
-                        <div class="form-group">
-                            <input type="password" name="inputPassword" class="form-control" placeholder="Your Password *">
-                        </div>
-                        <div class="form-group">
-                            <input type="submit" class="btn btn-primary" value="Cadastrar" />
-                        </div>
-                         
-                    </form>
-                </div>
+			<span>Sucesso ao <%=resp%></span> 
+
+			<div> <button class="btn btn" type="button" disabled >
+				<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+				Retornando à pagina Inicial
+			  </button></div>
+			
+
 		</section>
 
 	</main>

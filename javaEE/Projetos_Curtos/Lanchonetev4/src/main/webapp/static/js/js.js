@@ -31,6 +31,35 @@ function validaProduto(){
     formProduto.submit();
 }
 
+
+function validaCliente(){
+    let nome    	= formProduto.inputNome.value;
+    let descricao   = formProduto.inputTelefone.value;
+
+    //Nome
+    if(nome == ""){
+        alert("Campo nome vazio!")  
+        formProduto.inputNome.focus();
+        return;  
+     }
+
+    //Telefone
+    if(descricao == ""){
+        alert("Campo telefone vazio")
+        formProduto.inputTelefone.focus();
+        return;
+    }
+
+    
+    formProduto.submit();
+}
+
+function limparForm(){
+	 document.getElementById('formProduto').reset();
+}
+	
+
+
 function retornarPagina(){
     setTimeout(() =>{
         window.location.href="main";
@@ -45,6 +74,14 @@ function retornarPaginaLogar(){
 
 function erroSenha(){
 	alert("Senha ou usuário incorreto! Tente novamente")
+}
+
+function confirmaSaidaVenda(){
+	if(window.confirm("Deseja encessar a venda e sair?")){
+		window.location.href = "index.html";
+	}
+	 
+		
 }
 
 

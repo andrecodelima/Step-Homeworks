@@ -21,7 +21,7 @@
 
 <title>Response</title>
 </head>
-<body onload="retornarPagina()">
+<body onload="retornarPaginaLogar()">
 	
 	<!-- NAVBAR -->
 	

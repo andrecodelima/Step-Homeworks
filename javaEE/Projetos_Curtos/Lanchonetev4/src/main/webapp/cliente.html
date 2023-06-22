@@ -1,4 +1,3 @@
-  
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,11 +14,10 @@
 
 <link rel="stylesheet" href="./static/css/style.css">
 
-<title>Cadastro</title>
+<title>Clientes</title>
 </head>
 <body>
-
-
+	
 	<!-- NAVBAR -->
 	
 	<header>
@@ -37,9 +35,11 @@
 					
 						<li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Home</a></li>
 						
-						<li class="nav-item"><a class="nav-link" href="#">Clientes</a></li>
+						<li class="nav-item"><a class="nav-link active" href="cliente.html">Clientes</a></li>
 						
-						<li class="nav-item"><a class="nav-link" href="#">Venda de Balcão</a></li>
+						<li class="nav-item"><a class="nav-link active" href="cadastroCliente.html">Cadastro de Clientes</a></li>
+						
+						<li class="nav-item"><a class="nav-link" href="venda.jsp">Venda de Balcão</a></li>
 						
 						<li class="nav-item"><a class="nav-link" href="#">Entrega</a></li>
 						 
@@ -49,61 +49,15 @@
 			</div>
 		</nav>
 	</header>
-	
-	<main class="main-default">
+	<main>
 
-		<section class="box-produtos">
-
-			<h1>Cadastro de Produtos</h1>
+		<section class="box-acesso">
+			 
+			<h1>Área do Cliente</h1>
 			<hr>
 
-			<a href="cadastro.html" class="btn btn-outline-info"
-				title="Cadastrar novo aluno">Novo</a> <a href="consulta.jsp"
-				class="btn btn-outline-light" title="Consulta de alunos">Exportar</a>
+		</section>
 
-
-			<table class="box-produtos" id="tabelaProduto">
-
-				<form name="formProduto" action="insert">
-
-					<section class="table" id="table">
-
-						<div class="row">
-
-							<div class="col-md-4">
-
-								<input type="text" class="form-control" name="inputNome" id="inputNome" placeholder="Nome do produto" maxlength="45">
-								<label for="inputNome">Produto</label>
-
-							</div>
-
-							<div class="col-md-5">
-
-								<input type="text" class="form-control" name="inputDescricao" id="inputDescricao" placeholder="Descrição do produto" maxlength="50">
-								<label for="inputDescricao">Descrição</label>
-								
-							</div>
-
-							<div class="col-md-2">
-
-								<input type="text" class="form-control" name="inputPreco" id="inputPreco" placeholder="R$" maxlength="15">
-								<label for="inputPreco">Preço</label>
-								
-							</div>
-
-						</div>
-
-						<div class="row">
-
-							<input class='button-cadastro' type="button" value="Cadastrar" onclick="validaProduto()">
-
-						</div>
-
-					</section>
-
-				</form>
-
-			</table>
 	</main>
 
 

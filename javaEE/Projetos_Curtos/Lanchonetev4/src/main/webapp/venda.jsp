@@ -9,8 +9,8 @@
 <%@ page import="model.Venda"%>
 <%@ page import="services.VendaServiceImplementation"%>
 
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"%>
+
 
 <%
 String p = request.getParameter("idVenda");
@@ -36,18 +36,29 @@ String dataHoraFormatada = formato.format(v.getDataHora());
 
 
 String linhas = "";
+Double subtotal = 0.0;
 
 if (lista.isEmpty()) {
-	linhas += "<tr>" + "<td> Não há produtos vendidos</td>" + "</tr>";
+	linhas += "<tr>" + "<td colspan='3'> Não há produtos vendidos</td>" + "</tr>";
 } else {
 
 	for (VendaProduto produtos : lista) {
-
-		linhas += "<tr>" 					    +
+		
+		String nome			= 	produtos.getNomeProduto();
+		Double quantidade	= 	produtos.getQuantidade();
+		Double preco		= 	produtos.getPreco();
+		
+		preco = preco * quantidade;
+		
+		subtotal += preco;
+		
+		linhas += "<tr>" 					    		  +
 	
-					"<td class='produtosVendidos'>" + produtos.getNomeProduto()	 + "</td>"  + 
-					"<td class='produtosVendidos'>" + produtos.getQuantidade() 	 + "</td>"  + 
-					"<td class='produtosVendidos'>" + produtos.getPreco() 		 + "</td>"  +
+					"<td class='produtosVendidos Dados'>" + nome 						+ "</td>"  + 
+					"<td class='produtosVendidos Dados'>" + quantidade 	 				+ "</td>"  + 
+					"<td class='produtosVendidos Dados'>" + produtos.getPreco()	 		+ "</td>"  +
+					
+					"<td class='produtosVendidos Dados'>" + subtotal + "</td>" 						+
 
 				"</tr>";
 	}
@@ -71,6 +82,13 @@ if (lista.isEmpty()) {
 	crossorigin="anonymous">
 
 <link rel="stylesheet" href="./static/css/style.css">
+
+<style>
+	.Dados{
+		color:#000;	
+		font-weight:400;
+	}
+</style> 
 
 <title>Venda</title>
 </head>
@@ -99,9 +117,10 @@ if (lista.isEmpty()) {
 							aria-current="page" href="index.html">Home</a></li>
 
 						<li class="nav-item"><a class="nav-link" href="#">Clientes</a></li>
+						
+						<li class="nav-item"><a class="nav-link active" href="cadastroCliente.html">Cadastro de Clientes</a></li>
 
-						<li class="nav-item"><a class="nav-link" href="venda.jsp">Venda
-								de Balcão</a></li>
+						<li class="nav-item"><a class="nav-link" href="venda.jsp">Venda de Balcão</a></li>
 
 						<li class="nav-item"><a class="nav-link" href="#">Entrega</a></li>
 
@@ -146,6 +165,8 @@ if (lista.isEmpty()) {
 								<th>Produto</th>
 								<th>Quantidade</th>
 								<th>Preço R$</th>
+								<th>Subtotal</th>
+								
 							</tr>
 						</thead>
 						<tbody><%=linhas%></tbody>
@@ -179,6 +200,17 @@ if (lista.isEmpty()) {
 								<input class='btn btn-success'
 									type="button" value="Cadastrar" onclick="validaVenda()">
 							</div>
+							
+							<div class="col-md-2">
+								<input class='btn btn-secondary'
+									type="button" value="Finalizar Venda" onclick="confirmaSaidaVenda()">
+							</div>
+							
+							<div class="col-md-2">
+								<input class='btn btn-warning'
+									type="button" value="Limpar" onclick="limparForm()">
+							</div>
+							
 						</div>
 					</form>
 

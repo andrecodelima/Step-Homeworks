@@ -130,7 +130,7 @@ main{
     border: 2px solid #fdfdfdb0;
     border-radius: 7px;
     background-color: #1e9715de;
-    
+    color:#fff;
         
     font-weight: bold;
     
@@ -161,7 +161,11 @@ main{
     margin-top: 20px;
 }
  
-
+#formProduto .btn-secondary{
+    margin-left:-50%;
+    background-color: #d16d10;
+}
+ 
 /*RESPONSE*/
 .box-sucess{
 	width: 40%;

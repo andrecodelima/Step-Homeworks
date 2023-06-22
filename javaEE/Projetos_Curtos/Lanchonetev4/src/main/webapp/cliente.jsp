@@ -1,42 +1,55 @@
-<%@page import="java.util.ArrayList"%>
+<%@	page import="model.Cliente"%>
+<%@	page import="services.ClienteserviceImplementation"%>
+<%@	page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"%>
 
-<%@page import="services.ProdutoServiceImplementation"%>
-<%@page import="model.Produto"%>
+<%@	page import="services.ProdutoServiceImplementation"%>
+<%@	page import="model.Produto"%>
   
 <%
-
-ArrayList<Produto> lista = ProdutoServiceImplementation.getProduto();
-String line = "";
-
-if(lista.isEmpty()){
-	line = "<tr><th colspan='3'> Não há produtos cadastrados </tr></th>";
+	ArrayList<Cliente> lista = ClienteserviceImplementation.getCliente();
+	String line = "";
 	
-}else{
-	
-	for(Produto p : lista){
+	if(lista.isEmpty()){
+		line = "<tr><th colspan='3'> Não há clientes cadastrados </tr></th>";
 		
-		String nome			= p.getNome();
-		String descricao	= p.getDescricao();
-		Double preco		= p.getPreco();
-		int id				= p.getId();
+	}else{
 		
-		line +=	"<tr>"			+
+		for(Cliente c : lista){
 			
-					"<td class='Dados'>"		+ nome 			+	"</td>"		+
-					"<td class='Dados'>"		+ descricao		+ 	"</td>"		+
-					"<td class='Dados'>"		+ preco			+ 	"</td>"		+
-					
-					"<td class='table-link'><a class='btn btn-outline-warning' href='edit.jsp?id=" 		+ id + "'>Editar</a></td>"  	+
-					"<td class='table-link'><a class='btn btn-outline-danger'  href='delete?id=" 	    + id + "'>Excluir</a></td>"  	+
-					
-				"</tr>";
+			String nome			= 	c.getNome();
+			String telefone		= 	c.getTelefone();
+			String email		= 	c.getEmail();
+			String endereco		= 	c.getEndereco();
+			
+			int id				= 	c.getId();
+			
+			
+			line +=	"<tr>"		+
+			
+						"<td class='Dados'>"	+	nome		+		"</td>"		+
+						"<td class='Dados'>"	+	telefone	+		"</td>"		+
+						"<td class='Dados'>"	+	email		+		"</td>"		+
+						"<td class='Dados'>"	+	endereco	+		"</td>"		+
+						
+						
+						"<td class='table-link'><a class='btn btn-outline-warning' href='edit.jsp?id=" 		+ id + "'>Editar</a></td>"  	+
+						"<td class='table-link'><a class='btn btn-outline-danger'  href='delete?id=" 	    + id + "'>Excluir</a></td>"  	+
+											
+					"</tr>"											;
+		}
 	}
-}
+
 
 %>
 
-    
+<style>
+	.Dados{
+		color:#3030c7;	
+		font-weight: 500;
+		
+	}
+</style>   
   
 <!DOCTYPE html>
 <html lang="en">
@@ -53,13 +66,6 @@ if(lista.isEmpty()){
 	crossorigin="anonymous">
 
 <link rel="stylesheet" href="./static/css/style.css">
-
-<style>
-	.Dados{
-		color:#000;	
-		font-weight: 600;
-	}
-</style> 
 
 <title>Produtos</title>
 </head>
@@ -99,22 +105,21 @@ if(lista.isEmpty()){
 	<main>
 		<section class="box-acesso">
 				 
-				<h1>Produtos</h1>
+				<h1>Cliente</h1>
 				<hr>
 				
 	
 		</section>
 	</main>
-	
 	<main class="main-default">
 
 		<section class="box-produtos">
 
-			<h1>Lista de Produtos</h1>
+			<h1>Lista de Clientes</h1>
 			<hr>
 
-			<a href="cadastro.html" class="btn btn-outline-info" title="Cadastrar novo produto">Novo</a> 
-			<a href="consulta.jsp" class="btn btn-outline-light" title="Consulta de produtos">Exportar</a>
+			<a href="cadastroCliente.html" class="btn btn-outline-info" title="Cadastrar novo cliente">Novo</a> 
+			<a href="#" class="btn btn-outline-light" title="Consulta de clientes">Exportar</a>
 
 
 			<table class="table-produtos" id="tabelaProduto">
@@ -122,8 +127,10 @@ if(lista.isEmpty()){
 				<thead>
 					<tr>
 						<th class="col-nome">Nome</th>
-						<th class="col-descricao">Descrição</th>
-						<th class="col-preco">Preço</th>
+						<th class="col-descricao">Telefone</th>
+						<th class="col-preco">E-mail</th>
+						<th class="col-preco">Endereço</th>
+						
 						 
 					</tr>
 				</thead>
@@ -131,7 +138,7 @@ if(lista.isEmpty()){
 
 				<tbody>
 					<tr>
-						<th><%=line %></th>
+						 <th><%=line %></th>
 					</tr>
 				</tbody>
 

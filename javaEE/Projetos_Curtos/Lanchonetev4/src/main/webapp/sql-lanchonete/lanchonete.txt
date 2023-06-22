@@ -3,7 +3,7 @@ SQL - LANCHONETE
 CREATE TABLE produto(
 	id INT PRIMARY KEY auto_increment,
     nome VARCHAR(50) NOT NULL,
-    descricacao VARCHAR(100) NOT NULL,
+    descricao VARCHAR(100) NOT NULL,
     preco DOUBLE DEFAULT 0
 );
 
