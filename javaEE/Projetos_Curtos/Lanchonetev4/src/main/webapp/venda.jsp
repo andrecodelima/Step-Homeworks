@@ -1,53 +1,61 @@
 
+<%@page import="java.text.DecimalFormat"%>
+<%@page import="java.text.SimpleDateFormat"%>
+<%@page import="java.util.ArrayList"%>
+
 <%@page import="services.VendaProdutoServiceImplamentation"%>
 <%@page import="model.VendaProduto"%>
 <%@page import="java.util.ArrayList"%>
-<%@ page import="model.Venda" %>
+<%@ page import="model.Venda"%>
 <%@ page import="services.VendaServiceImplementation"%>
+
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
- 
+	pageEncoding="ISO-8859-1"%>
+
 <%
-    String p = request.getParameter("idVenda");
-    int idVenda;
-    
-    if(p == null){
-        
-        VendaServiceImplementation.insert(new Venda());
-        idVenda = VendaServiceImplementation.getUltimaVenda();
-    
-    }else{
-        idVenda = Integer.parseInt(p);
-    }
-    
-    Venda v = VendaServiceImplementation.getId(idVenda);
-    ArrayList<VendaProduto> lista = VendaProdutoServiceImplamentation.getByVenda(idVenda);
-    
-    String linhas = "";
-    
-    if(lista.isEmpty()){
-    	linhas += 
-                "<tr>"  +
-                        "<td> N„o h· produtos vendidos</td>" +                
-                "</tr>";
-        } else {
-        	
-        	for(VendaProduto produtos : lista){
-        		
-        		linhas += "<tr>"  														+
-        						
-        						"<td>" + produtos.getNomeProduto() 	+ 		"</td>"		+
-        						"<td>" + produtos.getQuantidade()	+ 		"</td>"		+
-        						"<td>" + produtos.getPreco() 		+ 		"</td>"		+
-        						
-        				 "</tr>"														;
-        	}
-        	
-        }
-     
+String p = request.getParameter("idVenda");
+int idVenda;
+
+
+
+if (p == null) {
+
+	VendaServiceImplementation.insert(new Venda());
+	idVenda = VendaServiceImplementation.getUltimaVenda();
+
+} else {
+	idVenda = Integer.parseInt(p);
+}
+
+Venda v = VendaServiceImplementation.getId(idVenda);
+ArrayList<VendaProduto> lista = VendaProdutoServiceImplamentation.getByVenda(idVenda);
+
+//Formata√ß√£o Data e Hora
+SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+String dataHoraFormatada = formato.format(v.getDataHora());
+
+
+String linhas = "";
+
+if (lista.isEmpty()) {
+	linhas += "<tr>" + "<td> N√£o h√° produtos vendidos</td>" + "</tr>";
+} else {
+
+	for (VendaProduto produtos : lista) {
+
+		linhas += "<tr>" 					    +
+	
+					"<td class='produtosVendidos'>" + produtos.getNomeProduto()	 + "</td>"  + 
+					"<td class='produtosVendidos'>" + produtos.getQuantidade() 	 + "</td>"  + 
+					"<td class='produtosVendidos'>" + produtos.getPreco() 		 + "</td>"  +
+
+				"</tr>";
+	}
+
+}
 %>
-  
- 
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -70,35 +78,40 @@
 
 
 	<!-- NAVBAR -->
-	
+
 	<header>
 		<nav class="navbar navbar-expand-lg" id="navbar">
 			<div class="container-fluid">
-			
+
 				<a class="navbar-brand" href="index.html">Lima Lanches</a>
-				
-				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" 	aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+
+				<button class="navbar-toggler" type="button"
+					data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+					aria-controls="navbarNavDropdown" aria-expanded="false"
+					aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
 				</button>
-				
+
 				<div class="collapse navbar-collapse" id="navbarNavDropdown">
 					<ul class="navbar-nav">
-					
-						<li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Home</a></li>
-						
+
+						<li class="nav-item"><a class="nav-link active"
+							aria-current="page" href="index.html">Home</a></li>
+
 						<li class="nav-item"><a class="nav-link" href="#">Clientes</a></li>
-						
-						<li class="nav-item"><a class="nav-link" href="venda.jsp">Venda de Balc„o</a></li>
-						
+
+						<li class="nav-item"><a class="nav-link" href="venda.jsp">Venda
+								de Balc√£o</a></li>
+
 						<li class="nav-item"><a class="nav-link" href="#">Entrega</a></li>
-						 
+
 					</ul>
 				</div>
-				
+
 			</div>
 		</nav>
 	</header>
-	
+
 	<main class="main-default">
 
 		<section class="box-produtos">
@@ -114,59 +127,67 @@
 			<table class="box-produtos" id="tabelaProduto">
 				<section class="table" id="table">
 
-						<div class="row">
-						
-							<div>
-								id da venda: <%=v.getId() %>
-							</div>
-							<div>
-								Data: <%=v.getDataHora() %>	
-							</div>
-							
-						</div>	
-										
-				 		<table>
-				    		<thead>
-				    			<tr>
-				    				<th>ID Produto</th><th>Quantidade</th><th>PreÁo R$</th>
-				    			</tr>
-				    		</thead>
-				    		<tbody><%=linhas%></tbody>
-				    	</table>
-				   
-				   	<form name="formProduto" action="insertVendaProduto">
-				    	
-				    	<div class=row>
-							<div class="col-md-4">
-								<label for="inputIdProduto">ID do Produto</label>
-								<input type="text" class="form-control" name="inputIdProduto" id="inputIdProduto" placeholder="Id do produto" maxlength="45">
+					<div class="row">
+
+						<div>
+							id da venda:
+							<%=v.getId()%>
+						</div>
+						<div>
+							Data:
+							<%=dataHoraFormatada%>
+						</div>
+
+					</div>
+
+					<table id="tableVendaProduto">
+						<thead>
+							<tr>
+								<th>Produto</th>
+								<th>Quantidade</th>
+								<th>Pre√ßo R$</th>
+							</tr>
+						</thead>
+						<tbody><%=linhas%></tbody>
+					</table>
+
+
+				<form name="formVendaProduto" action="insertVendaProduto" id="formProduto">
+						<div class=row>
+							<div class="col-md-3">
+								<label for="inputIdProduto">ID do Produto</label> <input
+									type="text" class="form-control" name="inputIdProduto"
+									id="inputIdProduto" placeholder="Id do produto" maxlength="45">
 
 							</div>
-							
-							
-							<div class="col-md-4">
-								<label for="inputNome">Quantidade</label>
-								<input type="text" class="form-control" name="inputQuantidade" id="inputQuantidade" placeholder="Quantidade" maxlength="45">
+
+
+							<div class="col-md-3">
+								<label for="inputNome">Quantidade</label> <input type="text"
+									class="form-control" name="inputQuantidade"
+									id="inputQuantidade" placeholder="Quantidade" maxlength="45">
 
 							</div>
 
 						</div>
-						
- 							 
-							 <input type="hidden" class="form-control" name="idVenda" value="<%=v.getId()%>">
- 
+
+						<input type="hidden" class="form-control" name="idVenda"
+							value="<%=v.getId()%>">
+
 						<div class="row">
 							<div class="col-md-2">
-								<input class='btn btn-outline-dark button-cadastro' type="submit" value="Cadastrar">
+								<input class='btn btn-success'
+									type="button" value="Cadastrar" onclick="validaVenda()">
 							</div>
 						</div>
-
 					</form>
-					
+
 				</section>
-			</section>
 
 			</table>
+
+		</section>
+
 	</main>
 
 

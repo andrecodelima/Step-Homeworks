@@ -46,3 +46,27 @@ function retornarPaginaLogar(){
 function erroSenha(){
 	alert("Senha ou usuário incorreto! Tente novamente")
 }
+
+
+//VALIDAÇÃO DA VENDA
+function validaVenda(){
+    let nome    		= formVendaProduto.inputIdProduto.value;
+    let quantidade   	= formVendaProduto.inputQuantidade.value;
+
+    //Nome
+    if(nome == ""){
+        alert("Insira o produto")  
+        formVendaProduto.inputIdProduto.focus();
+        return;  
+  }
+
+    //Quantidade
+    if(quantidade == ""){
+        alert("insira a Quantidade")  
+        formVendaProduto.inputQuantidade.focus();
+        return; 
+    }
+    
+    formProduto.submit();
+}
+

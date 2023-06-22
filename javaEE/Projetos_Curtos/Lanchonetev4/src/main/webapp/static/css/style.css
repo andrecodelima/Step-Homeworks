@@ -140,6 +140,27 @@ main{
 	
 }
 
+/*VENDA DE PRODUTO*/
+#tableVendaProduto{
+    margin-top: 2%;
+    background-color: #aba9a96e;
+    border-radius: 7px;
+    font-weight: bolder;
+    padding: 10px;
+ 
+}
+
+#tableVendaProduto th{
+    border: 2px solid #6a6969;
+    padding: 14px;
+    width: 234px
+
+}
+
+#formProduto .row{
+    margin-top: 20px;
+}
+ 
 
 /*RESPONSE*/
 .box-sucess{
@@ -259,4 +280,12 @@ main{
 }
 
 
+ #formProduto{
+     margin-top: 15px;
+ }
  
+ .produtosVendidos{
+    border: 2px dotted #ededed38;
+    padding: 8px;
+    text-transform: capitalize;
+ }

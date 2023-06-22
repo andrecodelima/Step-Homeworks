@@ -41,7 +41,7 @@ public class VendaProdutoController extends HttpServlet {
 		int idVenda			= Integer.parseInt(request.getParameter("idVenda"));
 		
 		VendaProdutoServiceImplamentation.insert(new VendaProduto(idVenda, idProduto, preco, quantidade));
-
+		response.sendRedirect("venda.jsp?idVenda=" + idVenda);
 	}
 
 }

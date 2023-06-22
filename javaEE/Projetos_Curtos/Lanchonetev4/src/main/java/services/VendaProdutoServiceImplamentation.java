@@ -46,14 +46,16 @@ public class VendaProdutoServiceImplamentation {
 		
 		try {
 			
-			String sql = "SELECT vendaProduto.id 			AS id, " +
-								"vendaProduto.idProduto 	AS idProduto, " +
-								"produto.nome 				AS nomeProduto, " +
-								"vendaProduto.preco 		AS preco, " + 
-								"vendaProduto.quantidade 	AS quantidade " + 
-						 "FROM vendaProduto INNER JOIN produto " +
-						 "ON vendaProduto.idProduto = produto.id " + 
-						 "WHERE vendaProduto.idVenda = " + idVenda;
+			String sql = "SELECT vendaProduto.id 			AS id, " 			+
+								"vendaProduto.idProduto 	AS idProduto, " 	+
+								"produto.nome 				AS nomeProduto, " 	+
+								"vendaProduto.preco 		AS preco, " 		+ 
+								"vendaProduto.quantidade 	AS quantidade " 	+ 
+								
+						 "FROM vendaProduto INNER JOIN produto " 				+
+						 "ON vendaProduto.idProduto = produto.id " 				+ 
+						 
+						 "WHERE vendaProduto.idVenda = " 						+ idVenda;
 			
 			Statement st = conn.createStatement();
 			
