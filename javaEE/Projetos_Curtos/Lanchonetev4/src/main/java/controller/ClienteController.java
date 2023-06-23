@@ -48,7 +48,7 @@ public class ClienteController extends HttpServlet {
  				);  
 		
 		if(ClienteserviceImplementation.insert(cliente)) {
-			response.getWriter().append("Cliente cadastrado!");
+			response.sendRedirect("responseSucessClient.jsp?resp=cadastrar+cliente");
 			
 		}else {
 		

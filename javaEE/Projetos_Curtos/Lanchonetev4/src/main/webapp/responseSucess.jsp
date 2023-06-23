@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"%>
     
 <% String resp = request.getParameter("resp"); %>
     
@@ -22,36 +21,7 @@
 <title>Response</title>
 </head>
 <body onload="retornarPagina()">
-	
-	<!-- NAVBAR -->
-	
-	<header>
-		<nav class="navbar navbar-expand-lg" id="navbar">
-			<div class="container-fluid">
-			
-				<a class="navbar-brand" href="index.html">Lima Lanches</a>
-				
-				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" 	aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-					<span class="navbar-toggler-icon"></span>
-				</button>
-				
-				<div class="collapse navbar-collapse" id="navbarNavDropdown">
-					<ul class="navbar-nav">
-					
-						<li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Home</a></li>
-						
-						<li class="nav-item"><a class="nav-link" href="#">Clientes</a></li>
-						
-						<li class="nav-item"><a class="nav-link" href="#">Venda de Balcão</a></li>
-						
-						<li class="nav-item"><a class="nav-link" href="#">Entrega</a></li>
-						 
-					</ul>
-				</div>
-				
-			</div>
-		</nav>
-	</header>
+		
 	<main>
 
 		<section class="box-sucess">
@@ -60,7 +30,7 @@
 
 			<div> <button class="btn btn" type="button" disabled >
 				<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
-				Retornando à pagina Inicial
+				Retornando...
 			  </button></div>
 			
 

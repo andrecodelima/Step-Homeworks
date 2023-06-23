@@ -60,6 +60,12 @@ function limparForm(){
 	
 
 
+function retornarPaginaCliente(){
+    setTimeout(() =>{
+        window.location.href="cliente.jsp";
+    }, 3000);
+}
+
 function retornarPagina(){
     setTimeout(() =>{
         window.location.href="main";

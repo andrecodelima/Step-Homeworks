@@ -1,5 +1,4 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"%>
-    pageEncoding="ISO-8859-1"%>
     
 <% String resp = request.getParameter("resp"); %>
     
@@ -21,18 +20,22 @@
 
 <title>Response</title>
 </head>
-<body onload="retornarPaginaLogar()">
-		
-
+<body onload="retornarPaginaCliente()">
+	
+	<!-- NAVBAR -->
+	
 	<main>
 
-		<section class="box-failed">
-			 <div class="text-warning" role="status">
-						 Falha ao <%=resp%><br>
-				  <span class="visually">Loading...</span>
-				   
-			</div>
+		<section class="box-sucess">
+			 
+			<span>Sucesso ao <%=resp%></span> 
+
+			<div> <button class="btn btn" type="button" disabled >
+				<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+				Retornando...
+			  </button></div>
 			
+
 		</section>
 
 	</main>

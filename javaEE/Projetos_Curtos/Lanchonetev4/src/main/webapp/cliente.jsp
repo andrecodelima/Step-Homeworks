@@ -1,9 +1,8 @@
 <%@	page import="model.Cliente"%>
 <%@	page import="services.ClienteserviceImplementation"%>
 <%@	page import="java.util.ArrayList"%>
-<%@ page language="java" contentType="text/html; charset=UTF-8"%>
 
-<%@	page import="services.ProdutoServiceImplementation"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"%>
 <%@	page import="model.Produto"%>
   
 <%
@@ -47,8 +46,8 @@
 	.Dados{
 		color:#3030c7;	
 		font-weight: 500;
+		}
 		
-	}
 </style>   
   
 <!DOCTYPE html>
@@ -70,7 +69,6 @@
 <title>Produtos</title>
 </head>
 <body>
-
 
 	<!-- NAVBAR -->
 	
@@ -105,7 +103,7 @@
 	<main>
 		<section class="box-acesso">
 				 
-				<h1>Cliente</h1>
+				<h1><font color='#fff'> Cliente </font></h1>
 				<hr>
 				
 	
