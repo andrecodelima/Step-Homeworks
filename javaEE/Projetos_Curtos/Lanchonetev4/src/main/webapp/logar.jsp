@@ -19,6 +19,11 @@
 	li{
 		display:none;
 	}
+		
+	h1{
+		color:#fff;
+	}
+	
 </style>
 <title>Login</title>
 </head>

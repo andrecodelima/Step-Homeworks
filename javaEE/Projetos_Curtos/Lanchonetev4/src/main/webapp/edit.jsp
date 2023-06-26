@@ -24,6 +24,11 @@
 
 <link rel="stylesheet" href="./static/css/style.css">
 
+<style>
+	h1{
+		color:#fff;
+	}
+</style>
 <title>Editar</title>
 </head>
 <body>
@@ -35,7 +40,7 @@
 		<nav class="navbar navbar-expand-lg" id="navbar">
 			<div class="container-fluid">
 			
-				<a class="navbar-brand" href="index.html">LimaLanches</a>
+				<a class="navbar-brand" href="index.html">Lima Lanches</a>
 				
 				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" 	aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
@@ -44,11 +49,31 @@
 				<div class="collapse navbar-collapse" id="navbarNavDropdown">
 					<ul class="navbar-nav">
 					
-						<li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Home</a></li>
+						<li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Home</a></li>						
 						
-						<li class="nav-item"><a class="nav-link" href="#">Clientes</a></li>
-						
-						<li class="nav-item"><a class="nav-link" href="venda.jsp">Venda de Balcão</a></li>
+						<li class="nav-item dropdown">
+				          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+				            Produtos
+				          </a>
+				          <ul class="dropdown-menu">
+				           	<li><a class="dropdown-item" href="produto.jsp">Produtos</a></li>
+				          	<li><a class="dropdown-item" href="cadastroProduto.html">Cadastro de Produtos</a></li>
+				            <li><a class="dropdown-item" href="consultaProduto.jsp">Consulta de Produtos</a></li>
+				          </ul>
+				        </li>
+				        
+						<li class="nav-item dropdown">
+				          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+				            Cliente
+				          </a>
+				          <ul class="dropdown-menu">
+				           	<li><a class="dropdown-item" href="cliente.jsp">Clientes</a></li>
+				      		<li><a class="dropdown-item" href="cadastroCliente.html">Cadastro de Clientes</a></li>
+				            <li><a class="dropdown-item" href="consultaCliente.jsp">Consulta de Cliente</a></li>
+				          </ul>
+				        </li>
+				        
+				        <li class="nav-item"><a class="nav-link" href="venda.jsp">Venda de Balcão</a></li>
 						
 						<li class="nav-item"><a class="nav-link" href="#">Entrega</a></li>
 						 
@@ -72,7 +97,7 @@
 
 			<table class="box-produtos" id="tabelaProduto">
 
-				<form name="formProduto" action="update">
+				<form name="formProduto" action="updateProduct">
 
 					<section class="table" id="table">
 

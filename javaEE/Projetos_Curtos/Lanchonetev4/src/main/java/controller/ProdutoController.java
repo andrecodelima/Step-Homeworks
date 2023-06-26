@@ -13,7 +13,7 @@ import model.Produto;
 import services.ProdutoServiceImplementation;
 
 
-@WebServlet(urlPatterns = {"/main", "/insert", "/delete", "/update"})
+@WebServlet(urlPatterns = {"/main", "/insertProduct", "/deleteProduct", "/updateProduct"})
 public class ProdutoController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -35,17 +35,17 @@ public class ProdutoController extends HttpServlet {
     			break;
     		}
     			
-    		case "/insert": {
+    		case "/insertProduct": {
     			newProduct(request, response);
     			break;
     		}
     		
-    		case "/delete": {
+    		case "/deleteProduct": {
     			delProduct(request, response);
     			break;
     		}
     			
-    		case "/update": {
+    		case "/updateProduct": {
     			try {
 					updateProduto(request, response);
 				} catch (ServletException | IOException | SQLException e) {
@@ -80,11 +80,11 @@ public class ProdutoController extends HttpServlet {
 				 					);  
 		
 		 if(ProdutoServiceImplementation.insert(produto)) {
-			 response.getWriter().append("Produto cadastrado!");
+				response.sendRedirect("responseSucess.jsp?resp=cadastrar+produto");
 		 
 		 }else {
 			 
-			 response.getWriter().append("Falha no cadastro");
+				response.sendRedirect("responseFailed.jsp?resp=cadastrar+produto");
 		 }
 		 
 	}

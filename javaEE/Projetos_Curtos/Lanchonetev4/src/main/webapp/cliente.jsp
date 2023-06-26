@@ -32,10 +32,10 @@
 						"<td class='Dados'>"	+	endereco	+		"</td>"		+
 						
 						
-						"<td class='table-link'><a class='btn btn-outline-warning' href='edit.jsp?id=" 		+ id + "'>Editar</a></td>"  	+
-						"<td class='table-link'><a class='btn btn-outline-danger'  href='delete?id=" 	    + id + "'>Excluir</a></td>"  	+
+						"<td class='table-link'><a class='btn btn-outline-warning' href='editClient.jsp?id=" 		+ id + "'>Editar</a></td>"  	+
+						"<td class='table-link'><a class='btn btn-outline-danger'  href='deleteClient?id=" 	+ id + "'>Excluir</a></td>"  	+
 											
-					"</tr>"											;
+					"</tr>"																													;
 		}
 	}
 
@@ -44,9 +44,16 @@
 
 <style>
 	.Dados{
-		color:#3030c7;	
-		font-weight: 500;
+		color:#000;	
+		font-weight:500;
+		border-bottom: 1px dotted #fff
 		}
+		
+		h1{
+		color:#fff;
+		}
+		
+	}
 		
 </style>   
   
@@ -71,12 +78,11 @@
 <body>
 
 	<!-- NAVBAR -->
-	
-	<header>
+<header>
 		<nav class="navbar navbar-expand-lg" id="navbar">
 			<div class="container-fluid">
 			
-				<a class="navbar-brand" href="index.html">LimaLanches</a>
+				<a class="navbar-brand" href="index.html">Lima Lanches</a>
 				
 				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" 	aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
@@ -85,11 +91,31 @@
 				<div class="collapse navbar-collapse" id="navbarNavDropdown">
 					<ul class="navbar-nav">
 					
-						<li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Home</a></li>
+						<li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Home</a></li>						
 						
-						<li class="nav-item"><a class="nav-link" href="cliente.jsp">Clientes</a></li>
-												
-						<li class="nav-item"><a class="nav-link" href="venda.jsp">Venda de Balcão</a></li>
+						<li class="nav-item dropdown">
+				          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+				            Produtos
+				          </a>
+				          <ul class="dropdown-menu">
+				           	<li><a class="dropdown-item" href="produto.jsp">Produtos</a></li>
+				          	<li><a class="dropdown-item" href="cadastroProduto.html">Cadastro de Produtos</a></li>
+				            <li><a class="dropdown-item" href="consultaProduto.jsp">Consulta de Produtos</a></li>
+				          </ul>
+				        </li>
+				        
+						<li class="nav-item dropdown">
+				          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+				            Cliente
+				          </a>
+				          <ul class="dropdown-menu">
+				           	<li><a class="dropdown-item" href="cliente.jsp">Clientes</a></li>
+				      		<li><a class="dropdown-item" href="cadastroCliente.html">Cadastro de Clientes</a></li>
+				            <li><a class="dropdown-item" href="consultaCliente.jsp">Consulta de Cliente</a></li>
+				          </ul>
+				        </li>
+				        
+				        <li class="nav-item"><a class="nav-link" href="venda.jsp">Venda de Balcão</a></li>
 						
 						<li class="nav-item"><a class="nav-link" href="#">Entrega</a></li>
 						 
@@ -99,7 +125,6 @@
 			</div>
 		</nav>
 	</header>
-	
 	<main>
 		<section class="box-acesso">
 				 

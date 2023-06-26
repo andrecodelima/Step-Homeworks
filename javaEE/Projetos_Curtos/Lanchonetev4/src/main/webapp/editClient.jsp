@@ -1,43 +1,13 @@
-<%@page import="java.util.ArrayList"%>
-<%@ page language="java" contentType="text/html; charset=UTF-8"%>
+<%@page import="services.ClienteserviceImplementation"%>
+<%@page import="model.Cliente"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="ISO-8859-1"%>
 
-<%@page import="services.ProdutoServiceImplementation"%>
-<%@page import="model.Produto"%>
-  
+
 <%
-
-ArrayList<Produto> lista = ProdutoServiceImplementation.getProduto();
-String line = "";
-
-if(lista.isEmpty()){
-	line = "<tr><th colspan='3'> N√£o h√° produtos cadastrados </tr></th>";
-	
-}else{
-	
-	for(Produto p : lista){
-		
-		String nome			= p.getNome();
-		String descricao	= p.getDescricao();
-		Double preco		= p.getPreco();
-		int id				= p.getId();
-		
-		line +=	"<tr>"			+
-			
-					"<td class='Dados'>"		+ nome 			+	"</td>"		+
-					"<td class='Dados'>"		+ descricao		+ 	"</td>"		+
-					"<td class='Dados'>"		+ preco			+ 	"</td>"		+
-					
-					"<td class='table-link'><a class='btn btn-outline-warning' href='edit.jsp?id=" 				+ id + "'>Editar</a></td>"  	+
-					"<td class='table-link'><a class='btn btn-outline-danger'  href='deleteProduct?id=" 	    + id + "'>Excluir</a></td>"  	+
-					
-				"</tr>";
-	}
-}
-
+	Cliente cliente = ClienteserviceImplementation.getClientById(Integer.parseInt(request.getParameter("id")));
 %>
-
     
-  
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -55,25 +25,16 @@ if(lista.isEmpty()){
 <link rel="stylesheet" href="./static/css/style.css">
 
 <style>
-	.Dados{
-		color:#000;	
-		font-weight: 600;
-		border-bottom: 1px dotted #fff
-		
-	}
-	
 	h1{
 		color:#fff;
 	}
-</style> 
-
-<title>Clientes</title>
+</style>
+<title>Editar</title>
 </head>
 <body>
 
 
 	<!-- NAVBAR -->
-	
 	<header>
 		<nav class="navbar navbar-expand-lg" id="navbar">
 			<div class="container-fluid">
@@ -111,7 +72,7 @@ if(lista.isEmpty()){
 				          </ul>
 				        </li>
 				        
-				        <li class="nav-item"><a class="nav-link" href="venda.jsp">Venda de Balc√£o</a></li>
+				        <li class="nav-item"><a class="nav-link" href="venda.jsp">Venda de Balc„o</a></li>
 						
 						<li class="nav-item"><a class="nav-link" href="#">Entrega</a></li>
 						 
@@ -122,56 +83,76 @@ if(lista.isEmpty()){
 		</nav>
 	</header>
 	
-	<main>
-		<section class="box-acesso">
-				 
-				<h1>Produtos</h1>
-				<hr>
-				
-	
-		</section>
-	</main>
-	
 	<main class="main-default">
 
 		<section class="box-produtos">
 
-			<h1>Lista de Produtos</h1>
+			<h1>EDITAR PRODUTO</h1>
 			<hr>
 
-			<a href="cadastroProduto.html" class="btn btn-outline-info" title="Cadastrar novo produto">Novo</a> 
-			<a href="consultaProduto.jsp" class="btn btn-outline-light" title="Consulta de produtos">Exportar</a>
+			<a href="index.html" class="btn btn-outline-info"
+				title="P·gina inicial">Home</a>  
 
 
-			<table class="table-produtos" id="tabelaProduto">
-			
-				<thead>
-					<tr>
-						<th class="col-nome">Nome</th>
-						<th class="col-descricao">Descri√ß√£o</th>
-						<th class="col-preco">Pre√ßo</th>
-						 
-					</tr>
-				</thead>
+			<table class="box-produtos" id="tabelaProduto">
+
+				<form name="formProduto" action="updateClient">
+
+					<section class="table" id="table">
+
+					<div class="row">
+
+							<div class="col-md-4">
+
+								<input type="text" class="form-control" name="inputNome" id="inputNome" placeholder="Nome" maxlength="45"  value="<%=cliente.getNome()%>">
+								<label for="inputNome">Nome</label>
+
+							</div>
+					
+							<div class="col-md-2">
+
+								<input type="text" class="form-control" name="inputTelefone" id="inputTelefone" placeholder="00-0000-0000" maxlength="20" value="<%=cliente.getTelefone()%>">
+								<label for="inputTelefone">Telefone</label>
+								
+							</div>
+						</div>
 
 
-				<tbody>
-					<tr>
-						<th><%=line %></th>
-					</tr>
-				</tbody>
+						<div class="row">
+							
+							<div class="col-md-4">
 
-				
-				<tfoot>
-					<tr>
-						<th colspan="5">Fim da lista</th>
-					</tr>
-				</tfoot>
+								<input type="text" class="form-control" name="inputEndereco" id="inputEndereco" placeholder="EndereÁo" maxlength="100" value="<%=cliente.getEndereco()%>">
+								<label for="inputEndereco">EndereÁo</label>
+								
+							</div>
+							
+							<div class="col-md-3">
+
+								<input type="text" class="form-control" name="inputEmail" id="inputEmail" placeholder="nome@exemplo.com" maxlength="100" value="<%=cliente.getEmail()%>">
+								<label for="inputEmail">E-mail</label>
+								
+							<input type="hidden" name="id" value="<%=cliente.getId()%>">
+								
+								
+							</div>
+							
+
+						</div>
+
+ 
+						<div class="row">
+
+
+							<input class='button-cadastro' type="submit" value="Salvar">
+
+						</div>
+
+					</section>
+
+				</form>
 
 			</table>
-			
-		</section>
-		
 	</main>
 
 

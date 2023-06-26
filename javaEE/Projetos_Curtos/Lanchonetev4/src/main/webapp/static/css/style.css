@@ -87,8 +87,8 @@ main{
 }
 
 	.box-acesso .btn:hover{
-		background-color: green;
-        color: #fff;
+		background-color:#fff;
+        color: #000;
         font-weight: 800;
 	}
 	

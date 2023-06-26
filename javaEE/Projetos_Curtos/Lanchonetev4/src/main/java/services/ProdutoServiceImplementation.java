@@ -72,6 +72,40 @@ public class ProdutoServiceImplementation {
 		return null;
 	}
 	
+	public static ArrayList<Produto>getProdutoByName(String nome){
+		
+		Connection conn = Db.conect();
+		
+		try {
+			
+			String sql = "SELECT * FROM produto WHERE nome LIKE '%" + nome + "%'";
+			Statement 	st 		= conn.createStatement();
+			ResultSet   result  = st.executeQuery(sql); 
+			
+			ArrayList<Produto>lista = new ArrayList<Produto>();
+			
+			while(result.next()) {
+				lista.add(new Produto(result.getInt("id"),
+									  result.getString("nome"),
+									  result.getString("descricao"),
+									  result.getDouble("preco")
+							)
+						);
+			}
+			
+			st.close();
+			Db.Disconnect(conn);
+			return lista;
+			
+			
+		}catch (Exception e) {
+			System.err.println("Erro ao consultar produto" + e);
+			
+		}
+		
+		return null;
+	}
+	
 	
 	public static boolean delProduto(int id) {
 		

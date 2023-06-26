@@ -1,42 +1,57 @@
-<%@page import="java.util.ArrayList"%>
-<%@ page language="java" contentType="text/html; charset=UTF-8"%>
+<%@	page import="model.Cliente"%>
+<%@	page import="services.ClienteserviceImplementation"%>
+<%@	page import="java.util.ArrayList"%>
 
-<%@page import="services.ProdutoServiceImplementation"%>
-<%@page import="model.Produto"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"%>
+<%@	page import="model.Produto"%>
   
 <%
 
-ArrayList<Produto> lista = ProdutoServiceImplementation.getProduto();
-String line = "";
 
-if(lista.isEmpty()){
-	line = "<tr><th colspan='3'> Não há produtos cadastrados </tr></th>";
-	
-}else{
-	
-	for(Produto p : lista){
-		
-		String nome			= p.getNome();
-		String descricao	= p.getDescricao();
-		Double preco		= p.getPreco();
-		int id				= p.getId();
-		
-		line +=	"<tr>"			+
-			
-					"<td class='Dados'>"		+ nome 			+	"</td>"		+
-					"<td class='Dados'>"		+ descricao		+ 	"</td>"		+
-					"<td class='Dados'>"		+ preco			+ 	"</td>"		+
-					
-					"<td class='table-link'><a class='btn btn-outline-warning' href='edit.jsp?id=" 				+ id + "'>Editar</a></td>"  	+
-					"<td class='table-link'><a class='btn btn-outline-danger'  href='deleteProduct?id=" 	    + id + "'>Excluir</a></td>"  	+
-					
-				"</tr>";
+	ArrayList<Cliente> lista = new ArrayList<Cliente>();
+	String nome = request.getParameter("name");
+
+	if(nome == (null) || nome.equals("")){
+		lista = ClienteserviceImplementation.getCliente();
+	}else{
+		lista = ClienteserviceImplementation.getClientByname(nome);
 	}
-}
+	
+	String line = "";
+	
+	if(lista.isEmpty()){
+		line = "<h3>Conteúdo não encontrado </h3>";
+	}
+	else
+		for(Cliente c : lista){
+			
+			line +=	"<tr>"		+
+					
+							"<td class='Dados'>"	+	c.getId()			+			"</td>"		+
+							"<td class='Dados'>"	+	c.getNome()			+			"</td>"		+
+							"<td class='Dados'>"	+	c.getTelefone()		+			"</td>"		+
+							"<td class='Dados'>"	+	c.getEndereco()		+			"</td>"		+
+							"<td class='Dados'>"	+	c.getEmail()		+			"</td>"		+
+					
+					"</tr>"		;	
+		}
 
 %>
 
-    
+<style>
+	.Dados{
+		color:#000;	
+		font-weight:500;
+		border-bottom: 1px dotted #fff
+		}
+		
+		h1{
+		color:#fff;
+		}
+		
+	}
+		
+</style>   
   
 <!DOCTYPE html>
 <html lang="en">
@@ -54,27 +69,13 @@ if(lista.isEmpty()){
 
 <link rel="stylesheet" href="./static/css/style.css">
 
-<style>
-	.Dados{
-		color:#000;	
-		font-weight: 600;
-		border-bottom: 1px dotted #fff
-		
-	}
-	
-	h1{
-		color:#fff;
-	}
-</style> 
-
-<title>Clientes</title>
+<title>Consulta | Cliente</title>
 </head>
 <body>
 
-
 	<!-- NAVBAR -->
 	
-	<header>
+		<header>
 		<nav class="navbar navbar-expand-lg" id="navbar">
 			<div class="container-fluid">
 			
@@ -125,31 +126,49 @@ if(lista.isEmpty()){
 	<main>
 		<section class="box-acesso">
 				 
-				<h1>Produtos</h1>
+				<h1><font color='#fff'> Cliente </font></h1>
 				<hr>
 				
 	
 		</section>
 	</main>
-	
 	<main class="main-default">
 
 		<section class="box-produtos">
 
-			<h1>Lista de Produtos</h1>
+			<h1>Consulta de Clientes</h1>
 			<hr>
-
-			<a href="cadastroProduto.html" class="btn btn-outline-info" title="Cadastrar novo produto">Novo</a> 
-			<a href="consultaProduto.jsp" class="btn btn-outline-light" title="Consulta de produtos">Exportar</a>
+			
+ 			  <div class="col-md-3">
+			
+			<form action="consultaCliente.jsp">
+				<div class="input-group mb-3">
+		  			<input type="text" class="form-control" name="name" placeholder="Pesquisar" aria-label="Recipient's username" aria-describedby="button-addon2">
+		 			 <button class="btn btn-primary" id="button-addon2">
+		 			 	<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+						  <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+						</svg>
+		 			 </button>
+			 	</div>
+			 </form>
+			 </div>
+			 
+			<a href="cadastroCliente.html" class="btn btn-outline-info" title="Cadastrar novo cliente">Novo</a> 
+			<a href="#" class="btn btn-outline-light" title="Consulta de clientes">Exportar</a>
 
 
 			<table class="table-produtos" id="tabelaProduto">
-			
-				<thead>
+							
+
+ 				<thead>
 					<tr>
+					
+						<th class="col-nome">ID</th>
 						<th class="col-nome">Nome</th>
-						<th class="col-descricao">Descrição</th>
-						<th class="col-preco">Preço</th>
+						<th class="col-descricao">Telefone</th>
+						<th class="col-preco">E-mail</th>
+						<th class="col-preco">Endereço</th>
+						
 						 
 					</tr>
 				</thead>
@@ -157,7 +176,7 @@ if(lista.isEmpty()){
 
 				<tbody>
 					<tr>
-						<th><%=line %></th>
+						 <th><%=line %></th>
 					</tr>
 				</tbody>
 

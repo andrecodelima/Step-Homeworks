@@ -84,7 +84,7 @@ function erroSenha(){
 
 function confirmaSaidaVenda(){
 	if(window.confirm("Deseja encessar a venda e sair?")){
-		window.location.href = "index.html";
+		window.location.href = "produto.jsp";
 	}
 	 
 		
