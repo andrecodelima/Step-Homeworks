@@ -193,7 +193,7 @@ public static boolean updateClient(Cliente c) throws SQLException{
 				 "SET nome =	?,"		+
 				 "telefone = 	?,"		+
 				 "endereco =	?,"		+
-				 "email 	=	?, "	+
+				 "email 	=	? "		+
 
 				 
 				 "WHERE id	=	?"		;
