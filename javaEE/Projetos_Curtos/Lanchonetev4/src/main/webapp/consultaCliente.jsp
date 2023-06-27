@@ -4,9 +4,14 @@
 
 <%@ page language="java" contentType="text/html; charset=UTF-8"%>
 <%@	page import="model.Produto"%>
-  
-<%
 
+<%@page import="java.io.BufferedReader"%>
+<%@page import="java.io.FileReader"%>
+<%@page import="java.io.PrintWriter"%>
+<%@page import="java.io.FileWriter"%>
+ 
+<%
+	
 
 	ArrayList<Cliente> lista = new ArrayList<Cliente>();
 	String nome = request.getParameter("name");
@@ -35,10 +40,48 @@
 					
 					"</tr>"		;	
 		}
-
+	
+	
+	ArrayList<Cliente> listaCliente = ClienteserviceImplementation.getCliente();
+	String lines = "";
+	
+	FileWriter doc 		= new FileWriter("C:\\java\\saidas\\cliente.txt");
+	PrintWriter write	= new PrintWriter(doc);
+	
+	
+	for(Cliente c : listaCliente){
+		write.println(c.getNome() + " | " + c.getEndereco() + " | " + c.getTelefone() + " | " + c.getEmail());
+	}
+	
+	doc.close();
+	write.close();
+	
+	FileReader doc1 = new FileReader("C:\\java\\saidas\\cliente.txt");
+	BufferedReader read = new BufferedReader(doc1);
+	
+	
+	ArrayList<Cliente> listaClienteLida = new ArrayList<Cliente>();
+	String cliente = read.readLine();
+	
+	for(Cliente c : listaCliente){
+		
+		lines +=	"<tr>"		+
+				
+							"<td class='Dados'>"	+	c.getId()			+			"</td>"		+
+							"<td class='Dados'>"	+	c.getNome()			+			"</td>"		+
+							"<td class='Dados'>"	+	c.getTelefone()		+			"</td>"		+
+							"<td class='Dados'>"	+	c.getEndereco()		+			"</td>"		+
+							"<td class='Dados'>"	+	c.getEmail()		+			"</td>"		+
+					
+					"</tr>"		;	
+		
+	}
+	
+	
+	
 %>
 
-<style>
+ <style>
 	.Dados{
 		color:#000;	
 		font-weight:500;
@@ -50,7 +93,17 @@
 		}
 		
 	}
-		
+	
+	.botao-download {
+	  display: inline-block;
+	  padding: 10px 20px;
+	  background-color: #4CAF50;
+	  color: white;
+	  text-align: center;
+	  text-decoration: none;
+	  font-size: 16px;
+	  border-radius: 12px;
+	}	
 </style>   
   
 <!DOCTYPE html>
@@ -154,9 +207,16 @@
 			 </div>
 			 
 			<a href="cadastroCliente.html" class="btn btn-outline-info" title="Cadastrar novo cliente">Novo</a> 
-			<a href="#" class="btn btn-outline-light" title="Consulta de clientes">Exportar</a>
-
-
+			
+			<a href="consultaCliente.jsp" title="Consulta de clientes">
+			 	<button type="button" class="btn btn-primary">
+			 	<svg xmlns="http://www.w3.org/2000/svg" width="50" height="24" fill="currentColor" class="bi bi-file-earmark-text" viewBox="0 0 16 16">
+					  <path d="M5.5 7a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1h-5zM5 9.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5z"/>
+					  <path d="M9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.5L9.5 0zm0 1v2A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5z"/>
+					</svg>
+			 	</button>
+			</a>
+			
 			<table class="table-produtos" id="tabelaProduto">
 							
 

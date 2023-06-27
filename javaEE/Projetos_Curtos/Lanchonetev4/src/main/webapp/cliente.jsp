@@ -142,8 +142,6 @@
 			<hr>
 
 			<a href="cadastroCliente.html" class="btn btn-outline-info" title="Cadastrar novo cliente">Novo</a> 
-			<a href="#" class="btn btn-outline-light" title="Consulta de clientes">Exportar</a>
-
 
 			<table class="table-produtos" id="tabelaProduto">
 			

@@ -140,8 +140,6 @@ if(lista.isEmpty()){
 			<hr>
 
 			<a href="cadastroProduto.html" class="btn btn-outline-info" title="Cadastrar novo produto">Novo</a> 
-			<a href="consultaProduto.jsp" class="btn btn-outline-light" title="Consulta de produtos">Exportar</a>
-
 
 			<table class="table-produtos" id="tabelaProduto">
 			
