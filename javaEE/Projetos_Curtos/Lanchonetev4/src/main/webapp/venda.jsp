@@ -58,7 +58,7 @@ if (lista.isEmpty()) {
 					"<td class='produtosVendidos Dados'>" + quantidade 	 				+ "</td>"  + 
 					"<td class='produtosVendidos Dados'>" + produtos.getPreco()	 		+ "</td>"  +
 					
-					"<td class='produtosVendidos Dados'>" + subtotal + "</td>" 						+
+					"<td class='produtosVendidos Dados'>" + subtotal 					+ "</td>"  +
 
 				"</tr>";
 	}
