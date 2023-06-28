@@ -32,8 +32,8 @@
 						"<td class='Dados'>"	+	endereco	+		"</td>"		+
 						
 						
-						"<td class='table-link'><a class='btn btn-outline-warning' href='editClient.jsp?id=" 		+ id + "'>Editar</a></td>"  	+
-						"<td class='table-link'><a class='btn btn-outline-danger'  href='deleteClient?id=" 	+ id + "'>Excluir</a></td>"  	+
+						"<td class='table-link'><a class='btn btn-warning' href='editClient.jsp?id=" 		+ id + "'>Editar</a></td>"  	+
+						"<td class='table-link'><a class='btn btn-danger'  href='deleteClient?id=" 	+ id + "'>Excluir</a></td>"  	+
 											
 					"</tr>"																													;
 		}

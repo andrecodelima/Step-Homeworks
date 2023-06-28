@@ -54,6 +54,28 @@ function validaCliente(){
     formProduto.submit();
 }
 
+function validaLogar(){
+    let user	= formLogin.inputUsuario.value;
+    let pass	= formLogin.inputPassword.value;
+
+    
+    if(user == ""){
+        alert("Campo usuário vazio!")  
+        formProduto.inputNome.focus();
+        return;  
+     }
+     
+     if(pass == ""){
+        alert("Campo usuário vazio!")  
+        formProduto.inputPassword.focus();
+        return;  
+     }
+     
+    formLogin.submit();
+}
+
+
+
 function limparForm(){
 	 document.getElementById('formProduto').reset();
 }

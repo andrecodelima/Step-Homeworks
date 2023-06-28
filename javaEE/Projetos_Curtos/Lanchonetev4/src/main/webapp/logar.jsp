@@ -15,6 +15,8 @@
 	crossorigin="anonymous">
 
 <link rel="stylesheet" href="./static/css/style.css">
+	 
+	
 <style>
 	li{
 		display:none;
@@ -64,7 +66,7 @@
 			 
 			<div class="col-md-6 login-form-2">
               
-                  <form class="form-login" action="logar">
+                  <form class="" name="formLogin" action="logar">
                     <h3>Login</h3>
                         <div class="form-group">
                             <input type="text" name="inputUsuario" class="form-control" placeholder="User*"/>
@@ -74,17 +76,18 @@
                         </div>
                         <div class="form-group">
                         
-                            <input type="submit" name="submit" class="btnLogin" value="Login"/>
+                            <input type="button"  class="btnLogin" value="Login" onclick="validaLogar()"/></br>
+                            
                          <a href="cadastroUser.html"><input type="button" name="cadastro" class="btnLogin" value="Cadastro"/></a>   
                             
                         </div>
-                        
+                     </form>
+               
                         
                         <div class="form-group">                  
 
                             <a href="#" class="btnForgetPwd" value="Login"><h7>Forget Password?</h7></a>
                         </div>
-                    </form>
                 </div>
 		</section>
 
@@ -98,6 +101,8 @@
 		integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
 		crossorigin="anonymous"></script>
 	<script src="./static/js/js.js"></script>
+	
+
 
 </body>
 </html>

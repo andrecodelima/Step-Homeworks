@@ -68,15 +68,16 @@ public class UsuarioController extends HttpServlet {
 
 		if (usr != null) {
 			if ((usr.getUsuario().equals(usuario)) && (usr.getPassword().equals(password))) {
-				response.sendRedirect("produto.jsp");
+				response.sendRedirect("home.html");
 
-			} else if ((usuario != usr.getUsuario()) || (password != usr.getPassword())) {
+			}else if ((usuario != usr.getUsuario()) || (password != usr.getPassword())) {
 				response.sendRedirect("responseFailed.jsp?resp=acessar+sistema. Usuario+ou+senha+invalido.");
-
-			}
 			// Tratar erro de usuario null
 
-		}
+			}
 
+		}
+		
 	}
+	
 }

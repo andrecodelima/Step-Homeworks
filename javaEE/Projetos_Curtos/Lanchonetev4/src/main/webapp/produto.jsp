@@ -27,8 +27,8 @@ if(lista.isEmpty()){
 					"<td class='Dados'>"		+ descricao		+ 	"</td>"		+
 					"<td class='Dados'>"		+ preco			+ 	"</td>"		+
 					
-					"<td class='table-link'><a class='btn btn-outline-warning' href='edit.jsp?id=" 				+ id + "'>Editar</a></td>"  	+
-					"<td class='table-link'><a class='btn btn-outline-danger'  href='deleteProduct?id=" 	    + id + "'>Excluir</a></td>"  	+
+					"<td class='table-link'><a class='btn btn-warning' href='edit.jsp?id=" 				+ id + "'>Editar</a></td>"  	+
+					"<td class='table-link'><a class='btn btn-danger'  href='deleteProduct?id=" 	    + id + "'>Excluir</a></td>"  	+
 					
 				"</tr>";
 	}
