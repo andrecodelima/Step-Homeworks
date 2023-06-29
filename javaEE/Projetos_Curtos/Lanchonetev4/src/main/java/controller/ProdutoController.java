@@ -2,6 +2,7 @@ package controller;
 
 import java.io.IOException;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -9,11 +10,13 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.itextpdf.text.Document;
+
 import model.Produto;
 import services.ProdutoServiceImplementation;
 
 
-@WebServlet(urlPatterns = {"/main", "/insertProduct", "/deleteProduct", "/updateProduct"})
+@WebServlet(urlPatterns = {"/main", "/insertProduct", "/deleteProduct", "/updateProduct", "/exportaProdutoPdf"})
 public class ProdutoController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -54,7 +57,14 @@ public class ProdutoController extends HttpServlet {
 				}
     			break;
     		}
+    		
+    		
+    		case "/exportaProdutoPdf":{
+    			fnc_exportaPdf(request, response);
+    			break;
     			
+    		}
+    		
     		default: {
     			response.sendError(HttpServletResponse.SC_NOT_FOUND);
     			break;
@@ -121,5 +131,31 @@ public class ProdutoController extends HttpServlet {
 		 }
 		 
 	}
+	
+	public void fnc_exportaPdf(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		ArrayList<Produto> lista = new ArrayList<Produto>();
+		String nome = request.getParameter("name");
+
+		if(nome == (null) || nome.equals("")){
+			lista = ProdutoServiceImplementation.getProduto();
+		}else{
+			lista = ProdutoServiceImplementation.getProdutoByName(nome);
+		}
+		
+		String line = "";
+		
+		Document document = new Document();
+		if(lista.isEmpty()){
+			line = "<h3>Conteúdo não encontrado </h3>";
+		}
+		else {
+			
+			
+		}
+			
+		
+		 
+	}
+	
 
 }

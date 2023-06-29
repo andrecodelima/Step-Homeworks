@@ -164,11 +164,11 @@
 		<section class="box-acesso">
 				 
 				<h1><font color='#fff'> Produto </font></h1>
-				<hr>
-				
+				<hr>	
 	
 		</section>
 	</main>
+	
 	<main class="main-default">
 
 		<section class="box-produtos">
@@ -191,7 +191,7 @@
 			 </div>
 			 
 			<a href="cadastroProduto.html" class="btn btn-outline-info" title="Cadastrar novo Produto">Novo</a> 
-			<a href="consultaProduto.jsp" title="Consulta de Produtos">
+			<a href="consultaProduto.jsp" title="Exportar txt">
 			 	<button type="button" class="btn btn-primary">
 			 	<svg xmlns="http://www.w3.org/2000/svg" width="50" height="24" fill="currentColor" class="bi bi-file-earmark-text" viewBox="0 0 16 16">
 					  <path d="M5.5 7a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1h-5zM5 9.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5z"/>
@@ -199,7 +199,7 @@
 					</svg>
 			 	</button>
 			</a>
-			<a href="consultaProduto.jsp" title="Consulta de Produtos">
+			<a href="#" onclick="exportar()" title="Exportar pdf">
 			 	<button type="button" class="btn btn-danger">
 			 		<svg xmlns="http://www.w3.org/2000/svg"  width="50" height="24" fill="currentColor" class="bi bi-file-earmark-pdf" viewBox="0 0 16 16">
 					  <path d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zM9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5v2z"/>
@@ -210,7 +210,6 @@
 
 			<table class="table-produtos" id="tabelaProduto">
 							
-
  				<thead>
 					<tr>
 					
@@ -243,13 +242,23 @@
 	</main>
 
 
-
 	<!-- SCRIPTS -->
 	<script
 		src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
 		crossorigin="anonymous"></script>
 	<script src="./static/js/js.js"></script>
+	
+	<script>
+		const urlParams = new URLSearchParams(window.location.search);
+		const name = urlParams.get("name");
+		
+		console.log(name);
+		
+		function exportar() {	  //endereco do servlet + param nome
+			window.location.href='exportaProdutoPdf?name='+name;
+		}
+	</script>
 
 </body>
 </html>
