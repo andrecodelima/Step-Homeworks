@@ -73,6 +73,8 @@ main{
     border-radius: 10px;
     box-shadow: 4px 4px 7px 2px #555151;
 
+	display:flex;
+	justify-content: space-evenly;
 }
 
 /*PRODUTOS*/
