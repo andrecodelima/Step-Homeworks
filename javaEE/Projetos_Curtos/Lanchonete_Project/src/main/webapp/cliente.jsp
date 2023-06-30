@@ -141,7 +141,7 @@
 			<h1>Lista de Clientes</h1>
 			<hr>
 
-			<a href="cadastroCliente.html" class="btn btn-outline-info" title="Cadastrar novo cliente">Novo</a> 
+			<a href="cadastroCliente.html" class="btn btn-success" title="Cadastrar novo cliente">Novo</a> 
 
 			<table class="table-produtos" id="tabelaProduto">
 			

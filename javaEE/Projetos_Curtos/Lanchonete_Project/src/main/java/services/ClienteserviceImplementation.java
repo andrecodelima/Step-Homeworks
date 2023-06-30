@@ -8,7 +8,7 @@ import java.sql.Statement;
 import java.util.ArrayList;
 
 import model.Cliente;
-import model.Produto;
+import model.Cliente;
 
 public class ClienteserviceImplementation {
 	
@@ -80,6 +80,42 @@ public class ClienteserviceImplementation {
 		return null;
 	}
 	 
+	
+public static ArrayList<Cliente>getClienteByName(String nome){
+		
+		Connection conn = Db.conect();
+		
+		try {
+			
+			String sql = "SELECT * FROM cliente WHERE nome LIKE '%" + nome + "%'";
+			Statement 	st 		= conn.createStatement();
+			ResultSet   result  = st.executeQuery(sql); 
+			
+			ArrayList<Cliente>lista = new ArrayList<Cliente>();
+			
+			while(result.next()) {
+				lista.add(new Cliente(result.getInt("id"),
+									  result.getString("nome"),
+									  result.getString("telefone"),
+									  result.getString("endereco"),
+									  result.getString("email")
+							)
+						);
+			}
+			
+			st.close();
+			Db.Disconnect(conn);
+			return lista;
+			
+			
+		}catch (Exception e) {
+			System.err.println("Erro ao consultar Cliente" + e);
+			
+		}
+		
+		return null;
+	}
+	
 
 public static boolean delClient(int id) {
 		

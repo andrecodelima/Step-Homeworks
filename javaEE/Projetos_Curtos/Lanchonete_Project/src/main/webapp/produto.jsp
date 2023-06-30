@@ -139,7 +139,7 @@ if(lista.isEmpty()){
 			<h1>Lista de Produtos</h1>
 			<hr>
 
-			<a href="cadastroProduto.html" class="btn btn-outline-info" title="Cadastrar novo produto">Novo</a> 
+			<a href="cadastroProduto.html" class="btn btn-info" title="Cadastrar novo produto">Novo</a> 
 
 			<table class="table-produtos" id="tabelaProduto">
 			

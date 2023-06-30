@@ -154,9 +154,8 @@ if (lista.isEmpty()) {
 			<h1>Venda de Produtos</h1>
 			<hr>
 
-			<a href="cadastro.html" class="btn btn-outline-info"
-				title="Cadastrar novo aluno">Novo</a> <a href="consulta.jsp"
-				class="btn btn-outline-light" title="Consulta de alunos">Exportar</a>
+			<a href="cadastro.html" class="btn btn-info" title="Cadastrar novo aluno">Novo</a> 
+			<a href="consulta.jsp" class="btn btn-light" title="Consulta de alunos">Exportar</a>
 
 
 			<table class="box-produtos" id="tabelaProduto">

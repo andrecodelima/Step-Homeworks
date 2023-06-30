@@ -178,7 +178,7 @@ public class ProdutoController extends HttpServlet {
 			document.add(titulo);
 			
 			for(Produto p: list) {
-				String line = "Nome: " + p.getNome() + " - Preço R$ " + p.getPreco();
+				String line = "Nome: " + p.getNome() + " - Preço R$: " + p.getPreco();
 				
 				Paragraph paragraph = new Paragraph(line, fontParagrafo);
 				
