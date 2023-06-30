@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>Lanchonetev4</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+  </welcome-file-list>
+
+    <!--Podemos personalizar com o error-code. Qualquer exception que corresponder ao código especifico do erro será direcionado pra essa pagina-->
+    <error-page>
+      <error-code>404</error-code>
+      <location>/erro.html</location>
+    </error-page>
+
+    <error-page>
+      <!--Erro default. Qualquer erro que der acionará essa página-->
+      <!--O default precisa ficar no final da p-->
+      <location>/erro.html</location>
+    </error-page>
+
+</web-app>
