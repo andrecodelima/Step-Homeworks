@@ -4,15 +4,18 @@
 <hibernate-configuration>
  <session-factory name="">
   <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
-  <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/estacionamentodb</property>
+  <property name="hibernate.connection.url">jdbc:mysql://localhost/estacionamentodb</property>
   <property name="hibernate.connection.username">root</property>
   <property name="hibernate.connection.password">1234567</property>
-  <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+
+  <property name="hibernate.dialect">org.hibernate.dialect.MariaDBDialect</property>
   <property name="hibernate.connection.autocommit">true</property>
   <property name="hibernate.show_sql">true</property>
   <property name="hibernate.format_sql">true</property>
   <property name="hibernate.hbm2ddl.auto">update</property>
   <!-- Livro -->
-  <mapping class="br.com.estacionamento.model.Carro"/>
+  <mapping class="model.Carro"/>
+  <mapping class="model.Cliente"/>
+  
  </session-factory>
 </hibernate-configuration>
