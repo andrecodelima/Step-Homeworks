@@ -1,18 +1,15 @@
 package model;
 
-import java.sql.Date;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-
 @Entity
 @Table(name="cliente")
 public class Cliente {
-	
+
 	@Id 
 	@GeneratedValue 
 	private int id;
@@ -28,7 +25,7 @@ public class Cliente {
 	
 	@Column(length = 20)
 	private String telefone;
-
+	
 	public Cliente(int id, String nome, String cpf, String nascimento, String telefone) {
 		super();
 		this.id = id;
@@ -46,7 +43,6 @@ public class Cliente {
 		this.telefone = telefone;
 	}
 
-	
 	public int getId() {
 		return id;
 	}
@@ -86,7 +82,7 @@ public class Cliente {
 	public void setTelefone(String telefone) {
 		this.telefone = telefone;
 	}
-
-
 	
+	
+
 }

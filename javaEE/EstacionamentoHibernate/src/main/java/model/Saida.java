@@ -10,10 +10,11 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+
 @Entity
-@Table(name="saida")
+@Table(name="entrada")
 public class Saida {
-	
+
 	@Id
 	@GeneratedValue
 	private int id;
@@ -21,9 +22,21 @@ public class Saida {
 	@Column(name="data")
 	private Date DataSaida;
 	
-    @ManyToOne
-    @JoinColumn(name="carro_id", referencedColumnName = "id")
-    private Carro carro;
+	@ManyToOne
+	@JoinColumn(name="carro_id", referencedColumnName = "id")private Carro carro;
+	
+	public Saida(int id, Date dataSaida, Carro carro) {
+		super();
+		this.id = id;
+		DataSaida = dataSaida;
+		this.carro = carro;
+	}
+
+	public Saida(Date dataSaida, Carro carro) {
+		super();
+		DataSaida = dataSaida;
+		this.carro = carro;
+	}
 
 	public int getId() {
 		return id;
@@ -31,10 +44,6 @@ public class Saida {
 
 	public void setId(int id) {
 		this.id = id;
-	}
-
-	public Date getDataEntrada() {
-		return DataSaida;
 	}
 
 
@@ -53,8 +62,6 @@ public class Saida {
 	public void setCarro(Carro carro) {
 		this.carro = carro;
 	}
+
     
-    
-    
-	
 }

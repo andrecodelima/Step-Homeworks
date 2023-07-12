@@ -6,26 +6,27 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+
 @Entity
 @Table(name="carro")
 public class Carro {
-	
+
 	@Id // PK
 	@GeneratedValue // Auto incremento
-	int id;
+	private int id;
 	
 	@Column(length = 20)
-	String modelo;
+	private String modelo;
 	
 	@Column
-	int ano;
+	private int ano;
 	
 	@Column(length = 20)
-	String cor;
+	private String cor;
 	
 	@Column(length = 8, unique = true)
-	String placa;
-
+	private String placa;
+	
 	public Carro(int id, String modelo, int ano, String cor, String placa) {
 		super();
 		this.id = id;
@@ -82,11 +83,7 @@ public class Carro {
 	public void setPlaca(String placa) {
 		this.placa = placa;
 	}
-	
-	
-	
+
 	
 	
 }
-
-

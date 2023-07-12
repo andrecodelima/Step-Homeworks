@@ -10,10 +10,11 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+
 @Entity
 @Table(name="entrada")
 public class Entrada {
-	
+
 	@Id
 	@GeneratedValue
 	private int id;
@@ -21,9 +22,21 @@ public class Entrada {
 	@Column(name="data")
 	private Date DataEntrada;
 	
-    @ManyToOne
-    @JoinColumn(name="carro_id", referencedColumnName = "id")
-    private Carro carro;
+	@ManyToOne
+	@JoinColumn(name="carro_id", referencedColumnName = "id")private Carro carro;
+	
+	public Entrada(int id, Date dataEntrada, Carro carro) {
+		super();
+		this.id = id;
+		DataEntrada = dataEntrada;
+		this.carro = carro;
+	}
+
+	public Entrada(Date dataEntrada, Carro carro) {
+		super();
+		DataEntrada = dataEntrada;
+		this.carro = carro;
+	}
 
 	public int getId() {
 		return id;
@@ -48,8 +61,6 @@ public class Entrada {
 	public void setCarro(Carro carro) {
 		this.carro = carro;
 	}
+
     
-    
-    
-	
 }
