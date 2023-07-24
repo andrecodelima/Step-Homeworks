@@ -1,0 +1,9 @@
+runtime:    java
+env:        flex
+threadsafe: true
+
+handlers:
+- url: /.*
+  script: this field is required, but ignored
+  secure: always
+# [END appyaml]
