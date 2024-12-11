@@ -1,0 +1,6 @@
+# INSTRUÇÕES
+
+Ao abrir uma aplicação que utiliza o o gerenciador de pacotes NPM, execute o npm install no terminal para instalar ou atualizar 
+os módulos listados no arquivo package.json. Isso garantirá que todas as dependências necessárias para o funcionamento da aplicação
+sejam baixadas e configuradas corretamente.
+
