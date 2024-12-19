@@ -1,0 +1,39 @@
+<form class="row g-3 mt-2 form-cadastro" (ngSubmit)="cadastrar()" #produtoForm="ngForm">
+
+    <div class="row mb-3">
+        <div class="col-md-6">
+            <label for="Nome" class="form-label">Nome</label>
+            <input type="text" class="form-control" id="nome" name="nome" [(ngModel)]="produto.nome" required>
+        </div>
+
+        <div class="col-md-4">
+            <label for="categoria" class="form-label">Categoria</label>
+            <select id="categoria" class="form-select" name="categoria" [(ngModel)]="produto.categoria" required>
+                <option value="" selected disabled>Categoria...</option>
+                <option>Caneta</option>
+                <option>Lapis</option>
+                <option>Caderno</option>
+            </select>
+        </div>
+    </div> 
+
+    <div class="row">
+        <div class="col-md-2">
+            <label for="quantidade" class="form-label">Quantidade</label>
+            <input type="number" class="form-control" id="quantidade" name="quantidade" [(ngModel)]="produto.quantidade" required>
+        </div>
+
+        <div class="col-md-2">
+            <label for="preco" class="form-label">Preço</label>
+            <input type="text" class="form-control" id="preco" name="preco" [(ngModel)]="produto.preco" required>
+        </div>
+    </div> 
+    
+    <div class="col-12">
+      <button type="submit" class="btn btn-primary">Cadastrar</button>
+    </div>
+
+  </form>
+
+  <p *ngIf="mensagem_sucesso" class="alert alert-success mt-3">{{mensagem_sucesso}}</p>
+  <p *ngIf="mensagem_erro" class="alert alert-danger mt-3">{{mensagem_erro}}</p>
