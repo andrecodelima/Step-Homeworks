@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { ConsultaComponent } from '../consulta/consulta.component';
 
 @Component({
   selector: 'app-cadastro',
   standalone: true, 
-  imports: [FormsModule, CommonModule],
+  imports: [FormsModule, CommonModule, ConsultaComponent],
   templateUrl: './cadastro.component.html',
   styleUrl: './cadastro.component.css'
 })
